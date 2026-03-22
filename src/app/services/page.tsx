@@ -1,0 +1,113 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { CTASection } from "@/components/CTASection";
+import { SectionHeading } from "@/components/SectionHeading";
+import { ServiceCard } from "@/components/ServiceCard";
+import { COMPANY, SITE_URL } from "@/lib/site";
+import { SERVICE_SLUGS } from "@/lib/services-data";
+
+export const metadata: Metadata = {
+  title: "Interior services in Pune",
+  description: `${COMPANY.name} — home and commercial interior design, modular kitchens, false ceilings, wall painting, and custom furniture. Based in Wagholi; serving Pune.`,
+  alternates: { canonical: "/services" },
+  openGraph: {
+    url: `${SITE_URL}/services`,
+    title: `Services | ${COMPANY.name}`,
+    description:
+      "Residential and commercial interior design across Pune—one accountable team.",
+  },
+};
+
+export default function ServicesIndexPage() {
+  return (
+    <>
+      <section className="border-b border-stone-200 bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+          <nav className="text-xs font-medium text-stone-500">
+            <Link href="/" className="hover:text-charcoal">
+              Home
+            </Link>
+            <span className="mx-2">/</span>
+            <span className="text-charcoal">Services</span>
+          </nav>
+          <h1 className="mt-4 max-w-3xl font-display text-4xl tracking-tight text-charcoal sm:text-5xl">
+            Homes, offices &amp; retail—under one roof
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-stone-600">
+            From apartments and villas to offices, shops, and showrooms, we
+            coordinate drawings, materials, and site teams. Explore each service
+            for benefits, process, and FAQs—or call us from{" "}
+            {COMPANY.addressLocality} to walk through your floor plan.
+          </p>
+          <p className="mt-4 text-sm text-stone-500">{COMPANY.serviceAreaLine}</p>
+          <dl className="mt-10 grid max-w-2xl grid-cols-2 gap-4 border-t border-stone-200 pt-8 sm:grid-cols-4">
+            <div>
+              <dt className="text-[0.65rem] font-semibold uppercase tracking-wider text-stone-500">
+                Experience
+              </dt>
+              <dd className="mt-1 font-display text-xl text-charcoal">
+                {COMPANY.yearsExperience}+ years
+              </dd>
+            </div>
+            <div>
+              <dt className="text-[0.65rem] font-semibold uppercase tracking-wider text-stone-500">
+                Deliveries
+              </dt>
+              <dd className="mt-1 font-display text-xl text-charcoal">
+                {COMPANY.happyClients}+
+              </dd>
+            </div>
+            <div>
+              <dt className="text-[0.65rem] font-semibold uppercase tracking-wider text-stone-500">
+                Studio
+              </dt>
+              <dd className="mt-1 text-sm font-medium text-charcoal">
+                {COMPANY.addressLocality}, Pune
+              </dd>
+            </div>
+            <div>
+              <dt className="text-[0.65rem] font-semibold uppercase tracking-wider text-stone-500">
+                Hours
+              </dt>
+              <dd className="mt-1 text-sm font-medium text-charcoal">
+                {COMPANY.hours}
+              </dd>
+            </div>
+          </dl>
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+            <Link
+              href="/contact"
+              className="inline-flex justify-center rounded-full bg-charcoal px-8 py-3.5 text-sm font-semibold text-cream transition hover:bg-wood-dark"
+            >
+              Get free consultation
+            </Link>
+            <Link
+              href="/projects"
+              className="inline-flex justify-center rounded-full border border-stone-300 px-8 py-3.5 text-sm font-semibold text-charcoal transition hover:border-wood-dark"
+            >
+              See projects
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+        <SectionHeading
+          eyebrow="What we do"
+          title="Six disciplines, one accountable studio"
+          description="Residential and commercial—pick a single scope or a coordinated programme. Drawings, BOQs, and site updates stay in one thread."
+        />
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {SERVICE_SLUGS.map((slug) => (
+            <ServiceCard key={slug} slug={slug} />
+          ))}
+        </div>
+      </section>
+
+      <CTASection
+        title="Not sure where to start?"
+        subtitle="Tell us your society and possession date—we’ll suggest a sensible sequence (civil → services → paint → woodwork) for your budget."
+      />
+    </>
+  );
+}
