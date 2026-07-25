@@ -35,7 +35,7 @@ function formatDate(iso: string) {
 }
 
 const heroImage =
-  "/images/projects/living-room-clock-wall.jpg";
+  "/images/stock/hallway-open-plan.jpg";
 
 export default function BlogIndexPage() {
   const sorted = [...blogPosts].sort(

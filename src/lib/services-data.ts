@@ -28,7 +28,7 @@ export const servicesMeta: Record<
     title: "Home Interior Design",
     short:
       "Complete interiors for 1, 2 & 3 BHK flats and villas—layout, materials, lighting, and execution that feels calm, warm, and unmistakably yours.",
-    heroImage: "/images/projects/living-room-false-ceiling.jpg",
+    heroImage: "/images/stock/interior-warm-living.jpg",
     keywords: [
       "interior designer Pune",
       "home interior design",
@@ -40,7 +40,7 @@ export const servicesMeta: Record<
     short:
       "Offices, retail stores, and showrooms in Pune—brand-led layouts, efficient workflows, durable finishes, and on-time handover for working spaces.",
     heroImage:
-      "/images/stock/office-open-workspace.jpg",
+      "/images/stock/office-loft.jpg",
     keywords: [
       "office interior design Pune",
       "shop interior Pune",
@@ -59,21 +59,21 @@ export const servicesMeta: Record<
     title: "Wall Painting",
     short:
       "Low-odour paints, crisp lines, and palettes chosen for Pune’s light—scheduled around the monsoon so walls cure properly and colours stay true.",
-    heroImage: "/images/projects/living-room-blue-accent.jpg",
+    heroImage: "/images/stock/painting-roller-blue.jpg",
     keywords: ["home painting Pune", "wall painting", "texture paint"],
   },
   "false-ceiling": {
     title: "False Ceiling (POP)",
     short:
       "Layered ceilings, cove lighting, and clean profiles that hide wiring and AC piping—while keeping standard Pune flat heights bright and airy.",
-    heroImage: "/images/projects/ceiling-wooden-cove-wallpaper.jpg",
+    heroImage: "/images/stock/living-coffered-ceiling.jpg",
     keywords: ["false ceiling Pune", "POP ceiling", "gypsum ceiling"],
   },
   "custom-furniture": {
     title: "Custom Furniture",
     short:
       "TV units, beds, wardrobes, and storage—measured for your space, finished to match your interior story.",
-    heroImage: "/images/projects/wardrobe-loft-storage.jpg",
+    heroImage: "/images/stock/furniture-shelving-chair.jpg",
     keywords: ["custom TV unit Pune", "bed design", "wardrobe design"],
   },
 };

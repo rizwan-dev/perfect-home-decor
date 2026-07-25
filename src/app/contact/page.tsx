@@ -98,7 +98,7 @@ function IconMapPin({ className }: { className?: string }) {
 }
 
 const contactHeroImage =
-  "/images/projects/living-room-tv-unit-curtains.jpg";
+  "/images/stock/bedroom-calm-glass.jpg";
 
 export default function ContactPage() {
   const mapIframeSrc = getContactMapIframeSrc();

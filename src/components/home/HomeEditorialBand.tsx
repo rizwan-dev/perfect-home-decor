@@ -17,9 +17,18 @@ export function HomeEditorialBand() {
           loading="lazy"
         />
         <div
-          className="absolute inset-0 bg-gradient-to-t from-charcoal/50 via-transparent to-charcoal/20"
+          className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-charcoal/20"
           aria-hidden
         />
+        <div className="absolute bottom-0 left-0 right-0">
+          <div className="mx-auto max-w-6xl px-4 pb-8 sm:px-6 sm:pb-10 lg:px-8">
+            <div className="h-px w-12 bg-cream/50" aria-hidden />
+            <p className="mt-4 max-w-xl font-display text-xl italic leading-snug text-cream sm:text-2xl">
+              “Detail is the difference—finishes chosen to age well in Pune
+              homes.”
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

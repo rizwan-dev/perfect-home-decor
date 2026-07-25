@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SocialIconLinks } from "@/components/SocialIconLinks";
 import {
@@ -70,7 +71,13 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="font-display text-2xl text-charcoal">{COMPANY.name}</p>
+            <Image
+              src="/images/brand/logo-lockup.png"
+              alt={COMPANY.name}
+              width={358}
+              height={182}
+              className="h-12 w-auto"
+            />
             <p className="mt-3 text-sm leading-relaxed text-stone-600">
               Interior design, painting, false ceilings &amp; modular kitchens
               for Pune homes—honest quotations, tidy sites, and finishes that

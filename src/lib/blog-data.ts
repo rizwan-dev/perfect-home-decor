@@ -27,7 +27,7 @@ export const blogPosts: BlogPost[] = [
     author: "Perfect Home Decor",
     category: "Modular kitchen",
     image:
-      "/images/projects/kitchen-grey-white.jpg",
+      "/images/stock/kitchen-marble-island.jpg",
     keywords: [
       "modular kitchen Pune",
       "modular kitchen checklist",
@@ -115,7 +115,7 @@ export const blogPosts: BlogPost[] = [
     author: "Perfect Home Decor",
     category: "Painting",
     image:
-      "/images/projects/living-room-blue-accent.jpg",
+      "/images/stock/bedroom-white-bright.jpg",
     keywords: [
       "home painting Pune",
       "wall painting Wagholi",
@@ -202,7 +202,7 @@ export const blogPosts: BlogPost[] = [
     author: "Perfect Home Decor",
     category: "False ceiling",
     image:
-      "/images/projects/bedroom-led-ceiling-blue-wall.jpg",
+      "/images/stock/living-coffered-ceiling.jpg",
     keywords: [
       "false ceiling Pune",
       "POP ceiling Wagholi",
@@ -288,7 +288,7 @@ export const blogPosts: BlogPost[] = [
     author: "Perfect Home Decor",
     category: "Interior design",
     image:
-      "/images/projects/living-room-false-ceiling.jpg",
+      "/images/stock/interior-warm-living.jpg",
     keywords: [
       "home interior design Pune",
       "turnkey interiors Pune",
@@ -453,7 +453,7 @@ export const blogPosts: BlogPost[] = [
     author: "Perfect Home Decor",
     category: "Bedroom",
     image:
-      "/images/projects/bedroom-hexagon-headboard.jpg",
+      "/images/stock/bedroom-beige-soft.jpg",
     keywords: [
       "bedroom interior design Pune",
       "master bedroom interiors",
@@ -529,7 +529,7 @@ export const blogPosts: BlogPost[] = [
     author: "Perfect Home Decor",
     category: "Kids room",
     image:
-      "/images/projects/bedroom-green-blinds.jpg",
+      "/images/stock/bedroom-calm-glass.jpg",
     keywords: [
       "kids room interior Pune",
       "child bedroom design",
@@ -603,7 +603,7 @@ export const blogPosts: BlogPost[] = [
     author: "Perfect Home Decor",
     category: "Living room",
     image:
-      "/images/projects/living-room-marble-tv-unit.jpg",
+      "/images/stock/living-sofa-modern.jpg",
     keywords: [
       "living room interior Pune",
       "TV unit design",
@@ -676,7 +676,7 @@ export const blogPosts: BlogPost[] = [
     author: "Perfect Home Decor",
     category: "Storage",
     image:
-      "/images/projects/wardrobe-sliding-dresser.jpg",
+      "/images/stock/furniture-shelving-chair.jpg",
     keywords: [
       "modular wardrobe Pune",
       "sliding wardrobe bedroom",
@@ -748,7 +748,7 @@ export const blogPosts: BlogPost[] = [
     author: "Perfect Home Decor",
     category: "Dining",
     image:
-      "/images/projects/render-kitchen-dining.jpg",
+      "/images/stock/dining-green-chairs.jpg",
     keywords: [
       "dining room interior Pune",
       "compact dining design",

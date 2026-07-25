@@ -69,8 +69,8 @@ export default async function HomePage() {
             Turnkey interiors
           </p>
           <h1 className="animate-fade-up animate-delay-1 mt-4 max-w-3xl font-display text-4xl leading-[1.08] tracking-tight text-cream sm:text-5xl lg:text-[3.25rem] lg:leading-[1.06] xl:text-6xl">
-            From possession to housewarming, the interiors your Pune home
-            deserves.
+            From possession to <em className="italic">housewarming</em>, the
+            interiors your Pune home deserves.
           </h1>
           <p className="animate-fade-up animate-delay-2 mt-6 max-w-2xl text-base leading-relaxed text-cream/90 sm:text-lg">
             {COMPANY.name} designs and builds complete home interiors—modular
@@ -258,10 +258,22 @@ export default async function HomePage() {
             <li key={a.slug}>
               <Link
                 href={`/interior-designer-in-${a.slug}`}
-                className="flex items-center justify-between rounded-2xl border border-stone-200 bg-white px-5 py-4 text-sm font-medium text-charcoal shadow-sm transition hover:border-wood-dark hover:text-wood-dark"
+                className="group flex items-center justify-between gap-4 rounded-2xl border border-stone-200 bg-white px-5 py-4 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-wood-dark/60 hover:shadow-[0_16px_32px_-20px_rgba(28,25,23,0.25)]"
               >
-                Interior designer in {a.label}
-                <span aria-hidden>→</span>
+                <span>
+                  <span className="block text-sm font-semibold text-charcoal transition-colors group-hover:text-wood-dark">
+                    {a.label}
+                  </span>
+                  <span className="mt-0.5 block text-xs text-stone-500">
+                    Interior designer in {a.label}
+                  </span>
+                </span>
+                <span
+                  className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-stone-200 text-sm text-stone-500 transition duration-300 group-hover:translate-x-1 group-hover:border-wood-dark group-hover:bg-wood-dark group-hover:text-cream"
+                  aria-hidden
+                >
+                  →
+                </span>
               </Link>
             </li>
           ))}

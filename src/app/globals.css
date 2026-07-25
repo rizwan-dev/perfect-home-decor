@@ -20,6 +20,17 @@ html {
   scroll-behavior: smooth;
 }
 
+::selection {
+  background: var(--wood);
+  color: var(--cream);
+}
+
+/* Consistent, brand-toned keyboard focus without double outlines */
+:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--wood-dark) 70%, transparent);
+  outline-offset: 2px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

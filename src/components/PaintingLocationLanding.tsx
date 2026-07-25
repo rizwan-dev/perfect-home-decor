@@ -11,7 +11,7 @@ import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/json-ld";
 import { projectsNearArea } from "@/lib/projects-data";
 
 const heroImage =
-  "/images/projects/living-room-blue-accent.jpg";
+  "/images/stock/living-green-feature-wall.jpg";
 
 export function PaintingLocationLanding({ area }: { area: AreaSlug }) {
   const c = paintingLocationContent[area];

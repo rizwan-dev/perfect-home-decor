@@ -11,7 +11,7 @@ import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/json-ld";
 import { projectsNearArea } from "@/lib/projects-data";
 
 const heroImage =
-  "/images/projects/kitchen-grey-white.jpg";
+  "/images/stock/kitchen-bright-marble.jpg";
 
 export function ModularKitchenLocationLanding({ area }: { area: AreaSlug }) {
   const c = modularKitchenLocationContent[area];

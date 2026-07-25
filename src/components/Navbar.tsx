@@ -1,8 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { COMPANY } from "@/lib/site";
 
 const callButtonClass =
@@ -39,17 +40,36 @@ const nav = [
 export function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [elevated, setElevated] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setElevated(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-stone-200/80 bg-cream/90 backdrop-blur-md">
+    <header
+      className={`sticky top-0 z-50 border-b bg-cream/90 backdrop-blur-md transition-[box-shadow,border-color] duration-300 ${
+        elevated
+          ? "border-stone-200 shadow-[0_8px_30px_-18px_rgba(28,25,23,0.35)]"
+          : "border-stone-200/80"
+      }`}
+    >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <Link href="/" className="group flex flex-col leading-tight">
-          <span className="font-display text-xl tracking-tight text-charcoal transition group-hover:text-wood-dark sm:text-2xl">
-            {COMPANY.name}
-          </span>
-          <span className="text-xs font-medium text-stone-500">
-            Pune · Interiors &amp; home services
-          </span>
+        <Link
+          href="/"
+          className="group flex shrink-0 items-center transition-opacity hover:opacity-80"
+        >
+          <Image
+            src="/images/brand/logo-lockup.png"
+            alt={`${COMPANY.name} — interiors & home services, Pune`}
+            width={358}
+            height={182}
+            priority
+            className="h-11 w-auto sm:h-12"
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex" aria-label="Main">

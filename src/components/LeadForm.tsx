@@ -183,9 +183,17 @@ export function LeadForm({
         <button
           type="submit"
           disabled={status === "sending"}
-          className="w-full rounded-full bg-charcoal py-3 text-sm font-semibold text-cream transition hover:bg-wood-dark disabled:opacity-60"
+          className="group/submit flex w-full items-center justify-center gap-2 rounded-full bg-charcoal py-3.5 text-sm font-semibold text-cream shadow-[0_10px_24px_-14px_rgba(28,25,23,0.5)] transition duration-300 hover:-translate-y-0.5 hover:bg-wood-dark active:translate-y-0 disabled:opacity-60"
         >
           {status === "sending" ? "Sending…" : "Request free consultation"}
+          {status === "sending" ? null : (
+            <span
+              className="transition-transform duration-300 group-hover/submit:translate-x-1"
+              aria-hidden
+            >
+              →
+            </span>
+          )}
         </button>
         {status === "ok" ? (
           <p className="text-center text-sm text-green-700" role="status">

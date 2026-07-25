@@ -11,7 +11,7 @@ import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/json-ld";
 import { projectsNearArea } from "@/lib/projects-data";
 
 const heroImage =
-  "/images/projects/bedroom-led-ceiling-wardrobe.jpg";
+  "/images/stock/living-minimal-bright.jpg";
 
 export function FalseCeilingLocationLanding({ area }: { area: AreaSlug }) {
   const c = falseCeilingLocationContent[area];

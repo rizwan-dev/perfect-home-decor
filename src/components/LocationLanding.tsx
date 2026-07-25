@@ -12,7 +12,7 @@ import { projectsNearArea } from "@/lib/projects-data";
 import { SERVICE_SLUGS, servicesMeta } from "@/lib/services-data";
 
 const hero =
-  "/images/projects/living-room-marble-tv-unit.jpg";
+  "/images/stock/living-sofa-modern.jpg";
 
 export function LocationLanding({ area }: { area: AreaSlug }) {
   const c = locationContent[area];
