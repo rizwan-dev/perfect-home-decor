@@ -95,7 +95,7 @@ export default function ServicesIndexPage() {
         <SectionHeading
           eyebrow="What we do"
           title="Six disciplines, one accountable studio"
-          description="Residential and commercial—pick a single scope or a coordinated programme. Drawings, BOQs, and site updates stay in one thread."
+          description="Residential and commercial—take a single service or the whole home. Drawings, quotations, and site updates stay in one WhatsApp thread, with one person answerable to you."
         />
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICE_SLUGS.map((slug) => (
@@ -106,7 +106,7 @@ export default function ServicesIndexPage() {
 
       <CTASection
         title="Not sure where to start?"
-        subtitle="Tell us your society and possession date—we’ll suggest a sensible sequence (civil → services → paint → woodwork) for your budget."
+        subtitle="Tell us your society and possession date—we’ll suggest the right order of work for your budget, so painting never follows the woodwork dust."
       />
     </>
   );

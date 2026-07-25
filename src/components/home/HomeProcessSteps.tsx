@@ -1,23 +1,23 @@
 const steps = [
   {
     step: "01",
-    title: "Discover",
-    body: "We visit your home in Pune, capture measurements, and align on budget, timeline, and how you use each room.",
+    title: "Free site visit",
+    body: "We visit your flat—Kharadi to Kesnand—measure every wall, and listen to how your family actually uses each room.",
   },
   {
     step: "02",
-    title: "Design",
-    body: "Layouts, 3D views, and material palettes—signed off before we mobilise so visuals match what gets built.",
+    title: "Design & quote",
+    body: "Layouts, 3D views, and material palettes with an item-by-item quotation—signed off before work starts, so what you see is what gets built.",
   },
   {
     step: "03",
     title: "Detail & produce",
-    body: "Working drawings, services coordination, and factory-ready modular—quality checks at every handoff.",
+    body: "Working drawings with electrical and plumbing marked before boarding, and modular units built in the factory—checked before they reach your society gate.",
   },
   {
     step: "04",
     title: "Build & hand over",
-    body: "Site supervision, snag lists, and a walkthrough when finishes are protected and ready to live in.",
+    body: "Supervised execution, floors protected, a shared snag list we actually close—and a final walkthrough when the home is truly ready to live in.",
   },
 ] as const;
 
@@ -32,9 +32,9 @@ export function HomeProcessSteps() {
           From first call to handover—one team, clear stages
         </h2>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-stone-600">
-          The same structured journey you expect from national interior
-          brands—paired with direct access to designers and site leads who
-          know Pune societies and monsoon schedules.
+          The same structured journey you expect from the national interior
+          brands—with direct access to the designers and site leads who know
+          Pune’s societies, monsoon calendar, and Diwali deadlines.
         </p>
         <ol className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {steps.map((s) => (

@@ -7,8 +7,8 @@ type Props = {
 };
 
 export function CTASection({
-  title = "Book a free consultation",
-  subtitle = "Tell us your area in Pune—we’ll share ideas, a rough timeline, and what to budget before you commit.",
+  title = "Book a free site visit",
+  subtitle = "Tell us your society and area—Wagholi, Kharadi, Viman Nagar, anywhere in East Pune. We’ll visit, measure, and give you an honest estimate before you spend a rupee.",
 }: Props) {
   const wa = whatsappLink(
     `Hi ${COMPANY.name}, I'd like a free consultation. My area in Pune: `,

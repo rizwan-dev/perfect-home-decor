@@ -20,8 +20,9 @@ export function Footer() {
           <div>
             <p className="font-display text-2xl text-charcoal">{COMPANY.name}</p>
             <p className="mt-3 text-sm leading-relaxed text-stone-600">
-              Premium interior design and home services across Pune—measured
-              execution, transparent pricing, calm aesthetics.
+              Interior design, painting, false ceilings &amp; modular kitchens
+              for Pune homes—honest quotations, tidy sites, and finishes that
+              outlast the first monsoon.
             </p>
             <p className="mt-4 text-sm text-stone-600">{COMPANY.address}</p>
             <p className="mt-2 text-sm text-stone-500">{COMPANY.serviceAreaLine}</p>

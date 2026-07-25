@@ -27,7 +27,7 @@ export const servicesMeta: Record<
   "interior-design": {
     title: "Home Interior Design",
     short:
-      "End-to-end interior design for apartments and villas—layout, materials, lighting, and execution that feels calm and expensive.",
+      "Complete interiors for 1, 2 & 3 BHK flats and villas—layout, materials, lighting, and execution that feels calm, warm, and unmistakably yours.",
     heroImage: "/images/projects/living-room-false-ceiling.jpg",
     keywords: [
       "interior designer Pune",
@@ -51,21 +51,21 @@ export const servicesMeta: Record<
   "modular-kitchen": {
     title: "Modular Kitchen",
     short:
-      "Ergonomic kitchen layouts, premium finishes, and water-smart storage—built for Indian cooking and Pune’s climate.",
+      "Ergonomic layouts, premium finishes, and storage planned down to the masala shelf—kitchens built for daily Indian cooking and Pune’s humid monsoons.",
     heroImage: "/images/projects/render-kitchen-dining.jpg",
     keywords: ["modular kitchen Pune", "kitchen interior", "parallel kitchen"],
   },
   "home-painting": {
     title: "Wall Painting",
     short:
-      "Low-VOC finishes, crisp lines, and colour palettes that suit Pune’s natural light—from soft neutrals to bold accents.",
+      "Low-odour paints, crisp lines, and palettes chosen for Pune’s light—scheduled around the monsoon so walls cure properly and colours stay true.",
     heroImage: "/images/projects/living-room-blue-accent.jpg",
     keywords: ["home painting Pune", "wall painting", "texture paint"],
   },
   "false-ceiling": {
     title: "False Ceiling (POP)",
     short:
-      "Layered ceilings, cove lighting, and clean profiles that hide services while keeping rooms bright and airy.",
+      "Layered ceilings, cove lighting, and clean profiles that hide wiring and AC piping—while keeping standard Pune flat heights bright and airy.",
     heroImage: "/images/projects/ceiling-wooden-cove-wallpaper.jpg",
     keywords: ["false ceiling Pune", "POP ceiling", "gypsum ceiling"],
   },

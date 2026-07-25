@@ -25,8 +25,8 @@ import { homeFaqForSchema } from "@/lib/home-faq";
 import { faqJsonLd } from "@/lib/json-ld";
 
 export const metadata: Metadata = {
-  title: "Premium interior design & home services in Pune",
-  description: `${COMPANY.name} — turnkey home and commercial interiors for Kharadi, Lohegaon, Magarpatta & East Pune: offices, retail, Forest County, Gera World of Joy, VTP, kitchens, ceilings, paint & furniture.`,
+  title: "Interior designer in Pune — homes across Kharadi & East Pune",
+  description: `${COMPANY.name}: complete home interiors, modular kitchens, false ceilings, painting & wallpaper in Kharadi, Wagholi, Viman Nagar & East Pune. Free site visit, item-by-item quotes, 5.0★ on Google.`,
   alternates: { canonical: "/" },
   keywords: [
     "interior designer Pune",
@@ -67,14 +67,15 @@ export default async function HomePage() {
             Turnkey interiors
           </p>
           <h1 className="animate-fade-up animate-delay-1 mt-4 max-w-3xl font-display text-4xl leading-[1.08] tracking-tight text-cream sm:text-5xl lg:text-[3.25rem] lg:leading-[1.06] xl:text-6xl">
-            Turnkey interiors for the towers that define Pune’s skyline.
+            From possession to housewarming, the interiors your Pune home
+            deserves.
           </h1>
           <p className="animate-fade-up animate-delay-2 mt-6 max-w-2xl text-base leading-relaxed text-cream/90 sm:text-lg">
-            {COMPANY.name} delivers full-home and single-scope interiors—design
-            drawings, modular kitchens, false ceilings, paint systems, and custom
-            furniture—with one accountable team from first site visit to snag-free
-            handover in Kharadi, Lohegaon, Magarpatta, Viman Nagar, Wagholi, and
-            neighbouring micro-markets.
+            {COMPANY.name} designs and builds complete home interiors—modular
+            kitchens, wardrobes, false ceilings, painting, and wallpaper—for
+            families in Kharadi, Wagholi, Viman Nagar, Lohegaon, Magarpatta, and
+            Kesnand. One team, one clear quotation, and one number that always
+            picks up.
           </p>
           <div className="animate-fade-up animate-delay-2 mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Link
@@ -146,7 +147,7 @@ export default async function HomePage() {
         <SectionHeading
           eyebrow="Services"
           title="Everything your home needs—from shell to styling"
-          description="Pick one discipline or hand us the keys for a coordinated turnkey. We speak civil, electrical, HVAC, and finishing—so you are not translating between vendors."
+          description="Take a single service or hand us the whole home. From one accent wall to a full 3 BHK, the same team plans, quotes, and delivers—so you never have to referee between a painter, a carpenter, and an electrician."
         />
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICE_SLUGS.map((slug) => (
@@ -164,7 +165,7 @@ export default async function HomePage() {
           <SectionHeading
             eyebrow="Why Perfect Home Decor"
             title="The discipline of a large firm. The access of a dedicated studio."
-            description="Structured design reviews, factory-checked modulars, and milestone billing like national interior brands—paired with WhatsApp-first project leads who know your society’s lift timings, duct routes, and handover checklists."
+            description="Structured design reviews, factory-checked modular units, and milestone billing like the national brands—paired with WhatsApp-first project leads who know your society’s lift bookings, work-hour rules, and handover checklists."
           />
           <ul className="mt-12 grid gap-6 sm:grid-cols-3">
             <li className="rounded-2xl border border-stone-200 bg-cream/40 p-6 shadow-sm">
@@ -242,7 +243,7 @@ export default async function HomePage() {
         <SectionHeading
           eyebrow="Areas we serve"
           title="Interior designers across East Pune & beyond"
-          description="Each locality has different towers, light, and society rules. Open your area for services, landmarks, and FAQs written for homeowners—not generic filler."
+          description="Kharadi’s glass towers, Wagholi’s new possessions, Viman Nagar’s established societies—each area has its own light, layouts, and rules. Open your locality for services, landmarks, and FAQs written for your side of Pune."
         />
         <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {AREAS.map((a) => (

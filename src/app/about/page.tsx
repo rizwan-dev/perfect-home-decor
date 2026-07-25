@@ -61,7 +61,7 @@ export default async function AboutPage() {
               href="/contact"
               className="inline-flex items-center justify-center rounded-full bg-cream px-8 py-3.5 text-sm font-semibold text-charcoal shadow-lg transition hover:bg-white"
             >
-              Get free consultation
+              Book a free site visit
             </Link>
             <Link
               href="/projects"
@@ -183,9 +183,9 @@ export default async function AboutPage() {
                 Written BOQs—not verbal guesses
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-stone-600 sm:text-base">
-                Quantities and finishes are listed before mobilisation so you can
-                compare fairly, phase spends, and avoid surprise line items mid-way
-                through civil or modular.
+                Quantities and finishes are listed in writing before work starts,
+                so you can compare quotes fairly, phase your spending, and never
+                meet a surprise line item halfway through the job.
               </p>
             </li>
             <li className="rounded-3xl border border-stone-200/90 bg-white p-8 shadow-[0_2px_24px_-18px_rgba(28,25,23,0.12)]">
