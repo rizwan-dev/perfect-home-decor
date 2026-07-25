@@ -43,7 +43,8 @@ export const metadata: Metadata = {
 
 export default async function HomePage() {
   const googleStats = await getGooglePlaceReviewStats();
-  const heroImage = "/images/projects/living-room-tv-unit-fluted-panel.jpg";
+  const heroImage =
+    "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&q=80";
   return (
     <>
       <JsonLd
@@ -56,10 +57,10 @@ export default async function HomePage() {
             alt="Warm contemporary living room interior"
             fill
             priority
-            className="object-cover opacity-70"
+            className="object-cover opacity-60"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/70 to-charcoal/25" />
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/75 to-charcoal/40" />
         </div>
         <div className="relative mx-auto flex min-h-[78vh] max-w-6xl flex-col justify-center px-4 py-24 sm:px-6 lg:px-8">
           <p className="animate-fade-up text-xs font-semibold uppercase tracking-[0.25em] text-cream/80">

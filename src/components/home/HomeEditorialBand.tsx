@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const src =
-  "/images/projects/render-wood-staircase.jpg";
+  "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=2400&q=80";
 
 /** Full-width visual rhythm between content sections (premium editorial feel). */
 export function HomeEditorialBand() {
