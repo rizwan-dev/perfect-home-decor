@@ -15,7 +15,7 @@ export type BlogPost = {
   sections: { heading: string; paragraphs: string[] }[];
 };
 
-/** Stable Unsplash URLs (images.unsplash.com, w=1600) — do not swap IDs without re-checking. */
+/** Post images are served from /public — real project photos where available, curated stock otherwise. */
 export const blogPosts: BlogPost[] = [
   {
     slug: "modular-kitchen-pune-checklist-before-you-sign",
@@ -376,7 +376,7 @@ export const blogPosts: BlogPost[] = [
     author: "Perfect Home Decor",
     category: "Waterproofing",
     image:
-      "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1600&q=80&auto=format&fit=crop",
+      "/images/stock/blog-waterproofing.jpg",
     keywords: [
       "waterproofing bathroom Pune",
       "balcony waterproofing",
@@ -821,7 +821,7 @@ export const blogPosts: BlogPost[] = [
     author: "Perfect Home Decor",
     category: "Study & office",
     image:
-      "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1600&q=80&auto=format&fit=crop",
+      "/images/stock/blog-home-office.jpg",
     keywords: [
       "home office interior Pune",
       "study room design Pune",
@@ -906,7 +906,7 @@ export const blogPosts: BlogPost[] = [
     author: "Perfect Home Decor",
     category: "Festivals",
     image:
-      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=1600&q=80&auto=format&fit=crop",
+      "/images/stock/blog-diwali-decor.jpg",
     keywords: [
       "Diwali home decoration",
       "Diwali cleaning checklist",

@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
+import { ProjectStrip } from "@/components/ProjectStrip";
 import { JsonLd } from "@/components/JsonLd";
 import { LeadForm } from "@/components/LeadForm";
 import { SectionHeading } from "@/components/SectionHeading";
 import { AREAS, COMPANY, SITE_URL, type AreaSlug } from "@/lib/site";
 import { locationContent } from "@/lib/locations-data";
 import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/json-ld";
+import { projectsNearArea } from "@/lib/projects-data";
 import { SERVICE_SLUGS, servicesMeta } from "@/lib/services-data";
 
 const hero =
@@ -198,6 +200,13 @@ export function LocationLanding({ area }: { area: AreaSlug }) {
           <LeadForm source={`location:${area}`} />
         </div>
       </section>
+
+      <ProjectStrip
+        projects={projectsNearArea(c.areaLabel)}
+        eyebrow="Local proof"
+        title={`Interior work delivered around ${c.areaLabel}`}
+        description="Societies our team already knows—lift bookings, work hours, and handover checklists included."
+      />
 
       <CTASection
         title={`Interior designer in ${c.areaLabel} — book today`}

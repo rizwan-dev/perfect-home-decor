@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
+import { ProjectStrip } from "@/components/ProjectStrip";
 import { JsonLd } from "@/components/JsonLd";
 import { LeadForm } from "@/components/LeadForm";
 import { SectionHeading } from "@/components/SectionHeading";
 import { AREAS, COMPANY, SITE_URL, type AreaSlug } from "@/lib/site";
 import { falseCeilingLocationContent } from "@/lib/false-ceiling-locations-data";
 import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/json-ld";
+import { projectsNearArea } from "@/lib/projects-data";
 
 const heroImage =
   "/images/projects/bedroom-led-ceiling-wardrobe.jpg";
@@ -258,6 +260,13 @@ export function FalseCeilingLocationLanding({ area }: { area: AreaSlug }) {
           <LeadForm source={`false-ceiling-location:${area}`} />
         </div>
       </section>
+
+      <ProjectStrip
+        projects={projectsNearArea(c.areaLabel)}
+        eyebrow="Local proof"
+        title={`Recent projects in and around ${c.areaLabel}`}
+        description="Ceilings, lighting, and full interiors delivered near you."
+      />
 
       <CTASection
         title={`False ceiling in ${c.areaLabel} — ${COMPANY.name}`}

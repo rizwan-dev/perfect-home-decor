@@ -1,3 +1,5 @@
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbJsonLd } from "@/lib/json-ld";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -43,6 +45,12 @@ export default function BlogIndexPage() {
 
   return (
     <>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+        ])}
+      />
       <section className="relative overflow-hidden border-b border-stone-200">
         <div className="absolute inset-0">
           <Image

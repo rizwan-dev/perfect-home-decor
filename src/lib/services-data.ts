@@ -40,7 +40,7 @@ export const servicesMeta: Record<
     short:
       "Offices, retail stores, and showrooms in Pune—brand-led layouts, efficient workflows, durable finishes, and on-time handover for working spaces.",
     heroImage:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=82&auto=format&fit=crop",
+      "/images/stock/office-open-workspace.jpg",
     keywords: [
       "office interior design Pune",
       "shop interior Pune",

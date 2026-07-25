@@ -9,6 +9,20 @@ export type ProjectItem = {
   alt: string;
 };
 
+/**
+ * Projects delivered in or right next to a locality — Magarpatta and Hadapsar
+ * are one service loop, so their landing pages share proof.
+ */
+export function projectsNearArea(areaLabel: string): ProjectItem[] {
+  const neighbours: Record<string, string[]> = {
+    Magarpatta: ["Magarpatta", "Hadapsar"],
+    Hadapsar: ["Hadapsar", "Magarpatta"],
+    Kesnand: ["Kesnand", "Wagholi"],
+  };
+  const match = neighbours[areaLabel] ?? [areaLabel];
+  return projects.filter((p) => match.includes(p.area));
+}
+
 export const projects: ProjectItem[] = [
   {
     id: "forest-county-kharadi",
@@ -152,7 +166,7 @@ export const projects: ProjectItem[] = [
     service: "commercial-interior-design",
     area: "Kharadi",
     image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=82&auto=format&fit=crop",
+      "/images/stock/office-open-workspace.jpg",
     alt: "Modern open-plan office with desks and natural light",
   },
   {
@@ -161,7 +175,7 @@ export const projects: ProjectItem[] = [
     service: "commercial-interior-design",
     area: "Viman Nagar",
     image:
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=1200&q=82&auto=format&fit=crop",
+      "/images/stock/retail-showroom.jpg",
     alt: "Retail interior with display shelving and warm lighting",
   },
 ];

@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { SocialIconLinks } from "@/components/SocialIconLinks";
-import { AREAS, COMPANY } from "@/lib/site";
+import {
+  AREAS,
+  COMPANY,
+  GOOGLE_BUSINESS_KNOWLEDGE_URL,
+  whatsappLink,
+} from "@/lib/site";
 import { SERVICE_SLUGS } from "@/lib/services-data";
 
 const serviceLabels: Record<string, string> = {
@@ -15,6 +20,53 @@ const serviceLabels: Record<string, string> = {
 export function Footer() {
   return (
     <footer className="border-t border-stone-200 bg-white">
+      {/* Pre-footer trust + action band */}
+      <div className="border-b border-stone-200 bg-stone-50/70">
+        <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-4 py-10 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+          <div>
+            <p className="font-display text-2xl tracking-tight text-charcoal">
+              Ready when you are.
+            </p>
+            <a
+              href={GOOGLE_BUSINESS_KNOWLEDGE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-flex items-center gap-2 text-sm text-stone-600 transition hover:text-charcoal"
+            >
+              <span className="tracking-[0.1em] text-amber-500" aria-hidden>
+                ★★★★★
+              </span>
+              <span>
+                {COMPANY.googleStarRating}.0 on Google · {COMPANY.googleReviewCount}+ reviews
+              </span>
+            </a>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href={`tel:${COMPANY.phoneTel}`}
+              className="inline-flex items-center rounded-full border border-stone-300 px-6 py-3 text-sm font-semibold text-charcoal transition hover:border-wood-dark hover:text-wood-dark"
+            >
+              Call {COMPANY.phoneDisplay}
+            </a>
+            <a
+              href={whatsappLink(
+                `Hi ${COMPANY.name}, I'd like a free site visit. My area in Pune: `,
+              )}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-full border border-stone-300 px-6 py-3 text-sm font-semibold text-charcoal transition hover:border-wood-dark hover:text-wood-dark"
+            >
+              WhatsApp
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex items-center rounded-full bg-charcoal px-6 py-3 text-sm font-semibold text-cream shadow-sm transition hover:bg-wood-dark"
+            >
+              Book a free site visit
+            </Link>
+          </div>
+        </div>
+      </div>
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>

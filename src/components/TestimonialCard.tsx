@@ -18,7 +18,13 @@ export function TestimonialCard({
   showStars = false,
 }: Props) {
   return (
-    <figure className="flex h-full flex-col rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+    <figure className="relative flex h-full flex-col rounded-3xl border border-stone-200/90 bg-white p-6 shadow-[0_1px_2px_rgba(28,25,23,0.04)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_40px_-24px_rgba(28,25,23,0.22)]">
+      <span
+        className="pointer-events-none absolute right-5 top-2 select-none font-display text-6xl leading-none text-stone-100"
+        aria-hidden
+      >
+        ”
+      </span>
       {service ? (
         <p className="mb-2 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-wood-dark">
           {service}

@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const src =
-  "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=2400&q=80";
+  "/images/stock/editorial-living-room.jpg";
 
 /** Full-width visual rhythm between content sections (premium editorial feel). */
 export function HomeEditorialBand() {

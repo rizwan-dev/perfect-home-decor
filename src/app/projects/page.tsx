@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { SectionHeading } from "@/components/SectionHeading";
 import { CTASection } from "@/components/CTASection";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbJsonLd } from "@/lib/json-ld";
 import { COMPANY, SITE_URL } from "@/lib/site";
 import { projects } from "@/lib/projects-data";
 import { ProjectsGrid } from "./ProjectsGrid";
@@ -18,6 +20,26 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Projects", path: "/projects" },
+        ])}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: `Interior design projects in Pune — ${COMPANY.name}`,
+          numberOfItems: projects.length,
+          itemListElement: projects.map((p, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: p.title,
+            image: p.image.startsWith("/") ? `${SITE_URL}${p.image}` : p.image,
+          })),
+        }}
+      />
       <section className="border-b border-stone-200 bg-white">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
           <SectionHeading

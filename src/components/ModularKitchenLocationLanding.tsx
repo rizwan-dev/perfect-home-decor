@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
+import { ProjectStrip } from "@/components/ProjectStrip";
 import { JsonLd } from "@/components/JsonLd";
 import { LeadForm } from "@/components/LeadForm";
 import { SectionHeading } from "@/components/SectionHeading";
 import { AREAS, COMPANY, SITE_URL, type AreaSlug } from "@/lib/site";
 import { modularKitchenLocationContent } from "@/lib/modular-kitchen-locations-data";
 import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/json-ld";
+import { projectsNearArea } from "@/lib/projects-data";
 
 const heroImage =
   "/images/projects/kitchen-grey-white.jpg";
@@ -258,6 +260,13 @@ export function ModularKitchenLocationLanding({ area }: { area: AreaSlug }) {
           <LeadForm source={`modular-kitchen-location:${area}`} />
         </div>
       </section>
+
+      <ProjectStrip
+        projects={projectsNearArea(c.areaLabel)}
+        eyebrow="Local proof"
+        title={`Recent projects in and around ${c.areaLabel}`}
+        description="Kitchens and full-home work delivered in nearby societies."
+      />
 
       <CTASection
         title={`Modular kitchen in ${c.areaLabel} — ${COMPANY.name}`}

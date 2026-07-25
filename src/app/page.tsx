@@ -21,6 +21,7 @@ import { HomeFaqSection } from "@/components/home/HomeFaqSection";
 import { HomeProcessSteps } from "@/components/home/HomeProcessSteps";
 import { HomeTrustStrip } from "@/components/home/HomeTrustStrip";
 import { JsonLd } from "@/components/JsonLd";
+import { Reveal } from "@/components/Reveal";
 import { homeFaqForSchema } from "@/lib/home-faq";
 import { faqJsonLd } from "@/lib/json-ld";
 
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
 export default async function HomePage() {
   const googleStats = await getGooglePlaceReviewStats();
   const heroImage =
-    "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&q=80";
+    "/images/stock/hero-living-room.jpg";
   return (
     <>
       <JsonLd
@@ -151,8 +152,10 @@ export default async function HomePage() {
           description="Take a single service or hand us the whole home. From one accent wall to a full 3 BHK, the same team plans, quotes, and delivers—so you never have to referee between a painter, a carpenter, and an electrician."
         />
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICE_SLUGS.map((slug) => (
-            <ServiceCard key={slug} slug={slug} />
+          {SERVICE_SLUGS.map((slug, i) => (
+            <Reveal key={slug} delay={(i % 3) * 90}>
+              <ServiceCard slug={slug} />
+            </Reveal>
           ))}
         </div>
       </section>
@@ -218,8 +221,10 @@ export default async function HomePage() {
           </Link>
         </div>
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.slice(0, 9).map((p) => (
-            <ProjectCard key={p.id} project={p} />
+          {projects.slice(0, 9).map((p, i) => (
+            <Reveal key={p.id} delay={(i % 3) * 90}>
+              <ProjectCard project={p} />
+            </Reveal>
           ))}
         </div>
       </section>
@@ -233,8 +238,10 @@ export default async function HomePage() {
             align="center"
           />
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {testimonials.map((t) => (
-              <TestimonialCard key={t.id} {...t} showStars />
+            {testimonials.map((t, i) => (
+              <Reveal key={t.id} delay={(i % 4) * 80}>
+                <TestimonialCard {...t} showStars />
+              </Reveal>
             ))}
           </div>
         </div>

@@ -4,6 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CTASection } from "@/components/CTASection";
 import { FaqAccordion } from "@/components/FaqAccordion";
+import { ProjectStrip } from "@/components/ProjectStrip";
+import { projects } from "@/lib/projects-data";
 import { JsonLd } from "@/components/JsonLd";
 import { LeadForm } from "@/components/LeadForm";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -95,6 +97,7 @@ export default async function ServicePage({ params }: Props) {
 
   const relatedSlugs = SERVICE_SLUGS.filter((s) => s !== slug);
   const localityBlock = serviceLocalityBlock(slug);
+  const serviceProjects = projects.filter((p) => p.service === slug);
 
   return (
     <>
@@ -359,6 +362,13 @@ export default async function ServicePage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      <ProjectStrip
+        projects={serviceProjects}
+        eyebrow="Delivered work"
+        title={`Recent ${meta.title.toLowerCase()} projects in Pune`}
+        description="Real sites, real finishes—photographed as handed over, not staged."
+      />
 
       <section className="border-t border-stone-200 bg-cream/60 py-14 sm:py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
