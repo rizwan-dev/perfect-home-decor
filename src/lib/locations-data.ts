@@ -41,6 +41,14 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
         q: "Can we phase kitchen first and bedrooms later?",
         a: "Common for families still living in the flat. We sequence dust-heavy work, protect services, and lock milestones per phase.",
       },
+      {
+        q: "Which societies in Kharadi have you worked in?",
+        a: "Recent deliveries include Forest County, Majestique Towers, Gera World of Joy, VTP Leonara, Marvel Zephyr, Kalpataru Jade Residences, Yashwant Enchante, and Godrej Rivergreens. If your tower is nearby, our team likely already knows its lift bookings and move-in rules.",
+      },
+      {
+        q: "What do full interiors for a Kharadi 2 or 3 BHK cost?",
+        a: "Woodwork quantity and material grade decide cost more than carpet area alone. After a free site visit you get an item-by-item quotation—many Kharadi clients phase it: kitchen and wardrobes before move-in, living-room woodwork and décor later.",
+      },
     ],
     metaDescription:
       "Premium interior design in Kharadi, Pune—modular kitchens, false ceilings, painting, and custom furniture. Local site experience near EON & WTC. Book a free consultation.",
@@ -72,6 +80,14 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
       {
         q: "Do you work with under-construction timelines?",
         a: "Yes—we align design milestones with possession dates and lock long-lead items early.",
+      },
+      {
+        q: "Which Wagholi societies have you delivered in?",
+        a: "Recent work spans Nyati Evita, Nyati Elan, Ivy State, Konark Exotica, Mansha, and a full-home painting project at Citron—and our own studio is on Awhalwadi Road, so Wagholi sites get the shortest response times of any area we serve.",
+      },
+      {
+        q: "We just got possession in Wagholi—what should we spend on first?",
+        a: "Start with what daily life needs: kitchen, wardrobes, and painting before the furniture arrives. Because our quotation is line-wise, you can defer false ceilings and feature walls to a later phase without redoing anything.",
       },
     ],
     metaDescription:
@@ -105,6 +121,10 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
         q: "Parking is tight—how do deliveries work?",
         a: "We schedule off-peak slots, use society lifts when permitted, and palletise materials to minimise lobby time.",
       },
+      {
+        q: "How is renovating an older Viman Nagar flat priced differently?",
+        a: "Renovation quotes carry lines a new flat never sees—dismantling, debris removal, and surface repair before anything new goes in. We survey first and price those honestly, so the comparison with a fresh-possession quote makes sense. Recent area work includes false ceiling and lighting at Rohan Mithila.",
+      },
     ],
     metaDescription:
       "Interior design in Viman Nagar, Pune—renovations, modular kitchens, false ceilings, painting. Airport-area experience. Book a consultation.",
@@ -136,6 +156,10 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
       {
         q: "Do you handle civil tweaks?",
         a: "Minor tweaks yes; structural changes route through your engineer—we coordinate drawings accordingly.",
+      },
+      {
+        q: "Have you delivered homes in Lohegaon itself?",
+        a: "Yes—including a full 3 BHK home interior at Rohan Abhilasha. Lohegaon sits minutes from our Wagholi studio, so site supervision visits happen more often, not less.",
       },
     ],
     metaDescription:
@@ -169,6 +193,10 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
         q: "Do you design home offices for hybrid work?",
         a: "We plan acoustic panels, task lighting, and cable paths so your background reads professional on calls.",
       },
+      {
+        q: "Do you also cover Amanora and Hadapsar?",
+        a: "Yes—Magarpatta, Amanora, and Hadapsar sit on the same daily service loop for us. Recent work includes a 3 BHK interior refresh at Amanora Neo Towers with geometric wallpaper and brass trims.",
+      },
     ],
     metaDescription:
       "Interior designer in Magarpatta, Pune—premium modular kitchens, false ceilings, painting, custom furniture. Township-ready execution. Free consult.",
@@ -200,6 +228,10 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
       {
         q: "Water supply can be irregular—does that affect work?",
         a: "We sequence curing and cleaning around availability and communicate realistic day plans.",
+      },
+      {
+        q: "What does finishing a bare-shell Kesnand home cost?",
+        a: "Shell homes are where line-wise quotations matter most—civil, electrical, ceilings, and finishes each get their own numbers, so you decide what happens now and what waits. The site visit and estimate are free, and Kesnand is ten minutes from our Wagholi studio.",
       },
     ],
     metaDescription:

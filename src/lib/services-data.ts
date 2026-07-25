@@ -89,7 +89,7 @@ export const servicePageCopy: Record<
 > = {
   "interior-design": {
     intro:
-      "We design homes that feel settled the day you move in—warm neutrals, honest materials, and layouts that respect how Pune families actually live. Whether you are renovating a compact flat or finishing a new build, we coordinate civil touch-ups, electrical planning, and finishing trades so you are not chasing five vendors.",
+      "We design homes that feel settled the day you move in—warm neutrals, honest materials, and layouts that respect how Pune families actually live. Most of our clients call us in one of two moments: just after collecting possession of a new flat in Kharadi, Wagholi, or Viman Nagar, or when a home they have lived in for years stops fitting the family it holds. Either way, we coordinate civil touch-ups, electrical planning, and finishing trades so you are not chasing five vendors between office and school runs.",
     benefits: [
       {
         title: "One accountable team",
@@ -142,6 +142,10 @@ export const servicePageCopy: Record<
       {
         q: "Can we choose our own brands for appliances?",
         a: "Absolutely. We coordinate sizes, services, and cabinetry cut-outs so installation day is smooth.",
+      },
+      {
+        q: "What does full home interior design cost in Pune?",
+        a: "It depends on carpet area, how much woodwork you want, and the material grades you choose—which is why we never quote from a phone call. After a free site visit you get an item-by-item quotation, so you can see exactly where the money goes, trim what you don't need, and phase the rest.",
       },
     ],
   },
@@ -201,11 +205,15 @@ export const servicePageCopy: Record<
         q: "How does commercial timing differ from homes?",
         a: "We work backward from your opening or occupancy date, buffer for approvals, and sequence civil, MEP, and finishes to avoid idle weeks.",
       },
+      {
+        q: "How is a commercial fit-out priced?",
+        a: "Per-seat or per-square-foot benchmarks are a starting point, but the real drivers are ceiling and AC scope, partition count, and front-of-house finishes. After a site survey you get a milestone-wise quotation, so capex approval and cash flow planning have real numbers behind them.",
+      },
     ],
   },
   "modular-kitchen": {
     intro:
-      "Kitchens are the busiest room in the house—we design them for flow, ventilation, and storage depth. From compact parallel layouts along Pune apartment walls to island-led social kitchens, we engineer carcass strength, soft-close hardware, and quartz or granite tops that tolerate heat and spills.",
+      "Kitchens are the busiest room in the house—we design them for flow, ventilation, and storage depth. Most Pune builder kitchens arrive as a bare platform and a chimney duct; we turn that shell into a kitchen that works for daily dal-chawal cooking and Sunday biryani alike. From compact parallel layouts along apartment walls to island-led social kitchens, we engineer carcass strength, soft-close hardware, and quartz or granite tops that tolerate heat, haldi, and spills.",
     benefits: [
       {
         title: "Triangle that fits your plan",
@@ -259,11 +267,15 @@ export const servicePageCopy: Record<
         q: "Warranty on modular work?",
         a: "Hardware and factory modules carry manufacturer terms; we document handover checks so claims are straightforward.",
       },
+      {
+        q: "How much does a modular kitchen cost in Pune?",
+        a: "The honest answer: it hinges on the layout (parallel, L, or island), the number of drawers versus shutters, and hardware grade—drawers and tall units cost more but earn their keep daily. We measure your kitchen free of charge and give a line-wise quote, so you can start with the essentials and add loft units or accessories later.",
+      },
     ],
   },
   "home-painting": {
     intro:
-      "Paint transforms light. We prepare surfaces properly—filling undulations, priming for adhesion, and choosing finishes that survive Pune’s mix of heat, dust, and moisture. From soft limewash moods to crisp trims in rental upgrades, we keep edges clean and schedules realistic.",
+      "Paint transforms light. We prepare surfaces properly—filling undulations, priming for adhesion, and choosing finishes that survive Pune’s mix of summer heat, construction dust, and four months of monsoon damp. Whether it is a fresh coat before Diwali, a full repaint after tenants move out, or first paint on a bare possession flat, we keep edges clean and schedules realistic—so the house smells like a home again, not a work site.",
     benefits: [
       {
         title: "True colour in your room",
@@ -317,11 +329,15 @@ export const servicePageCopy: Record<
         q: "Do you supply material or labour only?",
         a: "We can do turnkey supply-and-apply or align with your architect’s specified brands.",
       },
+      {
+        q: "What does house painting cost per square foot in Pune?",
+        a: "Per-square-foot rates you see online usually ignore the part that decides how long paint lasts: surface preparation. A wall that needs crack filling and two primer coats costs more than one that needs a refresh coat—and quoting both the same number is how repaints go wrong. We inspect your walls free, then quote prep and paint separately so you can compare fairly.",
+      },
     ],
   },
   "false-ceiling": {
     intro:
-      "Ceilings organise light and hide services without shrinking the room visually. We design profiles for cove LED, focus spots over dining, and acoustic comfort in TV rooms. POP and gypsum systems are detailed to access panels where AC servicing or wiring may be needed later.",
+      "Ceilings organise light and hide services without shrinking the room visually. In most Pune flats the slab arrives crowded—AC piping, fire sprinklers in newer towers, and wiring that was never meant to be seen. We design POP and gypsum profiles that tuck all of it away: cove LED for the living room, focus spots over dining, acoustic comfort in TV rooms, and access panels where AC servicing or wiring will be needed later.",
     benefits: [
       {
         title: "Layered lighting plans",
@@ -375,11 +391,15 @@ export const servicePageCopy: Record<
         q: "Can you retrofit in occupied homes?",
         a: "Yes, with dust control and phased rooms. We’ll flag furniture moves upfront.",
       },
+      {
+        q: "What does a false ceiling cost in Pune?",
+        a: "Pricing follows the design, not just the area: a plain peripheral border costs less than layered profiles with cove lighting and curves, and material choice (gypsum vs POP) shifts it further. Share your room sizes on WhatsApp for a ballpark, or book a free visit for a firm line-wise quote including lighting points.",
+      },
     ],
   },
   "custom-furniture": {
     intro:
-      "Built-ins should feel intentional—not kit-furniture stretched to fit. We design TV units with cable management, beds with lift storage where ceilings allow, and wardrobes segmented for seasons and travel gear. Finishes tie back to your interior palette for a gallery-like calm.",
+      "Built-ins should feel intentional—not kit-furniture stretched to fit. Pune flats rarely have spare square feet, so every unit has to earn its wall: TV units with cable management, beds with lift-up storage for the suitcases and winter razais, wardrobes segmented for office wear, sarees, and school bags. Finishes tie back to your interior palette for a gallery-like calm.",
     benefits: [
       {
         title: "Exact millimetres",
