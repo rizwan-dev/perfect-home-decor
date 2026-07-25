@@ -2,16 +2,13 @@ import type { GooglePlaceReviewStats } from "@/lib/google-place-reviews";
 import { COMPANY, GOOGLE_BUSINESS_KNOWLEDGE_URL, SITE_URL } from "./site";
 
 export function localBusinessJsonLd(googleStats?: GooglePlaceReviewStats | null) {
-  const rating = googleStats?.rating ?? COMPANY.googleStarRating;
-  const reviewCount =
-    googleStats?.userRatingsTotal ?? COMPANY.googleReviewCount;
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": `${SITE_URL}/#business`,
     name: COMPANY.name,
-    image:
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80",
+    image: `${SITE_URL}/images/projects/living-room-marble-tv-unit.jpg`,
+    logo: `${SITE_URL}/images/brand/logo.png`,
     url: SITE_URL,
     telephone: COMPANY.phoneTel,
     email: COMPANY.email,
@@ -52,29 +49,35 @@ export function localBusinessJsonLd(googleStats?: GooglePlaceReviewStats | null)
       opens: "10:00",
       closes: "19:00",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: String(rating),
-      bestRating: "5",
-      worstRating: "1",
-      reviewCount: String(reviewCount),
-    },
-    review: [
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Ananya K." },
-        reviewBody:
-          "They translated our ideas into a calmer, more cohesive home. Execution was predictable.",
-        reviewRating: { "@type": "Rating", ratingValue: "5" },
-      },
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Rohit S." },
-        reviewBody:
-          "Society coordination was smooth and the finishing detail stood out.",
-        reviewRating: { "@type": "Rating", ratingValue: "5" },
-      },
-    ],
+    // aggregateRating is only emitted when live Google Places data is
+    // available — hardcoded fallback ratings without visible on-page reviews
+    // risk a structured-data manual action.
+    ...(googleStats?.source === "google"
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: String(googleStats.rating),
+            bestRating: "5",
+            worstRating: "1",
+            reviewCount: String(googleStats.userRatingsTotal),
+          },
+        }
+      : {}),
+  };
+}
+
+export function breadcrumbJsonLd(
+  items: { name: string; path: string }[],
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: `${SITE_URL}${item.path}`,
+    })),
   };
 }
 
@@ -105,13 +108,16 @@ export function blogPostingJsonLd(input: {
   keywords?: string[];
 }) {
   const url = `${SITE_URL}/blog/${input.slug}`;
+  const absoluteImage = input.image?.startsWith("/")
+    ? `${SITE_URL}${input.image}`
+    : input.image;
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: input.title,
     description: input.description,
     datePublished: input.publishedAt,
-    ...(input.image ? { image: [input.image] } : {}),
+    ...(absoluteImage ? { image: [absoluteImage] } : {}),
     ...(input.articleSection
       ? { articleSection: input.articleSection }
       : {}),

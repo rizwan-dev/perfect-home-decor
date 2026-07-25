@@ -11,7 +11,7 @@ export function HomeTrustStrip({
 }: Props) {
   const items = [
     {
-      label: "Free consultation & site visit",
+      label: "Free site visit & consultation",
       sub: "Same-day callbacks · Pune-wide",
     },
     {
@@ -57,6 +57,16 @@ export function HomeTrustStrip({
             </li>
           ))}
         </ul>
+        <p className="mt-7 border-t border-stone-100 pt-5 text-center text-xs leading-relaxed text-stone-500">
+          <span className="font-semibold uppercase tracking-[0.14em] text-stone-400">
+            Materials we specify
+          </span>
+          <span className="mx-2 text-stone-300" aria-hidden>
+            —
+          </span>
+          Asian Paints &amp; Berger paint systems · Gyproc ceilings · branded
+          boards &amp; hardware, documented in your BOQ
+        </p>
       </div>
     </section>
   );

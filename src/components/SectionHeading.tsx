@@ -3,6 +3,8 @@ type Props = {
   title: string;
   description?: string;
   align?: "left" | "center";
+  /** Heading level — pages without another h1 should promote their lead SectionHeading. */
+  as?: "h1" | "h2";
 };
 
 export function SectionHeading({
@@ -10,6 +12,7 @@ export function SectionHeading({
   title,
   description,
   align = "left",
+  as: Heading = "h2",
 }: Props) {
   return (
     <div
@@ -24,9 +27,9 @@ export function SectionHeading({
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="mt-2 font-display text-3xl tracking-tight text-charcoal sm:text-4xl">
+      <Heading className="mt-2 font-display text-3xl tracking-tight text-charcoal sm:text-4xl">
         {title}
-      </h2>
+      </Heading>
       {description ? (
         <p className="mt-4 text-base leading-relaxed text-stone-600">
           {description}

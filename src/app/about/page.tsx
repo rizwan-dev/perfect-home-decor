@@ -8,8 +8,7 @@ import {
 } from "@/lib/google-place-reviews";
 import { COMPANY, SITE_URL } from "@/lib/site";
 
-const heroImage =
-  "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=82&auto=format&fit=crop";
+const heroImage = "/images/projects/living-room-false-ceiling.jpg";
 
 export const metadata: Metadata = {
   title: "About us — Perfect Home Decor Pune",
@@ -125,8 +124,8 @@ export default async function AboutPage() {
         <div className="mx-auto grid max-w-6xl gap-14 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-16 lg:px-8 lg:py-24">
           <div className="relative order-2 aspect-[4/5] overflow-hidden rounded-3xl bg-stone-100 shadow-[0_24px_60px_-28px_rgba(28,25,23,0.25)] ring-1 ring-stone-900/[0.06] lg:order-1">
             <Image
-              src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=900&q=82&auto=format&fit=crop"
-              alt="Materials, finishes, and interior design planning at Perfect Home Decor"
+              src="/images/projects/bedroom-hexagon-headboard.jpg"
+              alt="Custom bedroom headboard wall and wood panelling crafted by Perfect Home Decor"
               fill
               className="object-cover"
               sizes="(max-width:1024px) 100vw, 50vw"

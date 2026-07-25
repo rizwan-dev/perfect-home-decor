@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { CTASection } from "@/components/CTASection";
 import { JsonLd } from "@/components/JsonLd";
 import { COMPANY, SITE_URL } from "@/lib/site";
-import { blogPostingJsonLd } from "@/lib/json-ld";
+import { blogPostingJsonLd, breadcrumbJsonLd } from "@/lib/json-ld";
 import { blogPosts, getPostBySlug } from "@/lib/blog-data";
 import {
   estimateReadMinutes,
@@ -74,6 +74,13 @@ export default async function BlogPostPage({ params }: Props) {
           articleSection: post.category,
           keywords: post.keywords,
         })}
+      />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: post.title, path: `/blog/${post.slug}` },
+        ])}
       />
 
       <article>

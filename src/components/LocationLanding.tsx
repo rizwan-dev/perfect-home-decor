@@ -6,11 +6,11 @@ import { LeadForm } from "@/components/LeadForm";
 import { SectionHeading } from "@/components/SectionHeading";
 import { AREAS, COMPANY, SITE_URL, type AreaSlug } from "@/lib/site";
 import { locationContent } from "@/lib/locations-data";
-import { faqJsonLd, serviceJsonLd } from "@/lib/json-ld";
+import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/json-ld";
 import { SERVICE_SLUGS, servicesMeta } from "@/lib/services-data";
 
 const hero =
-  "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1920&q=80";
+  "/images/projects/living-room-marble-tv-unit.jpg";
 
 export function LocationLanding({ area }: { area: AreaSlug }) {
   const c = locationContent[area];
@@ -25,7 +25,13 @@ export function LocationLanding({ area }: { area: AreaSlug }) {
           url: `${SITE_URL}${path}`,
         })}
       />
-      <JsonLd data={faqJsonLd(c.localFaq)} />
+      <JsonLd data={faqJsonLd(c.localFaq, { pageUrl: `${SITE_URL}${path}` })} />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: `Interior designer in ${c.areaLabel}`, path },
+        ])}
+      />
 
       <section className="relative bg-charcoal">
         <div className="absolute inset-0">
@@ -62,12 +68,12 @@ export function LocationLanding({ area }: { area: AreaSlug }) {
             >
               Free site visit in {c.areaLabel}
             </Link>
-            <Link
+            <a
               href={`tel:${COMPANY.phoneTel}`}
               className="inline-flex justify-center rounded-full border border-cream/40 px-8 py-3.5 text-sm font-semibold text-cream transition hover:bg-white/10"
             >
               Call {COMPANY.phoneDisplay}
-            </Link>
+            </a>
           </div>
         </div>
       </section>

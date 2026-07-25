@@ -8,6 +8,43 @@ import {
 
 export const runtime = "nodejs";
 
+/**
+ * Best-effort per-IP throttle. In-memory, so it resets on redeploy and is
+ * per-serverless-instance — good enough to blunt casual form spam without
+ * adding infrastructure.
+ */
+const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000;
+const RATE_LIMIT_MAX = 5;
+const hits = new Map<string, number[]>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const windowStart = now - RATE_LIMIT_WINDOW_MS;
+  const recent = (hits.get(ip) ?? []).filter((t) => t > windowStart);
+  if (recent.length >= RATE_LIMIT_MAX) {
+    hits.set(ip, recent);
+    return true;
+  }
+  recent.push(now);
+  hits.set(ip, recent);
+  if (hits.size > 5000) hits.clear();
+  return false;
+}
+
+const MAX_LENGTHS = {
+  name: 120,
+  phone: 20,
+  area: 120,
+  service: 60,
+  message: 2000,
+  source: 80,
+} as const;
+
+function clip(value: string | undefined, max: number): string | undefined {
+  const v = value?.trim();
+  return v ? v.slice(0, max) : undefined;
+}
+
 /** Dev-only: open GET /api/lead in the browser to see if env vars load (no secrets). */
 export async function GET() {
   if (process.env.NODE_ENV !== "development") {
@@ -25,7 +62,24 @@ export async function GET() {
 
 export async function POST(req: Request) {
   try {
-    const body = (await req.json()) as Partial<LeadPayload>;
+    const ip =
+      req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+    if (isRateLimited(ip)) {
+      return NextResponse.json(
+        { ok: false, error: "Too many requests. Please call or WhatsApp us." },
+        { status: 429 },
+      );
+    }
+
+    const body = (await req.json()) as Partial<LeadPayload> & {
+      website?: string;
+    };
+
+    // Honeypot filled → almost certainly a bot. Report success, send nothing.
+    if (body?.website?.trim()) {
+      return NextResponse.json({ ok: true, emailSent: true });
+    }
+
     if (!body?.name?.trim() || !body?.phone?.trim()) {
       return NextResponse.json(
         { ok: false, error: "Name and phone are required" },
@@ -33,12 +87,21 @@ export async function POST(req: Request) {
       );
     }
 
+    const phone = body.phone.trim();
+    if (!/^[+]?[0-9\s\-()]{10,15}$/.test(phone)) {
+      return NextResponse.json(
+        { ok: false, error: "Please enter a valid phone number" },
+        { status: 400 },
+      );
+    }
+
     const payload: LeadPayload = {
-      name: body.name.trim(),
-      phone: body.phone.trim(),
-      area: body.area?.trim(),
-      message: body.message?.trim(),
-      source: body.source?.trim() || "website",
+      name: clip(body.name, MAX_LENGTHS.name)!,
+      phone: phone.slice(0, MAX_LENGTHS.phone),
+      area: clip(body.area, MAX_LENGTHS.area),
+      service: clip(body.service, MAX_LENGTHS.service),
+      message: clip(body.message, MAX_LENGTHS.message),
+      source: clip(body.source, MAX_LENGTHS.source) || "website",
     };
 
     if (!isSmtpConfigured()) {

@@ -6,10 +6,10 @@ import { LeadForm } from "@/components/LeadForm";
 import { SectionHeading } from "@/components/SectionHeading";
 import { AREAS, COMPANY, SITE_URL, type AreaSlug } from "@/lib/site";
 import { falseCeilingLocationContent } from "@/lib/false-ceiling-locations-data";
-import { faqJsonLd, serviceJsonLd } from "@/lib/json-ld";
+import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/json-ld";
 
 const heroImage =
-  "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80&auto=format&fit=crop";
+  "/images/projects/bedroom-led-ceiling-wardrobe.jpg";
 
 export function FalseCeilingLocationLanding({ area }: { area: AreaSlug }) {
   const c = falseCeilingLocationContent[area];
@@ -27,6 +27,12 @@ export function FalseCeilingLocationLanding({ area }: { area: AreaSlug }) {
       />
       <JsonLd
         data={faqJsonLd(c.localFaq, { pageUrl: `${SITE_URL}${path}` })}
+      />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: `False ceiling in ${c.areaLabel}`, path },
+        ])}
       />
 
       <section className="relative overflow-hidden border-b border-stone-200 bg-stone-900">
@@ -80,12 +86,12 @@ export function FalseCeilingLocationLanding({ area }: { area: AreaSlug }) {
             >
               Free ceiling consult in {c.areaLabel}
             </Link>
-            <Link
+            <a
               href={`tel:${COMPANY.phoneTel}`}
               className="inline-flex justify-center rounded-full border border-cream/40 px-8 py-3.5 text-sm font-semibold text-cream transition hover:bg-white/10"
             >
               Call {COMPANY.phoneDisplay}
-            </Link>
+            </a>
             <Link
               href="/services/false-ceiling"
               className="inline-flex justify-center rounded-full border border-cream/25 px-8 py-3.5 text-sm font-semibold text-cream/90 transition hover:bg-white/10"

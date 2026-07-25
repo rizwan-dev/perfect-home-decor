@@ -27,21 +27,21 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${COMPANY.name} | Premium interiors & home services in Pune`,
+    default: `${COMPANY.name} | Interior Designer in Pune — Painting, False Ceiling & Modular Kitchens`,
     template: `%s | ${COMPANY.name}`,
   },
-  description: COMPANY.tagline,
+  description: `${COMPANY.name}: interior design, home painting, false ceilings (POP), modular kitchens & wallpaper across Kharadi, Wagholi, Viman Nagar & East Pune. Free site visit, transparent quotes.`,
   openGraph: {
     type: "website",
     locale: "en_IN",
     siteName: COMPANY.name,
-    title: `${COMPANY.name} — Pune interiors`,
-    description: COMPANY.tagline,
+    title: `${COMPANY.name} — Interiors, painting & false ceilings in Pune`,
+    description: `Turnkey home interiors and single-scope work with one accountable team. ${COMPANY.serviceAreaLine}.`,
   },
   twitter: {
     card: "summary_large_image",
-    title: COMPANY.name,
-    description: COMPANY.tagline,
+    title: `${COMPANY.name} — Interiors & home services, Pune`,
+    description: `Interior design, painting, false ceilings, modular kitchens & wallpaper. Free site visit across East Pune.`,
   },
   robots: {
     index: true,

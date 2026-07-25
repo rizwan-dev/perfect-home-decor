@@ -1,9 +1,13 @@
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://perfecthomedecor.in";
 
-/** Google Search URL that opens the business knowledge panel (Google Business Profile). */
+/**
+ * Stable link to the Google Business Profile (Maps listing).
+ * CID 15641839200569855066 == ftid 0x3bc2c345208138ed:0xd912f9e0ffbf0c5a;
+ * Places API Place ID: ChIJ7TiBIEXDwjsRWgy__-D5Etk (see .env.example).
+ */
 export const GOOGLE_BUSINESS_KNOWLEDGE_URL =
-  "https://www.google.com/search?gs_ssp=eJzj4tVP1zc0LLFItiwrLLQ0YLRSNagwTko2SjY2MTUysDA0tkhNsTKoSLE0NEqzTDVIS0tKM0g2TfQSKkgtSktNLlHIyM9NVUhJTc4vAgAWphaG&q=perfect+home+decor&rlz=1C5GCCM_en&oq=per&gs_lcrp=EgZjaHJvbWUqEggBEC4YJxivARjHARiABBiKBTIGCAAQRRg7MhIIARAuGCcYrwEYxwEYgAQYigUyBggCEEUYOTIGCAMQRRg7MgoIBBAAGLEDGIAEMgoIBRAAGLEDGIAEMgYIBhBFGDwyBggHEEUYPNIBCDMxMDBqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8";
+  "https://maps.google.com/?cid=15641839200569855066";
 
 export const COMPANY = {
   name: "Perfect Home Decor",
@@ -15,10 +19,10 @@ export const COMPANY = {
   state: "Maharashtra",
   country: "IN",
   postalCode: "412207",
-  streetAddress: "405, Jubilation Society, Ahwalwadi Road",
+  streetAddress: "405, Jubilation Society, Awhalwadi Road",
   /** Full mailing / visit address (single line) */
   address:
-    "405, Jubilation Society, Ahwalwadi Road, Wagholi, Pune 412207, Maharashtra",
+    "405, Jubilation Society, Awhalwadi Road, Wagholi, Pune 412207, Maharashtra",
   /** Service coverage (separate from registered office) */
   serviceAreaLine:
     "Serving Kharadi, Wagholi, Viman Nagar, Lohegaon, Magarpatta, Kesnand & nearby Pune",
@@ -43,12 +47,13 @@ export const COMPANY = {
   /**
    * Fallback review count when `GOOGLE_PLACES_API_KEY` + `GOOGLE_PLACE_ID` are not set
    * or the Places API request fails. Prefer configuring env for live counts.
+   * Matches the live Google Business Profile as of 2026-07-25 (5.0★, 570 reviews).
    */
-  googleReviewCount: 560,
+  googleReviewCount: 570,
   facebookUrl: "https://www.facebook.com/theperfecthomedecor",
   instagramUrl: "https://www.instagram.com/perfecthomedecore/",
-  mapEmbedUrl:
-    "https://www.google.com/maps?q=Perfect+Home+Decor%2C+405%2C+Jubilation+Society%2C+Ahwalwadi+Road%2C+Wagholi%2C+Pune+412207&output=embed",
+  /** Keyless embed pinned to the exact Maps listing via CID (not an address search). */
+  mapEmbedUrl: "https://maps.google.com/maps?cid=15641839200569855066&output=embed",
 } as const;
 
 export function whatsappLink(message: string) {

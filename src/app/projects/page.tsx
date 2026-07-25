@@ -21,6 +21,7 @@ export default function ProjectsPage() {
       <section className="border-b border-stone-200 bg-white">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
           <SectionHeading
+            as="h1"
             eyebrow="Portfolio"
             title="Deliveries across Pune’s premium societies"
             description="From Forest County and Gera World of Joy to VTP Leonara and Marvel Zephyr—filter by discipline to see how we execute kitchens, ceilings, paint, furniture, and full-home turnkey scopes."

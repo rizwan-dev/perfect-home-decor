@@ -136,7 +136,7 @@ export const paintingLocationContent: Record<
       },
     ],
     differentiators: [
-      "Local studio on Ahwalwadi Road—short travel time for revisits and colour checks.",
+      "Local studio on Awhalwadi Road—short travel time for revisits and colour checks.",
       "Experience with Wagholi society formats from compact towers to podium parking logistics.",
       "Clear communication when builder plaster needs civil attention before aesthetic coats.",
     ],

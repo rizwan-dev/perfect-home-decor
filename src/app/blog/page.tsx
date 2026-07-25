@@ -33,7 +33,7 @@ function formatDate(iso: string) {
 }
 
 const heroImage =
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=82&auto=format&fit=crop";
+  "/images/projects/living-room-clock-wall.jpg";
 
 export default function BlogIndexPage() {
   const sorted = [...blogPosts].sort(

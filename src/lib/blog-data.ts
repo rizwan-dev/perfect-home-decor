@@ -27,7 +27,7 @@ export const blogPosts: BlogPost[] = [
     author: "Perfect Home Decor",
     category: "Modular kitchen",
     image:
-      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=80&auto=format&fit=crop",
+      "/images/projects/kitchen-grey-white.jpg",
     keywords: [
       "modular kitchen Pune",
       "modular kitchen checklist",
@@ -115,7 +115,7 @@ export const blogPosts: BlogPost[] = [
     author: "Perfect Home Decor",
     category: "Painting",
     image:
-      "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=1600&q=80&auto=format&fit=crop",
+      "/images/projects/living-room-blue-accent.jpg",
     keywords: [
       "home painting Pune",
       "wall painting Wagholi",
@@ -202,7 +202,7 @@ export const blogPosts: BlogPost[] = [
     author: "Perfect Home Decor",
     category: "False ceiling",
     image:
-      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=1600&q=80&auto=format&fit=crop",
+      "/images/projects/bedroom-led-ceiling-blue-wall.jpg",
     keywords: [
       "false ceiling Pune",
       "POP ceiling Wagholi",
@@ -288,7 +288,7 @@ export const blogPosts: BlogPost[] = [
     author: "Perfect Home Decor",
     category: "Interior design",
     image:
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1600&q=80&auto=format&fit=crop",
+      "/images/projects/living-room-false-ceiling.jpg",
     keywords: [
       "home interior design Pune",
       "turnkey interiors Pune",
@@ -453,7 +453,7 @@ export const blogPosts: BlogPost[] = [
     author: "Perfect Home Decor",
     category: "Bedroom",
     image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1600&q=80&auto=format&fit=crop",
+      "/images/projects/bedroom-hexagon-headboard.jpg",
     keywords: [
       "bedroom interior design Pune",
       "master bedroom interiors",
@@ -529,7 +529,7 @@ export const blogPosts: BlogPost[] = [
     author: "Perfect Home Decor",
     category: "Kids room",
     image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80&auto=format&fit=crop",
+      "/images/projects/bedroom-green-blinds.jpg",
     keywords: [
       "kids room interior Pune",
       "child bedroom design",
@@ -603,7 +603,7 @@ export const blogPosts: BlogPost[] = [
     author: "Perfect Home Decor",
     category: "Living room",
     image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=80&auto=format&fit=crop",
+      "/images/projects/living-room-marble-tv-unit.jpg",
     keywords: [
       "living room interior Pune",
       "TV unit design",
@@ -676,7 +676,7 @@ export const blogPosts: BlogPost[] = [
     author: "Perfect Home Decor",
     category: "Storage",
     image:
-      "https://images.unsplash.com/photo-1558997519-83ea9252edf8?w=1600&q=80&auto=format&fit=crop",
+      "/images/projects/wardrobe-sliding-dresser.jpg",
     keywords: [
       "modular wardrobe Pune",
       "sliding wardrobe bedroom",
@@ -748,7 +748,7 @@ export const blogPosts: BlogPost[] = [
     author: "Perfect Home Decor",
     category: "Dining",
     image:
-      "https://images.unsplash.com/photo-1617806118233-18e1de247200?w=1600&q=80&auto=format&fit=crop",
+      "/images/projects/render-kitchen-dining.jpg",
     keywords: [
       "dining room interior Pune",
       "compact dining design",
@@ -902,7 +902,7 @@ export const blogPosts: BlogPost[] = [
       "How to get your home ready for Diwali: cleaning, décor & safety checklist (Pune)",
     description:
       "Step-by-step guide to preparing your Pune home for Diwali—deep cleaning zones, lighting and electrical safety, entryway and guest flow, balcony diyas, paint touch-ups, MC-friendly rules, and calm hosting.",
-    publishedAt: "2026-09-28",
+    publishedAt: "2025-09-28",
     author: "Perfect Home Decor",
     category: "Festivals",
     image:

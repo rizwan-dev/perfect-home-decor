@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
-import { COMPANY, SITE_URL, type AreaSlug } from "./site";
+import { SITE_URL, type AreaSlug } from "./site";
 import { locationContent } from "./locations-data";
 
 export function locationPageMetadata(area: AreaSlug): Metadata {
   const c = locationContent[area];
   const path = `/interior-designer-in-${area}`;
   return {
-    title: `Interior designer in ${c.areaLabel} | ${COMPANY.name}`,
+    title: `Interior designer in ${c.areaLabel}`,
     description: c.metaDescription,
+    keywords: [
+      `interior designer ${c.areaLabel}`,
+      `interior design ${c.areaLabel} Pune`,
+      `home interiors ${c.areaLabel}`,
+      "interior designer Pune",
+    ],
     alternates: { canonical: path },
     openGraph: {
       title: c.headline,

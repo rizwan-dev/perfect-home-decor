@@ -98,7 +98,7 @@ function IconMapPin({ className }: { className?: string }) {
 }
 
 const contactHeroImage =
-  "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1400&q=82&auto=format&fit=crop";
+  "/images/projects/living-room-tv-unit-curtains.jpg";
 
 export default function ContactPage() {
   const mapIframeSrc = getContactMapIframeSrc();

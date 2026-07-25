@@ -34,7 +34,10 @@ export function LeadForm({
       name: String(fd.get("name") || ""),
       phone: String(fd.get("phone") || ""),
       area: String(fd.get("area") || ""),
+      service: String(fd.get("service") || ""),
       message: String(fd.get("message") || ""),
+      // Honeypot — real visitors never see or fill this field.
+      website: String(fd.get("website") || ""),
       source,
     };
     try {
@@ -111,8 +114,44 @@ export function LeadForm({
             required
             inputMode="tel"
             autoComplete="tel"
+            pattern="^[+]?[0-9\s\-()]{10,15}$"
+            title="Enter a valid phone number (10 digits, e.g. 90312 63531)"
             className="mt-1.5 w-full rounded-xl border border-stone-200 bg-cream/40 px-4 py-2.5 text-sm outline-none ring-wood-dark/30 transition focus:border-wood-dark focus:ring-2"
             placeholder="+91 …"
+          />
+        </div>
+        <div>
+          <label
+            htmlFor="lead-service"
+            className="text-sm font-medium text-charcoal"
+          >
+            Service you need
+          </label>
+          <select
+            id="lead-service"
+            name="service"
+            defaultValue=""
+            className="mt-1.5 w-full rounded-xl border border-stone-200 bg-cream/40 px-4 py-2.5 text-sm outline-none ring-wood-dark/30 transition focus:border-wood-dark focus:ring-2"
+          >
+            <option value="">Not sure yet</option>
+            <option>Full home interiors</option>
+            <option>Home painting</option>
+            <option>False ceiling (POP)</option>
+            <option>Modular kitchen</option>
+            <option>Wallpaper</option>
+            <option>Custom furniture</option>
+            <option>Commercial / office</option>
+          </select>
+        </div>
+        {/* Honeypot: hidden from humans; bots that fill it are silently dropped. */}
+        <div className="absolute -left-[9999px] top-auto h-px w-px overflow-hidden" aria-hidden="true">
+          <label htmlFor="lead-website">Website</label>
+          <input
+            id="lead-website"
+            name="website"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
           />
         </div>
         <div>

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { COMPANY, SITE_URL, type AreaSlug } from "./site";
+import { SITE_URL, type AreaSlug } from "./site";
 import { falseCeilingLocationContent } from "./false-ceiling-locations-data";
 
 export function falseCeilingLocationPageMetadata(area: AreaSlug): Metadata {
   const c = falseCeilingLocationContent[area];
   const path = `/false-ceiling-in-${area}`;
   return {
-    title: `False ceiling & POP in ${c.areaLabel}, Pune | ${COMPANY.name}`,
+    title: `False ceiling & POP in ${c.areaLabel}, Pune`,
     description: c.metaDescription,
     alternates: { canonical: path },
     keywords: c.metaKeywords,

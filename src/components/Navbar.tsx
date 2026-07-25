@@ -71,7 +71,7 @@ export function Navbar() {
                   >
                     Services
                   </Link>
-                  <div className="invisible absolute left-0 top-full z-50 pt-2 opacity-0 transition group-hover:visible group-hover:opacity-100">
+                  <div className="invisible absolute left-0 top-full z-50 pt-2 opacity-0 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
                     <div className="min-w-[220px] rounded-2xl border border-stone-200 bg-white p-2 shadow-lg">
                       <ServiceMenuLinks />
                     </div>

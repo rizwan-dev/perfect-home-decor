@@ -5,6 +5,7 @@ export type LeadPayload = {
   name: string;
   phone: string;
   area?: string;
+  service?: string;
   message?: string;
   source?: string;
 };
@@ -70,6 +71,7 @@ export async function sendLeadEmail(payload: LeadPayload): Promise<void> {
     `Name: ${payload.name}`,
     `Phone: ${payload.phone}`,
     `Area in Pune: ${payload.area || "—"}`,
+    `Service: ${payload.service || "—"}`,
     `What they need: ${payload.message || "—"}`,
     `Form source: ${payload.source || "website"}`,
     "",
@@ -81,6 +83,7 @@ export async function sendLeadEmail(payload: LeadPayload): Promise<void> {
     ["Name", payload.name],
     ["Phone", payload.phone],
     ["Area", payload.area || "—"],
+    ["Service", payload.service || "—"],
     ["Message", payload.message || "—"],
     ["Source", payload.source || "website"],
   ]

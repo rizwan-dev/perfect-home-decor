@@ -28,8 +28,7 @@ export const servicesMeta: Record<
     title: "Home Interior Design",
     short:
       "End-to-end interior design for apartments and villas—layout, materials, lighting, and execution that feels calm and expensive.",
-    heroImage:
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=80",
+    heroImage: "/images/projects/living-room-false-ceiling.jpg",
     keywords: [
       "interior designer Pune",
       "home interior design",
@@ -53,32 +52,28 @@ export const servicesMeta: Record<
     title: "Modular Kitchen",
     short:
       "Ergonomic kitchen layouts, premium finishes, and water-smart storage—built for Indian cooking and Pune’s climate.",
-    heroImage:
-      "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1920&q=80",
+    heroImage: "/images/projects/render-kitchen-dining.jpg",
     keywords: ["modular kitchen Pune", "kitchen interior", "parallel kitchen"],
   },
   "home-painting": {
     title: "Wall Painting",
     short:
       "Low-VOC finishes, crisp lines, and colour palettes that suit Pune’s natural light—from soft neutrals to bold accents.",
-    heroImage:
-      "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=1920&q=80",
+    heroImage: "/images/projects/living-room-blue-accent.jpg",
     keywords: ["home painting Pune", "wall painting", "texture paint"],
   },
   "false-ceiling": {
     title: "False Ceiling (POP)",
     short:
       "Layered ceilings, cove lighting, and clean profiles that hide services while keeping rooms bright and airy.",
-    heroImage:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80",
+    heroImage: "/images/projects/ceiling-wooden-cove-wallpaper.jpg",
     keywords: ["false ceiling Pune", "POP ceiling", "gypsum ceiling"],
   },
   "custom-furniture": {
     title: "Custom Furniture",
     short:
       "TV units, beds, wardrobes, and storage—measured for your space, finished to match your interior story.",
-    heroImage:
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1920&q=80",
+    heroImage: "/images/projects/wardrobe-loft-storage.jpg",
     keywords: ["custom TV unit Pune", "bed design", "wardrobe design"],
   },
 };

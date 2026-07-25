@@ -8,7 +8,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { LeadForm } from "@/components/LeadForm";
 import { SectionHeading } from "@/components/SectionHeading";
 import { AREAS, COMPANY, SITE_URL } from "@/lib/site";
-import { faqJsonLd, serviceJsonLd } from "@/lib/json-ld";
+import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/json-ld";
 import {
   SERVICE_SLUGS,
   type ServiceSlug,
@@ -106,6 +106,13 @@ export default async function ServicePage({ params }: Props) {
         })}
       />
       <JsonLd data={faqJsonLd(copy.faqs, { pageUrl })} />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Services", path: "/services" },
+          { name: meta.title, path: `/services/${slug}` },
+        ])}
+      />
 
       <section className="relative bg-charcoal">
         <div className="absolute inset-0">
@@ -154,12 +161,12 @@ export default async function ServicePage({ params }: Props) {
             >
               Request a consultation
             </Link>
-            <Link
+            <a
               href={`tel:${COMPANY.phoneTel}`}
               className="inline-flex justify-center rounded-full border border-cream/45 px-8 py-3.5 text-sm font-semibold text-cream transition hover:bg-white/10"
             >
               Call {COMPANY.phoneDisplay}
-            </Link>
+            </a>
             <Link
               href="/projects"
               className="inline-flex justify-center rounded-full border border-cream/25 bg-white/5 px-8 py-3.5 text-sm font-semibold text-cream/95 backdrop-blur-sm transition hover:bg-white/10"
@@ -305,9 +312,9 @@ export default async function ServicePage({ params }: Props) {
                 <p className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-stone-400">
                   {String(i + 1).padStart(2, "0")}
                 </p>
-                <h2 className="mt-2 font-display text-xl text-charcoal lg:text-[1.35rem]">
+                <h3 className="mt-2 font-display text-xl text-charcoal lg:text-[1.35rem]">
                   {b.title}
-                </h2>
+                </h3>
                 <p className="mt-3 text-sm leading-relaxed text-stone-600">
                   {b.body}
                 </p>
