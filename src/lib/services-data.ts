@@ -66,7 +66,7 @@ export const servicesMeta: Record<
     title: "False Ceiling (POP)",
     short:
       "Layered ceilings, cove lighting, and clean profiles that hide wiring and AC piping—while keeping standard Pune flat heights bright and airy.",
-    heroImage: "/images/stock/living-coffered-ceiling.jpg",
+    heroImage: "/images/projects/false-ceiling-led-detail.jpg",
     keywords: ["false ceiling Pune", "POP ceiling", "gypsum ceiling"],
   },
   "custom-furniture": {
