@@ -331,7 +331,7 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
   "false-ceiling": {
     overviewImage: {
       src: "/images/stock/bedroom-cove-ceiling-interior-pune.webp",
-      alt: "Bedroom with cove-lit false ceiling and warm perimeter lighting — false ceiling design Pune",
+      alt: "Bedroom with a cove-lit false ceiling, wood panelling and warm perimeter lighting — false ceiling design Pune",
     },
     gallery: [
       {
@@ -351,7 +351,7 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
       },
           {
         src: "/images/stock/luxury-living-room-interior-pune.webp",
-        alt: "Luxury living room with detailed ceiling and cornice lighting — decorative false ceiling Pune",
+        alt: "Classic living room with cornice detailing, chandelier and wall sconces — decorative false ceiling Pune",
         caption: "Wood & decorative",
       },
     ],

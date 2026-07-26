@@ -21,13 +21,13 @@ const rooms = [
     label: "Bedroom",
     href: "/services/interior-design",
     src: "/images/stock/bedroom-soft-neutral-interior-pune.webp",
-    alt: "Soft neutral bedroom interior with fitted wardrobe and warm lighting in Pune",
+    alt: "Bedroom with upholstered headboard, panelled feature wall and warm bedside lighting in Pune",
   },
   {
     label: "Wardrobe",
     href: "/services/custom-furniture",
-    src: "/images/stock/wardrobe-design-glass-wood-pune.webp",
-    alt: "Wardrobe design with glass and wood finishes in a Pune home",
+    src: "/images/stock/fitted-wardrobe-loft-storage-pune.webp",
+    alt: "Floor-to-ceiling fitted wardrobe run with loft storage above in a Pune bedroom",
   },
   {
     label: "False ceiling",
@@ -39,7 +39,7 @@ const rooms = [
     label: "TV & media wall",
     href: "/services/custom-furniture",
     src: "/images/stock/tv-media-wall-unit-design-pune.webp",
-    alt: "TV media wall unit with storage and accent lighting in a Pune living room",
+    alt: "Living room with a low TV console, wall-mounted screen and storage in a Pune home",
   },
   {
     label: "Kids' room",

@@ -53,8 +53,8 @@ export const projects: ProjectItem[] = [
     title: "3 BHK Home Interior, Nyati Evita, Wagholi",
     service: "interior-design",
     area: "Wagholi",
-    image: "/images/stock/wardrobe-design-glass-wood-pune.webp",
-    alt: "Wardrobe wall with glass and wood finishes — 3 BHK home interior, Nyati Evita, Wagholi",
+    image: "/images/stock/fitted-wardrobe-loft-storage-pune.webp",
+    alt: "Floor-to-ceiling fitted wardrobe run with loft storage — 3 BHK home interior, Nyati Evita, Wagholi",
   },
   {
     id: "ivy-state-wagholi",
@@ -62,7 +62,7 @@ export const projects: ProjectItem[] = [
     service: "interior-design",
     area: "Wagholi",
     image: "/images/stock/living-dining-false-ceiling-pune.webp",
-    alt: "Living and dining interior with ceiling detail — 3 BHK, Ivy State, Wagholi",
+    alt: "Open living and dining zone with pendant-lit dining table — 3 BHK, Ivy State, Wagholi",
   },
   {
     id: "nyati-elan-wagholi",
@@ -110,7 +110,7 @@ export const projects: ProjectItem[] = [
     service: "interior-design",
     area: "Kharadi",
     image: "/images/stock/bedroom-interior-design-wardrobe-pune.webp",
-    alt: "Master bedroom with feature wall and fitted wardrobe — 3 BHK, Gera World of Joy, Kharadi",
+    alt: "Master bedroom with fitted wardrobe, overhead loft and study table — 3 BHK, Gera World of Joy, Kharadi",
   },
   {
     id: "vtp-leonara-kharadi",
@@ -118,7 +118,7 @@ export const projects: ProjectItem[] = [
     service: "interior-design",
     area: "Kharadi",
     image: "/images/stock/tv-unit-media-wall-design-pune.webp",
-    alt: "Living room with media wall and storage — 3 BHK turnkey, VTP Leonara, Kharadi",
+    alt: "Marble-clad TV unit with wooden frame and cove-lit ceiling — 3 BHK turnkey, VTP Leonara, Kharadi",
   },
   {
     id: "marvel-zephyr-kharadi",
@@ -126,7 +126,7 @@ export const projects: ProjectItem[] = [
     service: "modular-kitchen",
     area: "Kharadi",
     image: "/images/stock/modular-kitchen-dark-wood-pune.webp",
-    alt: "Modular kitchen with wood and dark cabinetry — Marvel Zephyr, Kharadi",
+    alt: "Modular kitchen with dark wood cabinetry, tall units and under-cabinet lighting — Marvel Zephyr, Kharadi",
   },
   {
     id: "kalpataru-jade-kharadi",
@@ -142,7 +142,7 @@ export const projects: ProjectItem[] = [
     service: "interior-design",
     area: "Hadapsar",
     image: "/images/stock/white-modular-kitchen-storage-pune.webp",
-    alt: "White modular kitchen and storage wall — 3 BHK interior refresh, Amanora Neo Towers, Hadapsar",
+    alt: "White modular kitchen with marble counter and pendant lights — 3 BHK interior refresh, Amanora Neo Towers, Hadapsar",
   },
   {
     id: "mansha-wagholi",
