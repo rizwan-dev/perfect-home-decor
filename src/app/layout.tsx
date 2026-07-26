@@ -36,6 +36,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     siteName: COMPANY.name,
+    // Root default; inner pages override it. Without this the homepage shipped
+    // no og:url at all, so shares could be attributed to whatever URL the
+    // scraper happened to fetch (apex, or a *.vercel.app preview).
+    url: SITE_URL,
     title: `${COMPANY.name} — Interiors, painting & false ceilings in Pune`,
     description: `Turnkey home interiors and single-scope work with one accountable team. ${COMPANY.serviceAreaLine}.`,
   },

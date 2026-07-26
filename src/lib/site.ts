@@ -1,5 +1,16 @@
+/**
+ * Canonical origin — `www`, deliberately.
+ *
+ * Vercel serves www as the primary domain and 308s the apex to it, and the
+ * business has been indexed at www.perfecthomedecor.in for years (the previous
+ * Wix site lived there, so backlinks, directory listings and the Google
+ * Business Profile all point at www). Emitting apex canonicals while the server
+ * redirects apex → www would contradict itself on every page; matching the
+ * hostname Google already associates with the business also avoids stacking a
+ * hostname migration on top of a full site rebuild.
+ */
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://perfecthomedecor.in";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.perfecthomedecor.in";
 
 /**
  * Stable link to the Google Business Profile (Maps listing).
