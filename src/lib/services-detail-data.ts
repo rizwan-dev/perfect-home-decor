@@ -315,14 +315,14 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
   },
   "false-ceiling": {
     overviewImage: {
-      src: "/images/canva/living-cove-art.jpg",
-      alt: "Living room with layered cove-lit false ceiling and art wall — false ceiling design Pune",
+      src: "/images/projects/real-led-ceiling-panelling.jpg",
+      alt: "Delivered LED-strip false ceiling with cove lighting and panelled wall in a Pune home — false ceiling design Pune",
     },
     gallery: [
       {
-        src: "/images/canva/bedroom-fluted-panels.jpg",
-        alt: "Bedroom with fluted panels and recessed cove ceiling — bedroom false ceiling Pune",
-        caption: "Panelled & cove-lit",
+        src: "/images/projects/real-marble-tv-unit-ceiling.jpg",
+        alt: "Delivered living room with LED profile ceiling and marble TV unit in Pune flat — false ceiling with lighting Pune",
+        caption: "LED profile ceilings",
       },
       {
         src: "/images/canva/bedroom-wood-cove.jpg",
@@ -418,9 +418,9 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
         caption: "Floating shelf systems",
       },
       {
-        src: "/images/canva/bedroom-panel-mustard.jpg",
-        alt: "Bedroom with wooden panelled headboard wall and platform bed — custom bedroom furniture Pune",
-        caption: "Panelled bed walls",
+        src: "/images/projects/real-geometric-wall-panel.jpg",
+        alt: "Delivered geometric white wall panelling with pendant lights in a Pune apartment — custom wall panelling Pune",
+        caption: "Geometric wall panelling",
       },
       {
         src: "/images/stock/bedroom-calm-glass.jpg",
