@@ -9,6 +9,10 @@ export type ServiceTier = {
 };
 
 export type ServiceDetail = {
+  /** Supporting visual beside/below the overview intro. */
+  overviewImage: { src: string; alt: string };
+  /** Three-tile looks gallery — styles this service delivers. */
+  gallery: { src: string; alt: string; caption: string }[];
   /** "What's included" — the concrete scope homeowners are buying. */
   inclusions: { title: string; body: string }[];
   /** Three honest scope tiers — no prices; the free site visit sets the number. */
@@ -22,6 +26,27 @@ export type ServiceDetail = {
 
 export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
   "home-painting": {
+    overviewImage: {
+      src: "/images/stock/overview-bright-apartment.jpg",
+      alt: "Bright freshly painted apartment living room — home painting in Pune by Perfect Home Decor",
+    },
+    gallery: [
+      {
+        src: "/images/stock/living-green-feature-wall.jpg",
+        alt: "Deep green painted feature wall with tan leather sofa — feature wall painting Pune",
+        caption: "Deep feature walls",
+      },
+      {
+        src: "/images/stock/bedroom-dark-feature.jpg",
+        alt: "Moody charcoal painted bedroom wall — designer wall colours Pune",
+        caption: "Moody accents",
+      },
+      {
+        src: "/images/stock/bedroom-white-bright.jpg",
+        alt: "Fresh white painted bedroom with clean lines — low-odour home painting Pune",
+        caption: "Fresh, breathable whites",
+      },
+    ],
     inclusions: [
       {
         title: "Interior wall painting",
@@ -97,6 +122,27 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
     ],
   },
   "interior-design": {
+    overviewImage: {
+      src: "/images/stock/overview-boho-living.jpg",
+      alt: "Warm layered living room interior with textures and plants — home interior design Pune",
+    },
+    gallery: [
+      {
+        src: "/images/stock/dining-nook-mirror.jpg",
+        alt: "Elegant grey dining nook with round mirror — dining room interior design Pune",
+        caption: "Calm, layered greys",
+      },
+      {
+        src: "/images/stock/living-white-staircase.jpg",
+        alt: "Bright white duplex living room with staircase — villa and duplex interiors Pune",
+        caption: "Bright & open plans",
+      },
+      {
+        src: "/images/stock/living-dining-warm.jpg",
+        alt: "Warm living and dining interior with wooden floor — 2 BHK interior design Pune",
+        caption: "Warm family spaces",
+      },
+    ],
     inclusions: [
       {
         title: "Space planning & layouts",
@@ -172,6 +218,27 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
     ],
   },
   "modular-kitchen": {
+    overviewImage: {
+      src: "/images/stock/kitchen-gold-tap-detail.jpg",
+      alt: "Modular kitchen detail with quartz counter and brass tap — modular kitchen Pune",
+    },
+    gallery: [
+      {
+        src: "/images/stock/kitchen-charcoal-white.jpg",
+        alt: "Charcoal and white modular kitchen with open shelving — modern kitchen design Pune",
+        caption: "Two-tone classics",
+      },
+      {
+        src: "/images/stock/kitchen-navy-marble-island.jpg",
+        alt: "Navy modular kitchen with marble island — island kitchen design Pune",
+        caption: "Island & marble looks",
+      },
+      {
+        src: "/images/stock/kitchen-pendant-white.jpg",
+        alt: "White modular kitchen with black pendant lights — white kitchen interiors Pune",
+        caption: "Bright whites & pendants",
+      },
+    ],
     inclusions: [
       {
         title: "Layout engineering",
@@ -247,6 +314,27 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
     ],
   },
   "false-ceiling": {
+    overviewImage: {
+      src: "/images/stock/living-minimal-bright.jpg",
+      alt: "Bright living room with clean false ceiling and natural light — false ceiling design Pune",
+    },
+    gallery: [
+      {
+        src: "/images/stock/living-coffered-ceiling.jpg",
+        alt: "Coffered white ceiling in classic living room — designer ceiling Pune",
+        caption: "Coffered & classic",
+      },
+      {
+        src: "/images/stock/hallway-open-plan.jpg",
+        alt: "Living room with recessed ceiling lighting and pendant — ceiling lighting design Pune",
+        caption: "Recessed & warm",
+      },
+      {
+        src: "/images/stock/living-neutral-bright.jpg",
+        alt: "Neutral living room with clean plain ceiling — gypsum ceiling Pune homes",
+        caption: "Minimal & bright",
+      },
+    ],
     inclusions: [
       {
         title: "Gypsum ceilings",
@@ -319,6 +407,27 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
     ],
   },
   "custom-furniture": {
+    overviewImage: {
+      src: "/images/stock/upholstery-detail-terracotta.jpg",
+      alt: "Terracotta upholstered sofa detail — custom furniture and upholstery Pune",
+    },
+    gallery: [
+      {
+        src: "/images/stock/shelving-styled.jpg",
+        alt: "Wall-mounted wooden shelving unit styled with frames — custom shelving Pune",
+        caption: "Floating shelf systems",
+      },
+      {
+        src: "/images/stock/table-detail-white.jpg",
+        alt: "Clean white table and chair detail — custom dining furniture Pune",
+        caption: "Clean-lined pieces",
+      },
+      {
+        src: "/images/stock/bedroom-calm-glass.jpg",
+        alt: "Calm bedroom with glass-door wardrobe — custom wardrobe design Pune",
+        caption: "Bedroom built-ins",
+      },
+    ],
     inclusions: [
       {
         title: "TV & media walls",
@@ -391,6 +500,27 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
     ],
   },
   "commercial-interior-design": {
+    overviewImage: {
+      src: "/images/stock/office-plants-lounge.jpg",
+      alt: "Modern plant-filled office lounge — office interior design Pune",
+    },
+    gallery: [
+      {
+        src: "/images/stock/office-window-desk.jpg",
+        alt: "Workstation by a window with city view — office workstation design Pune",
+        caption: "Focused workpoints",
+      },
+      {
+        src: "/images/stock/office-team-loft.jpg",
+        alt: "Team collaborating in a loft-style office — collaborative office fit-out Pune",
+        caption: "Collaboration zones",
+      },
+      {
+        src: "/images/stock/loft-lounge.jpg",
+        alt: "Industrial loft lounge with grey sofas — cafe and lounge interiors Pune",
+        caption: "Lounge & café moods",
+      },
+    ],
     inclusions: [
       {
         title: "Office fit-outs",

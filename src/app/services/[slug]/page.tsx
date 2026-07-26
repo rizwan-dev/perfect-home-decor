@@ -228,6 +228,15 @@ export default async function ServicePage({ params }: Props) {
               <p className="mt-4 text-lg leading-relaxed text-stone-700 sm:text-xl">
                 {copy.intro}
               </p>
+              <div className="relative mt-8 aspect-[16/9] overflow-hidden rounded-2xl bg-stone-100 shadow-[0_24px_48px_-28px_rgba(28,25,23,0.3)] ring-1 ring-stone-900/[0.05]">
+                <Image
+                  src={detail.overviewImage.src}
+                  alt={detail.overviewImage.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width:1024px) 100vw, 66vw"
+                />
+              </div>
             </div>
             <aside className="rounded-2xl border border-stone-200 bg-cream/50 p-6 shadow-sm lg:col-span-4 lg:sticky lg:top-28">
               <p className="font-display text-lg text-charcoal">Why companies &amp; families choose us</p>
@@ -291,6 +300,37 @@ export default async function ServicePage({ params }: Props) {
       </section>
 
       <section className="border-b border-stone-200 bg-white py-14 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Looks we deliver"
+            title="Moods to bring to your site visit"
+            description="Save the one closest to your taste—we’ll translate it to your light, layout, and budget."
+          />
+          <div className="mt-10 grid gap-6 sm:grid-cols-3 lg:gap-8">
+            {detail.gallery.map((g, i) => (
+              <Reveal key={g.src} delay={(i % 3) * 90}>
+                <figure className="group overflow-hidden rounded-3xl border border-stone-200/90 bg-white shadow-[0_1px_2px_rgba(28,25,23,0.04)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_48px_-24px_rgba(28,25,23,0.28)]">
+                  <div className="relative aspect-[4/3] overflow-hidden bg-stone-100">
+                    <Image
+                      src={g.src}
+                      alt={g.alt}
+                      fill
+                      className="object-cover transition duration-700 ease-out group-hover:scale-[1.05]"
+                      sizes="(max-width:640px) 100vw, 33vw"
+                      loading="lazy"
+                    />
+                  </div>
+                  <figcaption className="px-5 py-4 font-display text-lg text-charcoal">
+                    {g.caption}
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-stone-200 bg-stone-50/40 py-14 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Choose your scope"
