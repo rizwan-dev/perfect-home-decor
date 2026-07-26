@@ -70,7 +70,7 @@ export function HomeWhyUs() {
             </p>
             <dl className="mt-8 grid grid-cols-2 gap-5 border-t border-stone-200 pt-7">
               <div>
-                <dt className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-stone-500">
+                <dt className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-stone-600">
                   Homes delivered
                 </dt>
                 <dd className="mt-1 font-display text-3xl text-charcoal">
@@ -78,7 +78,7 @@ export function HomeWhyUs() {
                 </dd>
               </div>
               <div>
-                <dt className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-stone-500">
+                <dt className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-stone-600">
                   Google rating
                 </dt>
                 <dd className="mt-1 font-display text-3xl text-charcoal">

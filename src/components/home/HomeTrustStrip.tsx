@@ -58,7 +58,7 @@ export function HomeTrustStrip({
           ))}
         </ul>
         <p className="mt-7 border-t border-stone-100 pt-5 text-center text-xs leading-relaxed text-stone-500">
-          <span className="font-semibold uppercase tracking-[0.14em] text-stone-400">
+          <span className="font-semibold uppercase tracking-[0.14em] text-stone-500">
             Materials we specify
           </span>
           <span className="mx-2 text-stone-300" aria-hidden>

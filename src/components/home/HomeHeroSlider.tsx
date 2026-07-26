@@ -40,12 +40,25 @@ export function HomeHeroSlider({
 }) {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  // The non-active slides are absolutely positioned inside the viewport, so
+  // `loading="lazy"` doesn't hold them back — the browser fetched all four
+  // during the LCP window. They now mount only once the slider first moves,
+  // which is after first paint either way.
+  const [warm, setWarm] = useState(false);
   const regionRef = useRef<HTMLDivElement>(null);
 
   const go = useCallback(
-    (delta: number) => setIndex((i) => (i + delta + slides.length) % slides.length),
+    (delta: number) => {
+      setWarm(true);
+      setIndex((i) => (i + delta + slides.length) % slides.length);
+    },
     [slides.length],
   );
+
+  const select = useCallback((i: number) => {
+    setWarm(true);
+    setIndex(i);
+  }, []);
 
   // Auto-advance, paused on hover/focus and for reduced-motion users.
   useEffect(() => {
@@ -91,15 +104,17 @@ export function HomeHeroSlider({
               i === index ? "opacity-100" : "opacity-0"
             }`}
           >
-            <Image
-              src={s.src}
-              alt={s.alt}
-              fill
-              priority={i === 0}
-              loading={i === 0 ? undefined : "lazy"}
-              className={`object-cover ${i === index ? "hero-kenburns" : ""}`}
-              sizes="100vw"
-            />
+            {i === 0 || warm ? (
+              <Image
+                src={s.src}
+                alt={s.alt}
+                fill
+                priority={i === 0}
+                loading={i === 0 ? undefined : "lazy"}
+                className={`object-cover ${i === index ? "hero-kenburns" : ""}`}
+                sizes="100vw"
+              />
+            ) : null}
           </div>
         ))}
         {/* Lighter scrim than before so the room stays visible behind the text. */}
@@ -172,13 +187,20 @@ export function HomeHeroSlider({
             role="tab"
             aria-selected={i === index}
             aria-label={`Slide ${i + 1}: ${s.kicker}`}
-            onClick={() => setIndex(i)}
-            className={`h-2.5 w-2.5 rounded-full transition-all duration-300 ${
-              i === index
-                ? "scale-110 bg-cream ring-2 ring-cream/35 ring-offset-0"
-                : "bg-cream/45 hover:bg-cream/75"
-            }`}
-          />
+            onClick={() => select(i)}
+            /* 10px dot, 44px tap target. The padding is transparent, so this
+               is identical visually but passes the 24px minimum — the dots were
+               the only failing touch target on the page. */
+            className="group/dot -m-4 flex h-11 w-11 items-center justify-center p-4"
+          >
+            <span
+              className={`h-2.5 w-2.5 rounded-full transition-all duration-300 ${
+                i === index
+                  ? "scale-110 bg-cream ring-2 ring-cream/35 ring-offset-0"
+                  : "bg-cream/45 group-hover/dot:bg-cream/75"
+              }`}
+            />
+          </button>
         ))}
       </div>
 

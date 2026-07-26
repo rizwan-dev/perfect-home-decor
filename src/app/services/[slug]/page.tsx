@@ -384,7 +384,7 @@ export default async function ServicePage({ params }: Props) {
             {detail.tiersNote}
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-2.5">
-            <span className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-stone-400">
+            <span className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-stone-500">
               Materials we specify
             </span>
             {detail.materials.map((m) => (
@@ -449,7 +449,7 @@ export default async function ServicePage({ params }: Props) {
                   className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-wood/80 to-wood/20"
                   aria-hidden
                 />
-                <p className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-stone-400">
+                <p className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-stone-500">
                   {String(i + 1).padStart(2, "0")}
                 </p>
                 <h3 className="mt-2 font-display text-xl text-charcoal lg:text-[1.35rem]">
