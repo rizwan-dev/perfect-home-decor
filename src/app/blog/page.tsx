@@ -63,16 +63,8 @@ export default function BlogIndexPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-stone-50/95 via-stone-50/90 to-stone-50" />
         </div>
         <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-          <nav className="text-xs font-medium tracking-wide text-stone-500">
-            <Link href="/" className="transition hover:text-charcoal">
-              Home
-            </Link>
-            <span className="mx-2 text-stone-300" aria-hidden>
-              /
-            </span>
-            <span className="text-charcoal">Journal</span>
-          </nav>
-          <p className="mt-6 text-xs font-semibold uppercase tracking-[0.22em] text-wood-dark">
+          {/* Depth-1 page: the trail would only repeat the nav. */}
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-wood-dark">
             Perfect Home Decor
           </p>
           <h1 className="mt-3 max-w-3xl font-display text-4xl leading-[1.1] tracking-tight text-charcoal sm:text-5xl lg:text-[3.25rem]">

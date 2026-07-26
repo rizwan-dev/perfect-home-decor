@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useState, useSyncExternalStore } from "react";
 
 export type FaqItem = { q: string; a: string; id?: string };
 
@@ -19,6 +19,18 @@ function itemId(item: FaqItem, index: number, idPrefix?: string) {
   return item.id ?? (idPrefix ? `${idPrefix}-${index}` : `faq-${index}`);
 }
 
+const subscribeToHash = (onChange: () => void) => {
+  window.addEventListener("hashchange", onChange);
+  return () => window.removeEventListener("hashchange", onChange);
+};
+const readHash = () => window.location.hash.slice(1);
+const noHash = () => "";
+
+/** Current URL fragment, so /#faq-warranty lands with that row open. */
+function useHash() {
+  return useSyncExternalStore(subscribeToHash, readHash, noHash);
+}
+
 export function FaqAccordion({
   items,
   className = "",
@@ -27,15 +39,30 @@ export function FaqAccordion({
 }: Props) {
   // Single-open accordion. Answers stay in the DOM (collapsed via grid rows) so
   // they remain crawlable and consistent with the FAQPage structured data.
-  const [open, setOpen] = useState<number | null>(null);
+  //
+  // The open row is derived from the URL fragment, and a click overrides it —
+  // but only for that fragment, so a later deep link still wins.
+  const hash = useHash();
+  const [override, setOverride] = useState<{
+    hash: string;
+    index: number | null;
+  } | null>(null);
 
-  // Deep links like /#faq-warranty-support should land with that row open.
-  useEffect(() => {
-    const hash = window.location.hash.slice(1);
-    if (!hash) return;
-    const i = items.findIndex((item, idx) => itemId(item, idx, idPrefix) === hash);
-    if (i !== -1) setOpen(i);
-  }, [items, idPrefix]);
+  const fromHash = items.findIndex(
+    (item, idx) => itemId(item, idx, idPrefix) === hash,
+  );
+  const open =
+    override && override.hash === hash
+      ? override.index
+      : fromHash === -1
+        ? null
+        : fromHash;
+
+  const toggle = useCallback(
+    (index: number) =>
+      setOverride({ hash, index: open === index ? null : index }),
+    [hash, open],
+  );
 
   return (
     <div className={`space-y-3 sm:space-y-4 ${className}`}>
@@ -57,7 +84,7 @@ export function FaqAccordion({
                 type="button"
                 aria-expanded={isOpen}
                 aria-controls={`${id}-panel`}
-                onClick={() => setOpen(isOpen ? null : index)}
+                onClick={() => toggle(index)}
                 className="flex w-full items-center justify-between gap-6 px-5 py-5 text-left outline-none sm:px-8 sm:py-6 focus-visible:bg-stone-50"
               >
                 <span className="min-w-0 flex-1 text-base font-medium leading-snug text-charcoal sm:text-[1.0625rem]">

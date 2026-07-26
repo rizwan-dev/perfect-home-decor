@@ -128,8 +128,8 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
   },
   "interior-design": {
     overviewImage: {
-      src: "/images/canva/indian-living-room-sofa-set-false-ceiling-pune.webp",
-      alt: "Modern Indian apartment living room with full sofa set and layered false ceiling — home interior design Pune",
+      src: "/images/stock/living-room-premium-interior-design-pune.webp",
+      alt: "Premium living room with a panelled TV wall, floor-to-ceiling windows and layered cove lighting — home interior design Pune",
     },
     gallery: [
       {
@@ -138,13 +138,13 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
         caption: "Calm, layered greys",
       },
       {
-        src: "/images/canva/classic-cream-living-room-interior-pune.webp",
-        alt: "Classic cream living room with wall mouldings and warm lamps — premium interiors Pune",
+        src: "/images/stock/living-room-panelled-sectional-design-pune.webp",
+        alt: "Living room with a grid-panelled feature wall, L-shaped sectional and mirrored storage run — premium interiors Pune",
         caption: "Timeless classics",
       },
       {
-        src: "/images/canva/ethnic-indian-living-room-interior-pune.webp",
-        alt: "Ethnic Indian living room with jewel-tone cushions and tapestry wall — traditional interior design Pune",
+        src: "/images/stock/indian-living-room-sofa-set-design-pune.webp",
+        alt: "Indian living room with a full sofa set, teal curtains, patterned rug and wooden TV console — traditional interior design Pune",
         caption: "Rooted & colourful",
       },
           {
@@ -229,8 +229,8 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
   },
   "modular-kitchen": {
     overviewImage: {
-      src: "/images/canva/modular-kitchen-grey-wood-pendant-lights-pune.webp",
-      alt: "Modular kitchen with grey handleless base units, wood wall cabinets and brass pendant lights — modular kitchen Pune",
+      src: "/images/stock/modular-kitchen-island-sage-green-pune.webp",
+      alt: "Sage green modular kitchen with a cooking island, chimney hood and handleless shutters — modular kitchen design Pune",
     },
     gallery: [
       {
@@ -239,9 +239,9 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
         caption: "Two-tone classics",
       },
       {
-        src: "/images/canva/island-modular-kitchen-cove-lighting-pune.webp",
-        alt: "Indian modular kitchen with island and cove-lit ceiling — island kitchen design Pune",
-        caption: "Cove-lit islands",
+        src: "/images/stock/modular-kitchen-orange-l-shape-pune.webp",
+        alt: "Orange and white L-shaped modular kitchen with tall wall units and under-cabinet lighting — L-shaped kitchen design Pune",
+        caption: "Bold two-tone L-shapes",
       },
       {
         src: "/images/stock/kitchen-gold-tap-detail.webp",
@@ -428,29 +428,29 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
   },
   "custom-furniture": {
     overviewImage: {
-      src: "/images/stock/upholstery-detail-terracotta.webp",
-      alt: "Terracotta upholstered sofa detail — custom furniture and upholstery Pune",
+      src: "/images/stock/custom-tv-media-wall-shelving-pune.webp",
+      alt: "TV media wall with white drawer console, walnut open shelving and concealed cable routing — custom TV unit Pune",
     },
     gallery: [
       {
-        src: "/images/stock/shelving-styled.webp",
-        alt: "Wall-mounted wooden shelving unit styled with frames — custom shelving Pune",
-        caption: "Floating shelf systems",
+        src: "/images/stock/wooden-wardrobe-loft-storage-design-pune.webp",
+        alt: "Floor-to-ceiling wooden wardrobe with loft storage and cove lighting — wardrobe design Pune",
+        caption: "Wardrobes with loft",
       },
       {
-        src: "/images/stock/living-room-warm-wood-panelling-pune.webp",
-        alt: "Living room with warm wood wall panelling and feature lighting — custom wall panelling Pune",
-        caption: "Geometric wall panelling",
+        src: "/images/stock/tv-cabinet-glass-shelving-unit-pune.webp",
+        alt: "TV cabinet with glass display shelving and closed drawer storage below the screen — TV cabinet design Pune",
+        caption: "TV & media cabinets",
       },
       {
-        src: "/images/canva/bedroom-wardrobe-study-table-pune.webp",
-        alt: "Bedroom with fitted wardrobe, loft storage and study table — custom wardrobe and study unit Pune",
-        caption: "Wardrobes & study units",
+        src: "/images/stock/designer-bed-headboard-feature-wall-pune.webp",
+        alt: "Designer bed with tall upholstered headboard, side chests and patterned feature wall — custom bed design Pune",
+        caption: "Beds & headboards",
       },
-          {
-        src: "/images/stock/tv-media-wall-unit-design-pune.webp",
-        alt: "TV media wall unit with integrated storage and lighting — custom media wall Pune",
-        caption: "Marble media walls",
+      {
+        src: "/images/stock/bedroom-wardrobe-study-desk-unit-pune.webp",
+        alt: "Bedroom with full-height wardrobe, bedside shelving and a built-in study desk in wood and cream finish — wardrobe and study unit Pune",
+        caption: "Wardrobe & study units",
       },
     ],
     inclusions: [

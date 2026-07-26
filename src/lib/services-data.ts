@@ -72,7 +72,7 @@ export const servicesMeta: Record<
     title: "Custom Furniture",
     short:
       "TV units, beds, wardrobes, and storage—measured for your space, finished to match your interior story.",
-    heroImage: "/images/stock/custom-furniture-shelving-pune.webp",
+    heroImage: "/images/stock/custom-furniture-wall-unit-design-pune.webp",
     keywords: ["custom TV unit Pune", "bed design", "wardrobe design"],
   },
 };

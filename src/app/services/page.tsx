@@ -31,14 +31,9 @@ export default function ServicesIndexPage() {
       />
       <section className="border-b border-stone-200 bg-white">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
-          <nav className="text-xs font-medium text-stone-500">
-            <Link href="/" className="hover:text-charcoal">
-              Home
-            </Link>
-            <span className="mx-2">/</span>
-            <span className="text-charcoal">Services</span>
-          </nav>
-          <h1 className="mt-4 max-w-3xl font-display text-4xl tracking-tight text-charcoal sm:text-5xl">
+          {/* No visible breadcrumb on a top-level page — the trail would only
+              repeat the nav. BreadcrumbList JSON-LD above still feeds SERPs. */}
+          <h1 className="max-w-3xl font-display text-4xl tracking-tight text-charcoal sm:text-5xl">
             Homes, offices &amp; retail—under one roof
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-stone-600">
