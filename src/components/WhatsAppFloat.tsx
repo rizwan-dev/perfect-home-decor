@@ -1,5 +1,12 @@
 import { COMPANY, whatsappLink } from "@/lib/site";
 
+/**
+ * Desktop-only WhatsApp bubble.
+ *
+ * On mobile `StickyMobileBar` already carries a full-width WhatsApp button and
+ * this bubble sat directly above it — two green WhatsApp controls within a
+ * thumb's width of each other.
+ */
 export function WhatsAppFloat() {
   const href = whatsappLink(
     `Hi ${COMPANY.name}, I'd like a free consultation for my home in Pune.`,
@@ -10,7 +17,7 @@ export function WhatsAppFloat() {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-[5.25rem] right-5 z-[60] flex h-14 w-14 md:bottom-5 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-stone-900/20 transition hover:scale-105 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25D366]"
+      className="fixed bottom-5 right-5 z-[60] hidden h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-stone-900/20 transition hover:scale-105 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25D366] md:flex"
       aria-label="Chat on WhatsApp"
     >
       <svg

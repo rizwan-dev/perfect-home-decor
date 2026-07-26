@@ -128,11 +128,15 @@ export function HomeHeroSlider({
           >
             Book a free site visit
           </Link>
-          {/* Solid fill + icon: reads as a tap-to-call action, not a label. */}
+          {/* Solid fill + icon: reads as a tap-to-call action, not a label.
+              Shown from `md` up, matching StickyMobileBar's `md:hidden` — below
+              that the sticky bar pins its own Call button to the viewport, so
+              this would be the same action twice. The two breakpoints must stay
+              in sync or tablets get the duplicate back. */}
           <a
             href={`tel:${COMPANY.phoneTel}`}
             aria-label={`Call ${COMPANY.phoneDisplay}`}
-            className="group/call inline-flex items-center justify-center gap-2.5 rounded-full bg-wood-dark px-8 py-3.5 text-sm font-semibold text-cream shadow-lg transition duration-200 hover:-translate-y-0.5 hover:bg-wood active:translate-y-0"
+            className="group/call hidden items-center justify-center gap-2.5 rounded-full bg-wood-dark px-8 py-3.5 text-sm font-semibold text-cream shadow-lg transition duration-200 hover:-translate-y-0.5 hover:bg-wood active:translate-y-0 md:inline-flex"
           >
             <IconPhone className="h-4 w-4 shrink-0 transition-transform duration-200 group-hover/call:-rotate-12" />
             Call now
@@ -146,7 +150,9 @@ export function HomeHeroSlider({
           <span>
             {ratingLabel} on Google · {reviewCount.toLocaleString("en-IN")} reviews
           </span>
-          <span className="text-cream/30" aria-hidden>
+          {/* Hidden on mobile, where the line wraps and leaves the divider
+              dangling at the end of the first row. */}
+          <span className="hidden text-cream/30 sm:inline" aria-hidden>
             |
           </span>
           <span>{COMPANY.yearsExperience}+ years in Pune</span>

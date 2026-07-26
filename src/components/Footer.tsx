@@ -42,7 +42,11 @@ export function Footer() {
               </span>
             </a>
           </div>
-          <div className="flex flex-wrap gap-3">
+          {/* Hidden on mobile: StickyMobileBar pins Call / WhatsApp / Consult
+              to the viewport there, and CTASection sits directly above this —
+              so these three were the same actions for the third time in one
+              screen. Desktop has no sticky bar, so they stay. */}
+          <div className="hidden flex-wrap gap-3 md:flex">
             <a
               href={`tel:${COMPANY.phoneTel}`}
               className="inline-flex items-center rounded-full border border-stone-300 px-6 py-3 text-sm font-semibold text-charcoal transition hover:border-wood-dark hover:text-wood-dark"
