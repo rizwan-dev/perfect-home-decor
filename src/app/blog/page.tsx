@@ -9,8 +9,8 @@ import { blogPosts } from "@/lib/blog-data";
 import { estimateReadMinutes } from "@/lib/blog-utils";
 
 export const metadata: Metadata = {
-  title: "Interior design blog — guides for Pune homes",
-  description: `Expert guides on home interior design, painting, modular kitchens, false ceilings, waterproofing, bedrooms, kids’ rooms & more from ${COMPANY.name}. Practical advice for Wagholi, Kharadi, Magarpatta & East Pune.`,
+  title: "Interior Design Blog for Pune Homes",
+  description: `Practical guides on interiors, painting, kitchens and false ceilings for Pune homes—written from real sites in Wagholi, Kharadi & East Pune.`,
   alternates: { canonical: "/blog" },
   keywords: [
     "interior design blog Pune",

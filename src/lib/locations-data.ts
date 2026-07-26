@@ -51,7 +51,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
       },
     ],
     metaDescription:
-      "Premium interior design in Kharadi, Pune—modular kitchens, false ceilings, painting, and custom furniture. Local site experience near EON & WTC. Book a free consultation.",
+      "Interior design in Kharadi, Pune—modular kitchens, false ceilings, painting & custom furniture. Local team near EON & WTC. Free site visit.",
   },
   wagholi: {
     areaLabel: "Wagholi",

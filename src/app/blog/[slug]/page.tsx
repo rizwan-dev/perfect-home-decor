@@ -24,13 +24,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostBySlug(slug);
   if (!post) return {};
   return {
-    title: post.title,
-    description: post.description,
+    // Absolute so the site-wide "| Perfect Home Decor" suffix does not push
+    // these long-tail titles past what search results display.
+    title: { absolute: post.seoTitle ?? post.title },
+    description: post.seoDescription ?? post.description,
     alternates: { canonical: `/blog/${slug}` },
     keywords: post.keywords,
     openGraph: {
-      title: post.title,
-      description: post.description,
+      title: post.seoTitle ?? post.title,
+      description: post.seoDescription ?? post.description,
       url: `${SITE_URL}/blog/${slug}`,
       type: "article",
       publishedTime: post.publishedAt,
@@ -38,8 +40,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
-      description: post.description,
+      title: post.seoTitle ?? post.title,
+      description: post.seoDescription ?? post.description,
       images: [post.image],
     },
   };

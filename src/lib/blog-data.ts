@@ -7,6 +7,10 @@ export type BlogPost = {
   slug: string;
   title: string;
   description: string;
+  /** Short title for <title> (<=60 chars, brand not appended). Falls back to `title`. */
+  seoTitle?: string;
+  /** Short meta description (<=158 chars). Falls back to `description`. */
+  seoDescription?: string;
   publishedAt: string;
   author: string;
   keywords: string[];
@@ -19,6 +23,9 @@ export type BlogPost = {
 export const blogPosts: BlogPost[] = [
   {
     slug: "modular-kitchen-pune-checklist-before-you-sign",
+    seoTitle: "Modular Kitchen Checklist for Pune Flats",
+    seoDescription:
+      "Modular kitchen checklist for Pune flats: drawings, gas & chimney services, materials, appliances, warranties and society logistics.",
     title:
       "Modular kitchen in Pune: complete checklist before you sign (2025–2026)",
     description:
@@ -107,6 +114,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "wall-painting-pune-monsoon-timing-finishes",
+    seoTitle: "Wall Painting in Pune: Monsoon Timing & Finishes",
+    seoDescription:
+      "When to paint in Pune, how humidity affects primer cycles, choosing sheen, and the handover checks that keep walls looking new.",
     title:
       "Home wall painting in Pune: monsoon timing, finishes & colour guide",
     description:
@@ -194,6 +204,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "false-ceiling-pop-pune-height-lighting-guide",
+    seoTitle: "False Ceiling & POP Guide for Pune Flats",
+    seoDescription:
+      "Height loss, gypsum vs POP, cove LED lighting, inspection traps and AC coordination — a practical false ceiling guide for Pune homes.",
     title:
       "False ceiling & POP in Pune flats: height, gypsum, lighting & AC grills",
     description:
@@ -280,6 +293,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "complete-guide-home-interior-design-pune",
+    seoTitle: "Home Interior Design in Pune: Complete Guide",
+    seoDescription:
+      "What turnkey really means, design stages, how to compare quotations, society coordination, and phasing work while you live in the flat.",
     title:
       "Complete guide to home interior design in Pune: turnkey process, BOQ & timelines",
     description:
@@ -368,6 +384,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "waterproofing-solutions-bathrooms-balconies-pune",
+    seoTitle: "Waterproofing Guide for Pune Bathrooms & Balconies",
+    seoDescription:
+      "Bathroom wet zones, balcony slopes, terrace layers, testing and society-friendly repairs — waterproofing before the tiles go down.",
     title:
       "Waterproofing for bathrooms, balconies & terraces in Pune flats: systems guide",
     description:
@@ -445,6 +464,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "bedroom-interior-design-pune-wardrobes-lighting",
+    seoTitle: "Bedroom Interior Design in Pune: Wardrobes & Light",
+    seoDescription:
+      "Master bedroom layouts, wardrobe types, circulation rules, headboard walls and layered lighting for Pune apartments.",
     title:
       "Bedroom interior design in Pune: master bedroom layouts, wardrobes & lighting",
     description:
@@ -521,6 +543,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "kids-room-child-bedroom-interior-pune",
+    seoTitle: "Kids' Room Interior Design in Pune",
+    seoDescription:
+      "Safe layouts, study corners, storage that grows with your child, and low-VOC finishes — kids' room design for Pune families.",
     title:
       "Kids’ room interior design in Pune: safe layouts, study corners & storage",
     description:
@@ -595,6 +620,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "living-room-interior-design-layout-lighting-pune",
+    seoTitle: "Living Room Interior Design in Pune",
+    seoDescription:
+      "Sofa layouts, TV wall planning and layered lighting that make Pune living rooms feel larger and work for everyday family life.",
     title:
       "Living room interior design in Pune: sofa layout, TV wall & layered lighting",
     description:
@@ -668,6 +696,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "modular-wardrobes-dressing-room-storage-pune",
+    seoTitle: "Modular Wardrobes in Pune: Sliding vs Swing",
+    seoDescription:
+      "Door systems, corner units, internal accessories, mirrors and materials that survive Pune humidity — plus installation sequencing.",
     title:
       "Modular wardrobes in Pune: sliding vs swing, internals & dressing corners",
     description:
@@ -740,6 +771,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "dining-area-interior-design-compact-flats-pune",
+    seoTitle: "Dining Design for Compact Pune Flats",
+    seoDescription:
+      "Table shapes, extendables, benches, crockery units and pendant lighting for compact dining zones in Pune open-plan flats.",
     title:
       "Dining area interior design for compact Pune flats: tables, crockery & lighting",
     description:
@@ -813,6 +847,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "home-office-study-room-interior-design-pune",
+    seoTitle: "Home Office & Study Room Design in Pune",
+    seoDescription:
+      "Desk placement, video-call backdrops, acoustics, power and data, plus lighting that survives long screen hours in Pune flats.",
     title:
       "Home office & study room interior design in Pune: WFH layouts, storage & light",
     description:
@@ -898,6 +935,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "how-to-get-your-home-ready-for-diwali-pune",
+    seoTitle: "Get Your Pune Home Diwali-Ready: Checklist",
+    seoDescription:
+      "Deep cleaning zones, lighting and electrical safety, entryway flow, balcony diyas and quick paint touch-ups before Diwali.",
     title:
       "How to get your home ready for Diwali: cleaning, décor & safety checklist (Pune)",
     description:
