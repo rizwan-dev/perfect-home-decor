@@ -67,7 +67,6 @@ export function Navbar() {
             alt={`${COMPANY.name} — interiors & home services, Pune`}
             width={358}
             height={182}
-            priority
             className="h-11 w-auto sm:h-12"
           />
         </Link>

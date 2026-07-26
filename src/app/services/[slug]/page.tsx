@@ -126,7 +126,8 @@ export default async function ServicePage({ params }: Props) {
             src={meta.heroImage}
             alt={meta.title}
             fill
-            priority
+            fetchPriority="high"
+            loading="eager"
             className="object-cover opacity-45"
             sizes="100vw"
           />

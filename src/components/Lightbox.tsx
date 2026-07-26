@@ -99,7 +99,7 @@ export function Lightbox({ items, index, onClose, onIndexChange }: Props) {
             fill
             className="object-contain"
             sizes="100vw"
-            priority
+            loading="eager"
           />
         </div>
 

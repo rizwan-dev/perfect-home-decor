@@ -204,7 +204,8 @@ export default function ContactPage() {
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 1024px) min(100vw, 28rem), 50vw"
-                priority
+                fetchPriority="high"
+                loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/50 via-transparent to-charcoal/10" />
               <div className="absolute bottom-0 left-0 right-0 p-8 text-cream">

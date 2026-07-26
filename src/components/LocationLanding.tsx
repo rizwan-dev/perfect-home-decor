@@ -48,7 +48,8 @@ export function LocationLanding({ area }: { area: AreaSlug }) {
             src={areaHero[area]}
             alt={`Interior design in ${c.areaLabel}, Pune`}
             fill
-            priority
+            fetchPriority="high"
+            loading="eager"
             className="object-cover opacity-45"
             sizes="100vw"
           />

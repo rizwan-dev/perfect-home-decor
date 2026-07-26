@@ -130,7 +130,8 @@ export default async function BlogPostPage({ params }: Props) {
                 src={post.image}
                 alt={post.title}
                 fill
-                priority
+                fetchPriority="high"
+                loading="eager"
                 className="object-cover"
                 sizes="(max-width:1024px) 100vw, 1024px"
               />

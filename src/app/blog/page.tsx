@@ -56,7 +56,8 @@ export default function BlogIndexPage() {
             src={heroImage}
             alt="Refined residential interior — editorial journal"
             fill
-            priority
+            fetchPriority="high"
+            loading="eager"
             className="object-cover opacity-40"
             sizes="100vw"
           />

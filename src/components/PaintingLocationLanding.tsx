@@ -42,7 +42,8 @@ export function PaintingLocationLanding({ area }: { area: AreaSlug }) {
             src={heroImage}
             alt={`Professional home wall painting in ${c.areaLabel}, Pune`}
             fill
-            priority
+            fetchPriority="high"
+            loading="eager"
             className="object-cover opacity-40"
             sizes="100vw"
           />

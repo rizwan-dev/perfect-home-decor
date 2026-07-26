@@ -42,7 +42,8 @@ export function FalseCeilingLocationLanding({ area }: { area: AreaSlug }) {
             src={heroImage}
             alt={`False ceiling and POP installation in ${c.areaLabel}, Pune`}
             fill
-            priority
+            fetchPriority="high"
+            loading="eager"
             className="object-cover opacity-42"
             sizes="100vw"
           />

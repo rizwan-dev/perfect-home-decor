@@ -31,7 +31,8 @@ export default async function AboutPage() {
             src={heroImage}
             alt="Spacious residential interior with natural light—design and execution by Perfect Home Decor"
             fill
-            priority
+            fetchPriority="high"
+            loading="eager"
             className="object-cover opacity-55"
             sizes="100vw"
           />

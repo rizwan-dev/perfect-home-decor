@@ -109,8 +109,8 @@ export function HomeHeroSlider({
                 src={s.src}
                 alt={s.alt}
                 fill
-                priority={i === 0}
-                loading={i === 0 ? undefined : "lazy"}
+                fetchPriority={i === 0 ? "high" : "auto"}
+                loading={i === 0 ? "eager" : "lazy"}
                 className={`object-cover ${i === index ? "hero-kenburns" : ""}`}
                 sizes="100vw"
               />

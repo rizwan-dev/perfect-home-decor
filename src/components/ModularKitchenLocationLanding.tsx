@@ -42,7 +42,8 @@ export function ModularKitchenLocationLanding({ area }: { area: AreaSlug }) {
             src={heroImage}
             alt={`Modular kitchen design in ${c.areaLabel}, Pune`}
             fill
-            priority
+            fetchPriority="high"
+            loading="eager"
             className="object-cover opacity-45"
             sizes="100vw"
           />
