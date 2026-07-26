@@ -10,8 +10,7 @@ import { falseCeilingLocationContent } from "@/lib/false-ceiling-locations-data"
 import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/json-ld";
 import { projectsNearArea } from "@/lib/projects-data";
 
-const heroImage =
-  "/images/stock/living-minimal-bright.jpg";
+const heroImage = "/images/stock/open-plan-living-dining-interior-pune.jpg";
 
 export function FalseCeilingLocationLanding({ area }: { area: AreaSlug }) {
   const c = falseCeilingLocationContent[area];

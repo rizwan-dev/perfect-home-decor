@@ -7,7 +7,7 @@ export function localBusinessJsonLd(googleStats?: GooglePlaceReviewStats | null)
     "@type": "LocalBusiness",
     "@id": `${SITE_URL}/#business`,
     name: COMPANY.name,
-    image: `${SITE_URL}/images/projects/living-room-marble-tv-unit.jpg`,
+    image: `${SITE_URL}/images/stock/living-room-interior-warm-lighting-pune.jpg`,
     logo: `${SITE_URL}/images/brand/logo.png`,
     url: SITE_URL,
     telephone: COMPANY.phoneTel,

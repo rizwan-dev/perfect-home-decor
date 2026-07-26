@@ -43,8 +43,7 @@ export const metadata: Metadata = {
 
 export default async function HomePage() {
   const googleStats = await getGooglePlaceReviewStats();
-  const heroImage =
-    "/images/stock/hero-living-room.jpg";
+  const heroImage = "/images/stock/home-interior-design-living-room-pune.jpg";
   return (
     <>
       <JsonLd

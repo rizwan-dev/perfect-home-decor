@@ -97,8 +97,7 @@ function IconMapPin({ className }: { className?: string }) {
   );
 }
 
-const contactHeroImage =
-  "/images/stock/bedroom-calm-glass.jpg";
+const contactHeroImage = "/images/stock/living-room-interior-warm-lighting-pune.jpg";
 
 export default function ContactPage() {
   const mapIframeSrc = getContactMapIframeSrc();

@@ -10,8 +10,7 @@ import { modularKitchenLocationContent } from "@/lib/modular-kitchen-locations-d
 import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/json-ld";
 import { projectsNearArea } from "@/lib/projects-data";
 
-const heroImage =
-  "/images/stock/kitchen-bright-marble.jpg";
+const heroImage = "/images/stock/modular-kitchen-design-pune.jpg";
 
 export function ModularKitchenLocationLanding({ area }: { area: AreaSlug }) {
   const c = modularKitchenLocationContent[area];

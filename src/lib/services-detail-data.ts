@@ -27,7 +27,7 @@ export type ServiceDetail = {
 export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
   "home-painting": {
     overviewImage: {
-      src: "/images/canva/living-blue-panels.jpg",
+      src: "/images/canva/blue-panelled-living-room-painting-pune.jpg",
       alt: "Living room with painted blue panelled wall and gallery frames — home painting in Pune by Perfect Home Decor",
     },
     gallery: [
@@ -123,7 +123,7 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
   },
   "interior-design": {
     overviewImage: {
-      src: "/images/canva/living-indian-sofa-set.jpg",
+      src: "/images/canva/indian-living-room-sofa-set-false-ceiling-pune.jpg",
       alt: "Modern Indian apartment living room with full sofa set and layered false ceiling — home interior design Pune",
     },
     gallery: [
@@ -133,12 +133,12 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
         caption: "Calm, layered greys",
       },
       {
-        src: "/images/canva/living-classic-cream.jpg",
+        src: "/images/canva/classic-cream-living-room-interior-pune.jpg",
         alt: "Classic cream living room with wall mouldings and warm lamps — premium interiors Pune",
         caption: "Timeless classics",
       },
       {
-        src: "/images/canva/living-ethnic-jewel.jpg",
+        src: "/images/canva/ethnic-indian-living-room-interior-pune.jpg",
         alt: "Ethnic Indian living room with jewel-tone cushions and tapestry wall — traditional interior design Pune",
         caption: "Rooted & colourful",
       },
@@ -219,7 +219,7 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
   },
   "modular-kitchen": {
     overviewImage: {
-      src: "/images/canva/kitchen-grey-wood-pendants.jpg",
+      src: "/images/canva/modular-kitchen-grey-wood-pendant-lights-pune.jpg",
       alt: "Modular kitchen with grey handleless base units, wood wall cabinets and brass pendant lights — modular kitchen Pune",
     },
     gallery: [
@@ -229,7 +229,7 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
         caption: "Two-tone classics",
       },
       {
-        src: "/images/canva/kitchen-island-cove.jpg",
+        src: "/images/canva/island-modular-kitchen-cove-lighting-pune.jpg",
         alt: "Indian modular kitchen with island and cove-lit ceiling — island kitchen design Pune",
         caption: "Cove-lit islands",
       },
@@ -315,17 +315,17 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
   },
   "false-ceiling": {
     overviewImage: {
-      src: "/images/projects/real-led-ceiling-panelling.jpg",
+      src: "/images/projects/false-ceiling-led-cove-lighting-pune.jpg",
       alt: "Delivered LED-strip false ceiling with cove lighting and panelled wall in a Pune home — false ceiling design Pune",
     },
     gallery: [
       {
-        src: "/images/projects/real-marble-tv-unit-ceiling.jpg",
+        src: "/images/projects/living-room-led-ceiling-marble-tv-unit-pune.jpg",
         alt: "Delivered living room with LED profile ceiling and marble TV unit in Pune flat — false ceiling with lighting Pune",
         caption: "LED profile ceilings",
       },
       {
-        src: "/images/canva/bedroom-geometric-ceiling.jpg",
+        src: "/images/canva/bedroom-geometric-false-ceiling-pune.jpg",
         alt: "Bedroom with geometric layered false ceiling and warm cove lighting — bedroom false ceiling design Pune",
         caption: "Geometric ceilings",
       },
@@ -418,12 +418,12 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
         caption: "Floating shelf systems",
       },
       {
-        src: "/images/projects/real-geometric-wall-panel.jpg",
+        src: "/images/projects/geometric-wall-panelling-design-pune.jpg",
         alt: "Delivered geometric white wall panelling with pendant lights in a Pune apartment — custom wall panelling Pune",
         caption: "Geometric wall panelling",
       },
       {
-        src: "/images/canva/bedroom-wardrobe-study.jpg",
+        src: "/images/canva/bedroom-wardrobe-study-table-pune.jpg",
         alt: "Bedroom with fitted wardrobe, loft storage and study table — custom wardrobe and study unit Pune",
         caption: "Wardrobes & study units",
       },

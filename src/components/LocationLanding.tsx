@@ -11,8 +11,7 @@ import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/json-ld";
 import { projectsNearArea } from "@/lib/projects-data";
 import { SERVICE_SLUGS, servicesMeta } from "@/lib/services-data";
 
-const hero =
-  "/images/stock/living-sofa-modern.jpg";
+const hero = "/images/stock/interior-designer-pune-apartment.jpg";
 
 export function LocationLanding({ area }: { area: AreaSlug }) {
   const c = locationContent[area];

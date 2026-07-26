@@ -33,8 +33,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2025-11-18",
     author: "Perfect Home Decor",
     category: "Modular kitchen",
-    image:
-      "/images/stock/kitchen-marble-island.jpg",
+    image: "/images/stock/modular-kitchen-checklist-pune.jpg",
     keywords: [
       "modular kitchen Pune",
       "modular kitchen checklist",
@@ -124,8 +123,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2025-12-02",
     author: "Perfect Home Decor",
     category: "Painting",
-    image:
-      "/images/stock/bedroom-white-bright.jpg",
+    image: "/images/stock/home-painting-service-pune.jpg",
     keywords: [
       "home painting Pune",
       "wall painting Wagholi",
@@ -214,8 +212,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-01-08",
     author: "Perfect Home Decor",
     category: "False ceiling",
-    image:
-      "/images/stock/living-coffered-ceiling.jpg",
+    image: "/images/stock/white-modular-kitchen-storage-pune.jpg",
     keywords: [
       "false ceiling Pune",
       "POP ceiling Wagholi",
@@ -303,8 +300,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-01-22",
     author: "Perfect Home Decor",
     category: "Interior design",
-    image:
-      "/images/stock/interior-warm-living.jpg",
+    image: "/images/stock/home-interior-design-living-room-pune.jpg",
     keywords: [
       "home interior design Pune",
       "turnkey interiors Pune",
@@ -394,8 +390,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-02-05",
     author: "Perfect Home Decor",
     category: "Waterproofing",
-    image:
-      "/images/stock/blog-waterproofing.jpg",
+    image: "/images/stock/waterproofing-bathroom-balcony-pune.jpg",
     keywords: [
       "waterproofing bathroom Pune",
       "balcony waterproofing",
@@ -474,8 +469,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-02-12",
     author: "Perfect Home Decor",
     category: "Bedroom",
-    image:
-      "/images/canva/bedroom-cream-soft.jpg",
+    image: "/images/stock/bedroom-wardrobe-lighting-design-pune.jpg",
     keywords: [
       "bedroom interior design Pune",
       "master bedroom interiors",
@@ -553,8 +547,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-02-18",
     author: "Perfect Home Decor",
     category: "Kids room",
-    image:
-      "/images/canva/kids-room-colorful.jpg",
+    image: "/images/stock/kids-room-interior-design-pune.jpg",
     keywords: [
       "kids room interior Pune",
       "child bedroom design",
@@ -630,8 +623,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-02-25",
     author: "Perfect Home Decor",
     category: "Living room",
-    image:
-      "/images/stock/living-sofa-modern.jpg",
+    image: "/images/stock/open-plan-living-dining-interior-pune.jpg",
     keywords: [
       "living room interior Pune",
       "TV unit design",
@@ -706,8 +698,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-03-01",
     author: "Perfect Home Decor",
     category: "Storage",
-    image:
-      "/images/stock/furniture-shelving-chair.jpg",
+    image: "/images/stock/modular-wardrobe-design-pune.jpg",
     keywords: [
       "modular wardrobe Pune",
       "sliding wardrobe bedroom",
@@ -781,8 +772,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-03-08",
     author: "Perfect Home Decor",
     category: "Dining",
-    image:
-      "/images/stock/dining-green-chairs.jpg",
+    image: "/images/stock/dining-area-interior-design-pune.jpg",
     keywords: [
       "dining room interior Pune",
       "compact dining design",
@@ -857,8 +847,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-03-15",
     author: "Perfect Home Decor",
     category: "Study & office",
-    image:
-      "/images/stock/blog-home-office.jpg",
+    image: "/images/stock/home-office-study-room-design-pune.jpg",
     keywords: [
       "home office interior Pune",
       "study room design Pune",
@@ -945,8 +934,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2025-09-28",
     author: "Perfect Home Decor",
     category: "Festivals",
-    image:
-      "/images/stock/blog-diwali-decor.jpg",
+    image: "/images/stock/diwali-home-decoration-pune.jpg",
     keywords: [
       "Diwali home decoration",
       "Diwali cleaning checklist",
