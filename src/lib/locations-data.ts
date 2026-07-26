@@ -25,7 +25,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
     landmarks:
       "World Trade Center, EON Free Zone, Reliance Mart Kharadi, Columbia Asia Hospital, Amanora Mall corridor, riverside societies along Fountain Road.",
     neighborhoods:
-      "Towers near EON IT Park, Panchshil, Nyati, and premium societies toward Mundhwa bridge.",
+      "Recently completed in Kalpataru Jade Residences, Gera World of Joy and Majestique Towers, plus homes in Forest County, Yashwant Enchante, VTP Leonara, Marvel Zephyr and Godrej Rivergreens. We work regularly across the towers near EON IT Park and the premium societies toward Mundhwa bridge.",
     servicesBlurb:
       "Full home interiors, modular kitchens tuned for compact galley plans, false ceilings with cove lighting for open layouts, painting packages for handover refreshes, and custom TV units for media walls facing city views.",
     localFaq: [
@@ -65,7 +65,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
     landmarks:
       "Lifeline Hospital, Wagholi chowk, schools along Nagar Road, retail on NH753F, connections toward Lohegaon airport.",
     neighborhoods:
-      "New townships and mid-rise communities along Nagar Road and internal sectors toward Kesnand.",
+      "Recently completed a 3 BHK in Nyati Evita, alongside homes in Nyati Elan, Ivy State, Konark Exotica, Citron and Mansha. We work across the new townships and mid-rise communities along Nagar Road and the internal sectors toward Kesnand.",
     servicesBlurb:
       "Turnkey interiors for fresh possessions, budget-smart modular kitchens, kids’ rooms with growth-friendly storage, POP ceilings with neat coves, and full-home painting with low-odour options.",
     localFaq: [

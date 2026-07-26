@@ -132,8 +132,15 @@ export function ProjectsGrid({ projects }: { projects: ProjectItem[] }) {
             </button>
             {/* Always-visible caption for touch users and screen readers. */}
             <figcaption className="mt-3 px-1">
-              <p className="text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-wood-dark">
-                {servicesMeta[p.service].title} · {p.area}
+              <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-wood-dark">
+                <span>
+                  {servicesMeta[p.service].title} · {p.area}
+                </span>
+                {p.recent ? (
+                  <span className="rounded-full bg-wood-dark/10 px-2 py-0.5 tracking-[0.1em] text-wood-dark">
+                    Recently completed
+                  </span>
+                ) : null}
               </p>
               <p className="mt-1 text-balance font-display text-base leading-snug text-charcoal">
                 {p.title}

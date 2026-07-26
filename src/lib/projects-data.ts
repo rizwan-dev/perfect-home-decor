@@ -7,6 +7,8 @@ export type ProjectItem = {
   area: string;
   image: string;
   alt: string;
+  /** Delivered in the current season — surfaced first and badged. */
+  recent?: boolean;
 };
 
 /**
@@ -20,7 +22,9 @@ export function projectsNearArea(areaLabel: string): ProjectItem[] {
     Kesnand: ["Kesnand", "Wagholi"],
   };
   const match = neighbours[areaLabel] ?? [areaLabel];
-  return projects.filter((p) => match.includes(p.area));
+  return projects
+    .filter((p) => match.includes(p.area))
+    .sort((a, b) => Number(b.recent ?? false) - Number(a.recent ?? false));
 }
 
 export const projects: ProjectItem[] = [
@@ -34,6 +38,7 @@ export const projects: ProjectItem[] = [
   },
   {
     id: "majestique-tower-kharadi",
+    recent: true,
     title: "2 BHK Home Interior, Majestique Towers, Kharadi",
     service: "interior-design",
     area: "Kharadi",
@@ -50,6 +55,7 @@ export const projects: ProjectItem[] = [
   },
   {
     id: "nyati-evita-wagholi",
+    recent: true,
     title: "3 BHK Home Interior, Nyati Evita, Wagholi",
     service: "interior-design",
     area: "Wagholi",
@@ -106,6 +112,7 @@ export const projects: ProjectItem[] = [
   },
   {
     id: "gera-world-of-joy-kharadi",
+    recent: true,
     title: "3 BHK Home Interior Design, Gera World of Joy, Kharadi",
     service: "interior-design",
     area: "Kharadi",
@@ -130,6 +137,7 @@ export const projects: ProjectItem[] = [
   },
   {
     id: "kalpataru-jade-kharadi",
+    recent: true,
     title: "3 BHK Full Home Interior, Kalpataru Jade Residences, Kharadi",
     service: "interior-design",
     area: "Kharadi",
