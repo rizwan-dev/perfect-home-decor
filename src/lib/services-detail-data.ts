@@ -330,13 +330,13 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
   },
   "false-ceiling": {
     overviewImage: {
-      src: "/images/projects/false-ceiling-led-cove-lighting-pune.webp",
-      alt: "Delivered LED-strip false ceiling with cove lighting and panelled wall in a Pune home — false ceiling design Pune",
+      src: "/images/stock/bedroom-cove-ceiling-interior-pune.webp",
+      alt: "Bedroom with cove-lit false ceiling and warm perimeter lighting — false ceiling design Pune",
     },
     gallery: [
       {
-        src: "/images/projects/living-room-led-ceiling-marble-tv-unit-pune.webp",
-        alt: "Delivered living room with LED profile ceiling and marble TV unit in Pune flat — false ceiling with lighting Pune",
+        src: "/images/stock/living-room-contemporary-ceiling-pune.webp",
+        alt: "Contemporary living room with layered false ceiling and recessed lighting — false ceiling with lighting Pune",
         caption: "LED profile ceilings",
       },
       {
@@ -350,8 +350,8 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
         caption: "Minimal & bright",
       },
           {
-        src: "/images/projects/wooden-false-ceiling-wallpaper-pune.webp",
-        alt: "Delivered decorative wooden false ceiling with brass light and wallpaper in a Pune home",
+        src: "/images/stock/luxury-living-room-interior-pune.webp",
+        alt: "Luxury living room with detailed ceiling and cornice lighting — decorative false ceiling Pune",
         caption: "Wood & decorative",
       },
     ],
@@ -438,8 +438,8 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
         caption: "Floating shelf systems",
       },
       {
-        src: "/images/projects/geometric-wall-panelling-design-pune.webp",
-        alt: "Delivered geometric white wall panelling with pendant lights in a Pune apartment — custom wall panelling Pune",
+        src: "/images/stock/living-room-warm-wood-panelling-pune.webp",
+        alt: "Living room with warm wood wall panelling and feature lighting — custom wall panelling Pune",
         caption: "Geometric wall panelling",
       },
       {
@@ -448,8 +448,8 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
         caption: "Wardrobes & study units",
       },
           {
-        src: "/images/projects/tv-unit-marble-panel-design-pune.webp",
-        alt: "Delivered TV unit with marble panel and wooden shelving in a Pune living room",
+        src: "/images/stock/tv-media-wall-unit-design-pune.webp",
+        alt: "TV media wall unit with integrated storage and lighting — custom media wall Pune",
         caption: "Marble media walls",
       },
     ],

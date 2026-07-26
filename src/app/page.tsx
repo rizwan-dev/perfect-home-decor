@@ -15,6 +15,9 @@ import { SERVICE_SLUGS, servicesMeta } from "@/lib/services-data";
 import { projects } from "@/lib/projects-data";
 import { testimonials } from "@/lib/testimonials";
 import { HomeEditorialBand } from "@/components/home/HomeEditorialBand";
+import { HomeHeroSlider, type HeroSlide } from "@/components/home/HomeHeroSlider";
+import { HomeInspiration } from "@/components/home/HomeInspiration";
+import { HomeWhyUs } from "@/components/home/HomeWhyUs";
 import { HomeFeaturedCommunities } from "@/components/home/HomeFeaturedCommunities";
 import { HomeFaqSection } from "@/components/home/HomeFaqSection";
 import { HomeProcessSteps } from "@/components/home/HomeProcessSteps";
@@ -41,100 +44,49 @@ export const metadata: Metadata = {
   ],
 };
 
+const heroSlides: HeroSlide[] = [
+  {
+    src: "/images/stock/hero-living-room-interior-design-pune.webp",
+    alt: "Bright living room interior with sectional sofa, gallery wall and natural light — home interior design Pune",
+    kicker: "Full home interiors · Kharadi & East Pune",
+    headline: "Interiors your Pune home",
+    accent: "deserves.",
+  },
+  {
+    src: "/images/stock/hero-modular-kitchen-marble-island-pune.webp",
+    alt: "Modular kitchen with marble island, white cabinetry and warm lighting — modular kitchen Pune",
+    kicker: "Modular kitchens · Built for Indian cooking",
+    headline: "Kitchens planned down to the",
+    accent: "masala shelf.",
+  },
+  {
+    src: "/images/stock/hero-living-room-greenery-interior-pune.webp",
+    alt: "Warm living room interior with greenery, pendant lights and layered seating — interior designer Pune",
+    kicker: "Design & execution · One accountable team",
+    headline: "One team, one clear",
+    accent: "quotation.",
+  },
+  {
+    src: "/images/stock/hero-classic-living-room-interior-pune.webp",
+    alt: "Classic living room interior with fireplace, built-in shelving and neutral palette — premium interiors Pune",
+    kicker: "False ceilings · Painting · Wardrobes",
+    headline: "Finishes that outlast the first",
+    accent: "monsoon.",
+  },
+];
+
 export default async function HomePage() {
   const googleStats = await getGooglePlaceReviewStats();
-  const heroImage = "/images/stock/home-interior-design-living-room-pune.webp";
   return (
     <>
       <JsonLd
         data={faqJsonLd(homeFaqForSchema(), { pageUrl: `${SITE_URL}/` })}
       />
-      <section className="relative overflow-hidden bg-stone-900">
-        <div className="absolute inset-0">
-          <Image
-            src={heroImage}
-            alt="Warm contemporary living room interior"
-            fill
-            priority
-            className="object-cover opacity-60"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/75 to-charcoal/40" />
-        </div>
-        <div className="relative mx-auto flex min-h-[78vh] max-w-6xl flex-col justify-center px-4 py-24 sm:px-6 lg:px-8">
-          <p className="animate-fade-up text-xs font-semibold uppercase tracking-[0.25em] text-cream/80">
-            Pune · Kharadi &amp; East Pune · {COMPANY.yearsExperience}+ years ·
-            Turnkey interiors
-          </p>
-          <h1 className="animate-fade-up animate-delay-1 mt-4 max-w-3xl font-display text-4xl leading-[1.08] tracking-tight text-cream sm:text-5xl lg:text-[3.25rem] lg:leading-[1.06] xl:text-6xl">
-            From possession to <em className="italic">housewarming</em>, the
-            interiors your Pune home deserves.
-          </h1>
-          <p className="animate-fade-up animate-delay-2 mt-6 max-w-2xl text-base leading-relaxed text-cream/90 sm:text-lg">
-            {COMPANY.name} designs and builds complete home interiors—modular
-            kitchens, wardrobes, false ceilings, painting, and wallpaper—for
-            families in Kharadi, Wagholi, Viman Nagar, Lohegaon, Magarpatta, and
-            Kesnand. One team, one clear quotation, and one number that always
-            picks up.
-          </p>
-          <div className="animate-fade-up animate-delay-2 mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-full bg-cream px-8 py-3.5 text-sm font-semibold text-charcoal shadow-lg transition hover:bg-white"
-            >
-              Book a free site visit
-            </Link>
-            <Link
-              href="/projects"
-              className="inline-flex items-center justify-center rounded-full border border-cream/40 px-8 py-3.5 text-sm font-semibold text-cream transition hover:bg-white/10"
-            >
-              View projects
-            </Link>
-          </div>
-          <p className="animate-fade-up animate-delay-2 mt-6 text-sm text-cream/75">
-            <a
-              href={`tel:${COMPANY.phoneTel}`}
-              className="font-medium text-cream underline-offset-4 transition hover:text-white hover:underline"
-            >
-              {COMPANY.phoneDisplay}
-            </a>
-            <span className="mx-2 text-cream/35" aria-hidden>
-              ·
-            </span>
-            Same-day callback on weekdays
-          </p>
-          <dl className="animate-fade-up animate-delay-2 mt-12 grid max-w-lg grid-cols-3 gap-4 border-t border-white/20 pt-8 text-cream">
-            <div>
-              <dt className="text-xs uppercase tracking-wider text-cream/70">
-                Clients
-              </dt>
-              <dd className="mt-1 font-display text-2xl">{COMPANY.happyClients}+</dd>
-            </div>
-            <div>
-              <dt className="text-xs uppercase tracking-wider text-cream/70">
-                Communities
-              </dt>
-              <dd className="mt-1 font-display text-2xl">
-                {COMPANY.landmarkCommunitiesServed}+
-              </dd>
-              <dd className="mt-1 text-[11px] leading-tight text-cream/65 sm:text-xs">
-                towers &amp; societies
-              </dd>
-            </div>
-            <div>
-              <dt className="text-xs uppercase tracking-wider text-cream/70">
-                Google
-              </dt>
-              <dd className="mt-1 font-display text-2xl">
-                {formatGoogleRating(googleStats.rating)}★
-              </dd>
-              <dd className="mt-1 text-[11px] leading-tight text-cream/65 sm:text-xs">
-                {googleStats.userRatingsTotal.toLocaleString("en-IN")} reviews
-              </dd>
-            </div>
-          </dl>
-        </div>
-      </section>
+      <HomeHeroSlider
+        slides={heroSlides}
+        ratingLabel={`${formatGoogleRating(googleStats.rating)}★`}
+        reviewCount={googleStats.userRatingsTotal}
+      />
 
       <HomeTrustStrip
         googleRatingLabel={`${formatGoogleRating(googleStats.rating)}★`}
@@ -158,51 +110,13 @@ export default async function HomePage() {
         </div>
       </section>
 
+      <HomeInspiration />
+
       <HomeProcessSteps />
 
       <HomeEditorialBand />
 
-      <section className="border-y border-stone-200 bg-white py-16 sm:py-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="Why Perfect Home Decor"
-            title="The discipline of a large firm. The access of a dedicated studio."
-            description="Structured design reviews, factory-checked modular units, and milestone billing like the national brands—paired with WhatsApp-first project leads who know your society’s lift bookings, work-hour rules, and handover checklists."
-          />
-          <ul className="mt-12 grid gap-6 sm:grid-cols-3">
-            <li className="rounded-2xl border border-stone-200 bg-cream/40 p-6 shadow-sm">
-              <div className="h-1 w-10 rounded-full bg-wood" aria-hidden />
-              <h3 className="mt-4 font-display text-xl text-charcoal">
-                Drawings before deposits
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-stone-600">
-                Layouts, elevations, and electrical points—so you buy what you
-                have seen, not a vague scope.
-              </p>
-            </li>
-            <li className="rounded-2xl border border-stone-200 bg-cream/40 p-6 shadow-sm">
-              <div className="h-1 w-10 rounded-full bg-wood" aria-hidden />
-              <h3 className="mt-4 font-display text-xl text-charcoal">
-                Built for Pune’s climate
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-stone-600">
-                Finishes and hardware chosen for humidity, dust, and monsoon
-                cycles—fewer callbacks after the first season.
-              </p>
-            </li>
-            <li className="rounded-2xl border border-stone-200 bg-cream/40 p-6 shadow-sm">
-              <div className="h-1 w-10 rounded-full bg-wood" aria-hidden />
-              <h3 className="mt-4 font-display text-xl text-charcoal">
-                Calm sites, clean handover
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-stone-600">
-                Protected floors, disciplined debris handling, and a final walk
-                when the home is actually ready—not “almost.”
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
+      <HomeWhyUs />
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">

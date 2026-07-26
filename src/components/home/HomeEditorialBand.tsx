@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const src = "/images/stock/open-plan-living-dining-interior-pune.webp";
+const src = "/images/stock/home-interior-hallway-open-plan-pune.webp";
 
 /** Full-width visual rhythm between content sections (premium editorial feel). */
 export function HomeEditorialBand() {

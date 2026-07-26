@@ -107,6 +107,36 @@ details > summary::-webkit-details-marker {
   }
 }
 
+/* Hero slider: slow drift on the active slide so stills feel alive */
+@keyframes hero-kenburns {
+  from {
+    transform: scale(1.02);
+  }
+  to {
+    transform: scale(1.09);
+  }
+}
+
+.hero-kenburns {
+  animation: hero-kenburns 7s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-kenburns {
+    animation: none;
+  }
+}
+
+/* FAQ accordion: no expand animation for reduced-motion users */
+@media (prefers-reduced-motion: reduce) {
+  [id$="-panel"] {
+    transition: none !important;
+  }
+  [id$="-panel"] p {
+    transition: none !important;
+  }
+}
+
 /* Header “Call” — expanding ring suggests clickability */
 @keyframes nav-call-ripple {
   0% {

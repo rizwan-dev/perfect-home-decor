@@ -13,10 +13,10 @@ import { SERVICE_SLUGS, servicesMeta } from "@/lib/services-data";
 
 /** Each locality gets its own hero so no two area pages share a lead image. */
 const areaHero: Record<AreaSlug, string> = {
-  kharadi: "/images/projects/tv-unit-fluted-panel-marble-pune.webp",
-  wagholi: "/images/projects/bedroom-hexagon-headboard-panelling-pune.webp",
-  "viman-nagar": "/images/projects/bedroom-led-profile-ceiling-pune.webp",
-  lohegaon: "/images/projects/modular-kitchen-grey-white-granite-pune.webp",
+  kharadi: "/images/stock/living-room-minimal-bright-pune.webp",
+  wagholi: "/images/stock/living-room-blue-sofa-interior-pune.webp",
+  "viman-nagar": "/images/stock/bedroom-cove-ceiling-interior-pune.webp",
+  lohegaon: "/images/stock/modular-kitchen-contemporary-pune.webp",
   magarpatta: "/images/canva/bedroom-wood-wardrobe-cove-lighting-pune.webp",
   kesnand: "/images/canva/bedroom-fluted-panel-ceiling-pune.webp",
 };
