@@ -16,6 +16,19 @@ export type HeroSlide = {
 
 const AUTO_MS = 5500;
 
+function IconPhone({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden
+    >
+      <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+    </svg>
+  );
+}
+
 export function HomeHeroSlider({
   slides,
   ratingLabel,
@@ -115,11 +128,14 @@ export function HomeHeroSlider({
           >
             Book a free site visit
           </Link>
+          {/* Solid fill + icon: reads as a tap-to-call action, not a label. */}
           <a
             href={`tel:${COMPANY.phoneTel}`}
-            className="inline-flex items-center justify-center gap-2 rounded-full border border-cream/45 px-8 py-3.5 text-sm font-semibold text-cream backdrop-blur-sm transition hover:bg-white/10"
+            aria-label={`Call ${COMPANY.phoneDisplay}`}
+            className="group/call inline-flex items-center justify-center gap-2.5 rounded-full bg-wood-dark px-8 py-3.5 text-sm font-semibold text-cream shadow-lg transition duration-200 hover:-translate-y-0.5 hover:bg-wood active:translate-y-0"
           >
-            {COMPANY.phoneDisplay}
+            <IconPhone className="h-4 w-4 shrink-0 transition-transform duration-200 group-hover/call:-rotate-12" />
+            Call now
           </a>
         </div>
 
@@ -137,46 +153,50 @@ export function HomeHeroSlider({
         </p>
       </div>
 
-      {/* Controls */}
-      <div className="absolute inset-x-0 bottom-6 z-10 mx-auto flex max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-2.5" role="tablist" aria-label="Choose slide">
-          {slides.map((s, i) => (
-            <button
-              key={s.src}
-              type="button"
-              role="tab"
-              aria-selected={i === index}
-              aria-label={`Slide ${i + 1}: ${s.kicker}`}
-              onClick={() => setIndex(i)}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                i === index ? "w-8 bg-cream" : "w-4 bg-cream/40 hover:bg-cream/70"
-              }`}
-            />
-          ))}
-        </div>
-        <div className="hidden items-center gap-2 sm:flex">
+      {/* Dots: round and centred along the bottom edge */}
+      <div
+        className="absolute inset-x-0 bottom-6 z-10 flex items-center justify-center gap-2.5"
+        role="tablist"
+        aria-label="Choose slide"
+      >
+        {slides.map((s, i) => (
           <button
+            key={s.src}
             type="button"
-            onClick={() => go(-1)}
-            aria-label="Previous slide"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-cream/30 text-cream backdrop-blur-sm transition hover:bg-cream/15"
-          >
-            <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={1.75} aria-hidden>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15 5l-7 7 7 7" />
-            </svg>
-          </button>
-          <button
-            type="button"
-            onClick={() => go(1)}
-            aria-label="Next slide"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-cream/30 text-cream backdrop-blur-sm transition hover:bg-cream/15"
-          >
-            <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={1.75} aria-hidden>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
+            role="tab"
+            aria-selected={i === index}
+            aria-label={`Slide ${i + 1}: ${s.kicker}`}
+            onClick={() => setIndex(i)}
+            className={`h-2.5 w-2.5 rounded-full transition-all duration-300 ${
+              i === index
+                ? "scale-110 bg-cream ring-2 ring-cream/35 ring-offset-0"
+                : "bg-cream/45 hover:bg-cream/75"
+            }`}
+          />
+        ))}
       </div>
+
+      {/* Arrows: vertically centred on the left and right edges */}
+      <button
+        type="button"
+        onClick={() => go(-1)}
+        aria-label="Previous slide"
+        className="absolute left-3 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-charcoal shadow-lg transition hover:scale-105 hover:bg-white sm:flex lg:left-6"
+      >
+        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 5l-7 7 7 7" />
+        </svg>
+      </button>
+      <button
+        type="button"
+        onClick={() => go(1)}
+        aria-label="Next slide"
+        className="absolute right-3 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-charcoal shadow-lg transition hover:scale-105 hover:bg-white sm:flex lg:right-6"
+      >
+        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
     </section>
   );
 }
