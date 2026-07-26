@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 import { LeadForm } from "@/components/LeadForm";
-import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceCard } from "@/components/ServiceCard";
 import { TestimonialCard } from "@/components/TestimonialCard";
@@ -12,7 +11,7 @@ import {
   getGooglePlaceReviewStats,
 } from "@/lib/google-place-reviews";
 import { AREAS, COMPANY, SITE_URL } from "@/lib/site";
-import { SERVICE_SLUGS } from "@/lib/services-data";
+import { SERVICE_SLUGS, servicesMeta } from "@/lib/services-data";
 import { projects } from "@/lib/projects-data";
 import { testimonials } from "@/lib/testimonials";
 import { HomeEditorialBand } from "@/components/home/HomeEditorialBand";
@@ -220,12 +219,68 @@ export default async function HomePage() {
             All projects
           </Link>
         </div>
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.slice(0, 9).map((p, i) => (
-            <Reveal key={p.id} delay={(i % 3) * 90}>
-              <ProjectCard project={p} />
-            </Reveal>
-          ))}
+        {/* Editorial showcase: one large lead image, then a supporting grid —
+            photographs carry the section instead of nine equal cards. */}
+        <div className="mt-12 grid gap-5 lg:grid-cols-12 lg:gap-6">
+          <Reveal className="lg:col-span-7">
+            <Link
+              href="/projects"
+              className="group relative block overflow-hidden rounded-3xl bg-stone-100"
+            >
+              <div className="relative aspect-[4/3] w-full lg:aspect-[16/13]">
+                <Image
+                  src={projects[0].image}
+                  alt={projects[0].alt}
+                  fill
+                  className="object-cover transition duration-700 ease-out group-hover:scale-[1.03]"
+                  sizes="(max-width:1024px) 100vw, 58vw"
+                />
+              </div>
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/90 via-charcoal/30 to-transparent p-6 pt-24 sm:p-8 sm:pt-28">
+                <p className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-cream/80">
+                  {servicesMeta[projects[0].service].title} · {projects[0].area}
+                </p>
+                <p className="mt-2 max-w-lg text-balance font-display text-2xl leading-tight text-cream sm:text-3xl">
+                  {projects[0].title}
+                </p>
+                <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-cream">
+                  Browse the portfolio
+                  <span className="transition group-hover:translate-x-1" aria-hidden>
+                    →
+                  </span>
+                </span>
+              </div>
+            </Link>
+          </Reveal>
+          <div className="grid gap-5 sm:grid-cols-2 lg:col-span-5 lg:gap-6">
+            {projects.slice(1, 5).map((p, i) => (
+              <Reveal key={p.id} delay={(i + 1) * 80}>
+                <Link
+                  href="/projects"
+                  className="group relative block h-full overflow-hidden rounded-2xl bg-stone-100"
+                >
+                  <div className="relative aspect-[4/3] w-full lg:h-full lg:aspect-auto lg:min-h-[168px]">
+                    <Image
+                      src={p.image}
+                      alt={p.alt}
+                      fill
+                      className="object-cover transition duration-700 ease-out group-hover:scale-[1.05]"
+                      sizes="(max-width:640px) 100vw, 28vw"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/85 to-transparent p-4 pt-12">
+                    <p className="text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-cream/85">
+                      {p.area}
+                    </p>
+                    <p className="mt-0.5 line-clamp-2 font-display text-sm leading-snug text-cream">
+                      {p.title}
+                    </p>
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
