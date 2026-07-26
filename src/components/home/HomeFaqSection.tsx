@@ -8,19 +8,18 @@ export function HomeFaqSection() {
   return (
     <section
       id="faqs"
-      className="scroll-mt-24 border-t border-stone-200/60 bg-white py-16 sm:py-24"
+      className="scroll-mt-24 border-t border-stone-200/60 bg-stone-100/70 py-16 sm:py-24"
       aria-label="Frequently asked questions about interior design in Pune"
     >
-      <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          align="center"
           eyebrow="FAQ"
           title="Questions we hear most often"
           description="How we quote, plan, and deliver in Pune—homes, kitchens, ceilings, and workplaces."
         />
 
         <nav
-          className="mt-8 flex flex-wrap items-center justify-center gap-x-1 gap-y-1 text-center text-[13px] text-stone-400"
+          className="mt-6 flex flex-wrap items-center gap-x-1 gap-y-1 text-[13px] text-stone-400"
           aria-label="Related pages"
         >
           <Link
@@ -52,7 +51,7 @@ export function HomeFaqSection() {
         <FaqAccordion
           items={homeFaqEntries}
           accordionName="home-faq"
-          className="mt-12"
+          className="mt-10"
         />
 
         <footer className="mt-14 border-t border-stone-200/60 pt-12 text-center">

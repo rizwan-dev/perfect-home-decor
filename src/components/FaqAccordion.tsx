@@ -11,13 +11,20 @@ type Props = {
   accordionName?: string;
   /** Prefix for auto ids when item.id is missing */
   idPrefix?: string;
+  /** Number the questions (1., 2., 3. …) as listing sites do. */
+  numbered?: boolean;
 };
 
 function itemId(item: FaqItem, index: number, idPrefix?: string) {
   return item.id ?? (idPrefix ? `${idPrefix}-${index}` : `faq-${index}`);
 }
 
-export function FaqAccordion({ items, className = "", idPrefix }: Props) {
+export function FaqAccordion({
+  items,
+  className = "",
+  idPrefix,
+  numbered = true,
+}: Props) {
   // Single-open accordion. Answers stay in the DOM (collapsed via grid rows) so
   // they remain crawlable and consistent with the FAQPage structured data.
   const [open, setOpen] = useState<number | null>(null);
@@ -31,9 +38,7 @@ export function FaqAccordion({ items, className = "", idPrefix }: Props) {
   }, [items, idPrefix]);
 
   return (
-    <div
-      className={`overflow-hidden rounded-2xl border border-stone-200/90 bg-white ${className}`}
-    >
+    <div className={`space-y-3 sm:space-y-4 ${className}`}>
       {items.map((item, index) => {
         const id = itemId(item, index, idPrefix);
         const isOpen = open === index;
@@ -41,7 +46,11 @@ export function FaqAccordion({ items, className = "", idPrefix }: Props) {
           <div
             key={id}
             id={id}
-            className="scroll-mt-28 border-b border-stone-200/80 last:border-b-0"
+            className={`scroll-mt-28 overflow-hidden rounded-xl bg-white transition-shadow duration-300 ${
+              isOpen
+                ? "shadow-[0_10px_30px_-18px_rgba(28,25,23,0.28)] ring-1 ring-stone-200"
+                : "shadow-[0_1px_2px_rgba(28,25,23,0.05)] ring-1 ring-stone-200/70 hover:ring-stone-300"
+            }`}
           >
             <h3>
               <button
@@ -49,25 +58,24 @@ export function FaqAccordion({ items, className = "", idPrefix }: Props) {
                 aria-expanded={isOpen}
                 aria-controls={`${id}-panel`}
                 onClick={() => setOpen(isOpen ? null : index)}
-                className={`flex w-full items-center justify-between gap-5 px-5 py-5 text-left outline-none transition-colors sm:px-7 sm:py-6 ${
-                  isOpen ? "bg-cream/40" : "hover:bg-stone-50/70"
-                } focus-visible:bg-stone-50`}
+                className="flex w-full items-center justify-between gap-6 px-5 py-5 text-left outline-none sm:px-8 sm:py-6 focus-visible:bg-stone-50"
               >
-                <span className="min-w-0 flex-1 text-[0.9375rem] font-medium leading-snug tracking-tight text-charcoal sm:text-[1.0625rem]">
+                <span className="min-w-0 flex-1 text-base font-medium leading-snug text-charcoal sm:text-[1.0625rem]">
+                  {numbered ? (
+                    <span className="text-charcoal">{index + 1}. </span>
+                  ) : null}
                   {item.q}
                 </span>
-                {/* Plus that becomes a minus — the affordance customers expect. */}
+                {/* Bare plus that becomes a minus — no circle, as on listing sites. */}
                 <span
-                  className={`relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition duration-300 sm:h-9 sm:w-9 ${
-                    isOpen
-                      ? "rotate-180 border-wood-dark bg-wood-dark text-cream"
-                      : "border-stone-300 text-charcoal"
+                  className={`relative flex h-6 w-6 shrink-0 items-center justify-center text-stone-700 transition-transform duration-300 ${
+                    isOpen ? "rotate-180" : ""
                   }`}
                   aria-hidden
                 >
-                  <span className="absolute h-[1.5px] w-3.5 rounded bg-current sm:w-4" />
+                  <span className="absolute h-[2px] w-5 rounded-full bg-current" />
                   <span
-                    className={`absolute h-3.5 w-[1.5px] rounded bg-current transition duration-300 sm:h-4 ${
+                    className={`absolute h-5 w-[2px] rounded-full bg-current transition-transform duration-300 ${
                       isOpen ? "scale-y-0" : "scale-y-100"
                     }`}
                   />
@@ -85,7 +93,7 @@ export function FaqAccordion({ items, className = "", idPrefix }: Props) {
             >
               <div className="overflow-hidden">
                 <p
-                  className={`max-w-2xl px-5 pb-6 text-sm leading-relaxed text-stone-600 transition-opacity duration-300 sm:px-7 sm:pb-7 sm:text-[0.9375rem] sm:leading-[1.75] ${
+                  className={`max-w-3xl px-5 pb-6 text-sm leading-relaxed text-stone-600 transition-opacity duration-300 sm:px-8 sm:pb-7 sm:text-[0.9375rem] sm:leading-[1.75] ${
                     isOpen ? "opacity-100" : "opacity-0"
                   }`}
                 >
