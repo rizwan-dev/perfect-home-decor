@@ -42,7 +42,7 @@ export function HomeProcessSteps() {
               key={s.step}
               className="relative rounded-2xl border border-stone-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-stone-300 hover:shadow-[0_20px_40px_-24px_rgba(28,25,23,0.22)]"
             >
-              <span className="font-display text-3xl italic text-wood/55 transition-colors duration-300 group-hover:text-wood/75">
+              <span className="font-display text-3xl italic text-wood/75 transition-colors duration-300 group-hover:text-wood">
                 {s.step}
               </span>
               <h3 className="mt-2 font-display text-xl text-charcoal">

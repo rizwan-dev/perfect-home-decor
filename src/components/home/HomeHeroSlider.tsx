@@ -176,7 +176,7 @@ export function HomeHeroSlider({
 
       {/* Dots: round and centred along the bottom edge */}
       <div
-        className="absolute inset-x-0 bottom-6 z-10 flex items-center justify-center gap-2.5"
+        className="absolute inset-x-0 bottom-6 z-10 flex items-center justify-center gap-1"
         role="tablist"
         aria-label="Choose slide"
       >
@@ -191,7 +191,7 @@ export function HomeHeroSlider({
             /* 10px dot, 44px tap target. The padding is transparent, so this
                is identical visually but passes the 24px minimum — the dots were
                the only failing touch target on the page. */
-            className="group/dot -m-4 flex h-11 w-11 items-center justify-center p-4"
+            className="group/dot flex h-6 w-6 items-center justify-center"
           >
             <span
               className={`h-2.5 w-2.5 rounded-full transition-all duration-300 ${

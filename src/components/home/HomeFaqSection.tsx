@@ -24,7 +24,7 @@ export function HomeFaqSection() {
         >
           <Link
             href="/services"
-            className="px-2 py-1 text-stone-500 transition hover:text-charcoal"
+            className="px-2 py-1 text-stone-600 transition hover:text-charcoal"
           >
             Services
           </Link>
@@ -33,7 +33,7 @@ export function HomeFaqSection() {
           </span>
           <Link
             href="/projects"
-            className="px-2 py-1 text-stone-500 transition hover:text-charcoal"
+            className="px-2 py-1 text-stone-600 transition hover:text-charcoal"
           >
             Projects
           </Link>
@@ -42,7 +42,7 @@ export function HomeFaqSection() {
           </span>
           <Link
             href="/contact"
-            className="px-2 py-1 text-stone-500 transition hover:text-charcoal"
+            className="px-2 py-1 text-stone-600 transition hover:text-charcoal"
           >
             Contact
           </Link>
@@ -58,7 +58,7 @@ export function HomeFaqSection() {
           <p className="font-display text-xl tracking-tight text-charcoal sm:text-2xl">
             Still unsure?
           </p>
-          <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-stone-500">
+          <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-stone-600">
             Share your society, carpet area, and what you want to tackle first—we
             usually reply the same day on weekdays.
           </p>
