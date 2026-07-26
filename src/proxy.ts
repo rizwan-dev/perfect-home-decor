@@ -13,6 +13,41 @@ export const config = {
 
 const REALM = 'Basic realm="Perfect Home Decor admin", charset="UTF-8"';
 
+/**
+ * /admin is reachable on the deployment host (*.vercel.app) and locally, but
+ * not on the public domain — a crawler of perfecthomedecor.in never sees that
+ * the path exists.
+ *
+ * This is attack-surface reduction, not a security control. The *.vercel.app
+ * hostname is discoverable via certificate transparency logs, so ADMIN_PASSWORD
+ * is still the only thing actually guarding this page. Treat it accordingly.
+ *
+ * Override with ADMIN_ALLOWED_HOSTS (comma-separated) if the admin panel should
+ * also answer on a specific hostname, e.g. admin.perfecthomedecor.in.
+ */
+function isAdminHostAllowed(hostHeader: string | null): boolean {
+  const host = (hostHeader ?? "").toLowerCase().split(":")[0];
+  if (!host) return false;
+  if (host === "localhost" || host === "127.0.0.1") return true;
+  if (host === "vercel.app" || host.endsWith(".vercel.app")) return true;
+  const extra = (process.env.ADMIN_ALLOWED_HOSTS ?? "")
+    .split(",")
+    .map((h) => h.trim().toLowerCase())
+    .filter(Boolean);
+  return extra.includes(host);
+}
+
+/** Indistinguishable from a route that was never deployed. */
+function notFound(): NextResponse {
+  return new NextResponse("This page could not be found.", {
+    status: 404,
+    headers: {
+      "Cache-Control": "no-store",
+      "X-Robots-Tag": "noindex, nofollow",
+    },
+  });
+}
+
 /** Length-independent comparison, so response time doesn't leak the password. */
 function credentialsMatch(a: string, b: string): boolean {
   const enc = new TextEncoder();
@@ -38,6 +73,12 @@ function challenge(): NextResponse {
 }
 
 export function proxy(request: NextRequest) {
+  // Host gate runs before the auth challenge, so the public domain never even
+  // returns a 401 — a 401 would confirm the path exists.
+  const host =
+    request.headers.get("x-forwarded-host") ?? request.headers.get("host");
+  if (!isAdminHostAllowed(host)) return notFound();
+
   const expectedUser = process.env.ADMIN_USER?.trim() || "admin";
   const expectedPass = process.env.ADMIN_PASSWORD?.trim();
 
