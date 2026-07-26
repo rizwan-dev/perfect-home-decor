@@ -27,8 +27,8 @@ export type ServiceDetail = {
 export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
   "home-painting": {
     overviewImage: {
-      src: "/images/stock/overview-bright-apartment.jpg",
-      alt: "Bright freshly painted apartment living room — home painting in Pune by Perfect Home Decor",
+      src: "/images/canva/living-blue-panels.jpg",
+      alt: "Living room with painted blue panelled wall and gallery frames — home painting in Pune by Perfect Home Decor",
     },
     gallery: [
       {
@@ -123,8 +123,8 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
   },
   "interior-design": {
     overviewImage: {
-      src: "/images/stock/overview-boho-living.jpg",
-      alt: "Warm layered living room interior with textures and plants — home interior design Pune",
+      src: "/images/canva/living-indian-classic.jpg",
+      alt: "Warm Indian living room with wooden rafter ceiling and cream sofas — home interior design Pune",
     },
     gallery: [
       {
@@ -133,14 +133,14 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
         caption: "Calm, layered greys",
       },
       {
-        src: "/images/stock/living-white-staircase.jpg",
-        alt: "Bright white duplex living room with staircase — villa and duplex interiors Pune",
-        caption: "Bright & open plans",
+        src: "/images/canva/living-classic-cream.jpg",
+        alt: "Classic cream living room with wall mouldings and warm lamps — premium interiors Pune",
+        caption: "Timeless classics",
       },
       {
-        src: "/images/stock/living-dining-warm.jpg",
-        alt: "Warm living and dining interior with wooden floor — 2 BHK interior design Pune",
-        caption: "Warm family spaces",
+        src: "/images/canva/living-ethnic-jewel.jpg",
+        alt: "Ethnic Indian living room with jewel-tone cushions and tapestry wall — traditional interior design Pune",
+        caption: "Rooted & colourful",
       },
     ],
     inclusions: [
@@ -229,14 +229,14 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
         caption: "Two-tone classics",
       },
       {
-        src: "/images/stock/kitchen-navy-marble-island.jpg",
-        alt: "Navy modular kitchen with marble island — island kitchen design Pune",
-        caption: "Island & marble looks",
+        src: "/images/canva/kitchen-island-cove.jpg",
+        alt: "Indian modular kitchen with island and cove-lit ceiling — island kitchen design Pune",
+        caption: "Cove-lit islands",
       },
       {
-        src: "/images/stock/kitchen-pendant-white.jpg",
-        alt: "White modular kitchen with black pendant lights — white kitchen interiors Pune",
-        caption: "Bright whites & pendants",
+        src: "/images/canva/kitchen-dark-wood-indian.jpg",
+        alt: "Rich dark wood modular kitchen with warm task lighting — modular kitchen Pune",
+        caption: "Rich wood classics",
       },
     ],
     inclusions: [
@@ -315,19 +315,19 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
   },
   "false-ceiling": {
     overviewImage: {
-      src: "/images/stock/living-minimal-bright.jpg",
-      alt: "Bright living room with clean false ceiling and natural light — false ceiling design Pune",
+      src: "/images/canva/living-cove-art.jpg",
+      alt: "Living room with layered cove-lit false ceiling and art wall — false ceiling design Pune",
     },
     gallery: [
       {
-        src: "/images/stock/living-coffered-ceiling.jpg",
-        alt: "Coffered white ceiling in classic living room — designer ceiling Pune",
-        caption: "Coffered & classic",
+        src: "/images/canva/bedroom-fluted-panels.jpg",
+        alt: "Bedroom with fluted panels and recessed cove ceiling — bedroom false ceiling Pune",
+        caption: "Panelled & cove-lit",
       },
       {
-        src: "/images/stock/hallway-open-plan.jpg",
-        alt: "Living room with recessed ceiling lighting and pendant — ceiling lighting design Pune",
-        caption: "Recessed & warm",
+        src: "/images/canva/bedroom-wood-cove.jpg",
+        alt: "Wooden bedroom wardrobe wall under a warm cove-lit ceiling — cove lighting Pune",
+        caption: "Warm bedroom coves",
       },
       {
         src: "/images/stock/living-neutral-bright.jpg",
@@ -418,9 +418,9 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
         caption: "Floating shelf systems",
       },
       {
-        src: "/images/stock/table-detail-white.jpg",
-        alt: "Clean white table and chair detail — custom dining furniture Pune",
-        caption: "Clean-lined pieces",
+        src: "/images/canva/bedroom-panel-mustard.jpg",
+        alt: "Bedroom with wooden panelled headboard wall and platform bed — custom bedroom furniture Pune",
+        caption: "Panelled bed walls",
       },
       {
         src: "/images/stock/bedroom-calm-glass.jpg",

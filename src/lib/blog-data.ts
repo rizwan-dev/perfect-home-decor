@@ -453,7 +453,7 @@ export const blogPosts: BlogPost[] = [
     author: "Perfect Home Decor",
     category: "Bedroom",
     image:
-      "/images/stock/bedroom-beige-soft.jpg",
+      "/images/canva/bedroom-cream-soft.jpg",
     keywords: [
       "bedroom interior design Pune",
       "master bedroom interiors",
@@ -529,7 +529,7 @@ export const blogPosts: BlogPost[] = [
     author: "Perfect Home Decor",
     category: "Kids room",
     image:
-      "/images/stock/bedroom-calm-glass.jpg",
+      "/images/canva/kids-room-colorful.jpg",
     keywords: [
       "kids room interior Pune",
       "child bedroom design",
