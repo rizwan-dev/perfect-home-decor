@@ -123,8 +123,8 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
   },
   "interior-design": {
     overviewImage: {
-      src: "/images/canva/living-indian-classic.jpg",
-      alt: "Warm Indian living room with wooden rafter ceiling and cream sofas — home interior design Pune",
+      src: "/images/canva/living-indian-sofa-set.jpg",
+      alt: "Modern Indian apartment living room with full sofa set and layered false ceiling — home interior design Pune",
     },
     gallery: [
       {
@@ -219,8 +219,8 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
   },
   "modular-kitchen": {
     overviewImage: {
-      src: "/images/stock/kitchen-gold-tap-detail.jpg",
-      alt: "Modular kitchen detail with quartz counter and brass tap — modular kitchen Pune",
+      src: "/images/canva/kitchen-grey-wood-pendants.jpg",
+      alt: "Modular kitchen with grey handleless base units, wood wall cabinets and brass pendant lights — modular kitchen Pune",
     },
     gallery: [
       {
@@ -234,9 +234,9 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
         caption: "Cove-lit islands",
       },
       {
-        src: "/images/canva/kitchen-dark-wood-indian.jpg",
-        alt: "Rich dark wood modular kitchen with warm task lighting — modular kitchen Pune",
-        caption: "Rich wood classics",
+        src: "/images/stock/kitchen-gold-tap-detail.jpg",
+        alt: "Modular kitchen detail with quartz counter and brass mixer tap — premium kitchen fittings Pune",
+        caption: "Detailing that lasts",
       },
     ],
     inclusions: [
@@ -325,9 +325,9 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
         caption: "LED profile ceilings",
       },
       {
-        src: "/images/canva/bedroom-wood-cove.jpg",
-        alt: "Wooden bedroom wardrobe wall under a warm cove-lit ceiling — cove lighting Pune",
-        caption: "Warm bedroom coves",
+        src: "/images/canva/bedroom-geometric-ceiling.jpg",
+        alt: "Bedroom with geometric layered false ceiling and warm cove lighting — bedroom false ceiling design Pune",
+        caption: "Geometric ceilings",
       },
       {
         src: "/images/stock/living-neutral-bright.jpg",
@@ -423,9 +423,9 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
         caption: "Geometric wall panelling",
       },
       {
-        src: "/images/stock/bedroom-calm-glass.jpg",
-        alt: "Calm bedroom with glass-door wardrobe — custom wardrobe design Pune",
-        caption: "Bedroom built-ins",
+        src: "/images/canva/bedroom-wardrobe-study.jpg",
+        alt: "Bedroom with fitted wardrobe, loft storage and study table — custom wardrobe and study unit Pune",
+        caption: "Wardrobes & study units",
       },
     ],
     inclusions: [
