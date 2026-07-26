@@ -9,6 +9,8 @@ export type ProjectItem = {
   alt: string;
   /** Delivered in the current season — surfaced first and badged. */
   recent?: boolean;
+  /** What the flat actually covered, in the owner's words. */
+  scope?: string;
 };
 
 /**
@@ -39,7 +41,8 @@ export const projects: ProjectItem[] = [
   {
     id: "majestique-tower-kharadi",
     recent: true,
-    title: "2 BHK Home Interior, Majestique Towers, Kharadi",
+    scope: "Complete flat interior — modular kitchen, hall, bedrooms and kids' room.",
+    title: "2 BHK Complete Home Interior Design, Majestique Towers, Kharadi",
     service: "interior-design",
     area: "Kharadi",
     image: "/images/stock/open-plan-living-dining-interior-pune.webp",
@@ -56,7 +59,8 @@ export const projects: ProjectItem[] = [
   {
     id: "nyati-evita-wagholi",
     recent: true,
-    title: "3 BHK Home Interior, Nyati Evita, Wagholi",
+    scope: "Complete flat interior — modular kitchen, hall, bedrooms and kids' room.",
+    title: "3 BHK Complete Home Interior Design, Nyati Evita, Wagholi",
     service: "interior-design",
     area: "Wagholi",
     image: "/images/stock/fitted-wardrobe-loft-storage-pune.webp",
@@ -113,7 +117,8 @@ export const projects: ProjectItem[] = [
   {
     id: "gera-world-of-joy-kharadi",
     recent: true,
-    title: "3 BHK Home Interior Design, Gera World of Joy, Kharadi",
+    scope: "Complete flat interior — modular kitchen, hall, bedrooms and kids' room.",
+    title: "3 BHK Complete Home Interior Design, Gera World of Joy, Kharadi",
     service: "interior-design",
     area: "Kharadi",
     image: "/images/stock/bedroom-interior-design-wardrobe-pune.webp",
@@ -138,7 +143,8 @@ export const projects: ProjectItem[] = [
   {
     id: "kalpataru-jade-kharadi",
     recent: true,
-    title: "3 BHK Full Home Interior, Kalpataru Jade Residences, Kharadi",
+    scope: "Complete flat interior — modular kitchen, hall, bedrooms and kids' room.",
+    title: "3 BHK Complete Home Interior Design, Kalpataru Jade Residences, Kharadi",
     service: "interior-design",
     area: "Kharadi",
     image: "/images/stock/modular-kitchen-design-pune.webp",

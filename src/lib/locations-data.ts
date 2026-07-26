@@ -27,7 +27,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
     neighborhoods:
       "Recently completed in Kalpataru Jade Residences, Gera World of Joy and Majestique Towers, plus homes in Forest County, Yashwant Enchante, VTP Leonara, Marvel Zephyr and Godrej Rivergreens. We work regularly across the towers near EON IT Park and the premium societies toward Mundhwa bridge.",
     servicesBlurb:
-      "Full home interiors, modular kitchens tuned for compact galley plans, false ceilings with cove lighting for open layouts, painting packages for handover refreshes, and custom TV units for media walls facing city views.",
+      "2 BHK and 3 BHK complete home interior design for flats — modular kitchen, hall, bedrooms and kids' room delivered as one job. Also modular kitchens tuned for compact galley plans, false ceilings with cove lighting for open layouts, painting packages for handover refreshes, and custom TV units for media walls facing city views.",
     localFaq: [
       {
         q: "We have a compact 2 BHK in a Kharadi tower—can you still add storage?",
@@ -67,7 +67,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
     neighborhoods:
       "Recently completed a 3 BHK in Nyati Evita, alongside homes in Nyati Elan, Ivy State, Konark Exotica, Citron and Mansha. We work across the new townships and mid-rise communities along Nagar Road and the internal sectors toward Kesnand.",
     servicesBlurb:
-      "Turnkey interiors for fresh possessions, budget-smart modular kitchens, kids’ rooms with growth-friendly storage, POP ceilings with neat coves, and full-home painting with low-odour options.",
+      "2 BHK and 3 BHK complete home interior design for fresh possessions — modular kitchen, hall, bedrooms and kids' room in a single scope. Also budget-smart modular kitchens, kids’ rooms with growth-friendly storage, POP ceilings with neat coves, and full-home painting with low-odour options.",
     localFaq: [
       {
         q: "Our flat faces the road—how do you handle noise and dust?",

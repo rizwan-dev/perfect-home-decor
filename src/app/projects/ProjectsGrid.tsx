@@ -145,6 +145,11 @@ export function ProjectsGrid({ projects }: { projects: ProjectItem[] }) {
               <p className="mt-1 text-balance font-display text-base leading-snug text-charcoal">
                 {p.title}
               </p>
+              {p.scope ? (
+                <p className="mt-1 text-sm leading-relaxed text-stone-600">
+                  {p.scope}
+                </p>
+              ) : null}
             </figcaption>
           </figure>
         ))}
