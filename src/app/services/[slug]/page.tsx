@@ -5,7 +5,9 @@ import { notFound } from "next/navigation";
 import { CTASection } from "@/components/CTASection";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { ProjectStrip } from "@/components/ProjectStrip";
+import { Reveal } from "@/components/Reveal";
 import { projects } from "@/lib/projects-data";
+import { serviceDetail } from "@/lib/services-detail-data";
 import { JsonLd } from "@/components/JsonLd";
 import { LeadForm } from "@/components/LeadForm";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -98,6 +100,7 @@ export default async function ServicePage({ params }: Props) {
   const relatedSlugs = SERVICE_SLUGS.filter((s) => s !== slug);
   const localityBlock = serviceLocalityBlock(slug);
   const serviceProjects = projects.filter((p) => p.service === slug);
+  const detail = serviceDetail[slug];
 
   return (
     <>
@@ -262,6 +265,100 @@ export default async function ServicePage({ params }: Props) {
         </div>
       </section>
 
+      <section className="border-b border-stone-200 bg-stone-50/70 py-14 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="What’s included"
+            title={`Everything ${meta.title.toLowerCase()} covers`}
+            description="The concrete scope behind the word—so you know exactly what you are comparing when quotes land."
+          />
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+            {detail.inclusions.map((item, i) => (
+              <Reveal key={item.title} delay={(i % 3) * 80}>
+                <div className="h-full rounded-2xl border border-stone-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_32px_-20px_rgba(28,25,23,0.22)]">
+                  <div className="h-1 w-8 rounded-full bg-wood/70" aria-hidden />
+                  <h3 className="mt-4 font-display text-lg text-charcoal">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-stone-600">
+                    {item.body}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-stone-200 bg-white py-14 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Choose your scope"
+            title="Three ways to take this on"
+            description="Same team and standards at every level—only the depth of work changes. Mix and match after the site visit."
+          />
+          <div className="mt-12 grid gap-6 lg:grid-cols-3 lg:gap-8">
+            {detail.tiers.map((tier, i) => (
+              <Reveal key={tier.name} delay={(i % 3) * 90}>
+                <div
+                  className={`relative flex h-full flex-col rounded-3xl border p-7 transition duration-300 hover:-translate-y-1 ${
+                    tier.featured
+                      ? "border-wood/40 bg-cream/50 shadow-[0_24px_48px_-24px_rgba(107,83,68,0.35)]"
+                      : "border-stone-200 bg-white shadow-sm hover:shadow-[0_20px_40px_-24px_rgba(28,25,23,0.22)]"
+                  }`}
+                >
+                  {tier.featured ? (
+                    <span className="absolute -top-3 left-7 rounded-full bg-wood-dark px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-cream">
+                      Most chosen
+                    </span>
+                  ) : null}
+                  <h3 className="font-display text-2xl text-charcoal">
+                    {tier.name}
+                  </h3>
+                  <p className="mt-1 text-sm text-stone-500">{tier.tagline}</p>
+                  <ul className="mt-6 flex-1 space-y-3 text-sm leading-relaxed text-stone-700">
+                    {tier.points.map((point) => (
+                      <li key={point} className="flex gap-2.5">
+                        <span className="mt-0.5 text-wood-dark" aria-hidden>
+                          ✓
+                        </span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    href="/contact"
+                    className={`mt-8 inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition ${
+                      tier.featured
+                        ? "bg-charcoal text-cream hover:bg-wood-dark"
+                        : "border border-stone-300 text-charcoal hover:border-wood-dark hover:text-wood-dark"
+                    }`}
+                  >
+                    Get this quoted free
+                  </Link>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <p className="mx-auto mt-8 max-w-2xl text-center text-sm leading-relaxed text-stone-500">
+            {detail.tiersNote}
+          </p>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-2.5">
+            <span className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-stone-400">
+              Materials we specify
+            </span>
+            {detail.materials.map((m) => (
+              <span
+                key={m}
+                className="rounded-full border border-stone-200 bg-stone-50 px-3.5 py-1.5 text-xs font-medium text-stone-600"
+              >
+                {m}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {localityBlock ? (
         <section className="border-b border-stone-200 bg-gradient-to-b from-cream/50 via-white to-stone-50/80 py-14 sm:py-16">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -369,6 +466,39 @@ export default async function ServicePage({ params }: Props) {
         title={`Recent ${meta.title.toLowerCase()} projects in Pune`}
         description="Real sites, real finishes—photographed as handed over, not staged."
       />
+
+      <section className="border-t border-stone-200 bg-white py-14 sm:py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="rounded-3xl border border-stone-200 bg-stone-50/80 p-8 sm:p-10">
+            <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-14">
+              <div className="lg:w-64 lg:shrink-0">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-wood-dark">
+                  Good to know
+                </p>
+                <h2 className="mt-2 font-display text-2xl tracking-tight text-charcoal sm:text-3xl">
+                  Straight answers before you commit
+                </h2>
+              </div>
+              <ul className="grid flex-1 gap-x-10 gap-y-5 sm:grid-cols-2">
+                {detail.goodToKnow.map((item) => (
+                  <li
+                    key={item}
+                    className="flex gap-3 text-sm leading-relaxed text-stone-700"
+                  >
+                    <span
+                      className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white text-[10px] font-bold text-wood-dark ring-1 ring-stone-200"
+                      aria-hidden
+                    >
+                      ✓
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="border-t border-stone-200 bg-cream/60 py-14 sm:py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
