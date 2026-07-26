@@ -72,7 +72,7 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <Image
-              src="/images/brand/logo-lockup.png"
+              src="/images/brand/logo-lockup.webp"
               alt={COMPANY.name}
               width={358}
               height={182}

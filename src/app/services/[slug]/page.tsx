@@ -306,7 +306,7 @@ export default async function ServicePage({ params }: Props) {
             title="Moods to bring to your site visit"
             description="Save the one closest to your taste—we’ll translate it to your light, layout, and budget."
           />
-          <div className="mt-10 grid gap-6 sm:grid-cols-3 lg:gap-8">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
             {detail.gallery.map((g, i) => (
               <Reveal key={g.src} delay={(i % 3) * 90}>
                 <figure className="group overflow-hidden rounded-3xl border border-stone-200/90 bg-white shadow-[0_1px_2px_rgba(28,25,23,0.04)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_48px_-24px_rgba(28,25,23,0.28)]">

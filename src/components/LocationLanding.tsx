@@ -11,7 +11,15 @@ import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/json-ld";
 import { projectsNearArea } from "@/lib/projects-data";
 import { SERVICE_SLUGS, servicesMeta } from "@/lib/services-data";
 
-const hero = "/images/stock/interior-designer-pune-apartment.jpg";
+/** Each locality gets its own hero so no two area pages share a lead image. */
+const areaHero: Record<AreaSlug, string> = {
+  kharadi: "/images/projects/tv-unit-fluted-panel-marble-pune.webp",
+  wagholi: "/images/projects/bedroom-hexagon-headboard-panelling-pune.webp",
+  "viman-nagar": "/images/projects/bedroom-led-profile-ceiling-pune.webp",
+  lohegaon: "/images/projects/modular-kitchen-grey-white-granite-pune.webp",
+  magarpatta: "/images/canva/bedroom-wood-wardrobe-cove-lighting-pune.webp",
+  kesnand: "/images/canva/bedroom-fluted-panel-ceiling-pune.webp",
+};
 
 export function LocationLanding({ area }: { area: AreaSlug }) {
   const c = locationContent[area];
@@ -37,7 +45,7 @@ export function LocationLanding({ area }: { area: AreaSlug }) {
       <section className="relative bg-charcoal">
         <div className="absolute inset-0">
           <Image
-            src={hero}
+            src={areaHero[area]}
             alt={`Interior design in ${c.areaLabel}, Pune`}
             fill
             priority

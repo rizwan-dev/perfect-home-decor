@@ -10,7 +10,7 @@ import { paintingLocationContent } from "@/lib/painting-locations-data";
 import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/json-ld";
 import { projectsNearArea } from "@/lib/projects-data";
 
-const heroImage = "/images/stock/home-painting-service-pune.jpg";
+const heroImage = "/images/stock/home-painting-service-pune.webp";
 
 export function PaintingLocationLanding({ area }: { area: AreaSlug }) {
   const c = paintingLocationContent[area];

@@ -28,7 +28,7 @@ export const servicesMeta: Record<
     title: "Home Interior Design",
     short:
       "Complete interiors for 1, 2 & 3 BHK flats and villas—layout, materials, lighting, and execution that feels calm, warm, and unmistakably yours.",
-    heroImage: "/images/stock/living-room-interior-warm-lighting-pune.jpg",
+    heroImage: "/images/stock/living-room-interior-warm-lighting-pune.webp",
     keywords: [
       "interior designer Pune",
       "home interior design",
@@ -39,7 +39,7 @@ export const servicesMeta: Record<
     title: "Commercial Interior Design",
     short:
       "Offices, retail stores, and showrooms in Pune—brand-led layouts, efficient workflows, durable finishes, and on-time handover for working spaces.",
-    heroImage: "/images/stock/office-interior-design-pune.jpg",
+    heroImage: "/images/stock/office-interior-design-pune.webp",
     keywords: [
       "office interior design Pune",
       "shop interior Pune",
@@ -51,28 +51,28 @@ export const servicesMeta: Record<
     title: "Modular Kitchen",
     short:
       "Ergonomic layouts, premium finishes, and storage planned down to the masala shelf—kitchens built for daily Indian cooking and Pune’s humid monsoons.",
-    heroImage: "/images/stock/modular-kitchen-design-pune.jpg",
+    heroImage: "/images/stock/modular-kitchen-design-pune.webp",
     keywords: ["modular kitchen Pune", "kitchen interior", "parallel kitchen"],
   },
   "home-painting": {
     title: "Wall Painting",
     short:
       "Low-odour paints, crisp lines, and palettes chosen for Pune’s light—scheduled around the monsoon so walls cure properly and colours stay true.",
-    heroImage: "/images/stock/home-painting-service-pune.jpg",
+    heroImage: "/images/stock/home-painting-service-pune.webp",
     keywords: ["home painting Pune", "wall painting", "texture paint"],
   },
   "false-ceiling": {
     title: "False Ceiling (POP)",
     short:
       "Layered ceilings, cove lighting, and clean profiles that hide wiring and AC piping—while keeping standard Pune flat heights bright and airy.",
-    heroImage: "/images/stock/open-plan-living-dining-interior-pune.jpg",
+    heroImage: "/images/stock/open-plan-living-dining-interior-pune.webp",
     keywords: ["false ceiling Pune", "POP ceiling", "gypsum ceiling"],
   },
   "custom-furniture": {
     title: "Custom Furniture",
     short:
       "TV units, beds, wardrobes, and storage—measured for your space, finished to match your interior story.",
-    heroImage: "/images/stock/custom-furniture-shelving-pune.jpg",
+    heroImage: "/images/stock/custom-furniture-shelving-pune.webp",
     keywords: ["custom TV unit Pune", "bed design", "wardrobe design"],
   },
 };

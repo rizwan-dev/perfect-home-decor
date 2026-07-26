@@ -63,7 +63,7 @@ export function Navbar() {
           className="group flex shrink-0 items-center transition-opacity hover:opacity-80"
         >
           <Image
-            src="/images/brand/logo-lockup.png"
+            src="/images/brand/logo-lockup.webp"
             alt={`${COMPANY.name} — interiors & home services, Pune`}
             width={358}
             height={182}

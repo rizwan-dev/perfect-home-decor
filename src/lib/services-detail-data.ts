@@ -27,24 +27,29 @@ export type ServiceDetail = {
 export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
   "home-painting": {
     overviewImage: {
-      src: "/images/canva/blue-panelled-living-room-painting-pune.jpg",
+      src: "/images/canva/blue-panelled-living-room-painting-pune.webp",
       alt: "Living room with painted blue panelled wall and gallery frames — home painting in Pune by Perfect Home Decor",
     },
     gallery: [
       {
-        src: "/images/stock/living-green-feature-wall.jpg",
+        src: "/images/stock/living-green-feature-wall.webp",
         alt: "Deep green painted feature wall with tan leather sofa — feature wall painting Pune",
         caption: "Deep feature walls",
       },
       {
-        src: "/images/stock/bedroom-dark-feature.jpg",
+        src: "/images/stock/bedroom-dark-feature.webp",
         alt: "Moody charcoal painted bedroom wall — designer wall colours Pune",
         caption: "Moody accents",
       },
       {
-        src: "/images/stock/bedroom-white-bright.jpg",
+        src: "/images/stock/bedroom-white-bright.webp",
         alt: "Fresh white painted bedroom with clean lines — low-odour home painting Pune",
         caption: "Fresh, breathable whites",
+      },
+          {
+        src: "/images/canva/dining-room-green-chairs-interior-pune.webp",
+        alt: "Dining room with deep green chairs against soft painted walls — colour consultation Pune",
+        caption: "Colour that carries",
       },
     ],
     inclusions: [
@@ -123,24 +128,29 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
   },
   "interior-design": {
     overviewImage: {
-      src: "/images/canva/indian-living-room-sofa-set-false-ceiling-pune.jpg",
+      src: "/images/canva/indian-living-room-sofa-set-false-ceiling-pune.webp",
       alt: "Modern Indian apartment living room with full sofa set and layered false ceiling — home interior design Pune",
     },
     gallery: [
       {
-        src: "/images/stock/dining-nook-mirror.jpg",
+        src: "/images/stock/dining-nook-mirror.webp",
         alt: "Elegant grey dining nook with round mirror — dining room interior design Pune",
         caption: "Calm, layered greys",
       },
       {
-        src: "/images/canva/classic-cream-living-room-interior-pune.jpg",
+        src: "/images/canva/classic-cream-living-room-interior-pune.webp",
         alt: "Classic cream living room with wall mouldings and warm lamps — premium interiors Pune",
         caption: "Timeless classics",
       },
       {
-        src: "/images/canva/ethnic-indian-living-room-interior-pune.jpg",
+        src: "/images/canva/ethnic-indian-living-room-interior-pune.webp",
         alt: "Ethnic Indian living room with jewel-tone cushions and tapestry wall — traditional interior design Pune",
         caption: "Rooted & colourful",
+      },
+          {
+        src: "/images/stock/coffered-ceiling-living-room-pune.webp",
+        alt: "Coffered ceiling living room with built-in shelving — premium home interior design Pune",
+        caption: "Coffered & crafted",
       },
     ],
     inclusions: [
@@ -219,24 +229,29 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
   },
   "modular-kitchen": {
     overviewImage: {
-      src: "/images/canva/modular-kitchen-grey-wood-pendant-lights-pune.jpg",
+      src: "/images/canva/modular-kitchen-grey-wood-pendant-lights-pune.webp",
       alt: "Modular kitchen with grey handleless base units, wood wall cabinets and brass pendant lights — modular kitchen Pune",
     },
     gallery: [
       {
-        src: "/images/stock/kitchen-charcoal-white.jpg",
+        src: "/images/stock/kitchen-charcoal-white.webp",
         alt: "Charcoal and white modular kitchen with open shelving — modern kitchen design Pune",
         caption: "Two-tone classics",
       },
       {
-        src: "/images/canva/island-modular-kitchen-cove-lighting-pune.jpg",
+        src: "/images/canva/island-modular-kitchen-cove-lighting-pune.webp",
         alt: "Indian modular kitchen with island and cove-lit ceiling — island kitchen design Pune",
         caption: "Cove-lit islands",
       },
       {
-        src: "/images/stock/kitchen-gold-tap-detail.jpg",
+        src: "/images/stock/kitchen-gold-tap-detail.webp",
         alt: "Modular kitchen detail with quartz counter and brass mixer tap — premium kitchen fittings Pune",
         caption: "Detailing that lasts",
+      },
+          {
+        src: "/images/stock/navy-modular-kitchen-marble-island-pune.webp",
+        alt: "Navy modular kitchen with marble island and pendant lights — island kitchen design Pune",
+        caption: "Navy & marble",
       },
     ],
     inclusions: [
@@ -315,24 +330,29 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
   },
   "false-ceiling": {
     overviewImage: {
-      src: "/images/projects/false-ceiling-led-cove-lighting-pune.jpg",
+      src: "/images/projects/false-ceiling-led-cove-lighting-pune.webp",
       alt: "Delivered LED-strip false ceiling with cove lighting and panelled wall in a Pune home — false ceiling design Pune",
     },
     gallery: [
       {
-        src: "/images/projects/living-room-led-ceiling-marble-tv-unit-pune.jpg",
+        src: "/images/projects/living-room-led-ceiling-marble-tv-unit-pune.webp",
         alt: "Delivered living room with LED profile ceiling and marble TV unit in Pune flat — false ceiling with lighting Pune",
         caption: "LED profile ceilings",
       },
       {
-        src: "/images/canva/bedroom-geometric-false-ceiling-pune.jpg",
+        src: "/images/canva/bedroom-geometric-false-ceiling-pune.webp",
         alt: "Bedroom with geometric layered false ceiling and warm cove lighting — bedroom false ceiling design Pune",
         caption: "Geometric ceilings",
       },
       {
-        src: "/images/stock/living-neutral-bright.jpg",
+        src: "/images/stock/living-neutral-bright.webp",
         alt: "Neutral living room with clean plain ceiling — gypsum ceiling Pune homes",
         caption: "Minimal & bright",
+      },
+          {
+        src: "/images/projects/wooden-false-ceiling-wallpaper-pune.webp",
+        alt: "Delivered decorative wooden false ceiling with brass light and wallpaper in a Pune home",
+        caption: "Wood & decorative",
       },
     ],
     inclusions: [
@@ -408,24 +428,29 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
   },
   "custom-furniture": {
     overviewImage: {
-      src: "/images/stock/upholstery-detail-terracotta.jpg",
+      src: "/images/stock/upholstery-detail-terracotta.webp",
       alt: "Terracotta upholstered sofa detail — custom furniture and upholstery Pune",
     },
     gallery: [
       {
-        src: "/images/stock/shelving-styled.jpg",
+        src: "/images/stock/shelving-styled.webp",
         alt: "Wall-mounted wooden shelving unit styled with frames — custom shelving Pune",
         caption: "Floating shelf systems",
       },
       {
-        src: "/images/projects/geometric-wall-panelling-design-pune.jpg",
+        src: "/images/projects/geometric-wall-panelling-design-pune.webp",
         alt: "Delivered geometric white wall panelling with pendant lights in a Pune apartment — custom wall panelling Pune",
         caption: "Geometric wall panelling",
       },
       {
-        src: "/images/canva/bedroom-wardrobe-study-table-pune.jpg",
+        src: "/images/canva/bedroom-wardrobe-study-table-pune.webp",
         alt: "Bedroom with fitted wardrobe, loft storage and study table — custom wardrobe and study unit Pune",
         caption: "Wardrobes & study units",
+      },
+          {
+        src: "/images/projects/tv-unit-marble-panel-design-pune.webp",
+        alt: "Delivered TV unit with marble panel and wooden shelving in a Pune living room",
+        caption: "Marble media walls",
       },
     ],
     inclusions: [
@@ -501,24 +526,29 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
   },
   "commercial-interior-design": {
     overviewImage: {
-      src: "/images/stock/office-plants-lounge.jpg",
+      src: "/images/stock/office-plants-lounge.webp",
       alt: "Modern plant-filled office lounge — office interior design Pune",
     },
     gallery: [
       {
-        src: "/images/stock/office-window-desk.jpg",
+        src: "/images/stock/office-window-desk.webp",
         alt: "Workstation by a window with city view — office workstation design Pune",
         caption: "Focused workpoints",
       },
       {
-        src: "/images/stock/office-team-loft.jpg",
+        src: "/images/stock/office-team-loft.webp",
         alt: "Team collaborating in a loft-style office — collaborative office fit-out Pune",
         caption: "Collaboration zones",
       },
       {
-        src: "/images/stock/loft-lounge.jpg",
+        src: "/images/stock/loft-lounge.webp",
         alt: "Industrial loft lounge with grey sofas — cafe and lounge interiors Pune",
         caption: "Lounge & café moods",
+      },
+          {
+        src: "/images/canva/living-room-cove-ceiling-art-wall-pune.webp",
+        alt: "Reception-style lounge with cove-lit ceiling and art wall — commercial interior design Pune",
+        caption: "Front-of-house moods",
       },
     ],
     inclusions: [

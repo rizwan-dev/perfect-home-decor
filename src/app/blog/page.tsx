@@ -34,7 +34,7 @@ function formatDate(iso: string) {
   }).format(new Date(iso));
 }
 
-const heroImage = "/images/stock/living-dining-false-ceiling-pune.jpg";
+const heroImage = "/images/stock/living-dining-false-ceiling-pune.webp";
 
 export default function BlogIndexPage() {
   const sorted = [...blogPosts].sort(
