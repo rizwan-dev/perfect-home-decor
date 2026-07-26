@@ -4,6 +4,7 @@ import Link from "next/link";
 export function StickyDesktopBookVisit() {
   return (
     <Link
+      data-site-float
       href="/contact"
       className="fixed bottom-28 right-5 z-[61] hidden shadow-lg shadow-stone-900/15 transition hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal md:inline-flex"
     >

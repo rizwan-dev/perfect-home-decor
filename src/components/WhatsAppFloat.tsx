@@ -6,6 +6,7 @@ export function WhatsAppFloat() {
   );
   return (
     <a
+      data-site-float
       href={href}
       target="_blank"
       rel="noopener noreferrer"

@@ -5,6 +5,11 @@ import {
   sendLeadEmail,
   type LeadPayload,
 } from "@/lib/send-lead-email";
+import {
+  isLeadStoreConfigured,
+  markLeadEmailed,
+  saveLead,
+} from "@/lib/leads-store";
 
 export const runtime = "nodejs";
 
@@ -50,13 +55,22 @@ export async function GET() {
   if (process.env.NODE_ENV !== "development") {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
+  const smtp = isSmtpConfigured();
+  const store = isLeadStoreConfigured();
   return NextResponse.json({
-    smtpConfigured: isSmtpConfigured(),
+    smtpConfigured: smtp,
+    leadStoreConfigured: store,
     leadInbox:
       process.env.LEAD_EMAIL_TO?.trim() || `${COMPANY.email} (default)`,
-    hint: isSmtpConfigured()
-      ? "POST a lead from the form; check server terminal for [lead] logs."
-      : "Set SMTP_USER + SMTP_PASS (or GMAIL_USER + GMAIL_APP_PASSWORD) in .env.local, then restart npm run dev.",
+    adminAuthConfigured: Boolean(process.env.ADMIN_PASSWORD?.trim()),
+    hint:
+      smtp && store
+        ? "Both sinks live. POST a lead, then open /admin/leads."
+        : !smtp && !store
+          ? "Set SMTP_USER + SMTP_PASS and DATABASE_URL in .env.local, then restart npm run dev."
+          : !store
+            ? "Email works. Add DATABASE_URL to also store leads and enable /admin/leads."
+            : "Storage works. Add SMTP_USER + SMTP_PASS to also get notified by email.",
   });
 }
 
@@ -104,32 +118,71 @@ export async function POST(req: Request) {
       source: clip(body.source, MAX_LENGTHS.source) || "website",
     };
 
+    const isDev = process.env.NODE_ENV === "development";
+
+    // Store first: the database is the durable record, the email is a
+    // notification. Ordering it this way means an SMTP failure downgrades to
+    // "we have the lead but didn't get pinged" instead of losing the enquiry.
+    const leadId = await saveLead(payload, {
+      ip,
+      userAgent: req.headers.get("user-agent") ?? undefined,
+    });
+    const stored = leadId !== null;
+    if (stored) console.info("[lead] stored as", leadId);
+
     if (!isSmtpConfigured()) {
-      if (process.env.NODE_ENV === "development") {
-        console.warn(
-          "[lead] SMTP not configured — enquiry not emailed:",
-          payload,
-        );
+      const detail = stored
+        ? "Saved to the leads database; email is off."
+        : "Not saved and not emailed.";
+      console.error(`[lead] SMTP credentials missing — ${detail}`);
+      // A stored lead is a received lead, so the customer sees success.
+      if (stored) {
         return NextResponse.json({
           ok: true,
           emailSent: false,
-          info: "Inbox email is off: add SMTP_USER and SMTP_PASS (or GMAIL_USER + GMAIL_APP_PASSWORD) to .env.local, save, then restart the dev server. Open GET /api/lead to verify.",
+          stored: true,
+          ...(isDev && {
+            info: "Saved to the database, but not emailed: add SMTP_USER and SMTP_PASS to .env.local and restart the dev server.",
+          }),
         });
       }
-      console.error("[lead] SMTP credentials missing in production");
+      if (isDev) {
+        console.warn("[lead] enquiry dropped:", payload);
+        return NextResponse.json({
+          ok: true,
+          emailSent: false,
+          stored: false,
+          info: "Neither storage nor email is configured: set DATABASE_URL and SMTP_USER/SMTP_PASS in .env.local, then restart the dev server. Open GET /api/lead to verify.",
+        });
+      }
       return NextResponse.json(
-        {
-          ok: false,
-          error: "Email is not configured on the server yet.",
-        },
+        { ok: false, error: "Email is not configured on the server yet." },
         { status: 503 },
       );
     }
 
     const to = process.env.LEAD_EMAIL_TO?.trim() || COMPANY.email;
-    await sendLeadEmail(payload);
-    console.info("[lead] email dispatched to", to);
-    return NextResponse.json({ ok: true, emailSent: true });
+    try {
+      await sendLeadEmail(payload);
+      console.info("[lead] email dispatched to", to);
+      if (stored) await markLeadEmailed(leadId);
+      return NextResponse.json({ ok: true, emailSent: true, stored });
+    } catch (mailErr) {
+      const msg = mailErr instanceof Error ? mailErr.message : String(mailErr);
+      // Rethrow only when nothing was persisted — otherwise the lead is safe
+      // and the customer should not be told to try again.
+      if (!stored) throw mailErr;
+      console.error(
+        `[lead] stored as ${leadId} but email failed — check /admin/leads:`,
+        msg,
+      );
+      return NextResponse.json({
+        ok: true,
+        emailSent: false,
+        stored: true,
+        ...(isDev && { info: `Stored, but the email failed: ${msg}` }),
+      });
+    }
   } catch (e) {
     const err = e instanceof Error ? e : new Error(String(e));
     console.error("[lead] send failed:", err.message, err);

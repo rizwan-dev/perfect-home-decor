@@ -6,7 +6,9 @@ export function StickyMobileBar() {
     `Hi ${COMPANY.name}, I'd like a free consultation for my Pune home.`,
   );
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 border-t border-stone-200 bg-cream/95 px-3 py-2 backdrop-blur-md md:hidden">
+    <div
+      data-site-float
+      className="fixed inset-x-0 bottom-0 z-50 border-t border-stone-200 bg-cream/95 px-3 py-2 backdrop-blur-md md:hidden">
       <div className="mx-auto flex max-w-lg gap-2">
         <a
           href={`tel:${COMPANY.phoneTel}`}

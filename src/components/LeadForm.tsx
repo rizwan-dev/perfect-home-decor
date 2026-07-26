@@ -59,13 +59,13 @@ export function LeadForm({
         );
         return;
       }
-      if (data.emailSent === false) {
+      // `info` is only ever populated in development. Gating on it — rather
+      // than on `emailSent === false` — keeps this developer diagnostic off
+      // customers' screens: in production a stored-but-unemailed lead has
+      // still been received, so it should read as a plain success.
+      if (typeof data.info === "string" && data.info.length > 0) {
         setStatus("ok-no-smtp");
-        setSmtpHint(
-          typeof data.info === "string"
-            ? data.info
-            : "Email is not configured. Check .env.local and restart the server.",
-        );
+        setSmtpHint(data.info);
         form.reset();
         return;
       }
