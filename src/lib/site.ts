@@ -41,7 +41,23 @@ export const COMPANY = {
   phoneTel: "+919031263531",
   whatsappDisplay: "+91 90312 63531",
   whatsappE164: "919031263531",
-  email: "perfecthomedecor.in@gmail.com",
+  /**
+   * Public contact address, shown on every page and in LocalBusiness schema.
+   * Zoho-hosted on the domain, with MX, SPF and DKIM (selector `zmail`) all
+   * published — so replies authenticate and clear the domain's DMARC policy,
+   * which is set to p=quarantine.
+   *
+   * The lead form's inbox is separate: LEAD_EMAIL_TO controls where enquiries
+   * are delivered, so it can stay on the Gmail account that is already watched.
+   */
+  email: "info@perfecthomedecor.in",
+  /**
+   * Where lead-form enquiries are delivered — deliberately separate from the
+   * public `email` above. The owner watches this Gmail inbox already, and the
+   * public address changing should not quietly reroute incoming business.
+   * Override per-environment with LEAD_EMAIL_TO.
+   */
+  leadInbox: "perfecthomedecor.in@gmail.com",
   hours: "Mon–Sat: 10:00–19:00",
   yearsExperience: 12,
   /** Completed projects / clients served */
