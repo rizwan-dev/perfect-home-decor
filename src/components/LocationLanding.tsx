@@ -5,6 +5,7 @@ import { ProjectStrip } from "@/components/ProjectStrip";
 import { JsonLd } from "@/components/JsonLd";
 import { LeadForm } from "@/components/LeadForm";
 import { SectionHeading } from "@/components/SectionHeading";
+import { PricingBands } from "@/components/PricingBands";
 import { AREAS, COMPANY, SITE_URL, type AreaSlug } from "@/lib/site";
 import { locationContent } from "@/lib/locations-data";
 import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/json-ld";
@@ -161,6 +162,12 @@ export function LocationLanding({ area }: { area: AreaSlug }) {
               </ul>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="border-b border-stone-200 bg-white py-14">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <PricingBands areaLabel={c.areaLabel} />
         </div>
       </section>
 

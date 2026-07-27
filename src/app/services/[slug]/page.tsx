@@ -6,6 +6,7 @@ import { CTASection } from "@/components/CTASection";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { ProjectStrip } from "@/components/ProjectStrip";
 import { Reveal } from "@/components/Reveal";
+import { PricingBands } from "@/components/PricingBands";
 import { projects } from "@/lib/projects-data";
 import { serviceDetail } from "@/lib/services-detail-data";
 import { JsonLd } from "@/components/JsonLd";
@@ -384,6 +385,13 @@ export default async function ServicePage({ params }: Props) {
           <p className="mx-auto mt-8 max-w-2xl text-center text-sm leading-relaxed text-stone-500">
             {detail.tiersNote}
           </p>
+          {/* Ranges only on the full-home service — single-scope jobs are
+              priced per unit, so a whole-flat band would mislead there. */}
+          {slug === "interior-design" ? (
+            <div className="mt-14 border-t border-stone-200 pt-12">
+              <PricingBands />
+            </div>
+          ) : null}
           <div className="mt-10 flex flex-wrap items-center justify-center gap-2.5">
             <span className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-stone-500">
               Materials we specify
