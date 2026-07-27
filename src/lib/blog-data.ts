@@ -57,7 +57,7 @@ export const blogPosts: BlogPost[] = [
       "A complete Kharadi flat interior covers the modular kitchen, hall, bedrooms and kids’ room as one coordinated scope — not five separate jobs stitched together.",
       "Ask for a line-by-line BOQ, never a single lump sum. If a quote cannot be compared item by item against another, it is not a quote, it is a number.",
       "Most of the cost sits in storage: wardrobes, kitchen units and the TV wall. Finishes and decor move the total far less than people expect.",
-      "Working ranges for a complete home: about ₹2–4 lakh for a 1 BHK, ₹3–8 lakh for a 2 BHK, ₹5–14 lakh for a 3 BHK and ₹9–20 lakh for a 4 BHK, with storage volume — not finishes — deciding where you land.",
+      "Working ranges for a complete home: about ₹2.5–9.5 lakh for a 1 BHK, ₹4.5–14.5 lakh for a 2 BHK, ₹6.5–19.5 lakh for a 3 BHK and ₹19.5–36.5 lakh for a 4 BHK, with storage volume — not finishes — deciding where you land.",
       "A typical 2 BHK runs about 6–8 weeks on site, a 3 BHK about 8–12, provided drawings are frozen before production starts.",
       "In Kharadi towers, society rules on work hours, lift access and debris removal shape the schedule as much as the design does.",
     ],
@@ -121,10 +121,10 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "What a complete interior actually costs in Kharadi",
         paragraphs: [
-          "Our working ranges for a complete home interior — modular kitchen, hall, bedrooms and kids’ room — are roughly ₹2–4 lakh for a 1 BHK, ₹3–8 lakh for a 2 BHK, ₹5–14 lakh for a 3 BHK, and ₹9–20 lakh for a 4 BHK or villa. Those are honest working ranges, not a headline low number with the real cost hidden in variations later.",
+          "Our working ranges for a complete home interior — modular kitchen, hall, bedrooms and kids’ room — are roughly ₹2.5–9.5 lakh for a 1 BHK, ₹4.5–14.5 lakh for a 2 BHK, ₹6.5–19.5 lakh for a 3 BHK, and ₹19.5–36.5 lakh for a 4 BHK or villa. Those are honest working ranges, not a headline low number with the real cost hidden in variations later.",
           "The spread inside each range is wide because it reflects how much built-in storage the home actually needs, not how fancy the finishes are. A 3 BHK where all three bedrooms need full-height wardrobes, plus a complete kitchen, a TV wall and a crockery unit, sits near the top. The same flat where two bedrooms already have wardrobes and you only want the kitchen and hall done sits near the bottom. Finish choices move the total far less than people expect — the volume of carpentry is what moves it.",
-          "For comparison, the national platforms publish considerably higher figures for Pune. Livspace lists roughly ₹8.9–22.2 lakh for a 2 BHK and ₹16–28.7 lakh for a 3 BHK; NoBroker quotes ₹5–15 lakh and ₹7–20 lakh for the same. We sit clearly below that at every size, and the reason is structural rather than a discount: we are a Wagholi studio working across East Pune, without franchise margins or a national advertising budget priced into every quote you receive.",
-          "Compare like with like, though, because published figures rarely describe the same job. Some platforms quote carpentry alone — kitchen, wardrobes and a TV unit — while others include false ceilings, flooring, painting and furniture, which is most of why their numbers sit three times apart. Ask any two quotes what is actually inside the total. A cheaper quote that excludes half the scope is not cheaper. Our final figure comes after a free site visit and measurement, itemised line by line, so you can see exactly which of these your home needs.",
+          "For context, Livspace publishes roughly ₹8.9–22.2 lakh for a 2 BHK in Pune, ₹16–28.7 lakh for a 3 BHK and ₹22–37 lakh for a 4 BHK; NoBroker lists ₹5–15 lakh, ₹7–20 lakh and ₹20–50 lakh for the same. We sit below both at every size, though not dramatically — anyone promising to halve the market rate is either quoting a smaller job than you think or planning to find the difference later. HomeLane, meanwhile, publishes ₹3.4–5.8 lakh for a 2 BHK: same city, same year, three times apart from Livspace, because those two numbers describe different jobs.",
+          "That is the part worth checking before you compare anything. The lower published figures usually cover carpentry alone — kitchen, wardrobes and a TV unit — while the higher ones include false ceilings, flooring, painting, electrical points and furniture. Ask any two quotes what is actually inside the total before you judge which is better value, because a cheaper number that excludes half the scope is not cheaper, it is just smaller. Our figure comes after a free site visit and measurement, itemised line by line, so you can see exactly which of these your home needs and drop what it does not.",
         ],
         image: {
           src: "/images/stock/kharadi-complete-flat-interior-cost.webp",
@@ -189,7 +189,7 @@ export const blogPosts: BlogPost[] = [
     faqs: [
       {
         q: "How much does complete home interior design cost in Kharadi?",
-        a: "As a working range for a complete home interior — modular kitchen, hall, bedrooms and kids’ room — expect roughly ₹2–4 lakh for a 1 BHK, ₹3–8 lakh for a 2 BHK, ₹5–14 lakh for a 3 BHK and ₹9–20 lakh for a 4 BHK or villa. Where you land inside that depends almost entirely on how much built-in storage the home needs rather than on finish choices. The final figure comes after a free site visit and measurement, itemised line by line, so you can compare it fairly against any other quote and trim scope yourself if the total runs high.",
+        a: "As a working range for a complete home interior — modular kitchen, hall, bedrooms and kids’ room — expect roughly ₹2.5–9.5 lakh for a 1 BHK, ₹4.5–14.5 lakh for a 2 BHK, ₹6.5–19.5 lakh for a 3 BHK and ₹19.5–36.5 lakh for a 4 BHK or villa. Where you land inside that depends almost entirely on how much built-in storage the home needs rather than on finish choices. The final figure comes after a free site visit and measurement, itemised line by line, so you can compare it fairly against any other quote and trim scope yourself if the total runs high.",
       },
       {
         q: "How long does a 2 BHK or 3 BHK interior take in Kharadi?",
