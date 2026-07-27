@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
 import { COMPANY } from "@/lib/site";
 import {
+  isAckSmtpConfigured,
   isSmtpConfigured,
+  sendAcknowledgementEmail,
   sendLeadEmail,
   type LeadPayload,
 } from "@/lib/send-lead-email";
@@ -39,11 +41,14 @@ function isRateLimited(ip: string): boolean {
 const MAX_LENGTHS = {
   name: 120,
   phone: 20,
+  email: 200,
   area: 120,
   service: 60,
   message: 2000,
   source: 80,
 } as const;
+
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function clip(value: string | undefined, max: number): string | undefined {
   const v = value?.trim();
@@ -57,11 +62,18 @@ export async function GET() {
   }
   const smtp = isSmtpConfigured();
   const store = isLeadStoreConfigured();
+  const ackSmtp = isAckSmtpConfigured();
   return NextResponse.json({
     smtpConfigured: smtp,
     leadStoreConfigured: store,
     leadInbox:
       process.env.LEAD_EMAIL_TO?.trim() || `${COMPANY.email} (default)`,
+    ackSmtpConfigured: ackSmtp,
+    ackEmailSendsAs: ackSmtp
+      ? `${process.env.ZOHO_SMTP_USER?.trim()} (Zoho)`
+      : smtp
+        ? "Gmail relay account (set ZOHO_SMTP_USER + ZOHO_SMTP_PASS to send as info@ instead)"
+        : "not configured",
     adminAuthConfigured: Boolean(process.env.ADMIN_PASSWORD?.trim()),
     hint:
       smtp && store
@@ -109,9 +121,19 @@ export async function POST(req: Request) {
       );
     }
 
+    // Optional — a visitor who skips it still gets the owner-notification path.
+    const email = clip(body.email, MAX_LENGTHS.email);
+    if (email && !EMAIL_PATTERN.test(email)) {
+      return NextResponse.json(
+        { ok: false, error: "Please enter a valid email address" },
+        { status: 400 },
+      );
+    }
+
     const payload: LeadPayload = {
       name: clip(body.name, MAX_LENGTHS.name)!,
       phone: phone.slice(0, MAX_LENGTHS.phone),
+      email,
       area: clip(body.area, MAX_LENGTHS.area),
       service: clip(body.service, MAX_LENGTHS.service),
       message: clip(body.message, MAX_LENGTHS.message),
@@ -166,6 +188,19 @@ export async function POST(req: Request) {
       await sendLeadEmail(payload);
       console.info("[lead] email dispatched to", to);
       if (stored) await markLeadEmailed(leadId);
+      // Best-effort and separate from the owner notification above: a bad
+      // visitor email or a transient failure here should not turn an
+      // otherwise-successful enquiry into an error response.
+      if (payload.email) {
+        try {
+          await sendAcknowledgementEmail(payload);
+        } catch (ackErr) {
+          console.error(
+            "[lead] acknowledgement email failed:",
+            ackErr instanceof Error ? ackErr.message : String(ackErr),
+          );
+        }
+      }
       return NextResponse.json({ ok: true, emailSent: true, stored });
     } catch (mailErr) {
       const msg = mailErr instanceof Error ? mailErr.message : String(mailErr);

@@ -33,6 +33,7 @@ export function LeadForm({
     const payload = {
       name: String(fd.get("name") || ""),
       phone: String(fd.get("phone") || ""),
+      email: String(fd.get("email") || ""),
       area: String(fd.get("area") || ""),
       service: String(fd.get("service") || ""),
       message: String(fd.get("message") || ""),
@@ -118,6 +119,19 @@ export function LeadForm({
             title="Enter a valid phone number (10 digits, e.g. 90312 63531)"
             className="mt-1.5 w-full rounded-xl border border-stone-200 bg-cream/40 px-4 py-2.5 text-sm outline-none ring-wood-dark/30 transition focus:border-wood-dark focus:ring-2"
             placeholder="+91 …"
+          />
+        </div>
+        <div>
+          <label htmlFor="lead-email" className="text-sm font-medium text-charcoal">
+            Email (optional, for confirmation)
+          </label>
+          <input
+            id="lead-email"
+            name="email"
+            type="email"
+            autoComplete="email"
+            className="mt-1.5 w-full rounded-xl border border-stone-200 bg-cream/40 px-4 py-2.5 text-sm outline-none ring-wood-dark/30 transition focus:border-wood-dark focus:ring-2"
+            placeholder="you@example.com"
           />
         </div>
         <div>

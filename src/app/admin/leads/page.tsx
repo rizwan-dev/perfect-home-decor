@@ -119,7 +119,7 @@ export default async function AdminLeadsPage() {
             <table className="w-full border-collapse text-sm">
               <thead>
                 <tr className="border-b border-stone-200 bg-stone-50/80 text-left">
-                  {["When", "Name", "Phone", "Service", "Area", "Message", ""].map(
+                  {["When", "Name", "Phone", "Email", "Service", "Area", "Message", ""].map(
                     (h) => (
                       <th
                         key={h}
@@ -164,6 +164,18 @@ export default async function AdminLeadsPage() {
                         >
                           {l.phone}
                         </a>
+                      </td>
+                      <td className="whitespace-nowrap px-4 py-3 text-stone-600">
+                        {l.email ? (
+                          <a
+                            href={`mailto:${l.email}`}
+                            className="hover:text-wood-dark hover:underline"
+                          >
+                            {l.email}
+                          </a>
+                        ) : (
+                          "—"
+                        )}
                       </td>
                       <td className="whitespace-nowrap px-4 py-3 text-stone-600">
                         {l.service ? titleise(l.service) : "—"}
@@ -221,6 +233,16 @@ export default async function AdminLeadsPage() {
                     ) : null}
                   </div>
                   <dl className="mt-3 space-y-1 text-sm text-stone-600">
+                    {l.email ? (
+                      <div className="flex gap-2">
+                        <dt className="text-stone-400">Email</dt>
+                        <dd>
+                          <a href={`mailto:${l.email}`} className="hover:underline">
+                            {l.email}
+                          </a>
+                        </dd>
+                      </div>
+                    ) : null}
                     {l.service ? (
                       <div className="flex gap-2">
                         <dt className="text-stone-400">Service</dt>

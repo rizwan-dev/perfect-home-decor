@@ -6,6 +6,7 @@ export type StoredLead = {
   createdAt: string;
   name: string;
   phone: string;
+  email: string | null;
   area: string | null;
   service: string | null;
   message: string | null;
@@ -76,6 +77,10 @@ async function ensureSchema(sql: SqlClient): Promise<void> {
   await sql`
     CREATE INDEX IF NOT EXISTS leads_created_at_idx ON leads (created_at DESC)
   `;
+  // Added after the table already existed in production — CREATE TABLE IF NOT
+  // EXISTS above never touches an existing table, so the column needs its own
+  // idempotent migration here.
+  await sql`ALTER TABLE leads ADD COLUMN IF NOT EXISTS email TEXT`;
   schemaReady = true;
 }
 
@@ -89,9 +94,9 @@ export async function saveLead(
   try {
     await ensureSchema(sql);
     const rows = (await sql`
-      INSERT INTO leads (name, phone, area, service, message, source, ip, user_agent)
+      INSERT INTO leads (name, phone, email, area, service, message, source, ip, user_agent)
       VALUES (
-        ${payload.name}, ${payload.phone}, ${payload.area ?? null},
+        ${payload.name}, ${payload.phone}, ${payload.email ?? null}, ${payload.area ?? null},
         ${payload.service ?? null}, ${payload.message ?? null},
         ${payload.source ?? null}, ${meta.ip ?? null}, ${meta.userAgent ?? null}
       )
@@ -122,7 +127,7 @@ export async function listLeads(limit = 500): Promise<StoredLead[]> {
   try {
     await ensureSchema(sql);
     const rows = (await sql`
-      SELECT id, created_at, name, phone, area, service, message, source, email_sent
+      SELECT id, created_at, name, phone, email, area, service, message, source, email_sent
       FROM leads
       ORDER BY created_at DESC
       LIMIT ${limit}
@@ -132,6 +137,7 @@ export async function listLeads(limit = 500): Promise<StoredLead[]> {
       createdAt: new Date(r.created_at as string).toISOString(),
       name: String(r.name),
       phone: String(r.phone),
+      email: (r.email as string | null) ?? null,
       area: (r.area as string | null) ?? null,
       service: (r.service as string | null) ?? null,
       message: (r.message as string | null) ?? null,
