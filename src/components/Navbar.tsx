@@ -65,8 +65,8 @@ export function Navbar() {
           <Image
             src="/images/brand/logo-lockup.webp"
             alt={`${COMPANY.name} — interiors & home services, Pune`}
-            width={900}
-            height={340}
+            width={358}
+            height={182}
             className="h-11 w-auto sm:h-12"
           />
         </Link>

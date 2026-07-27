@@ -78,8 +78,8 @@ export function Footer() {
             <Image
               src="/images/brand/logo-lockup.webp"
               alt={COMPANY.name}
-              width={900}
-              height={340}
+              width={358}
+              height={182}
               className="h-12 w-auto"
             />
             <p className="mt-3 text-sm leading-relaxed text-stone-600">
