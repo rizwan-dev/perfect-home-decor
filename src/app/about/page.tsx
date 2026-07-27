@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbJsonLd } from "@/lib/json-ld";
 import {
   formatGoogleRating,
   getGooglePlaceReviewStats,
@@ -25,6 +27,12 @@ export default async function AboutPage() {
 
   return (
     <>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "About", path: "/about" },
+        ])}
+      />
       <section className="relative overflow-hidden border-b border-stone-800 bg-stone-900">
         <div className="absolute inset-0">
           <Image

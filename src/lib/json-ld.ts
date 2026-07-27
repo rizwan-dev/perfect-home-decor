@@ -35,6 +35,11 @@ export function localBusinessJsonLd(googleStats?: GooglePlaceReviewStats | null)
       "Kesnand",
       "Pune",
     ],
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: COMPANY.latitude,
+      longitude: COMPANY.longitude,
+    },
     priceRange: "$$",
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",

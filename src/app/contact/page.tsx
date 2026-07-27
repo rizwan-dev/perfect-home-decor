@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { CTASection } from "@/components/CTASection";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbJsonLd } from "@/lib/json-ld";
 import { LeadForm } from "@/components/LeadForm";
 import { SocialIconLinks } from "@/components/SocialIconLinks";
 import { getContactMapIframeSrc } from "@/lib/contact-map-embed";
@@ -107,6 +109,12 @@ export default function ContactPage() {
 
   return (
     <>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Contact", path: "/contact" },
+        ])}
+      />
       <section className="relative overflow-hidden border-b border-stone-200/80 bg-gradient-to-br from-white via-cream to-stone-100/50">
         <div
           className="pointer-events-none absolute -right-24 top-0 h-[480px] w-[480px] rounded-full bg-wood/[0.04] blur-3xl"

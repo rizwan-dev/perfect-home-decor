@@ -31,6 +31,14 @@ export const COMPANY = {
   country: "IN",
   postalCode: "412207",
   streetAddress: "405, Jubilation Society, Awhalwadi Road",
+  /**
+   * Verified against the Google Business Profile via the Places API
+   * (Place ID ChIJ7TiBIEXDwjsRWgy__-D5Etk) on 2026-07-27. Publishing `geo` in
+   * LocalBusiness schema helps Google tie the site to the map listing, which is
+   * where most local interior searches actually convert.
+   */
+  latitude: 18.573855,
+  longitude: 73.9872958,
   /** Full mailing / visit address (single line) */
   address:
     "405, Jubilation Society, Awhalwadi Road, Wagholi, Pune 412207, Maharashtra",
