@@ -57,6 +57,7 @@ export const blogPosts: BlogPost[] = [
       "A complete Kharadi flat interior covers the modular kitchen, hall, bedrooms and kids’ room as one coordinated scope — not five separate jobs stitched together.",
       "Ask for a line-by-line BOQ, never a single lump sum. If a quote cannot be compared item by item against another, it is not a quote, it is a number.",
       "Most of the cost sits in storage: wardrobes, kitchen units and the TV wall. Finishes and decor move the total far less than people expect.",
+      "Working ranges for a complete flat: about ₹1–3 lakh for a 1 BHK, ₹1.5–6 lakh for a 2 BHK and ₹4–11 lakh for a 3 BHK, with storage volume — not finishes — deciding where you land.",
       "A typical 2 BHK runs about 6–8 weeks on site, a 3 BHK about 8–12, provided drawings are frozen before production starts.",
       "In Kharadi towers, society rules on work hours, lift access and debris removal shape the schedule as much as the design does.",
     ],
@@ -118,6 +119,21 @@ export const blogPosts: BlogPost[] = [
         },
       },
       {
+        heading: "What a complete interior actually costs in Kharadi",
+        paragraphs: [
+          "Our ranges for a complete flat interior — modular kitchen, hall, bedrooms and kids’ room — are roughly ₹1–3 lakh for a 1 BHK, ₹1.5–6 lakh for a 2 BHK, and ₹4–11 lakh for a 3 BHK. Those are honest working ranges, not a headline low number with the real cost hidden in variations.",
+          "The spread inside each range is wide because it reflects how much built-in storage the flat actually needs, not how fancy the finishes are. A 3 BHK where all three bedrooms need full-height wardrobes, plus a complete kitchen, a TV wall and a crockery unit, sits near the top. The same flat where two bedrooms already have wardrobes and you only want the kitchen and hall done sits near the bottom. Finish choices move the total far less than people expect — volume of carpentry is what moves it.",
+          "For comparison, the national platforms publish roughly ₹3.4–5.8 lakh for a 2 BHK and ₹4.5–10.5 lakh for a 3 BHK in Pune, with some listings quoting considerably higher. We generally sit below that for comparable scope, and the reason is structural rather than a discount: we are a Wagholi studio working across East Pune, without franchise margins or a national advertising budget priced into every quote.",
+          "Compare like with like, though. Ask any two quotes what is actually inside the number — whether false ceilings, painting, electrical points and minor civil work are included, or whether the figure covers carpentry alone. A cheaper quote that excludes half the scope is not cheaper. Our final figure comes after a free site visit and measurement, itemised line by line, so you can see exactly which of these your flat needs.",
+        ],
+        image: {
+          src: "/images/stock/kharadi-complete-flat-interior-cost.webp",
+          alt: "Completed living and dining interior in a Kharadi apartment",
+          caption:
+            "A complete flat interior in Kharadi: kitchen, hall, bedrooms and kids’ room delivered on one schedule and quoted as one itemised BOQ.",
+        },
+      },
+      {
         heading: "How we price, and why it is itemised",
         paragraphs: [
           "We quote line by line. Every wardrobe, every kitchen unit, every square foot of false ceiling and every litre of paint appears as its own row with its own rate. There is no single lump sum for “bedroom interiors”, because a lump sum cannot be checked, compared or trimmed.",
@@ -173,7 +189,7 @@ export const blogPosts: BlogPost[] = [
     faqs: [
       {
         q: "How much does complete home interior design cost in Kharadi?",
-        a: "It depends almost entirely on how much built-in storage the flat needs, which is why we quote only after a free site visit and measurement rather than over the phone. The quotation is itemised line by line — each wardrobe, kitchen unit, ceiling area and paint item priced separately — so you can compare it fairly against any other quote and trim scope yourself if the total runs above what you had in mind.",
+        a: "As a working range for a complete flat interior — modular kitchen, hall, bedrooms and kids’ room — expect roughly ₹1–3 lakh for a 1 BHK, ₹1.5–6 lakh for a 2 BHK and ₹4–11 lakh for a 3 BHK. Where you land inside that depends almost entirely on how much built-in storage the flat needs rather than on finish choices. The final figure comes after a free site visit and measurement, itemised line by line, so you can compare it fairly against any other quote and trim scope yourself if the total runs high.",
       },
       {
         q: "How long does a 2 BHK or 3 BHK interior take in Kharadi?",
