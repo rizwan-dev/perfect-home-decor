@@ -134,6 +134,10 @@ export async function sendLeadEmail(payload: LeadPayload): Promise<void> {
   await transporter.sendMail({
     from: `"${COMPANY.name} Website" <${user}>`,
     to,
+    // Lets the owner hit "Reply" and address the customer directly, without
+    // spoofing their address in the From header (which would fail SPF/DKIM
+    // and risk the notification itself being quarantined on the way in).
+    ...(payload.email && { replyTo: payload.email }),
     subject: `New enquiry: ${payload.name} — ${payload.area || "Pune"}`,
     text: textLines.join("\n"),
     html: `<p style="font-family:system-ui,sans-serif;font-size:15px;color:#1c1917">You have a new consultation request.</p>
