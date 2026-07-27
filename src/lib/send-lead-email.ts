@@ -210,8 +210,8 @@ export async function sendAcknowledgementEmail(
         <td align="center">
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:520px;background-color:#ffffff;border-radius:16px;overflow:hidden;border:1px solid #e7e5e4">
             <tr>
-              <td style="background-color:#4a3b32;padding:24px 32px">
-                <img src="${SITE_URL}/images/brand/logo-lockup-cream-email.png" width="180" height="91" alt="${escapeHtml(COMPANY.name)}" style="display:block;border:0;max-width:180px;height:auto">
+              <td style="background-color:#4a3b32;padding:28px 32px">
+                <p style="margin:0;font-size:20px;font-weight:600;color:#f7f4ef;letter-spacing:0.01em">${escapeHtml(COMPANY.name)}</p>
               </td>
             </tr>
             <tr>
