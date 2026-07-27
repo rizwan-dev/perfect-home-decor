@@ -47,17 +47,10 @@ export const COMPANY = {
    * published — so replies authenticate and clear the domain's DMARC policy,
    * which is set to p=quarantine.
    *
-   * The lead form's inbox is separate: LEAD_EMAIL_TO controls where enquiries
-   * are delivered, so it can stay on the Gmail account that is already watched.
+   * Lead-form enquiries are delivered here too. Set LEAD_EMAIL_TO to send them
+   * somewhere else without changing the address shown on the site.
    */
   email: "info@perfecthomedecor.in",
-  /**
-   * Where lead-form enquiries are delivered — deliberately separate from the
-   * public `email` above. The owner watches this Gmail inbox already, and the
-   * public address changing should not quietly reroute incoming business.
-   * Override per-environment with LEAD_EMAIL_TO.
-   */
-  leadInbox: "perfecthomedecor.in@gmail.com",
   hours: "Mon–Sat: 10:00–19:00",
   yearsExperience: 12,
   /** Completed projects / clients served */

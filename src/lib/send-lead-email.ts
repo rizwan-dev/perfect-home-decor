@@ -46,7 +46,7 @@ export async function sendLeadEmail(payload: LeadPayload): Promise<void> {
   }
   const { user, pass } = creds;
 
-  const to = process.env.LEAD_EMAIL_TO?.trim() || COMPANY.leadInbox;
+  const to = process.env.LEAD_EMAIL_TO?.trim() || COMPANY.email;
   const smtpHost = process.env.SMTP_HOST?.trim() || "smtp.gmail.com";
   const smtpPort = Number(process.env.SMTP_PORT || 587);
 

@@ -61,7 +61,7 @@ export async function GET() {
     smtpConfigured: smtp,
     leadStoreConfigured: store,
     leadInbox:
-      process.env.LEAD_EMAIL_TO?.trim() || `${COMPANY.leadInbox} (default)`,
+      process.env.LEAD_EMAIL_TO?.trim() || `${COMPANY.email} (default)`,
     adminAuthConfigured: Boolean(process.env.ADMIN_PASSWORD?.trim()),
     hint:
       smtp && store
@@ -161,7 +161,7 @@ export async function POST(req: Request) {
       );
     }
 
-    const to = process.env.LEAD_EMAIL_TO?.trim() || COMPANY.leadInbox;
+    const to = process.env.LEAD_EMAIL_TO?.trim() || COMPANY.email;
     try {
       await sendLeadEmail(payload);
       console.info("[lead] email dispatched to", to);
