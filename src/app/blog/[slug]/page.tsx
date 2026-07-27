@@ -3,9 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CTASection } from "@/components/CTASection";
+import { FaqAccordion } from "@/components/FaqAccordion";
 import { JsonLd } from "@/components/JsonLd";
 import { COMPANY, SITE_URL } from "@/lib/site";
-import { blogPostingJsonLd, breadcrumbJsonLd } from "@/lib/json-ld";
+import { blogPostingJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/json-ld";
 import { blogPosts, getPostBySlug } from "@/lib/blog-data";
 import {
   estimateReadMinutes,
@@ -84,6 +85,13 @@ export default async function BlogPostPage({ params }: Props) {
           { name: post.title, path: `/blog/${post.slug}` },
         ])}
       />
+      {post.faqs?.length ? (
+        <JsonLd
+          data={faqJsonLd(post.faqs, {
+            pageUrl: `${SITE_URL}/blog/${post.slug}`,
+          })}
+        />
+      ) : null}
 
       <article>
         <header className="relative border-b border-stone-200">
@@ -167,6 +175,25 @@ export default async function BlogPostPage({ params }: Props) {
                 </ol>
               </nav>
 
+              {post.takeaways?.length ? (
+                <aside className="mb-12 rounded-3xl border border-stone-200/90 bg-cream/40 px-6 py-7 sm:px-8">
+                  <p className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-wood-dark">
+                    In short
+                  </p>
+                  <ul className="mt-4 space-y-2.5">
+                    {post.takeaways.map((point) => (
+                      <li
+                        key={point}
+                        className="flex gap-3 text-[15px] leading-relaxed text-stone-700"
+                      >
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-wood-dark" aria-hidden />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </aside>
+              ) : null}
+
               <div className="max-w-none">
                 {post.sections.map((section, index) => (
                   <section
@@ -185,9 +212,41 @@ export default async function BlogPostPage({ params }: Props) {
                         {para}
                       </p>
                     ))}
+                    {section.image ? (
+                      <figure className="mt-8">
+                        <div className="relative aspect-[16/9] overflow-hidden rounded-2xl bg-stone-100 ring-1 ring-stone-900/[0.06]">
+                          <Image
+                            src={section.image.src}
+                            alt={section.image.alt}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width:1024px) 100vw, 720px"
+                            loading="lazy"
+                          />
+                        </div>
+                        {section.image.caption ? (
+                          <figcaption className="mt-3 text-sm leading-relaxed text-stone-500">
+                            {section.image.caption}
+                          </figcaption>
+                        ) : null}
+                      </figure>
+                    ) : null}
                   </section>
                 ))}
               </div>
+
+              {post.faqs?.length ? (
+                <section className="mt-16">
+                  <h2 className="font-display text-2xl tracking-tight text-charcoal sm:text-[1.75rem]">
+                    Frequently asked questions
+                  </h2>
+                  <FaqAccordion
+                    items={post.faqs}
+                    idPrefix={`faq-${post.slug}`}
+                    className="mt-6"
+                  />
+                </section>
+              ) : null}
 
               <aside className="mt-16 rounded-3xl border border-stone-200/90 bg-gradient-to-br from-cream/50 to-white px-6 py-8 sm:px-8 sm:py-10">
                 <p className="font-display text-xl text-charcoal sm:text-2xl">

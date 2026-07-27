@@ -16,11 +16,187 @@ export type BlogPost = {
   keywords: string[];
   category: string;
   image: string;
-  sections: { heading: string; paragraphs: string[] }[];
+  sections: {
+    heading: string;
+    paragraphs: string[];
+    /** Optional photograph for the section, shown under the copy. */
+    image?: { src: string; alt: string; caption?: string };
+  }[];
+  /** Scannable summary above the article — also what snippet extractors quote. */
+  takeaways?: string[];
+  /** Rendered as an accordion and emitted as FAQPage structured data. */
+  faqs?: { q: string; a: string }[];
 };
 
 /** Post images are served from /public — real project photos where available, curated stock otherwise. */
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "home-interior-design-kharadi-2bhk-3bhk-guide",
+    seoTitle: "Home Interior Design in Kharadi: 2 & 3 BHK Guide",
+    seoDescription:
+      "How complete home interior design works for Kharadi flats — what the scope covers, how honest itemised pricing is built, timelines, and questions to ask before you sign.",
+    title:
+      "Home interior design in Kharadi: what a complete 2 BHK or 3 BHK actually involves",
+    description:
+      "A practical guide to complete home interiors for Kharadi flats — what the scope really covers room by room, how an honest itemised quotation is built, realistic timelines, and the questions that separate a fair quote from a cheap one.",
+    publishedAt: "2026-07-27",
+    author: "Perfect Home Decor",
+    category: "Home Interior Design",
+    image: "/images/stock/home-interior-design-kharadi-flat.webp",
+    keywords: [
+      "home interior design Kharadi",
+      "interior designer in Kharadi",
+      "2 BHK interior design Kharadi",
+      "3 BHK interior design Kharadi",
+      "complete home interior Kharadi",
+      "modular kitchen Kharadi",
+      "interior design cost Kharadi",
+      "flat interior design Pune",
+    ],
+    takeaways: [
+      "A complete Kharadi flat interior covers the modular kitchen, hall, bedrooms and kids’ room as one coordinated scope — not five separate jobs stitched together.",
+      "Ask for a line-by-line BOQ, never a single lump sum. If a quote cannot be compared item by item against another, it is not a quote, it is a number.",
+      "Most of the cost sits in storage: wardrobes, kitchen units and the TV wall. Finishes and decor move the total far less than people expect.",
+      "A typical 2 BHK runs about 6–8 weeks on site, a 3 BHK about 8–12, provided drawings are frozen before production starts.",
+      "In Kharadi towers, society rules on work hours, lift access and debris removal shape the schedule as much as the design does.",
+    ],
+    sections: [
+      {
+        heading: "Why Kharadi flats need their own approach",
+        paragraphs: [
+          "Kharadi is not a single kind of home. Within a couple of kilometres you have compact 2 BHK units aimed at the EON IT crowd, larger 3 BHK plates in the newer towers near World Trade Center, and river-facing apartments with glazing that runs floor to ceiling. What works in one rarely transfers to another without changes.",
+          "The pattern we see most often is a well-built flat with awkward storage. Developers hand over shells optimised for carpet area, not for how a family actually lives — which means the wardrobe you need is deeper than the alcove provided, the kitchen has a service balcony door exactly where the tall unit should sit, and the living room has one usable wall competing between the TV and the dining table.",
+          "That is the real work of interior design here: not choosing a colour palette, but resolving those conflicts before anything is cut. A good drawing set answers them on paper, where changes are free.",
+        ],
+        image: {
+          src: "/images/stock/kharadi-living-room-panelled-wall-design.webp",
+          alt: "Living room with panelled feature wall and L-shaped sofa in a Kharadi apartment",
+          caption:
+            "Panelled walls do double duty in Kharadi flats — they hide uneven plaster and give the sofa a defined zone without eating floor area.",
+        },
+      },
+      {
+        heading: "What “complete home interior” actually covers",
+        paragraphs: [
+          "The phrase gets used loosely, so it is worth being specific. When we say complete home interior for a Kharadi flat, the scope is the modular kitchen, the hall or living-dining area, the bedrooms, and the kids’ room — designed together, quoted together, and installed by one team on one schedule.",
+          "Coordinating them matters more than it sounds. The kitchen shutter finish should relate to the crockery unit in the dining area. The false ceiling in the hall has to accommodate the TV wall’s back-lighting. The bedroom wardrobe depth affects whether the bed can take a side table. When these are contracted separately, each vendor optimises their own piece and the joins are where the money and the calm go.",
+          "Painting, false ceilings, electrical points and minor civil work sit inside this scope too. If a quotation excludes them, it is not a complete interior — it is carpentry, and you will be arranging the rest yourself while the flat sits unusable.",
+        ],
+        image: {
+          src: "/images/stock/kharadi-open-plan-living-dining-design.webp",
+          alt: "Open-plan living and dining area with pendant lighting in a Kharadi flat",
+          caption:
+            "Living and dining share one volume in most Kharadi plates, so lighting and ceiling design have to be planned as a single move.",
+        },
+      },
+      {
+        heading: "The kitchen decides the schedule",
+        paragraphs: [
+          "In almost every flat we do, the kitchen is the critical path. It has the most services running through it — gas, water, drainage, chimney duct, appliance points — and the least tolerance for improvisation. Get it wrong and the fix involves a plumber, an electrician and a carpenter arriving on three different days.",
+          "Decide the layout from how you cook, not from a brochure. A parallel kitchen along two walls usually beats a cramped L in narrow Kharadi plates, because it keeps the sink, hob and fridge within a workable triangle without stealing passage width. If two people cook together on weekends, say so at the site visit; it changes the aisle dimension.",
+          "Settle appliances before production, not after. A built-in oven, a dishwasher or a larger fridge each change carcass sizes and point locations. Adding them later means cutting into finished units — which is where “small changes” turn into real money.",
+        ],
+        image: {
+          src: "/images/stock/kharadi-modular-kitchen-l-shaped-design.webp",
+          alt: "Modular kitchen with handleless shutters and under-cabinet lighting in a Kharadi apartment",
+          caption:
+            "Handleless shutters and a continuous counter read as calm in a compact kitchen — and there is less to catch cleaning cloths on.",
+        },
+      },
+      {
+        heading: "Storage is where the budget actually goes",
+        paragraphs: [
+          "Clients are often surprised that finishes barely move the total while storage dominates it. Wardrobes, kitchen units and the TV wall typically account for the majority of a complete interior, because they are built to millimetre tolerances from branded boards with hardware that has to survive twenty openings a day.",
+          "This is also where quotes diverge most, and where a cheap number usually hides something. Two wardrobes can look identical and differ by a third in price — the difference is carcass material, edge banding, whether the back panel is a proper board or a thin sheet, and whether the hinges are soft-close units from a known brand or unbranded stock that sags within a year.",
+          "Our advice to anyone comparing quotes, including against ours: ask what board, what thickness, what hardware brand, and what the warranty covers. A supplier confident in their materials will answer immediately. Vague answers here are the single most reliable warning sign in this trade.",
+        ],
+        image: {
+          src: "/images/stock/kharadi-master-bedroom-wardrobe-design.webp",
+          alt: "Master bedroom with full-height fitted wardrobe and panelled headboard wall in Kharadi",
+          caption:
+            "Full-height wardrobes use the dead space above door level — in a Kharadi 3 BHK that loft is often an extra suitcase-worth of storage per room.",
+        },
+      },
+      {
+        heading: "How we price, and why it is itemised",
+        paragraphs: [
+          "We quote line by line. Every wardrobe, every kitchen unit, every square foot of false ceiling and every litre of paint appears as its own row with its own rate. There is no single lump sum for “bedroom interiors”, because a lump sum cannot be checked, compared or trimmed.",
+          "That matters for two reasons. First, it lets you compare us honestly against another firm — not on the headline number, but on what each row actually contains. Second, it lets you edit the scope. If the total comes in above what you had in mind, we can drop the study unit or simplify the ceiling and you can see precisely what that saves, instead of us quietly downgrading materials to hit a number.",
+          "We also price after a free site visit and measurement, never over the phone. Quoting a Kharadi flat from a floor plan alone means guessing at beam drops, actual wall lengths and where the existing points sit — and those guesses get corrected later as “extras”. We would rather spend an hour measuring than have that conversation halfway through.",
+          "Being honest about it: we are not always the cheapest quote a client receives. What we will not do is quote low to win the job and recover it through variations once the old kitchen is out and the flat is unusable. If another quote is materially below ours, ask them the material questions above — the gap is almost always in the specification rather than the workmanship.",
+        ],
+        image: {
+          src: "/images/stock/kharadi-tv-unit-storage-wall-design.webp",
+          alt: "TV unit with open shelving and closed storage in a Kharadi living room",
+          caption:
+            "A TV wall is quoted as its own line — panelling, carcass, shelving, lighting and cable routing each priced separately so you can see what drives it.",
+        },
+      },
+      {
+        heading: "Realistic timelines for a Kharadi tower",
+        paragraphs: [
+          "For an empty flat with drawings frozen, a 2 BHK complete interior typically runs six to eight weeks on site, and a 3 BHK eight to twelve. Add time if you are living in the flat while work happens, because we sequence room by room to keep part of the home usable.",
+          "The phrase that matters is drawings frozen. Production starts only once layouts, finishes and hardware are signed off. Changing a wardrobe internal after the boards are cut does not cost a day, it costs a week, because the panel goes back into the queue at the factory.",
+          "Society rules shape the rest. Most Kharadi towers restrict work to specific hours, require prior intimation for material movement, allocate service lifts by slot and insist debris leaves the same day. We plan around these from the start and handle the paperwork — but they are a real constraint on any honest schedule, and a contractor who promises to ignore them is promising you a stop-work notice.",
+        ],
+        image: {
+          src: "/images/stock/kharadi-bedroom-sliding-wardrobe-design.webp",
+          alt: "Bedroom with sliding-door wardrobe and panelled wall in a Kharadi apartment",
+          caption:
+            "Sliding shutters suit tight Kharadi bedrooms where a hinged door would foul the bed — decided at drawing stage, not on site.",
+        },
+      },
+      {
+        heading: "Planning the kids’ room properly",
+        paragraphs: [
+          "The kids’ room is where over-designing is most expensive and least durable. Themed furniture built for a six-year-old is embarrassing to them at eleven and useless at fourteen, and it is the piece clients most often ask us to rip out and redo.",
+          "We plan it for growth instead. A neutral wardrobe carcass with adjustable internals, a desk at a height that still works for a teenager, and generous open shelving that can hold toys now and books later. Personality goes into paint, wallpaper on one wall, and soft furnishings — all of which cost little to change when tastes move on.",
+          "Study lighting deserves real attention. Most flats hand over a single ceiling point, which throws shadows straight onto a desk. A task light at the desk plus an even ambient layer is a small line in the quote and the difference between a room that gets used for homework and one that does not.",
+        ],
+        image: {
+          src: "/images/stock/kharadi-kids-bedroom-wardrobe-study.webp",
+          alt: "Children’s bedroom with fitted wardrobe, open shelving and study area in Kharadi",
+          caption:
+            "Adjustable internals and a neutral carcass let a kids’ room grow up without a second renovation.",
+        },
+      },
+      {
+        heading: "Questions worth asking any contractor in Kharadi",
+        paragraphs: [
+          "Ask to see the itemised BOQ before signing anything, and check that every room in your flat appears in it. Missing rows become extras later.",
+          "Ask which board and which hardware brand, in writing, for wardrobes and kitchen units. Ask what the warranty covers and, more usefully, who you call in month fourteen and whether they will still be trading.",
+          "Ask who your single point of contact is, and whether the same person stays with the project from design to handover. Fragmented accountability is the most common complaint we hear about previous contractors, and it usually surfaces at exactly the moment something has gone wrong.",
+          "Ask how society compliance is handled — work hours, lift booking, debris. And ask for two or three flats they have finished nearby that you can actually see. We have completed homes in Kalpataru Jade Residences, Gera World of Joy and Majestique Towers, along with Forest County, Yashwant Enchante, VTP Leonara, Marvel Zephyr and Godrej Rivergreens, and we are happy to arrange a visit where a client is willing.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does complete home interior design cost in Kharadi?",
+        a: "It depends almost entirely on how much built-in storage the flat needs, which is why we quote only after a free site visit and measurement rather than over the phone. The quotation is itemised line by line — each wardrobe, kitchen unit, ceiling area and paint item priced separately — so you can compare it fairly against any other quote and trim scope yourself if the total runs above what you had in mind.",
+      },
+      {
+        q: "How long does a 2 BHK or 3 BHK interior take in Kharadi?",
+        a: "For an empty flat with drawings signed off, a 2 BHK typically takes six to eight weeks on site and a 3 BHK eight to twelve. Living in the flat during the work adds time, because we sequence room by room to keep part of the home usable. Changes made after production starts are the most common cause of delay.",
+      },
+      {
+        q: "Do you handle society permissions and work-hour rules?",
+        a: "Yes. Most Kharadi towers restrict working hours, require prior intimation for material movement, allocate service lifts by slot and require debris to be removed the same day. We plan the schedule around these rules and handle the coordination with the society office directly.",
+      },
+      {
+        q: "Can I get only the kitchen or only the wardrobes done?",
+        a: "Yes. Complete home interiors are what we do most often in Kharadi, but single-scope work is entirely normal — a modular kitchen, a set of wardrobes, a false ceiling or a full-home painting job on its own. The same itemised quotation and site discipline apply either way.",
+      },
+      {
+        q: "Which societies in Kharadi have you worked in?",
+        a: "Recent completions include Kalpataru Jade Residences, Gera World of Joy and Majestique Towers. We have also delivered homes in Forest County, Yashwant Enchante, VTP Leonara, Marvel Zephyr and Godrej Rivergreens, and we work across the towers near EON IT Park and the societies toward Mundhwa bridge.",
+      },
+      {
+        q: "Why is your quote higher than some others I have received?",
+        a: "Usually because of specification rather than workmanship. Two wardrobes can look identical and differ by a third in price depending on carcass material, edge banding, back panel and hardware grade. Ask any contractor which board, what thickness and which hardware brand they have quoted — the gap normally explains itself. We would rather quote accurately at the start than recover the difference through variations once your kitchen is already out.",
+      },
+    ],
+  },
   {
     slug: "modular-kitchen-pune-checklist-before-you-sign",
     seoTitle: "Modular Kitchen Checklist for Pune Flats",
