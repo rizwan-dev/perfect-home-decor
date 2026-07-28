@@ -322,7 +322,7 @@ export function LocationLanding({ area }: { area: AreaSlug }) {
                     className="border-b border-stone-200 pb-8 pt-8 first:pt-0 last:border-0 last:pb-0"
                   >
                     <div className="flex gap-5">
-                      <span className="mt-1 font-display text-2xl leading-none text-wood/60">
+                      <span className="mt-1 font-display text-2xl leading-none text-wood">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <div className="min-w-0">
@@ -404,7 +404,7 @@ export function LocationLanding({ area }: { area: AreaSlug }) {
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col gap-10 lg:flex-row lg:gap-16">
               <div className="lg:w-80 lg:shrink-0">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-wood/80">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sand">
                   Good to know
                 </p>
                 <h2 className="mt-3 font-display text-3xl tracking-tight text-cream sm:text-4xl">
@@ -419,7 +419,7 @@ export function LocationLanding({ area }: { area: AreaSlug }) {
                 {c.siteRealities.map((item, i) => (
                   <li key={item} className="flex gap-4">
                     <span
-                      className="mt-0.5 font-display text-lg leading-none text-wood/70"
+                      className="mt-0.5 font-display text-xl leading-none text-sand"
                       aria-hidden
                     >
                       {String(i + 1).padStart(2, "0")}
