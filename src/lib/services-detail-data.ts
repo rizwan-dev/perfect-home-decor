@@ -113,17 +113,19 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
     tiersNote:
       "Every tier is quoted line-wise after a free site inspection—surface preparation is measured on your walls, never guessed from a rate card.",
     materials: [
-      "Asian Paints systems",
+      "Asian Paints (incl. Royale Play)",
+      "Dulux (Velvet Touch)",
+      "Nerolac (Impressions)",
       "Berger systems",
+      "Dr. Fixit waterproofing",
       "Branded putty & primers",
-      "Low-odour emulsions",
-      "Weatherproof exterior coats",
     ],
     goodToKnow: [
       "Occupied homes are fine—we sequence room by room and ventilate as we go.",
       "Monsoon jobs are planned around humidity; drying windows are respected, not rushed.",
       "Dark-to-light colour changes usually need an extra coat—we flag it in the quote, not after.",
       "Common-area protection and society work-hour rules are handled by our team, not left to you.",
+      "2-year warranty on our painting work, documented at handover.",
     ],
   },
   "interior-design": {
@@ -216,7 +218,7 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
     materials: [
       "Branded ply & boards",
       "Soft-close hardware",
-      "Asian Paints & Berger finishes",
+      "Asian Paints, Dulux & Nerolac finishes",
       "Gyproc ceiling systems",
       "Laminates, veneers & PU",
     ],
@@ -225,6 +227,7 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
       "Most 2–3 BHK turnkey homes land between 10–16 weeks once civil work is released.",
       "You can phase the spend: kitchen and wardrobes before move-in, the rest later.",
       "Site updates come on WhatsApp with photos—no chasing five vendors for answers.",
+      "5-year warranty on furniture, 2-year warranty on painting—documented at handover.",
     ],
   },
   "modular-kitchen": {
@@ -325,7 +328,7 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
       "Units are built in the factory and installed on site in days, not weeks of carpentry dust.",
       "Templating for stone happens after cabinets are level—that is how joints stay tight.",
       "Keep the old kitchen running until installation week if you are living in the flat.",
-      "Hardware and factory modules carry manufacturer warranty terms, documented at handover.",
+      "5-year warranty on cabinetry, on top of manufacturer terms on hardware—documented at handover.",
     ],
   },
   "false-ceiling": {
@@ -522,6 +525,7 @@ export const serviceDetail: Record<ServiceSlug, ServiceDetail> = {
       "MDF vs ply vs HDHMR is chosen per location—wet zones and dry bedrooms need different boards.",
       "We scribe units to walls that are not perfectly straight—Pune walls rarely are.",
       "Existing veneers can be matched by sampling batches on site under your lighting.",
+      "5-year warranty on the furniture itself, documented at handover.",
     ],
   },
   "commercial-interior-design": {

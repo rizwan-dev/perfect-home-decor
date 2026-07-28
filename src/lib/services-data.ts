@@ -264,7 +264,7 @@ export const servicePageCopy: Record<
       },
       {
         q: "Warranty on modular work?",
-        a: "Hardware and factory modules carry manufacturer terms; we document handover checks so claims are straightforward.",
+        a: "We give a 5-year warranty on the cabinetry itself, on top of manufacturer terms on hardware and fittings—documented at handover so claims are straightforward.",
       },
       {
         q: "How much does a modular kitchen cost in Pune?",
@@ -331,6 +331,10 @@ export const servicePageCopy: Record<
       {
         q: "What does house painting cost per square foot in Pune?",
         a: "Per-square-foot rates you see online usually ignore the part that decides how long paint lasts: surface preparation. A wall that needs crack filling and two primer coats costs more than one that needs a refresh coat—and quoting both the same number is how repaints go wrong. We inspect your walls free, then quote prep and paint separately so you can compare fairly.",
+      },
+      {
+        q: "Do you offer a warranty on painting work?",
+        a: "Yes—2 years on the painting work itself, documented at handover.",
       },
     ],
   },
@@ -451,6 +455,10 @@ export const servicePageCopy: Record<
       {
         q: "Timeline for a TV unit + wardrobe set?",
         a: "Typically 4–7 weeks from sign-off depending on complexity and site readiness.",
+      },
+      {
+        q: "Is there a warranty on custom furniture?",
+        a: "Yes—5 years on the furniture itself, documented at handover so any claim is straightforward.",
       },
     ],
   },
