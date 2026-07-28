@@ -80,6 +80,7 @@ export const COMPANY = {
   googleReviewCount: 570,
   facebookUrl: "https://www.facebook.com/theperfecthomedecor",
   instagramUrl: "https://www.instagram.com/perfecthomedecore/",
+  linkedinUrl: "https://www.linkedin.com/company/101354667/",
   /** Keyless embed pinned to the exact Maps listing via CID (not an address search). */
   mapEmbedUrl: "https://maps.google.com/maps?cid=15641839200569855066&output=embed",
 } as const;

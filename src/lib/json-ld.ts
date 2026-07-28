@@ -16,6 +16,7 @@ export function localBusinessJsonLd(googleStats?: GooglePlaceReviewStats | null)
       GOOGLE_BUSINESS_KNOWLEDGE_URL,
       COMPANY.facebookUrl,
       COMPANY.instagramUrl,
+      COMPANY.linkedinUrl,
     ],
     address: {
       "@type": "PostalAddress",
