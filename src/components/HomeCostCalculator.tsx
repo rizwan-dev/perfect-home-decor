@@ -11,12 +11,12 @@ import {
 const ROOMS = [
   "Modular kitchen",
   "Living room",
-  "Bedrooms",
+  "Bedroom",
   "Dining area",
   "Puja unit",
   "Foyer / entrance",
   "Balcony",
-  "Wardrobes / storage",
+  "Wardrobe / storage",
 ] as const;
 
 type Step = 1 | 2 | 3 | 4;
@@ -33,31 +33,30 @@ const cardActive =
 export function HomeCostCalculator({ tiers }: { tiers: Tier[] }) {
   const [step, setStep] = useState<Step>(1);
   const [bhk, setBhk] = useState<string | null>(null);
-  const [rooms, setRooms] = useState<Set<string>>(new Set());
+  const [rooms, setRooms] = useState<Record<string, number>>({});
   const [tier, setTier] = useState<string | null>(null);
 
   const band = COMPLETE_HOME_PRICING.find((b) => b.label === bhk);
+  const roomEntries = Object.entries(rooms).filter(([, qty]) => qty > 0);
+  const totalRooms = roomEntries.reduce((sum, [, qty]) => sum + qty, 0);
 
-  function toggleRoom(room: string) {
-    setRooms((prev) => {
-      const next = new Set(prev);
-      if (next.has(room)) next.delete(room);
-      else next.add(room);
-      return next;
-    });
+  function setRoomQty(room: string, qty: number) {
+    setRooms((prev) => ({ ...prev, [room]: Math.max(0, qty) }));
   }
 
   function reset() {
     setStep(1);
     setBhk(null);
-    setRooms(new Set());
+    setRooms({});
     setTier(null);
   }
+
+  const roomsSummary = roomEntries.map(([room, qty]) => `${room} ×${qty}`).join(", ");
 
   const summaryMessage =
     bhk && tier
       ? `Cost calculator: ${bhk} home, ${tier} scope. Spaces: ${
-          rooms.size ? Array.from(rooms).join(", ") : "not specified yet"
+          roomEntries.length ? roomsSummary : "not specified yet"
         }.`
       : "";
 
@@ -111,28 +110,52 @@ export function HomeCostCalculator({ tiers }: { tiers: Tier[] }) {
             Which spaces need work?
           </h3>
           <p className="mt-2 text-sm text-stone-500">
-            Pick as many as apply—this just helps us prepare for your site
+            Set a count for each—this just helps us prepare for your site
             visit.
           </p>
-          <div className="mt-6 flex flex-wrap gap-2.5">
+          <ul className="mt-6 divide-y divide-stone-100 rounded-2xl border border-stone-200">
             {ROOMS.map((room) => {
-              const active = rooms.has(room);
+              const qty = rooms[room] ?? 0;
               return (
-                <button
+                <li
                   key={room}
-                  type="button"
-                  onClick={() => toggleRoom(room)}
-                  className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
-                    active
-                      ? "border-wood-dark bg-wood-dark text-cream"
-                      : "border-stone-200 bg-white text-stone-600 hover:border-wood/40"
-                  }`}
+                  className="flex items-center justify-between gap-4 px-4 py-3"
                 >
-                  {room}
-                </button>
+                  <span className="text-sm font-medium text-charcoal">
+                    {room}
+                  </span>
+                  <div className="flex items-center gap-3">
+                    <button
+                      type="button"
+                      onClick={() => setRoomQty(room, qty - 1)}
+                      disabled={qty === 0}
+                      aria-label={`Remove one ${room}`}
+                      className="flex h-8 w-8 items-center justify-center rounded-full border border-stone-300 text-charcoal transition hover:border-wood-dark disabled:opacity-30"
+                    >
+                      −
+                    </button>
+                    <span className="w-4 text-center text-sm font-semibold text-charcoal">
+                      {qty}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => setRoomQty(room, qty + 1)}
+                      aria-label={`Add one ${room}`}
+                      className="flex h-8 w-8 items-center justify-center rounded-full border border-stone-300 text-charcoal transition hover:border-wood-dark"
+                    >
+                      +
+                    </button>
+                  </div>
+                </li>
               );
             })}
-          </div>
+          </ul>
+          <p className="mt-4 text-sm text-stone-500">
+            <span className="font-semibold text-charcoal">
+              Selected: {totalRooms} {totalRooms === 1 ? "space" : "spaces"}
+            </span>
+            {roomEntries.length ? ` — ${roomsSummary}` : null}
+          </p>
           <div className="mt-8 flex justify-between">
             <button
               type="button"
@@ -206,12 +229,12 @@ export function HomeCostCalculator({ tiers }: { tiers: Tier[] }) {
           <p className="mt-4 rounded-2xl bg-stone-50 p-4 text-sm leading-relaxed text-stone-600">
             {PRICING_NOTE}
           </p>
-          {rooms.size ? (
+          {roomEntries.length ? (
             <p className="mt-4 text-sm text-stone-500">
               <span className="font-semibold text-charcoal">
-                Spaces you picked:
+                Spaces you picked ({totalRooms}):
               </span>{" "}
-              {Array.from(rooms).join(", ")}
+              {roomsSummary}
             </p>
           ) : null}
 

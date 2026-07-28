@@ -129,7 +129,7 @@ export function LeadForm({
         </div>
         <div>
           <label htmlFor="lead-email" className="text-sm font-medium text-charcoal">
-            Email (optional, for confirmation)
+            Email
           </label>
           <input
             id="lead-email"
