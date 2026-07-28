@@ -6,12 +6,14 @@ export function locationPageMetadata(area: AreaSlug): Metadata {
   const c = locationContent[area];
   const path = `/interior-designer-in-${area}`;
   return {
-    title: `Interior designer in ${c.areaLabel}`,
+    title: `Home Interior Design in ${c.areaLabel}`,
     description: c.metaDescription,
     keywords: [
+      `home interior ${c.areaLabel}`,
+      `home interior design ${c.areaLabel}`,
+      `home interior service ${c.areaLabel}`,
       `interior designer ${c.areaLabel}`,
       `interior design ${c.areaLabel} Pune`,
-      `home interiors ${c.areaLabel}`,
       "interior designer Pune",
     ],
     alternates: { canonical: path },

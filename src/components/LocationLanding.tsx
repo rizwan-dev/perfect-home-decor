@@ -30,7 +30,7 @@ export function LocationLanding({ area }: { area: AreaSlug }) {
     <>
       <JsonLd
         data={serviceJsonLd({
-          name: `Interior design in ${c.areaLabel}`,
+          name: `Home interior design in ${c.areaLabel}`,
           description: c.metaDescription,
           url: `${SITE_URL}${path}`,
         })}
@@ -39,7 +39,7 @@ export function LocationLanding({ area }: { area: AreaSlug }) {
       <JsonLd
         data={breadcrumbJsonLd([
           { name: "Home", path: "/" },
-          { name: `Interior designer in ${c.areaLabel}`, path },
+          { name: `Home interior design in ${c.areaLabel}`, path },
         ])}
       />
 
@@ -63,7 +63,7 @@ export function LocationLanding({ area }: { area: AreaSlug }) {
             </Link>
             <span className="mx-2">/</span>
             <span className="text-cream">
-              Interior designer in {c.areaLabel}
+              Home interior design in {c.areaLabel}
             </span>
           </nav>
           <h1 className="mt-6 max-w-3xl font-display text-3xl tracking-tight text-cream sm:text-4xl lg:text-5xl">
@@ -224,7 +224,7 @@ export function LocationLanding({ area }: { area: AreaSlug }) {
       />
 
       <CTASection
-        title={`Interior designer in ${c.areaLabel} — book today`}
+        title={`Home interior design in ${c.areaLabel} — book today`}
         subtitle="We bring samples, references, and a clear next-step plan—whether you are at grey shell or mid-renovation."
       />
     </>

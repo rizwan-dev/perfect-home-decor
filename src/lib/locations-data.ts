@@ -15,9 +15,9 @@ export type LocationPageContent = {
 export const locationContent: Record<AreaSlug, LocationPageContent> = {
   kharadi: {
     areaLabel: "Kharadi",
-    headline: "Interior designer in Kharadi for premium apartments & row homes",
+    headline: "Home interior design in Kharadi for premium apartments & row homes",
     subhead:
-      "World Trade Center proximity, EON IT corridor, and riverside towers—Kharadi homes deserve finishes that match the skyline. We design calm, contemporary interiors that handle rental upgrades and end-user luxury alike.",
+      "World Trade Center proximity, EON IT corridor, and riverside towers—Kharadi homes deserve finishes that match the skyline. Our home interior design and installation service handles rental upgrades and end-user luxury alike.",
     intro: [
       "Kharadi’s mix of compact high-rises and larger river-facing units needs layouts that maximise storage without crowding glazing. We plan services around balconies, dry zones, and the way Pune’s easterly sun moves across your living room.",
       "Whether you are near Panchshil Towers, Nyati Era, or the lanes around Fountain Road, our site teams are used to society norms, lift timings, and material movement—so execution stays predictable.",
@@ -51,13 +51,13 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
       },
     ],
     metaDescription:
-      "Interior design in Kharadi, Pune—modular kitchens, false ceilings, painting & custom furniture. Local team near EON & WTC. Free site visit.",
+      "Home interior design & service in Kharadi, Pune—modular kitchens, false ceilings, painting & custom furniture. Local team near EON & WTC. Free site visit.",
   },
   wagholi: {
     areaLabel: "Wagholi",
-    headline: "Home interiors & painting in Wagholi—designed for growing neighbourhoods",
+    headline: "Home interior design & painting in Wagholi—designed for growing neighbourhoods",
     subhead:
-      "From new launches along the airport road to quieter lanes toward Kesnand, Wagholi buyers often want warm, durable homes without showroom clichés. We bring disciplined drawings and transparent BOQs.",
+      "From new launches along the airport road to quieter lanes toward Kesnand, Wagholi buyers often want warm, durable homes without showroom clichés. Our home interior design and service process runs on disciplined drawings and transparent BOQs.",
     intro: [
       "Wagholi’s rapid development means many families move in while infrastructure still matures—we choose finishes that forgive dust, and lighting plans that keep interiors cheerful on overcast days.",
       "If you are near Lifeline Hospital, Wagholi chowk, or the NH753F corridor, we plan site visits that respect commute realities and batch decisions to save your time.",
@@ -91,7 +91,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
       },
     ],
     metaDescription:
-      "Interior designer & home painting in Wagholi, Pune. Modular kitchens, false ceilings, custom furniture. Practical finishes for new apartments. Free site visit.",
+      "Home interior design & service in Wagholi, Pune. Modular kitchens, false ceilings, painting & custom furniture. Practical finishes for new apartments. Free site visit.",
   },
   "viman-nagar": {
     areaLabel: "Viman Nagar",
