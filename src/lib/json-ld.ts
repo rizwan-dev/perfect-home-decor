@@ -50,9 +50,10 @@ export function localBusinessJsonLd(googleStats?: GooglePlaceReviewStats | null)
         "Thursday",
         "Friday",
         "Saturday",
+        "Sunday",
       ],
-      opens: "10:00",
-      closes: "19:00",
+      opens: "09:00",
+      closes: "21:00",
     },
     // aggregateRating is only emitted when live Google Places data is
     // available — hardcoded fallback ratings without visible on-page reviews

@@ -59,7 +59,7 @@ export const COMPANY = {
    * somewhere else without changing the address shown on the site.
    */
   email: "info@perfecthomedecor.in",
-  hours: "Mon–Sat: 10:00–19:00",
+  hours: "Every day: 9:00 AM – 9:00 PM",
   yearsExperience: 12,
   /** Completed projects / clients served */
   happyClients: 1000,

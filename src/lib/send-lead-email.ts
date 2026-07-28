@@ -169,9 +169,6 @@ export async function sendAcknowledgementEmail(
   const transporter = ackCreds ? getZohoTransporter(ackCreds) : getTransporter(creds);
 
   const firstName = payload.name.trim().split(/\s+/)[0] || payload.name;
-  // Call/WhatsApp enquiry hours are wider than the studio's walk-in hours
-  // (`COMPANY.hours`), so this is its own line rather than reusing that value.
-  const callHoursLine = "Every day, 10 AM – 10 PM";
   const detailRows = [
     ["Service", payload.service || "To be discussed"],
     ["Area", payload.area || "—"],
@@ -194,7 +191,7 @@ export async function sendAcknowledgementEmail(
       ? ["What you shared with us:", ...detailRows.map(([k, v]) => `- ${k}: ${v}`), ""]
       : []),
     `Prefer to talk now? Call or WhatsApp us at ${COMPANY.phoneDisplay}.`,
-    callHoursLine,
+    COMPANY.hours,
     "",
     `${COMPANY.name}`,
     `${COMPANY.address}`,
@@ -239,7 +236,7 @@ export async function sendAcknowledgementEmail(
               <td style="padding:0 32px 28px">
                 <p style="margin:0 0 4px;font-size:14px;line-height:1.6;color:#44403c">Prefer to talk now?</p>
                 <p style="margin:0;font-size:15px;color:#1c1917"><strong>Call / WhatsApp:</strong> ${escapeHtml(COMPANY.phoneDisplay)}</p>
-                <p style="margin:4px 0 0;font-size:13px;color:#78716c">${escapeHtml(callHoursLine)}</p>
+                <p style="margin:4px 0 0;font-size:13px;color:#78716c">${escapeHtml(COMPANY.hours)}</p>
               </td>
             </tr>
             <tr>
