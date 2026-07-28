@@ -249,6 +249,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
     intro: [
       "We regularly work around retrofit challenges: shifted columns, heritage floor patterns, and rental conversions that still need a premium guest-facing living room.",
       "Phoenix Marketcity and Symbiosis hubs mean many clients want home offices that mute street sound and video-call well—lighting and backdrop detailing matter.",
+      "Renovation is where most Viman Nagar projects go wrong, and it is rarely a design problem. It is a survey problem. A quote written without opening up an older flat will always look attractive and will always grow later, because dismantling reveals what drawings never showed—rerouted plumbing, packed-out walls, flooring that cannot be lifted cleanly. We would rather spend longer on the survey, carry those lines honestly in the quotation, and give you a number that survives contact with the site than win the job on a figure we already know will move.",
     ],
     landmarks:
       "Phoenix Marketcity, Inorbit, Dhole Patil College, Symbiosis International, Pune Airport, Viman Nagar main road.",
@@ -273,9 +274,75 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
         q: "How is renovating an older Viman Nagar flat priced differently?",
         a: "Renovation quotes carry lines a new flat never sees—dismantling, debris removal, and surface repair before anything new goes in. We survey first and price those honestly, so the comparison with a fresh-possession quote makes sense. Recent area work includes false ceiling and lighting at Rohan Mithila.",
       },
+      {
+        q: "What warranty do you give on interiors in Viman Nagar?",
+        a: "5 years on the furniture and cabinetry we build, and 2 years on painting work—both documented at handover. On renovations we are explicit about what the warranty covers versus pre-existing conditions in an older structure.",
+      },
+      {
+        q: "Which brands and materials do you use?",
+        a: "Asian Paints (including Royale Play), Dulux Velvet Touch, Nerolac Impressions and Berger for finishes, Dr. Fixit for waterproofing, and branded ply with soft-close hardware for cabinetry—each named on the quotation.",
+      },
+      {
+        q: "How long does a Viman Nagar renovation take?",
+        a: "Fresh-possession flats run 10–16 weeks for a 2–3 BHK. Renovations of older homes take longer and vary more, because dismantling frequently reveals conditions no survey can fully predict. We give a staged plan rather than one optimistic date.",
+      },
+      {
+        q: "Do you subcontract the work?",
+        a: "No—design, carpentry and painting are handled by our own in-house team, so the people who quoted your job are the ones accountable for building it.",
+      },
+      {
+        q: "Can you match new work to existing marble or kota flooring?",
+        a: "Yes, and it is one of the more common Viman Nagar asks. We sample wood tones and paint against your existing floor under your own lighting before anything is finalised, so new joinery does not fight the original material.",
+      },
     ],
     metaDescription:
-      "Interior design in Viman Nagar, Pune—renovations, modular kitchens, false ceilings, painting. Airport-area experience. Book a consultation.",
+      "Home interior design & service in Viman Nagar, Pune—renovations, modular kitchens, false ceilings, painting. Airport-area experience. Free site visit.",
+    buyerProfile: [
+      {
+        heading: "Who we usually design for in Viman Nagar",
+        body: "Viman Nagar splits into two distinct briefs. The first is renovation: families who have lived in an older flat or bungalow floor for years and want it to work like a modern home without moving out of a locality they like. The second is professionals and families near Symbiosis, the schools and the airport who bought into newer towers and want a polished, guest-facing home quickly.",
+      },
+      {
+        heading: "What they ask for first",
+        body: "Renovation clients almost always lead with the kitchen and the living room—the two rooms where dated finishes are most visible. Newer-flat clients lead with storage and a home office that reads well on video calls, which the Phoenix Marketcity and Symbiosis corridor makes a genuinely common requirement here.",
+      },
+      {
+        heading: "Budget expectations",
+        body: "Renovation buyers are often comparing our quote against a fresh-possession quote they saw elsewhere, and the two are not comparable. Dismantling, debris removal and surface repair are real lines that a new flat never carries. We survey first and price those openly rather than discovering them mid-project.",
+      },
+    ],
+    homeTypes: [
+      {
+        title: "Older flats needing full renovation",
+        body: "The most common Viman Nagar brief. Dismantling, surface repair and services rerouting handled properly before any new finish goes on.",
+      },
+      {
+        title: "Bungalow floors and independent units",
+        body: "Legacy structures with odd beams, heritage flooring and generous ceiling heights—designed to keep what is worth keeping rather than stripping it flat.",
+      },
+      {
+        title: "Newer towers toward Lohegaon road",
+        body: "Fresh-possession 2 and 3 BHK flats where the brief is storage, lighting and a complete interior delivered on one schedule.",
+      },
+      {
+        title: "Home-office focused interiors",
+        body: "Acoustic treatment, task lighting and a backdrop that reads professional on calls—planned into the room rather than added as furniture later.",
+      },
+      {
+        title: "Rental and guest-ready conversions",
+        body: "Durable, neutral fit-outs for owners letting to the airport and corporate crowd, with finishes that survive changeovers.",
+      },
+      {
+        title: "Partial and single-room upgrades",
+        body: "Kitchen-only or living-room-only work for homes that do not need everything touched—priced line-wise so the scope stays honest.",
+      },
+    ],
+    siteRealities: [
+      "Parking and lobby access are genuinely tight in parts of Viman Nagar—we schedule deliveries off-peak and palletise materials to keep lobby time short.",
+      "Older walls are frequently out of plumb; we survey them early and carry realistic putty depth and packing in the quotation instead of discovering it at painting stage.",
+      "Legacy marble and kota flooring is worth designing around, not over—we sample new wood tones against it before locking finishes.",
+      "Retrofits often reveal shifted columns and rerouted services once dismantling starts; we plan access routes for this rather than assuming drawings match reality.",
+    ],
   },
   lohegaon: {
     areaLabel: "Lohegaon",
@@ -285,6 +352,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
     intro: [
       "We factor flight paths into glazing and bedroom blackout needs, and we plan WFH corners that do not glare on screens when afternoon sun hits.",
       "Proximity to DY Patil Knowledge City and airport staff housing means quick turnarounds matter—we protect timelines with factory-ready modular and staged painting.",
+      "The honest constraint in Lohegaon is time, not budget. Clients here regularly have a hard date—a posting, a transfer, a family arriving—and the temptation for any contractor is to say yes to a full turnkey home inside a window that will not hold. We would rather tell you upfront which parts of the scope realistically fit the date and which are better done in a second phase after you have moved in. A home handed over complete and late helps nobody; a kitchen, wardrobes and painting finished on time, with the rest sequenced later, usually does.",
     ],
     landmarks:
       "Pune International Airport, DY Patil Knowledge City, Kendriya Vidyalaya Lohegaon, defence pockets, connectors to Viman Nagar.",
@@ -309,9 +377,76 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
         q: "Have you delivered homes in Lohegaon itself?",
         a: "Yes—including a full 3 BHK home interior at Rohan Abhilasha. Lohegaon sits minutes from our Wagholi studio, so site supervision visits happen more often, not less.",
       },
+      {
+        q: "What warranty do you give on interiors in Lohegaon?",
+        a: "5 years on the furniture and cabinetry we build, and 2 years on painting work—both documented at handover, which matters more than usual here given how often defence and airline families are posted elsewhere mid-tenure.",
+      },
+      {
+        q: "Which brands and materials do you use?",
+        a: "Asian Paints (including Royale Play), Dulux Velvet Touch, Nerolac Impressions and Berger for finishes, Dr. Fixit for waterproofing, and branded ply with soft-close hardware for cabinetry—all named on the quotation.",
+      },
+      {
+        q: "We travel constantly—can decisions be made remotely?",
+        a: "Yes, and a good share of our Lohegaon clients work this way. Material samples are photographed under your own lighting, drawings are shared for approval, and weekly site photos come on WhatsApp so you can stay across the project from another city.",
+      },
+      {
+        q: "Do you subcontract the work?",
+        a: "No—design, carpentry and painting are done by our own in-house team, which is the main reason we can commit to tighter timelines here without quality slipping.",
+      },
+      {
+        q: "How long does a Lohegaon flat interior take?",
+        a: "10–16 weeks for a full 2–3 BHK turnkey home once civil work is released. Scoped packages—painting plus select furniture—can move considerably faster, which is usually the right answer if you have a posting date to work around.",
+      },
     ],
     metaDescription:
-      "Interior designer in Lohegaon, Pune—kitchens, ceilings, painting, custom furniture. Airport-area homes. Call for a free consultation.",
+      "Home interior design & service in Lohegaon, Pune—kitchens, ceilings, painting, custom furniture. Airport-area homes. Free site visit.",
+    buyerProfile: [
+      {
+        heading: "Who we usually design for in Lohegaon",
+        body: "Lohegaon has a distinctive client mix: defence families in the enclaves, airline and airport staff, and professionals connected to DY Patil Knowledge City. What they share is travel-heavy lives and, frequently, a fixed date—a posting, a transfer, a move-in window—that the project has to respect.",
+      },
+      {
+        heading: "What they ask for first",
+        body: "Bedrooms, more often than anywhere else we work. Sleep quality genuinely matters near flight routes, so blackout provision, glazing seals and headboard walls come up in the first conversation rather than as an afterthought. Low-maintenance finishes are the second ask, because homes here are often left closed for stretches.",
+      },
+      {
+        heading: "Budget expectations",
+        body: "Timelines drive the budget conversation here more than finish grade does. Clients frequently want to know what can realistically be completed before a move-in date, and which parts are better deferred. We would rather scope honestly to the date than promise a full turnkey home we cannot deliver on time.",
+      },
+    ],
+    homeTypes: [
+      {
+        title: "Defence enclave homes",
+        body: "Practical, durable interiors for families who may be posted on—built to hand over cleanly and hold up without constant upkeep.",
+      },
+      {
+        title: "Mid-rise apartments along airport road",
+        body: "Complete 2 and 3 BHK interiors with acoustics and blackout planned into the bedrooms rather than solved later with curtains alone.",
+      },
+      {
+        title: "Independent floors",
+        body: "Whole-floor plans where storage, utility zoning and a consistent palette across rooms carry more weight than any single feature.",
+      },
+      {
+        title: "Quick-turnaround packages",
+        body: "Painting plus select furniture, scoped to a fixed move-in or posting date, with an honest view of what fits the window.",
+      },
+      {
+        title: "Compact plan optimisation",
+        body: "Efficient kitchens and storage-max wardrobes for smaller layouts, sized to the plan you actually have.",
+      },
+      {
+        title: "Work-from-home corners",
+        body: "Desk zones planned so afternoon sun does not glare on screens—a specific and recurring problem in west-facing Lohegaon rooms.",
+      },
+    ],
+    siteRealities: [
+      "Flight paths are a real design input here—we plan glazing upgrades where possible, heavy drapes, and AC grill placement that avoids rattle.",
+      "Lohegaon is minutes from our Wagholi studio, so supervision visits are more frequent than for most areas we serve.",
+      "Clients are often travelling or posted elsewhere mid-project, so we run approvals and weekly updates remotely by design, not as an exception.",
+      "Postings and transfers mean fixed dates are common; we scope to the date honestly rather than starting work we know will overrun it.",
+      "Structural changes route through your engineer—we handle minor civil tweaks in-house and coordinate drawings for anything beyond that.",
+    ],
   },
   magarpatta: {
     areaLabel: "Magarpatta",
@@ -321,6 +456,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
     intro: [
       "We know society workflows in Magarpatta: material passes, time slots, and noise etiquette. Our foremen brief teams daily so your neighbours stay comfortable.",
       "Destinations like Seasons Mall and Amanora are minutes away—many clients want entry sequences that feel hotel-calm after busy weekends.",
+      "The design problem specific to Magarpatta is repetition. The township is well-planned and the shells are genuinely good, but a few thousand homes share a handful of layouts, and the standard response—identical modular packages sold on a per-square-foot rate—produces flats that look like each other too. Since the layout is the one thing you cannot change, differentiation has to come from joinery proportions, material texture and how the lighting is layered. That is slower to design than picking a package, and it is the reason a Magarpatta home either feels considered or feels catalogue-ordered.",
     ],
     landmarks:
       "Magarpatta City main circle, Seasons Mall, Amanora Town Centre, corporate parks inside the township, Hadapsar GLIDE path.",
@@ -345,9 +481,75 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
         q: "Do you also cover Amanora and Hadapsar?",
         a: "Yes—Magarpatta, Amanora, and Hadapsar sit on the same daily service loop for us. Recent work includes a 3 BHK interior refresh at Amanora Neo Towers with geometric wallpaper and brass trims.",
       },
+      {
+        q: "What warranty do you give on interiors in Magarpatta?",
+        a: "5 years on the furniture and cabinetry we build, and 2 years on painting work—both documented at handover alongside the vendor paperwork your society already requires.",
+      },
+      {
+        q: "Which brands and materials do you use?",
+        a: "Asian Paints (including Royale Play), Dulux Velvet Touch, Nerolac Impressions and Berger for finishes, Dr. Fixit for waterproofing, and branded ply with soft-close hardware for cabinetry—each named on the quotation rather than described as 'premium'.",
+      },
+      {
+        q: "How long does a Magarpatta flat interior take?",
+        a: "10–16 weeks for a 2–3 BHK turnkey home once civil work is released. Township material-pass windows and lift slots are factored into that number rather than discovered later.",
+      },
+      {
+        q: "Do you subcontract the work?",
+        a: "No—design, carpentry and painting are handled by our own in-house team, which also means fewer unfamiliar faces going through your society's gate process.",
+      },
+      {
+        q: "Our tower's layout is identical to hundreds of others—can it still feel personal?",
+        a: "That is most of the design brief in Magarpatta. Identical shells respond well to joinery rhythm, texture and lighting scenes rather than layout changes—which is fortunate, because the layout is usually the one thing you cannot alter.",
+      },
     ],
     metaDescription:
-      "Interior designer in Magarpatta, Pune—premium modular kitchens, false ceilings, painting, custom furniture. Township-ready execution. Free consult.",
+      "Home interior design & service in Magarpatta, Pune—modular kitchens, false ceilings, painting, custom furniture. Township-ready execution. Free site visit.",
+    buyerProfile: [
+      {
+        heading: "Who we usually design for in Magarpatta",
+        body: "Township residents, largely: corporate professionals working in the parks inside Magarpatta, hybrid workers who need the home to function as an office several days a week, and families who have been in the township long enough to want their flat to stop looking like every other flat in the tower.",
+      },
+      {
+        heading: "What they ask for first",
+        body: "Differentiation. Magarpatta shells are well-built and well-lit but highly repetitive, so the first conversation is usually about how to make an identical layout feel personal. After that it is storage that stays visually quiet, and a home-office setup that reads professional on video calls.",
+      },
+      {
+        heading: "Budget expectations",
+        body: "Magarpatta clients tend to be well-researched and comfortable spending on quality, but sceptical of vague 'premium' language—reasonably so. We name brands and grades on the quotation line by line, so 'premium' means something specific you can check rather than a word in a brochure.",
+      },
+    ],
+    homeTypes: [
+      {
+        title: "Cosmos, Roystonea and Iris tower flats",
+        body: "The core Magarpatta brief—complete interiors sized to the township's standard floor plates, which our team has worked with repeatedly.",
+      },
+      {
+        title: "Duplexes and villas in the township ring",
+        body: "Multi-level homes where circulation, storage placement and a consistent palette across floors matter more than any single room.",
+      },
+      {
+        title: "Identical-shell differentiation",
+        body: "Joinery rhythm, texture and lighting scenes that make a repeated layout feel specific to you—without touching the structure.",
+      },
+      {
+        title: "Hybrid-work homes",
+        body: "Acoustic treatment, task lighting and cable management planned into the room, so the office does not look bolted on.",
+      },
+      {
+        title: "Island kitchens where the slab allows",
+        body: "Open-plan kitchens engineered against the actual services and slab, not a showroom rendering that ignores both.",
+      },
+      {
+        title: "Interior refreshes",
+        body: "Wallpaper, feature walls, lighting and trims for homes that need updating rather than rebuilding—common across the older township towers.",
+      },
+    ],
+    siteRealities: [
+      "Magarpatta societies run tight vendor processes—we furnish passes, insurance summaries and supervisor IDs against your MC checklist as standard.",
+      "Material passes and lift slots are time-boxed here; our foremen book them and brief teams daily so your neighbours are not the ones absorbing the disruption.",
+      "Noise etiquette is enforced more strictly inside the township than in most Pune areas—we sequence dust-heavy and noisy work accordingly.",
+      "Because floor plates repeat across towers, we often already have drawings for a layout like yours—which shortens the design stage rather than the quality of it.",
+    ],
   },
   kesnand: {
     areaLabel: "Kesnand",
@@ -357,6 +559,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
     intro: [
       "Kesnand’s open plots and newer towers often mean we start from a blank shell—ideal for routing services before slabs get crowded. We mark civil, electrical, and HVAC together.",
       "If you commute toward Wagholi or Hadapsar, we batch decisions on weekends and share 3D updates online to keep momentum.",
+      "The advantage of building in an area that is still filling out is that you are rarely inheriting someone else's compromises. On a bare shell, we can put power where the furniture will actually go, run plumbing for the kitchen you want rather than the one the builder assumed, and set ceiling heights against the lighting plan instead of working around a slab that is already closed. Almost none of that is possible—or affordable—once a home is finished. It is the main reason we would rather be brought in during the shell stage in Kesnand than after handover.",
     ],
     landmarks:
       "Kesnand village routes toward Hadapsar, connections to Wagholi, orchards and open plots, emerging residential pockets east of the city.",
@@ -381,8 +584,75 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
         q: "What does finishing a bare-shell Kesnand home cost?",
         a: "Shell homes are where line-wise quotations matter most—civil, electrical, ceilings, and finishes each get their own numbers, so you decide what happens now and what waits. The site visit and estimate are free, and Kesnand is ten minutes from our Wagholi studio.",
       },
+      {
+        q: "What warranty do you give on interiors in Kesnand?",
+        a: "5 years on the furniture and cabinetry we build, and 2 years on painting work—both documented at handover. On a bare-shell home this matters more than usual, because almost everything in the house is new work rather than inherited.",
+      },
+      {
+        q: "Which brands and materials do you use?",
+        a: "Asian Paints (including Royale Play), Dulux Velvet Touch, Nerolac Impressions and Berger for finishes, Dr. Fixit for waterproofing, and branded ply with soft-close hardware for cabinetry—every brand named on the quotation.",
+      },
+      {
+        q: "How long does finishing a Kesnand home take?",
+        a: "A bare shell takes longer than a possession-ready flat because civil, electrical and ceiling work all happen before finishes begin. We give a staged plan by phase rather than a single date, so you can see what is happening when.",
+      },
+      {
+        q: "Do you subcontract the work?",
+        a: "No—design, carpentry and painting are done by our own in-house team, which matters more on shell homes where the trades have to hand over to each other cleanly.",
+      },
+      {
+        q: "We are still deciding the layout—can you get involved that early?",
+        a: "Ideally, yes. Kesnand is one of the few areas where we are often involved before slabs and services are locked, and that is the cheapest moment to fix a layout problem. Marking civil, electrical and HVAC together at this stage avoids the retrofits that make finished homes expensive to change.",
+      },
     ],
     metaDescription:
-      "Interior design in Kesnand & east Pune—modular kitchen, false ceiling, painting, custom furniture. New homes & plots. Book a free consultation.",
+      "Home interior design & service in Kesnand & east Pune—modular kitchen, false ceiling, painting, custom furniture. New homes & plots. Free site visit.",
+    buyerProfile: [
+      {
+        heading: "Who we usually design for in Kesnand",
+        body: "Kesnand attracts families buying more space than the same budget would get closer in—plotted homes, row houses and mid-rise flats in newer clusters. Many are first movers into a pocket that is still filling out, and a good number are finishing a bare shell rather than a possession-ready flat.",
+      },
+      {
+        heading: "What they ask for first",
+        body: "Kitchens built for real festival-scale cooking, and storage that will still make sense as the family grows. Because homes here are larger, the second recurring ask is flexibility—a room that works as a study now and a bedroom later, rather than being locked to one use on day one.",
+      },
+      {
+        heading: "Budget expectations",
+        body: "Shell homes are where a lump-sum quotation is most misleading, because civil, electrical, ceilings and finishes are genuinely separate bodies of work with different timings. Our line-wise quotation lets you sequence them—get the structure and services right first, then finish rooms as budget allows, without redoing anything.",
+      },
+    ],
+    homeTypes: [
+      {
+        title: "Bare-shell plotted homes",
+        body: "The signature Kesnand brief. We mark civil, electrical and HVAC together before slabs get crowded—the cheapest point to get services right.",
+      },
+      {
+        title: "Row houses",
+        body: "Multi-level homes where staircase storage, utility zoning and a palette that carries across floors do more work than any feature wall.",
+      },
+      {
+        title: "High-ceiling homes",
+        body: "Volume changes paint and false-ceiling quantities materially, so we measure slab heights early and reflect that honestly in the quotation.",
+      },
+      {
+        title: "Garden-facing rooms",
+        body: "Finishes chosen for indoor-outdoor edges—durable surfaces near garden doors and palettes that hold up to strong natural light.",
+      },
+      {
+        title: "Apartments along Wagholi connectors",
+        body: "Standard 2 and 3 BHK turnkey interiors for the mid-rise clusters filling in between Kesnand and Wagholi.",
+      },
+      {
+        title: "Homes designed to grow",
+        body: "Flex rooms and storage planned for a family five years from now, not just the one moving in this month.",
+      },
+    ],
+    siteRealities: [
+      "Bare shells let us route services before slabs get crowded—a genuine advantage over retrofitting a finished flat, if we are involved early enough.",
+      "Higher ceilings on plotted homes change paint and ceiling quantities, so we measure slab heights before quoting rather than assuming standard flat heights.",
+      "Water supply can be irregular in parts of Kesnand; we sequence curing and cleaning around availability and share realistic day plans.",
+      "The commute means most clients prefer batched weekend decisions and 3D updates shared online—we plan the approval rhythm around that rather than expecting weekday site visits.",
+      "Kesnand is roughly ten minutes from our Wagholi studio, so supervision here is closer than the location suggests.",
+    ],
   },
 };
