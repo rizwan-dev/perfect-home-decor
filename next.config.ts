@@ -32,6 +32,11 @@ const nextConfig: NextConfig = {
       // than a dead end. Better a relevant page than a 404.
       { source: "/service/:slug*", destination: "/services", permanent: true },
       { source: "/service", destination: "/services", permanent: true },
+      // A second batch of old Wix URLs, outside the /service/ tree, still
+      // indexed by Google as of 2026-07-29 and 404ing live.
+      { source: "/home-interior", destination: "/services/interior-design", permanent: true },
+      { source: "/interior-painting", destination: "/services/home-painting", permanent: true },
+      { source: "/portfolio", destination: "/projects", permanent: true },
     ];
   },
   images: {
