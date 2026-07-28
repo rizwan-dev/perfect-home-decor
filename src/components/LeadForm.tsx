@@ -8,12 +8,18 @@ type Props = {
   source?: string;
   /** `flush`: no outer card chrome — wrap in your own panel (e.g. contact page). */
   variant?: "card" | "flush";
+  /** Pre-fills the message textarea — e.g. a summary from the cost calculator. */
+  defaultMessage?: string;
+  /** Pre-selects the service dropdown — must match one of its option labels. */
+  defaultService?: string;
 };
 
 export function LeadForm({
   className = "",
   source = "website",
   variant = "card",
+  defaultMessage,
+  defaultService,
 }: Props) {
   const [status, setStatus] = useState<
     "idle" | "sending" | "ok" | "ok-no-smtp" | "err"
@@ -144,7 +150,7 @@ export function LeadForm({
           <select
             id="lead-service"
             name="service"
-            defaultValue=""
+            defaultValue={defaultService ?? ""}
             className="mt-1.5 w-full rounded-xl border border-stone-200 bg-cream/40 px-4 py-2.5 text-sm outline-none ring-wood-dark/30 transition focus:border-wood-dark focus:ring-2"
           >
             <option value="">Not sure yet</option>
@@ -190,6 +196,7 @@ export function LeadForm({
             id="lead-message"
             name="message"
             rows={3}
+            defaultValue={defaultMessage}
             className="mt-1.5 w-full rounded-xl border border-stone-200 bg-cream/40 px-4 py-2.5 text-sm outline-none ring-wood-dark/30 transition focus:border-wood-dark focus:ring-2"
             placeholder="2 BHK renovation, kitchen only, full home…"
           />

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CTASection } from "@/components/CTASection";
 import { FaqAccordion } from "@/components/FaqAccordion";
+import { HomeCostCalculator } from "@/components/HomeCostCalculator";
 import { ProjectStrip } from "@/components/ProjectStrip";
 import { Reveal } from "@/components/Reveal";
 import { PricingBands } from "@/components/PricingBands";
@@ -407,6 +408,22 @@ export default async function ServicePage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {slug === "interior-design" ? (
+        <section className="border-b border-stone-200 bg-stone-50/70 py-14 sm:py-20">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <SectionHeading
+              align="center"
+              eyebrow="Get your number"
+              title="Estimate your home interior cost"
+              description="Three quick picks—home size, spaces, and finish level—for a range built from real Pune projects, not a generic rate card."
+            />
+            <div className="mt-12">
+              <HomeCostCalculator tiers={detail.tiers} />
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       {localityBlock ? (
         <section className="border-b border-stone-200 bg-gradient-to-b from-cream/50 via-white to-stone-50/80 py-14 sm:py-16">
