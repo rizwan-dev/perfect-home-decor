@@ -6,14 +6,14 @@ import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 import { COMPANY, SITE_URL } from "@/lib/site";
 import { blogPosts } from "@/lib/blog-data";
-import { estimateReadMinutes } from "@/lib/blog-utils";
+import { estimateReadMinutes, getGuideGroups } from "@/lib/blog-utils";
 
 export const metadata: Metadata = {
-  title: "Interior Design Blog for Pune Homes",
-  description: `Practical guides on interiors, painting, kitchens and false ceilings for Pune homes—written from real sites in Wagholi, Kharadi & East Pune.`,
+  title: "Interior Design Guides for Pune Homes",
+  description: `Practical, evergreen guides on interiors, painting, kitchens and false ceilings for Pune homes—written from real sites in Wagholi, Kharadi & East Pune.`,
   alternates: { canonical: "/blog" },
   keywords: [
-    "interior design blog Pune",
+    "interior design guide Pune",
     "home interior tips",
     "modular kitchen guide",
     "false ceiling POP Pune",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     url: `${SITE_URL}/blog`,
-    title: `Journal | ${COMPANY.name}`,
+    title: `Guides | ${COMPANY.name}`,
     description: `Design & execution guides for Pune homeowners.`,
   },
 };
@@ -36,18 +36,66 @@ function formatDate(iso: string) {
 
 const heroImage = "/images/stock/living-dining-false-ceiling-pune.webp";
 
-export default function BlogIndexPage() {
-  const sorted = [...blogPosts].sort(
-    (a, b) =>
-      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+function GuideCard({ post }: { post: (typeof blogPosts)[number] }) {
+  const minutes = estimateReadMinutes(post);
+  return (
+    <li>
+      <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-stone-200/90 bg-stone-50/50 shadow-[0_2px_24px_-18px_rgba(28,25,23,0.12)] transition hover:border-stone-300/90 hover:shadow-[0_20px_50px_-28px_rgba(28,25,23,0.18)]">
+        <Link
+          href={`/blog/${post.slug}`}
+          className="relative aspect-[16/10] overflow-hidden bg-stone-200"
+        >
+          <Image
+            src={post.image}
+            alt={post.title}
+            fill
+            className="object-cover transition duration-500 group-hover:scale-[1.03]"
+            sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 40vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-charcoal/50 via-transparent to-transparent opacity-80" />
+          <span className="absolute left-5 top-5 rounded-full bg-white/95 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-wider text-wood-dark ring-1 ring-stone-200/80">
+            {post.category}
+          </span>
+        </Link>
+        <div className="flex flex-1 flex-col p-6 sm:p-7">
+          <p className="text-xs font-medium text-stone-500">
+            {formatDate(post.publishedAt)}
+            <span className="mx-2 text-stone-300" aria-hidden>
+              ·
+            </span>
+            {minutes} min read
+          </p>
+          <h3 className="mt-3 font-display text-xl leading-snug tracking-tight text-charcoal sm:text-[1.35rem]">
+            <Link href={`/blog/${post.slug}`} className="transition hover:text-wood-dark">
+              {post.title}
+            </Link>
+          </h3>
+          <p className="mt-3 flex-1 text-sm leading-relaxed text-stone-600">
+            {post.description}
+          </p>
+          <Link
+            href={`/blog/${post.slug}`}
+            className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-wood-dark transition group-hover:gap-2"
+          >
+            Read guide
+            <span aria-hidden>→</span>
+          </Link>
+        </div>
+      </article>
+    </li>
   );
+}
+
+export default function BlogIndexPage() {
+  const groups = getGuideGroups();
+  const totalCount = blogPosts.length;
 
   return (
     <>
       <JsonLd
         data={breadcrumbJsonLd([
           { name: "Home", path: "/" },
-          { name: "Blog", path: "/blog" },
+          { name: "Guides", path: "/blog" },
         ])}
       />
       <section className="relative overflow-hidden border-b border-stone-200">
@@ -66,15 +114,16 @@ export default function BlogIndexPage() {
         <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
           {/* Depth-1 page: the trail would only repeat the nav. */}
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-wood-dark">
-            Perfect Home Decor
+            Perfect Home Decor · Guides
           </p>
           <h1 className="mt-3 max-w-3xl font-display text-4xl leading-[1.1] tracking-tight text-charcoal sm:text-5xl lg:text-[3.25rem]">
-            Ideas for homes that have to work in the real world
+            Reference guides for homes that have to work in the real world
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-stone-600 sm:text-lg">
-            Long-form guides on interiors, painting, kitchens, ceilings,
-            waterproofing, and room-by-room planning—written from Pune sites, not
-            generic décor templates.
+            Long-form, evergreen guides on interiors, painting, kitchens,
+            ceilings, waterproofing, and room-by-room planning—written from
+            Pune sites, not generic décor templates. Organised by what you're
+            trying to decide, not by publish date.
           </p>
         </div>
       </section>
@@ -87,7 +136,7 @@ export default function BlogIndexPage() {
                 Library
               </p>
               <h2 className="mt-2 font-display text-2xl text-charcoal sm:text-3xl">
-                {sorted.length} articles
+                {totalCount} guides
               </h2>
             </div>
             <p className="max-w-md text-sm text-stone-500">
@@ -96,60 +145,20 @@ export default function BlogIndexPage() {
             </p>
           </div>
 
-          <ul className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-2 lg:gap-10 xl:grid-cols-2">
-            {sorted.map((post) => {
-              const minutes = estimateReadMinutes(post);
-              return (
-                <li key={post.slug}>
-                  <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-stone-200/90 bg-stone-50/50 shadow-[0_2px_24px_-18px_rgba(28,25,23,0.12)] transition hover:border-stone-300/90 hover:shadow-[0_20px_50px_-28px_rgba(28,25,23,0.18)]">
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      className="relative aspect-[16/10] overflow-hidden bg-stone-200"
-                    >
-                      <Image
-                        src={post.image}
-                        alt={post.title}
-                        fill
-                        className="object-cover transition duration-500 group-hover:scale-[1.03]"
-                        sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 40vw"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/50 via-transparent to-transparent opacity-80" />
-                      <span className="absolute left-5 top-5 rounded-full bg-white/95 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-wider text-wood-dark ring-1 ring-stone-200/80">
-                        {post.category}
-                      </span>
-                    </Link>
-                    <div className="flex flex-1 flex-col p-6 sm:p-7">
-                      <p className="text-xs font-medium text-stone-500">
-                        {formatDate(post.publishedAt)}
-                        <span className="mx-2 text-stone-300" aria-hidden>
-                          ·
-                        </span>
-                        {minutes} min read
-                      </p>
-                      <h3 className="mt-3 font-display text-xl leading-snug tracking-tight text-charcoal sm:text-[1.35rem]">
-                        <Link
-                          href={`/blog/${post.slug}`}
-                          className="transition hover:text-wood-dark"
-                        >
-                          {post.title}
-                        </Link>
-                      </h3>
-                      <p className="mt-3 flex-1 text-sm leading-relaxed text-stone-600">
-                        {post.description}
-                      </p>
-                      <Link
-                        href={`/blog/${post.slug}`}
-                        className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-wood-dark transition group-hover:gap-2"
-                      >
-                        Read article
-                        <span aria-hidden>→</span>
-                      </Link>
-                    </div>
-                  </article>
-                </li>
-              );
-            })}
-          </ul>
+          <div className="mt-14 space-y-16">
+            {groups.map((group) => (
+              <div key={group.title}>
+                <h3 className="font-display text-xl text-charcoal sm:text-2xl">
+                  {group.title}
+                </h3>
+                <ul className="mt-6 grid gap-8 sm:grid-cols-2 lg:gap-10">
+                  {group.posts.map((post) => (
+                    <GuideCard key={post.slug} post={post} />
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

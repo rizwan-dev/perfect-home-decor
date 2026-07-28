@@ -174,7 +174,7 @@ export function Footer() {
               Projects
             </Link>
             <Link href="/blog" className="hover:text-charcoal">
-              Blog
+              Guides
             </Link>
             <Link href="/about" className="hover:text-charcoal">
               About

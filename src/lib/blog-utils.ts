@@ -23,3 +23,41 @@ export function getRelatedPosts(slug: string, limit = 3): BlogPost[] {
   const rest = others.filter((p) => p.category !== current.category);
   return [...sameCategory, ...rest].slice(0, limit);
 }
+
+/**
+ * Topic groups for the guides hub — same posts as `blogPosts`, organised by
+ * reader intent instead of publish date, matching how competitors structure
+ * their guides sections. Every post's category maps to exactly one group.
+ */
+const GUIDE_GROUPS: { title: string; categories: string[] }[] = [
+  {
+    title: "Before you hire",
+    categories: ["Home Interior Design", "Interior design", "Modular kitchen"],
+  },
+  {
+    title: "Room by room",
+    categories: [
+      "Bedroom",
+      "Kids room",
+      "Living room",
+      "Dining",
+      "Study & office",
+      "Storage",
+    ],
+  },
+  {
+    title: "Materials & technique",
+    categories: ["Painting", "False ceiling", "Waterproofing"],
+  },
+  {
+    title: "Seasonal",
+    categories: ["Festivals"],
+  },
+];
+
+export function getGuideGroups(): { title: string; posts: BlogPost[] }[] {
+  return GUIDE_GROUPS.map((group) => ({
+    title: group.title,
+    posts: blogPosts.filter((p) => group.categories.includes(p.category)),
+  })).filter((group) => group.posts.length > 0);
+}

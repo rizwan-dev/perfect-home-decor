@@ -81,7 +81,7 @@ export default async function BlogPostPage({ params }: Props) {
       <JsonLd
         data={breadcrumbJsonLd([
           { name: "Home", path: "/" },
-          { name: "Blog", path: "/blog" },
+          { name: "Guides", path: "/blog" },
           { name: post.title, path: `/blog/${post.slug}` },
         ])}
       />
@@ -104,7 +104,7 @@ export default async function BlogPostPage({ params }: Props) {
                 /
               </span>
               <Link href="/blog" className="transition hover:text-charcoal">
-                Journal
+                Guides
               </Link>
               <span className="mx-2 text-stone-300" aria-hidden>
                 /
@@ -300,7 +300,7 @@ export default async function BlogPostPage({ params }: Props) {
                   href="/blog"
                   className="mt-6 inline-block text-sm font-semibold text-wood-dark"
                 >
-                  ← All articles
+                  ← All guides
                 </Link>
               </div>
             </aside>
