@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
+import { FaqAccordion } from "@/components/FaqAccordion";
 import { ProjectStrip } from "@/components/ProjectStrip";
+import { Reveal } from "@/components/Reveal";
 import { JsonLd } from "@/components/JsonLd";
 import { LeadForm } from "@/components/LeadForm";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -12,6 +14,73 @@ import { locationContent } from "@/lib/locations-data";
 import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/json-ld";
 import { projectsNearArea } from "@/lib/projects-data";
 import { SERVICE_SLUGS, servicesMeta } from "@/lib/services-data";
+
+/**
+ * Six photographs per locality, mapped 1:1 onto that area's `homeTypes` cards.
+ * Deliberately different per area so no two locality pages look like the same
+ * page with the name swapped — which is exactly what a thin local page reads
+ * like, to a visitor and to Google.
+ */
+const areaHomeTypeImages: Record<AreaSlug, string[]> = {
+  kharadi: [
+    "/images/stock/kharadi-open-plan-living-dining-design.webp",
+    "/images/stock/kharadi-master-bedroom-wardrobe-design.webp",
+    "/images/stock/kharadi-living-room-sofa-cove-ceiling.webp",
+    "/images/stock/kharadi-modular-kitchen-l-shaped-design.webp",
+    "/images/stock/kharadi-tv-unit-media-wall-design.webp",
+    "/images/stock/kharadi-kids-bedroom-wardrobe-study.webp",
+  ],
+  wagholi: [
+    "/images/stock/living-room-blue-sofa-interior-pune.webp",
+    "/images/stock/bedroom-interior-design-wardrobe-pune.webp",
+    "/images/stock/home-interior-hallway-open-plan-pune.webp",
+    "/images/stock/modular-kitchen-design-pune.webp",
+    "/images/stock/home-painting-service-pune.webp",
+    "/images/stock/custom-furniture-wall-unit-design-pune.webp",
+  ],
+  "viman-nagar": [
+    "/images/stock/luxury-living-room-interior-pune.webp",
+    "/images/stock/living-room-panelled-sectional-design-pune.webp",
+    "/images/stock/modular-kitchen-contemporary-pune.webp",
+    "/images/stock/home-office-study-room-design-pune.webp",
+    "/images/stock/bedroom-soft-neutral-interior-pune.webp",
+    "/images/stock/tv-cabinet-glass-shelving-unit-pune.webp",
+  ],
+  lohegaon: [
+    "/images/stock/bedroom-cove-ceiling-interior-pune.webp",
+    "/images/stock/bedroom-wardrobe-lighting-design-pune.webp",
+    "/images/stock/living-neutral-bright.webp",
+    "/images/stock/modular-kitchen-dark-wood-pune.webp",
+    "/images/stock/fitted-wardrobe-loft-storage-pune.webp",
+    "/images/stock/bedroom-wardrobe-study-desk-unit-pune.webp",
+  ],
+  magarpatta: [
+    "/images/stock/living-room-premium-interior-design-pune.webp",
+    "/images/stock/coffered-ceiling-living-room-pune.webp",
+    "/images/canva/living-room-cove-ceiling-art-wall-pune.webp",
+    "/images/stock/home-office-study-room-design-pune.webp",
+    "/images/stock/hero-modular-kitchen-marble-island-pune.webp",
+    "/images/stock/dining-area-interior-design-pune.webp",
+  ],
+  kesnand: [
+    "/images/stock/hero-living-room-greenery-interior-pune.webp",
+    "/images/stock/custom-furniture-shelving-pune.webp",
+    "/images/stock/open-plan-living-dining-interior-pune.webp",
+    "/images/canva/living-room-cove-ceiling-art-wall-pune.webp",
+    "/images/stock/modular-kitchen-island-sage-green-pune.webp",
+    "/images/stock/bedroom-white-bright.webp",
+  ],
+};
+
+/** Editorial image beside the buyer-profile block, per area. */
+const areaProfileImage: Record<AreaSlug, string> = {
+  kharadi: "/images/stock/home-interior-design-kharadi-living-room.webp",
+  wagholi: "/images/canva/bedroom-wood-wardrobe-cove-lighting-pune.webp",
+  "viman-nagar": "/images/stock/hero-classic-living-room-interior-pune.webp",
+  lohegaon: "/images/stock/bedroom-soft-neutral-interior-pune.webp",
+  magarpatta: "/images/stock/living-dining-false-ceiling-pune.webp",
+  kesnand: "/images/canva/dining-room-green-chairs-interior-pune.webp",
+};
 
 /** Each locality gets its own hero so no two area pages share a lead image. */
 const areaHero: Record<AreaSlug, string> = {
@@ -105,11 +174,43 @@ export function LocationLanding({ area }: { area: AreaSlug }) {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:px-8">
+      <section className="border-b border-stone-200 bg-white">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <dl className="grid grid-cols-2 divide-stone-200 sm:grid-cols-4 sm:divide-x">
+            {[
+              {
+                v: `${COMPANY.googleStarRating}.0★`,
+                l: `${COMPANY.googleReviewCount}+ Google reviews`,
+              },
+              { v: `${COMPANY.yearsExperience}+`, l: "Years in Pune" },
+              { v: `${COMPANY.happyClients}+`, l: "Homes & sites delivered" },
+              { v: "5 yr", l: "Warranty on furniture" },
+            ].map((s) => (
+              <div key={s.l} className="px-2 py-8 text-center sm:px-6">
+                <dt className="sr-only">{s.l}</dt>
+                <dd>
+                  <span className="block font-display text-3xl text-charcoal sm:text-4xl">
+                    {s.v}
+                  </span>
+                  <span className="mt-1 block text-xs leading-snug text-stone-500">
+                    {s.l}
+                  </span>
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         {c.intro.map((paragraph, i) => (
           <p
             key={i}
-            className="mb-6 text-lg leading-relaxed text-stone-700 last:mb-0"
+            className={
+              i === 0
+                ? "mb-6 text-xl leading-relaxed text-charcoal last:mb-0 sm:text-2xl sm:leading-relaxed"
+                : "mb-6 text-lg leading-relaxed text-stone-700 last:mb-0"
+            }
           >
             {paragraph}
           </p>
@@ -182,54 +283,100 @@ export function LocationLanding({ area }: { area: AreaSlug }) {
       </section>
 
       {c.buyerProfile?.length ? (
-        <section className="border-b border-stone-200 bg-stone-50/70 py-14 sm:py-16">
+        <section className="border-b border-stone-200 bg-stone-50/70 py-16 sm:py-20">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <SectionHeading
               eyebrow="Local context"
               title={`What ${c.areaLabel} homeowners actually want`}
               description={`Written from site visits across ${c.areaLabel}, not a template we swap the area name into.`}
             />
-            <div className="mt-10 grid gap-6 lg:grid-cols-3 lg:gap-8">
-              {c.buyerProfile.map((block) => (
-                <div
-                  key={block.heading}
-                  className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm"
-                >
-                  <h3 className="font-display text-lg text-charcoal">
-                    {block.heading}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-stone-600">
-                    {block.body}
-                  </p>
+            <div className="mt-12 grid gap-10 lg:grid-cols-12 lg:items-start lg:gap-14">
+              <div className="lg:col-span-5">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-stone-200 shadow-[0_30px_60px_-32px_rgba(28,25,23,0.45)] ring-1 ring-stone-900/[0.06] lg:sticky lg:top-28">
+                  <Image
+                    src={areaProfileImage[area]}
+                    alt={`Home interior design delivered in ${c.areaLabel}, Pune`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width:1024px) 100vw, 40vw"
+                    loading="lazy"
+                  />
+                  <div
+                    className="absolute inset-0 bg-gradient-to-t from-charcoal/45 via-transparent to-transparent"
+                    aria-hidden
+                  />
+                  <div className="absolute inset-x-0 bottom-0 p-6">
+                    <p className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-cream/80">
+                      {c.areaLabel} · Pune
+                    </p>
+                    <p className="mt-1 font-display text-xl text-cream">
+                      Delivered by our own in-house team
+                    </p>
+                  </div>
                 </div>
-              ))}
+              </div>
+              <ol className="lg:col-span-7">
+                {c.buyerProfile.map((block, i) => (
+                  <li
+                    key={block.heading}
+                    className="border-b border-stone-200 pb-8 pt-8 first:pt-0 last:border-0 last:pb-0"
+                  >
+                    <div className="flex gap-5">
+                      <span className="mt-1 font-display text-2xl leading-none text-wood/60">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <div className="min-w-0">
+                        <h3 className="font-display text-xl text-charcoal">
+                          {block.heading}
+                        </h3>
+                        <p className="mt-3 leading-relaxed text-stone-600">
+                          {block.body}
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ol>
             </div>
           </div>
         </section>
       ) : null}
 
       {c.homeTypes?.length ? (
-        <section className="border-b border-stone-200 bg-white py-14 sm:py-16">
+        <section className="border-b border-stone-200 bg-white py-16 sm:py-20">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <SectionHeading
               eyebrow="Scope"
               title={`Types of homes we work on in ${c.areaLabel}`}
               description="Same team and standards across all of them—only the scope and sequence change."
             />
-            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {c.homeTypes.map((t) => (
-                <div
-                  key={t.title}
-                  className="rounded-2xl border border-stone-200 bg-stone-50/60 p-6"
-                >
-                  <div className="h-1 w-8 rounded-full bg-wood/70" aria-hidden />
-                  <h3 className="mt-4 font-display text-lg text-charcoal">
-                    {t.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-stone-600">
-                    {t.body}
-                  </p>
-                </div>
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+              {c.homeTypes.map((t, i) => (
+                <Reveal key={t.title} delay={(i % 3) * 80}>
+                  <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-stone-200/90 bg-white shadow-[0_1px_2px_rgba(28,25,23,0.04)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_48px_-24px_rgba(28,25,23,0.28)]">
+                    <div className="relative aspect-[4/3] overflow-hidden bg-stone-100">
+                      <Image
+                        src={
+                          areaHomeTypeImages[area][i] ??
+                          areaHomeTypeImages[area][0]
+                        }
+                        alt={`${t.title} — home interior design in ${c.areaLabel}, Pune`}
+                        fill
+                        className="object-cover transition duration-700 ease-out group-hover:scale-[1.05]"
+                        sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="flex flex-1 flex-col p-6">
+                      <h3 className="font-display text-lg leading-snug text-charcoal">
+                        {t.title}
+                      </h3>
+                      <p className="mt-2 text-sm leading-relaxed text-stone-600">
+                        {t.body}
+                      </p>
+                    </div>
+                  </article>
+                </Reveal>
               ))}
             </div>
           </div>
@@ -253,30 +400,33 @@ export function LocationLanding({ area }: { area: AreaSlug }) {
       </section>
 
       {c.siteRealities?.length ? (
-        <section className="border-b border-stone-200 bg-cream/40 py-14 sm:py-16">
+        <section className="border-b border-stone-200 bg-charcoal py-16 sm:py-20">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col gap-8 lg:flex-row lg:gap-14">
-              <div className="lg:w-72 lg:shrink-0">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-wood-dark">
+            <div className="flex flex-col gap-10 lg:flex-row lg:gap-16">
+              <div className="lg:w-80 lg:shrink-0">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-wood/80">
                   Good to know
                 </p>
-                <h2 className="mt-2 font-display text-2xl tracking-tight text-charcoal sm:text-3xl">
+                <h2 className="mt-3 font-display text-3xl tracking-tight text-cream sm:text-4xl">
                   Site realities we plan around in {c.areaLabel}
                 </h2>
+                <p className="mt-4 text-sm leading-relaxed text-cream/70">
+                  The practical constraints that shape a project here — flagged
+                  before we quote, not discovered halfway through.
+                </p>
               </div>
-              <ul className="grid flex-1 gap-x-10 gap-y-4 sm:grid-cols-2">
-                {c.siteRealities.map((item) => (
-                  <li
-                    key={item}
-                    className="flex gap-3 text-sm leading-relaxed text-stone-700"
-                  >
+              <ul className="grid flex-1 gap-x-12 gap-y-7 sm:grid-cols-2">
+                {c.siteRealities.map((item, i) => (
+                  <li key={item} className="flex gap-4">
                     <span
-                      className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white text-[10px] font-bold text-wood-dark ring-1 ring-stone-200"
+                      className="mt-0.5 font-display text-lg leading-none text-wood/70"
                       aria-hidden
                     >
-                      ✓
+                      {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span>{item}</span>
+                    <span className="text-sm leading-relaxed text-cream/85">
+                      {item}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -393,21 +543,24 @@ export function LocationLanding({ area }: { area: AreaSlug }) {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
-        <SectionHeading
-          eyebrow="Local FAQs"
-          title={`Questions we hear in ${c.areaLabel}`}
-        />
-        <dl className="mt-10 space-y-8">
-          {c.localFaq.map((f) => (
-            <div key={f.q}>
-              <dt className="font-semibold text-charcoal">{f.q}</dt>
-              <dd className="mt-2 text-sm leading-relaxed text-stone-600">
-                {f.a}
-              </dd>
-            </div>
-          ))}
-        </dl>
+      <section className="border-b border-stone-200 bg-cream/50 py-16 sm:py-20">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            align="center"
+            eyebrow="Local FAQs"
+            title={`Questions we hear in ${c.areaLabel}`}
+            description="The things people actually ask on a first call — answered straight."
+          />
+          <FaqAccordion
+            items={c.localFaq.map((f, i) => ({
+              id: `faq-${area}-${i}`,
+              q: f.q,
+              a: f.a,
+            }))}
+            className="mt-10"
+            accordionName={`location-faq-${area}`}
+          />
+        </div>
       </section>
 
       <section className="border-t border-stone-200 bg-cream py-14">
