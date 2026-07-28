@@ -292,12 +292,15 @@ export function LocationLanding({ area }: { area: AreaSlug }) {
             />
             <div className="mt-12 grid gap-10 lg:grid-cols-12 lg:items-start lg:gap-14">
               <div className="lg:col-span-5">
-                <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-stone-200 shadow-[0_30px_60px_-32px_rgba(28,25,23,0.45)] ring-1 ring-stone-900/[0.06] lg:sticky lg:top-28">
+                {/* 4:5 only where it sits in the desktop sidebar — full-width on
+                    smaller screens that ratio becomes a very tall block whose top
+                    third is usually just ceiling. */}
+                <div className="relative aspect-[16/10] overflow-hidden rounded-3xl bg-stone-200 shadow-[0_30px_60px_-32px_rgba(28,25,23,0.45)] ring-1 ring-stone-900/[0.06] sm:aspect-[3/2] lg:sticky lg:top-28 lg:aspect-[4/5]">
                   <Image
                     src={areaProfileImage[area]}
                     alt={`Home interior design delivered in ${c.areaLabel}, Pune`}
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                     sizes="(max-width:1024px) 100vw, 40vw"
                     loading="lazy"
                   />
