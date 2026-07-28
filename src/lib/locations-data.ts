@@ -10,6 +10,19 @@ export type LocationPageContent = {
   servicesBlurb: string;
   localFaq: { q: string; a: string }[];
   metaDescription: string;
+  /**
+   * Deep-dive sections below are optional and currently written only for the
+   * two localities we are actively competing in (Kharadi and Wagholi), where
+   * competitor pages run 1,600–2,500 words against our 915. Areas without
+   * them simply render the shorter page — better a lean, honest page than
+   * padded filler written about a neighbourhood we know less well.
+   */
+  /** Who actually buys here, and what they ask for on the first call. */
+  buyerProfile?: { heading: string; body: string }[];
+  /** Flat/home formats we are regularly asked to design in this area. */
+  homeTypes?: { title: string; body: string }[];
+  /** Practical building/society realities the team plans around locally. */
+  siteRealities?: string[];
 };
 
 export const locationContent: Record<AreaSlug, LocationPageContent> = {
@@ -21,6 +34,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
     intro: [
       "Kharadi’s mix of compact high-rises and larger river-facing units needs layouts that maximise storage without crowding glazing. We plan services around balconies, dry zones, and the way Pune’s easterly sun moves across your living room.",
       "Whether you are near Panchshil Towers, Nyati Era, or the lanes around Fountain Road, our site teams are used to society norms, lift timings, and material movement—so execution stays predictable.",
+      "Kharadi also has a particular kind of buyer pressure: the area attracts polished, high-budget marketing from national firms, and it is easy to end up comparing a per-square-foot headline against a detailed quotation and assuming they measure the same thing. They rarely do. A rate card that excludes hardware grade, surface preparation or electrical points will always look cheaper than an honest line-wise breakdown of the same home. We would rather show you where the money actually goes—usually in storage volume rather than finishes—and let you decide what to keep, drop, or move to a second phase.",
     ],
     landmarks:
       "World Trade Center, EON Free Zone, Reliance Mart Kharadi, Columbia Asia Hospital, Amanora Mall corridor, riverside societies along Fountain Road.",
@@ -49,9 +63,75 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
         q: "What do full interiors for a Kharadi 2 or 3 BHK cost?",
         a: "Woodwork quantity and material grade decide cost more than carpet area alone. After a free site visit you get an item-by-item quotation—many Kharadi clients phase it: kitchen and wardrobes before move-in, living-room woodwork and décor later.",
       },
+      {
+        q: "What warranty do you give on interiors in Kharadi?",
+        a: "5 years on the furniture and cabinetry we build, and 2 years on painting work—both documented at handover, not promised verbally. Appliance and hardware manufacturer terms apply on top of that.",
+      },
+      {
+        q: "Which brands and materials do you use?",
+        a: "Asian Paints (including Royale Play), Dulux Velvet Touch, Nerolac Impressions and Berger for finishes, Dr. Fixit for waterproofing, and branded ply with soft-close hardware for cabinetry. Brand names go on the quotation so you know exactly what you are paying for.",
+      },
+      {
+        q: "How long does a Kharadi flat interior take?",
+        a: "Most 2–3 BHK turnkey homes land between 10–16 weeks once civil work is released. High-rise material movement and society lift windows affect this, which is why we confirm the schedule after seeing your building, not before.",
+      },
+      {
+        q: "Do you subcontract the work to other teams?",
+        a: "No. Design, carpentry and painting are handled by our own in-house team, which is why the person who quoted your job is accountable for what actually gets built.",
+      },
+      {
+        q: "Can you also handle only painting or only a false ceiling in Kharadi?",
+        a: "Yes—single-scope work is common. See our dedicated pages for wall painting, false ceiling (POP) and modular kitchen work in Kharadi if you do not need a full-home interior yet.",
+      },
     ],
     metaDescription:
       "Home interior design & service in Kharadi, Pune—modular kitchens, false ceilings, painting & custom furniture. Local team near EON & WTC. Free site visit.",
+    buyerProfile: [
+      {
+        heading: "Who we usually design for in Kharadi",
+        body: "Most Kharadi enquiries come from two groups: IT professionals and dual-income couples who bought near the EON Free Zone and World Trade Center corridor, and families upgrading into larger river-facing units toward Mundhwa bridge. A third, smaller group are owners fitting out a flat to rent to the same IT crowd — they want durable, neutral interiors that photograph well and survive tenant turnover.",
+      },
+      {
+        heading: "What they ask for first",
+        body: "Storage almost always leads the conversation — Kharadi towers give you good glazing and city views but rarely generous floor plates, so wardrobes, kitchen tall units and a TV wall that hides cabling matter more than statement décor. The second most common ask is a work-from-home corner that does not eat a bedroom. Lighting comes up late in the conversation but changes the finished home the most.",
+      },
+      {
+        heading: "Budget expectations",
+        body: "Kharadi buyers usually come in having already seen a per-square-foot number from a larger firm and want to know what it actually includes. We quote line-wise instead, so you can see which items carry the cost — typically the woodwork volume, not the finish grade — and drop or phase anything you do not need yet.",
+      },
+    ],
+    homeTypes: [
+      {
+        title: "Compact 2 BHK tower flats",
+        body: "The most common Kharadi brief. Storage planned into wall depth, headboard walls and kitchen tall units so the flat gains capacity without losing floor area or blocking balcony access.",
+      },
+      {
+        title: "3 BHK family homes",
+        body: "Full-home scope across kitchen, hall, bedrooms and kids' room delivered on one schedule, with false ceilings and lighting coordinated before finishes close up.",
+      },
+      {
+        title: "River-facing premium units",
+        body: "Larger plans near Fountain Road and Mundhwa bridge where sightlines to the glazing drive the layout — we keep the furniture low and the ceiling profiles clean so the view stays the feature.",
+      },
+      {
+        title: "Rental-ready fit-outs",
+        body: "Neutral, hard-wearing packages for owners letting to the EON and WTC workforce — easy-clean surfaces, standard hardware and finishes that survive tenant changeovers.",
+      },
+      {
+        title: "Row homes",
+        body: "Multi-level plans where staircase storage, utility zoning and a coherent palette across floors matter more than any single room.",
+      },
+      {
+        title: "Renovations of older Kharadi flats",
+        body: "Phased, room-by-room execution for families already living in the home, with dust control and services protected between phases.",
+      },
+    ],
+    siteRealities: [
+      "High-rise material movement means service-lift bookings and time windows — our supervisors handle the MC coordination rather than leaving it to you.",
+      "Many Kharadi societies restrict working hours and weekend work; we plan the schedule against your society's rules before quoting a timeline.",
+      "Compact floor plates make balcony-door and AC-ledge clearances tight — we model these before cutting any board, not on site.",
+      "Easterly light moves fast across most Kharadi living rooms, so we sample paint and laminate on your walls at two times of day before you approve.",
+    ],
   },
   wagholi: {
     areaLabel: "Wagholi",
@@ -61,6 +141,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
     intro: [
       "Wagholi’s rapid development means many families move in while infrastructure still matures—we choose finishes that forgive dust, and lighting plans that keep interiors cheerful on overcast days.",
       "If you are near Lifeline Hospital, Wagholi chowk, or the NH753F corridor, we plan site visits that respect commute realities and batch decisions to save your time.",
+      "For most Wagholi clients this is their first home, and the first time they have commissioned interior work of any size. That changes how we quote. A lump-sum number is easy to give and impossible to check, so we break the quotation into line items you can question one by one—and we are explicit about what is genuinely worth spending on now versus what can wait a year without any of it needing to be redone. Kitchen, wardrobes and painting make a flat liveable; false ceilings, feature walls and soft styling almost always can follow later. Being clear about that difference is more useful, to a first-time buyer, than another paragraph about our design philosophy.",
     ],
     landmarks:
       "Lifeline Hospital, Wagholi chowk, schools along Nagar Road, retail on NH753F, connections toward Lohegaon airport.",
@@ -89,9 +170,76 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
         q: "We just got possession in Wagholi—what should we spend on first?",
         a: "Start with what daily life needs: kitchen, wardrobes, and painting before the furniture arrives. Because our quotation is line-wise, you can defer false ceilings and feature walls to a later phase without redoing anything.",
       },
+      {
+        q: "What warranty do you give on interiors in Wagholi?",
+        a: "5 years on the furniture and cabinetry we build, and 2 years on painting work—both documented at handover. Hardware and appliance manufacturer terms apply on top of that.",
+      },
+      {
+        q: "Which brands and materials do you use?",
+        a: "Asian Paints (including Royale Play), Dulux Velvet Touch, Nerolac Impressions and Berger for finishes, Dr. Fixit for waterproofing, and branded ply with soft-close hardware for cabinetry. Every brand is named on the quotation.",
+      },
+      {
+        q: "How long does a Wagholi flat interior take?",
+        a: "Most 2–3 BHK turnkey homes land between 10–16 weeks once civil work is released. Because our studio is on Awhalwadi Road, supervision visits to Wagholi sites are quicker than for any other area we serve.",
+      },
+      {
+        q: "Do you subcontract the work?",
+        a: "No—design, carpentry and painting are done by our own in-house team, so the people who quoted your job are the ones accountable for building it.",
+      },
+      {
+        q: "Can you work around an under-construction or newly handed-over building?",
+        a: "Yes. We align design milestones to your possession date, lock long-lead items early, and choose finishes that tolerate the dust that comes with a still-developing neighbourhood.",
+      },
     ],
     metaDescription:
       "Home interior design & service in Wagholi, Pune. Modular kitchens, false ceilings, painting & custom furniture. Practical finishes for new apartments. Free site visit.",
+    buyerProfile: [
+      {
+        heading: "Who we usually design for in Wagholi",
+        body: "Wagholi is largely a first-home market. Most enquiries come from young couples and growing families taking possession of their first 2 or 3 BHK, often moving from rented flats closer to the city. They are spending carefully, frequently coordinating with parents on decisions, and want to understand where every rupee goes before committing.",
+      },
+      {
+        heading: "What they ask for first",
+        body: "Kitchen and wardrobes, almost without exception — the things that make a new flat liveable on day one. Kids' room storage that will still work in five years comes up often. False ceilings and feature walls are usually wanted but knowingly deferred to a second phase, which is exactly how we structure the quotation.",
+      },
+      {
+        heading: "Budget expectations",
+        body: "Wagholi buyers are the most budget-conscious of the areas we serve, and the most poorly served by lump-sum quotes. Our line-wise quotation exists mainly for this situation: you can see the cost of each item, start with essentials before move-in, and add the rest later without redoing any of the earlier work.",
+      },
+    ],
+    homeTypes: [
+      {
+        title: "Fresh-possession 2 BHK flats",
+        body: "The most common Wagholi brief — bare shell to liveable home. Kitchen, wardrobes and full-home painting first, with everything else planned but phased.",
+      },
+      {
+        title: "3 BHK family homes",
+        body: "Complete interiors including a kids' room designed with storage that adapts as the child grows, rather than furniture that gets replaced in three years.",
+      },
+      {
+        title: "Phased first-home projects",
+        body: "Essentials before move-in, false ceilings and feature walls in a later phase — sequenced so the second phase never means undoing the first.",
+      },
+      {
+        title: "Budget-smart modular kitchens",
+        body: "Honest hardware and layout engineering over showroom finishes, sized to the platform and chimney duct the builder actually gave you.",
+      },
+      {
+        title: "Full-home painting for new flats",
+        body: "Low-odour options so families can move in sooner, with proper prep and primer rather than a fast coat over builder whitewash.",
+      },
+      {
+        title: "Row houses and larger plots",
+        body: "Multi-level homes toward Kesnand where storage planning and a consistent palette across floors matter most.",
+      },
+    ],
+    siteRealities: [
+      "Our studio is on Awhalwadi Road in Wagholi, so site visits and supervision here are faster than for any other area we cover.",
+      "Wagholi is still developing — road dust is a genuine factor, so we lean toward easy-clean surfaces and finishes that forgive it.",
+      "Many buildings are new handovers, which means builder snags surface mid-project; we flag them before starting rather than discovering them at painting stage.",
+      "New townships often have strict material-movement and work-hour rules; we handle the society coordination as part of the job.",
+      "Road-facing flats along the Nagar Road and NH753F corridor benefit from glazing seals and entry vestibules that buffer noise and dust.",
+    ],
   },
   "viman-nagar": {
     areaLabel: "Viman Nagar",
