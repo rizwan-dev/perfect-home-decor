@@ -10,7 +10,7 @@ import { SERVICE_SLUGS } from "@/lib/services-data";
 
 export const metadata: Metadata = {
   title: "Interior services in Pune",
-  description: `${COMPANY.name} — home and commercial interior design, modular kitchens, false ceilings, wall painting, and custom furniture. Based in Wagholi; serving Pune.`,
+  description: `Home & commercial interior design, modular kitchens, false ceilings, painting and custom furniture across Pune. ${COMPANY.googleStarRating}.0★ from ${COMPANY.googleReviewCount}+ reviews.`,
   alternates: { canonical: "/services" },
   openGraph: {
     url: `${SITE_URL}/services`,

@@ -71,7 +71,7 @@ export const servicesMeta: Record<
   "custom-furniture": {
     title: "Custom Furniture",
     short:
-      "TV units, beds, wardrobes, and storage—measured for your space, finished to match your interior story.",
+      "TV units, beds, wardrobes and storage—measured to your space, built with branded ply and soft-close hardware, and covered by a 5-year warranty.",
     heroImage: "/images/stock/custom-furniture-wall-unit-design-pune.webp",
     keywords: ["custom TV unit Pune", "bed design", "wardrobe design"],
   },

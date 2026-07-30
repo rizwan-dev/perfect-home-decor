@@ -10,7 +10,7 @@ import { COMPANY, SITE_URL, whatsappLink } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact — free interior consultation Pune",
-  description: `Call or WhatsApp ${COMPANY.name} for a free consultation. Home interiors across Pune with clear timelines and BOQs.`,
+  description: `Book a free site visit with ${COMPANY.name} — home interiors, kitchens and painting across Pune, quoted line by line. ${COMPANY.googleStarRating}.0★ from ${COMPANY.googleReviewCount}+ reviews.`,
   alternates: { canonical: "/contact" },
   openGraph: {
     url: `${SITE_URL}/contact`,

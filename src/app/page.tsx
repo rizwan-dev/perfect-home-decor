@@ -29,7 +29,7 @@ import { faqJsonLd } from "@/lib/json-ld";
 
 export const metadata: Metadata = {
   title: "Interior designer in Pune — homes across Kharadi & East Pune",
-  description: `${COMPANY.name}: home interiors, modular kitchens, false ceilings, painting & wallpaper across Kharadi, Wagholi & East Pune. Free site visit.`,
+  description: `Home interiors, modular kitchens, false ceilings & painting across Kharadi, Wagholi & East Pune. ${COMPANY.googleStarRating}.0★ from ${COMPANY.googleReviewCount}+ Google reviews. Free site visit.`,
   alternates: { canonical: "/" },
   keywords: [
     "interior designer Pune",
