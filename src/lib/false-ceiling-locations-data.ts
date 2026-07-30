@@ -85,7 +85,7 @@ export const falseCeilingLocationContent: Record<
       },
     ],
     metaDescription:
-      "False ceiling & POP in Kharadi, Pune—cove lighting, gypsum, AC grills, RCPs. Perfect Home Decor. Free site visit near EON & WTC.",
+      "False ceiling & POP in Kharadi, Pune — cove lighting, gypsum and AC grills planned before finishes close. 5.0★ from 570+ Google reviews. Free visit.",
     metaKeywords: [
       "false ceiling Kharadi",
       "POP ceiling Kharadi Pune",
@@ -158,7 +158,7 @@ export const falseCeilingLocationContent: Record<
       },
     ],
     metaDescription:
-      "False ceiling & POP Wagholi, Pune—coves, bulkheads, gypsum, lighting. Perfect Home Decor. Local team, free consultation.",
+      "False ceiling & POP in Wagholi, Pune — cove lighting and gypsum that hides wiring and AC piping. 5.0★ from 570+ Google reviews. Free site visit.",
     metaKeywords: [
       "false ceiling Wagholi",
       "POP ceiling Wagholi Pune",
@@ -231,7 +231,7 @@ export const falseCeilingLocationContent: Record<
       },
     ],
     metaDescription:
-      "False ceiling Viman Nagar, Pune—POP, gypsum, coves, retrofits. Perfect Home Decor. Airport-area experience. Book a visit.",
+      "False ceiling & POP in Viman Nagar, Pune — retrofits for older flats, coves and gypsum around beams. 5.0★ from 570+ Google reviews. Free visit.",
     metaKeywords: [
       "false ceiling Viman Nagar",
       "POP ceiling Viman Nagar Pune",
@@ -303,7 +303,7 @@ export const falseCeilingLocationContent: Record<
       },
     ],
     metaDescription:
-      "False ceiling Lohegaon, Pune—POP, gypsum, coves, bedroom blackout stacks. Perfect Home Decor. Free site visit.",
+      "False ceiling & POP in Lohegaon, Pune — cove lighting and bedroom detailing near flight paths. 5.0★ from 570+ Google reviews. Free site visit.",
     metaKeywords: [
       "false ceiling Lohegaon",
       "POP ceiling Lohegaon Pune",
@@ -375,7 +375,7 @@ export const falseCeilingLocationContent: Record<
       },
     ],
     metaDescription:
-      "False ceiling Magarpatta City—gypsum, POP, coves, MC-ready. Perfect Home Decor. Free consultation Hadapsar township.",
+      "False ceiling & POP in Magarpatta, Pune — layered coves for township flats, society passes handled. 5.0★ from 570+ Google reviews. Free visit.",
     metaKeywords: [
       "false ceiling Magarpatta",
       "POP ceiling Magarpatta Pune",
@@ -447,7 +447,7 @@ export const falseCeilingLocationContent: Record<
       },
     ],
     metaDescription:
-      "False ceiling Kesnand & east Pune—tall rooms, plots, gypsum POP. Perfect Home Decor. Site visit & RCP support.",
+      "False ceiling & POP in Kesnand & east Pune — gypsum and coves sized for taller plotted ceilings. 5.0★ from 570+ Google reviews. Free site visit.",
     metaKeywords: [
       "false ceiling Kesnand",
       "POP ceiling east Pune",

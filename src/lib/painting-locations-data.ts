@@ -85,7 +85,7 @@ export const paintingLocationContent: Record<
       },
     ],
     metaDescription:
-      "Wall & home painting in Kharadi, Pune—low-VOC systems, crisp trims, monsoon-smart sequencing. Free estimate. Perfect Home Decor: EON, WTC & riverside towers.",
+      "Home painting in Kharadi, Pune — full surface prep, Asian Paints & Dulux, 2-year warranty. 5.0★ from 570+ Google reviews. Free site inspection.",
     metaKeywords: [
       "home painting Kharadi",
       "wall painting Kharadi Pune",
@@ -159,7 +159,7 @@ export const paintingLocationContent: Record<
       },
     ],
     metaDescription:
-      "Wall painting in Wagholi, Pune—home & apartment repainting, low-VOC options, monsoon-smart prep. Perfect Home Decor. Free estimate & site visit.",
+      "Home painting in Wagholi, Pune — proper prep on new-possession flats, 2-year warranty. 5.0★ from 570+ Google reviews. Free site inspection.",
     metaKeywords: [
       "home painting Wagholi",
       "wall painting Wagholi Pune",
@@ -233,7 +233,7 @@ export const paintingLocationContent: Record<
       },
     ],
     metaDescription:
-      "Home wall painting Viman Nagar, Pune—old & new flats, careful prep, enamel trims. Perfect Home Decor. Book a free painting estimate near airport & Phoenix.",
+      "Home painting in Viman Nagar, Pune — older and new flats, full prep, 2-year warranty. 5.0★ from 570+ Google reviews. Free site inspection.",
     metaKeywords: [
       "home painting Viman Nagar",
       "wall painting Viman Nagar Pune",
@@ -306,7 +306,7 @@ export const paintingLocationContent: Record<
       },
     ],
     metaDescription:
-      "Wall painting Lohegaon, Pune—homes near airport, quick schedules, durable finishes. Perfect Home Decor. Free painting quote & site visit.",
+      "Home painting in Lohegaon, Pune — quick schedules for airport-area homes, 2-year warranty. 5.0★ from 570+ Google reviews. Free site inspection.",
     metaKeywords: [
       "home painting Lohegaon",
       "wall painting Lohegaon Pune",
@@ -379,7 +379,7 @@ export const paintingLocationContent: Record<
       },
     ],
     metaDescription:
-      "Home painting Magarpatta City, Pune—township flats & villas, MC-ready schedules, crisp finishes. Perfect Home Decor. Free painting estimate.",
+      "Home painting in Magarpatta, Pune — township flats, society passes handled, 2-year warranty. 5.0★ from 570+ Google reviews. Free inspection.",
     metaKeywords: [
       "home painting Magarpatta",
       "wall painting Magarpatta Pune",
@@ -452,7 +452,7 @@ export const paintingLocationContent: Record<
       },
     ],
     metaDescription:
-      "Home painting Kesnand & east Pune—plots, new towers, high ceilings. Perfect Home Decor. Transparent BOQs & free site visit.",
+      "Home painting in Kesnand & east Pune — plots, new towers, tall rooms, 2-year warranty. 5.0★ from 570+ Google reviews. Free site inspection.",
     metaKeywords: [
       "home painting Kesnand",
       "wall painting east Pune",

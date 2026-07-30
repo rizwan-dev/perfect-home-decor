@@ -85,7 +85,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
       },
     ],
     metaDescription:
-      "Home interior design & service in Kharadi, Pune—modular kitchens, false ceilings, painting & custom furniture. Local team near EON & WTC. Free site visit.",
+      "Home interior design in Kharadi, Pune — complete 2 & 3 BHK interiors from ₹4.5 lakh. 5.0★ from 570+ Google reviews. Free site visit near EON & WTC.",
     buyerProfile: [
       {
         heading: "Who we usually design for in Kharadi",
@@ -192,7 +192,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
       },
     ],
     metaDescription:
-      "Home interior design & service in Wagholi, Pune. Modular kitchens, false ceilings, painting & custom furniture. Practical finishes for new apartments. Free site visit.",
+      "Home interior design in Wagholi, Pune — complete 2 & 3 BHK interiors from ₹4.5 lakh. 5.0★ from 570+ Google reviews. Free site visit, local studio.",
     buyerProfile: [
       {
         heading: "Who we usually design for in Wagholi",
@@ -296,7 +296,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
       },
     ],
     metaDescription:
-      "Home interior design & service in Viman Nagar, Pune—renovations, modular kitchens, false ceilings, painting. Airport-area experience. Free site visit.",
+      "Home interior design in Viman Nagar, Pune — renovations and new flats, 2 & 3 BHK from ₹4.5 lakh. 5.0★ from 570+ Google reviews. Free site visit.",
     buyerProfile: [
       {
         heading: "Who we usually design for in Viman Nagar",
@@ -399,7 +399,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
       },
     ],
     metaDescription:
-      "Home interior design & service in Lohegaon, Pune—kitchens, ceilings, painting, custom furniture. Airport-area homes. Free site visit.",
+      "Home interior design in Lohegaon, Pune — 2 & 3 BHK interiors from ₹4.5 lakh, scoped to your move-in date. 5.0★ from 570+ Google reviews. Free visit.",
     buyerProfile: [
       {
         heading: "Who we usually design for in Lohegaon",
@@ -503,7 +503,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
       },
     ],
     metaDescription:
-      "Home interior design & service in Magarpatta, Pune—modular kitchens, false ceilings, painting, custom furniture. Township-ready execution. Free site visit.",
+      "Home interior design in Magarpatta, Pune — township flats and villas, 2 & 3 BHK from ₹4.5 lakh. 5.0★ from 570+ Google reviews. Free site visit.",
     buyerProfile: [
       {
         heading: "Who we usually design for in Magarpatta",
@@ -606,7 +606,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
       },
     ],
     metaDescription:
-      "Home interior design & service in Kesnand & east Pune—modular kitchen, false ceiling, painting, custom furniture. New homes & plots. Free site visit.",
+      "Home interior design in Kesnand & east Pune — plotted homes and new flats from ₹4.5 lakh. 5.0★ from 570+ Google reviews. Free site visit.",
     buyerProfile: [
       {
         heading: "Who we usually design for in Kesnand",
