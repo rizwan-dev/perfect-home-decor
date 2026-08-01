@@ -147,12 +147,15 @@ export default function ContactPage() {
                   <span className="flex h-10 w-10 items-center justify-center rounded-full bg-cream text-wood-dark ring-1 ring-stone-200/80 transition group-hover:bg-white group-hover:ring-wood/20">
                     <IconPhone className="h-5 w-5" />
                   </span>
-                  <span className="mt-4 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-stone-500">
+                  {/* Block elements, not spans: search engines concatenate
+                      adjacent inline text with no separator, which rendered
+                      the Google snippet as "Call+91 90312 63531". */}
+                  <div className="mt-4 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-stone-500">
                     Call
-                  </span>
-                  <span className="mt-1 font-display text-lg text-charcoal">
+                  </div>
+                  <div className="mt-1 font-display text-lg text-charcoal">
                     {COMPANY.phoneDisplay}
-                  </span>
+                  </div>
                 </a>
                 <a
                   href={wa}
@@ -163,12 +166,12 @@ export default function ContactPage() {
                   <span className="flex h-10 w-10 items-center justify-center rounded-full bg-cream text-wood-dark ring-1 ring-stone-200/80 transition group-hover:bg-white group-hover:ring-wood/20">
                     <IconChat className="h-5 w-5" />
                   </span>
-                  <span className="mt-4 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-stone-500">
+                  <div className="mt-4 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-stone-500">
                     WhatsApp
-                  </span>
-                  <span className="mt-1 font-display text-lg text-charcoal">
+                  </div>
+                  <div className="mt-1 font-display text-lg text-charcoal">
                     Message us
-                  </span>
+                  </div>
                 </a>
                 <a
                   href={`mailto:${COMPANY.email}`}
@@ -177,12 +180,12 @@ export default function ContactPage() {
                   <span className="flex h-10 w-10 items-center justify-center rounded-full bg-cream text-wood-dark ring-1 ring-stone-200/80 transition group-hover:bg-white group-hover:ring-wood/20">
                     <IconMail className="h-5 w-5" />
                   </span>
-                  <span className="mt-4 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-stone-500">
+                  <div className="mt-4 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-stone-500">
                     Email
-                  </span>
-                  <span className="mt-1 break-words font-sans text-sm font-medium leading-snug text-charcoal">
+                  </div>
+                  <div className="mt-1 break-words font-sans text-sm font-medium leading-snug text-charcoal">
                     {COMPANY.email}
-                  </span>
+                  </div>
                 </a>
               </div>
 
