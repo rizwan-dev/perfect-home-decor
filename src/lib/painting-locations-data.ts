@@ -1,3 +1,4 @@
+import { COMPANY } from "./site";
 import type { AreaSlug } from "./site";
 
 const COMPANY_NAME = "Perfect Home Decor";
@@ -85,7 +86,7 @@ export const paintingLocationContent: Record<
       },
     ],
     metaDescription:
-      "Home painting in Kharadi, Pune — full surface prep, Asian Paints & Dulux, 2-year warranty. 5.0★ from 570+ Google reviews. Free site inspection.",
+      `Home painting in Kharadi, Pune — full surface prep, Asian Paints & Dulux, 2-year warranty. ${COMPANY.googleStarRating}.0★ from ${COMPANY.googleReviewCount}+ Google reviews. Free site inspection.`,
     metaKeywords: [
       "home painting Kharadi",
       "wall painting Kharadi Pune",
@@ -159,7 +160,7 @@ export const paintingLocationContent: Record<
       },
     ],
     metaDescription:
-      "Home painting in Wagholi, Pune — proper prep on new-possession flats, 2-year warranty. 5.0★ from 570+ Google reviews. Free site inspection.",
+      `Home painting in Wagholi, Pune — proper prep on new-possession flats, 2-year warranty. ${COMPANY.googleStarRating}.0★ from ${COMPANY.googleReviewCount}+ Google reviews. Free site inspection.`,
     metaKeywords: [
       "home painting Wagholi",
       "wall painting Wagholi Pune",
@@ -233,7 +234,7 @@ export const paintingLocationContent: Record<
       },
     ],
     metaDescription:
-      "Home painting in Viman Nagar, Pune — older and new flats, full prep, 2-year warranty. 5.0★ from 570+ Google reviews. Free site inspection.",
+      `Home painting in Viman Nagar, Pune — older and new flats, full prep, 2-year warranty. ${COMPANY.googleStarRating}.0★ from ${COMPANY.googleReviewCount}+ Google reviews. Free site inspection.`,
     metaKeywords: [
       "home painting Viman Nagar",
       "wall painting Viman Nagar Pune",
@@ -306,7 +307,7 @@ export const paintingLocationContent: Record<
       },
     ],
     metaDescription:
-      "Home painting in Lohegaon, Pune — quick schedules for airport-area homes, 2-year warranty. 5.0★ from 570+ Google reviews. Free site inspection.",
+      `Home painting in Lohegaon, Pune — quick schedules for airport-area homes, 2-year warranty. ${COMPANY.googleStarRating}.0★ from ${COMPANY.googleReviewCount}+ Google reviews. Free site inspection.`,
     metaKeywords: [
       "home painting Lohegaon",
       "wall painting Lohegaon Pune",
@@ -379,7 +380,7 @@ export const paintingLocationContent: Record<
       },
     ],
     metaDescription:
-      "Home painting in Magarpatta, Pune — township flats, society passes handled, 2-year warranty. 5.0★ from 570+ Google reviews. Free inspection.",
+      `Home painting in Magarpatta, Pune — township flats, society passes handled, 2-year warranty. ${COMPANY.googleStarRating}.0★ from ${COMPANY.googleReviewCount}+ Google reviews. Free inspection.`,
     metaKeywords: [
       "home painting Magarpatta",
       "wall painting Magarpatta Pune",
@@ -452,7 +453,7 @@ export const paintingLocationContent: Record<
       },
     ],
     metaDescription:
-      "Home painting in Kesnand & east Pune — plots, new towers, tall rooms, 2-year warranty. 5.0★ from 570+ Google reviews. Free site inspection.",
+      `Home painting in Kesnand & east Pune — plots, new towers, tall rooms, 2-year warranty. ${COMPANY.googleStarRating}.0★ from ${COMPANY.googleReviewCount}+ Google reviews. Free site inspection.`,
     metaKeywords: [
       "home painting Kesnand",
       "wall painting east Pune",

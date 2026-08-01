@@ -75,9 +75,10 @@ export const COMPANY = {
   /**
    * Fallback review count when `GOOGLE_PLACES_API_KEY` + `GOOGLE_PLACE_ID` are not set
    * or the Places API request fails. Prefer configuring env for live counts.
-   * Matches the live Google Business Profile as of 2026-07-25 (5.0★, 570 reviews).
+   * Also interpolated into all 24 locality meta descriptions, so bumping this one
+   * number updates every page. Matches the live profile as of 2026-08-02.
    */
-  googleReviewCount: 570,
+  googleReviewCount: 575,
   facebookUrl: "https://www.facebook.com/theperfecthomedecor",
   instagramUrl: "https://www.instagram.com/perfecthomedecore/",
   linkedinUrl: "https://www.linkedin.com/company/101354667/",

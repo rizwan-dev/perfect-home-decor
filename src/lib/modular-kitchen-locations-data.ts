@@ -1,3 +1,4 @@
+import { COMPANY } from "./site";
 import type { AreaSlug } from "./site";
 
 const BRAND = "Perfect Home Decor";
@@ -85,7 +86,7 @@ export const modularKitchenLocationContent: Record<
       },
     ],
     metaDescription:
-      "Modular kitchen in Kharadi, Pune — layouts engineered to your gas point and chimney duct, 5-yr warranty. 5.0★ from 570+ Google reviews. Free visit.",
+      `Modular kitchen in Kharadi, Pune — layouts engineered to your gas point and chimney duct, 5-yr warranty. ${COMPANY.googleStarRating}.0★ from ${COMPANY.googleReviewCount}+ Google reviews. Free visit.`,
     metaKeywords: [
       "modular kitchen Kharadi",
       "kitchen interior Kharadi Pune",
@@ -158,7 +159,7 @@ export const modularKitchenLocationContent: Record<
       },
     ],
     metaDescription:
-      "Modular kitchen in Wagholi, Pune — soft-close hardware, tall units, line-wise pricing, 5-yr warranty. 5.0★ from 570+ Google reviews. Free visit.",
+      `Modular kitchen in Wagholi, Pune — soft-close hardware, tall units, line-wise pricing, 5-yr warranty. ${COMPANY.googleStarRating}.0★ from ${COMPANY.googleReviewCount}+ Google reviews. Free visit.`,
     metaKeywords: [
       "modular kitchen Wagholi",
       "kitchen interior Wagholi Pune",
@@ -231,7 +232,7 @@ export const modularKitchenLocationContent: Record<
       },
     ],
     metaDescription:
-      "Modular kitchen in Viman Nagar, Pune — retrofits and new fit-outs, parallel & L layouts, 5-yr warranty. 5.0★ from 570+ Google reviews. Free visit.",
+      `Modular kitchen in Viman Nagar, Pune — retrofits and new fit-outs, parallel & L layouts, 5-yr warranty. ${COMPANY.googleStarRating}.0★ from ${COMPANY.googleReviewCount}+ Google reviews. Free visit.`,
     metaKeywords: [
       "modular kitchen Viman Nagar",
       "kitchen renovation Viman Nagar Pune",
@@ -303,7 +304,7 @@ export const modularKitchenLocationContent: Record<
       },
     ],
     metaDescription:
-      "Modular kitchen in Lohegaon, Pune — efficient layouts for compact plans, 5-yr warranty. 5.0★ from 570+ Google reviews. Free site visit.",
+      `Modular kitchen in Lohegaon, Pune — efficient layouts for compact plans, 5-yr warranty. ${COMPANY.googleStarRating}.0★ from ${COMPANY.googleReviewCount}+ Google reviews. Free site visit.`,
     metaKeywords: [
       "modular kitchen Lohegaon",
       "kitchen interior Lohegaon Pune",
@@ -375,7 +376,7 @@ export const modularKitchenLocationContent: Record<
       },
     ],
     metaDescription:
-      "Modular kitchen in Magarpatta, Pune — island and parallel layouts for township flats, 5-yr warranty. 5.0★ from 570+ Google reviews. Free visit.",
+      `Modular kitchen in Magarpatta, Pune — island and parallel layouts for township flats, 5-yr warranty. ${COMPANY.googleStarRating}.0★ from ${COMPANY.googleReviewCount}+ Google reviews. Free visit.`,
     metaKeywords: [
       "modular kitchen Magarpatta",
       "kitchen interior Magarpatta Pune",
@@ -447,7 +448,7 @@ export const modularKitchenLocationContent: Record<
       },
     ],
     metaDescription:
-      "Modular kitchen in Kesnand & east Pune — bare-shell homes and plots, services marked early, 5-yr warranty. 5.0★ from 570+ Google reviews. Free visit.",
+      `Modular kitchen in Kesnand & east Pune — bare-shell homes and plots, services marked early, 5-yr warranty. ${COMPANY.googleStarRating}.0★ from ${COMPANY.googleReviewCount}+ Google reviews. Free visit.`,
     metaKeywords: [
       "modular kitchen Kesnand",
       "kitchen interior east Pune",

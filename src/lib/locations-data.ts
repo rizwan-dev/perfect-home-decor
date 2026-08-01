@@ -1,3 +1,4 @@
+import { COMPANY } from "./site";
 import type { AreaSlug } from "./site";
 
 export type LocationPageContent = {
@@ -85,7 +86,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
       },
     ],
     metaDescription:
-      "Home interior design in Kharadi, Pune — complete 2 & 3 BHK interiors from ₹4.5 lakh. 5.0★ from 570+ Google reviews. Free site visit near EON & WTC.",
+      `Home interior design in Kharadi, Pune — complete 2 & 3 BHK interiors from ₹4.5 lakh. ${COMPANY.googleStarRating}.0★ from ${COMPANY.googleReviewCount}+ Google reviews. Free site visit near EON & WTC.`,
     buyerProfile: [
       {
         heading: "Who we usually design for in Kharadi",
@@ -192,7 +193,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
       },
     ],
     metaDescription:
-      "Home interior design in Wagholi, Pune — complete 2 & 3 BHK interiors from ₹4.5 lakh. 5.0★ from 570+ Google reviews. Free site visit, local studio.",
+      `Home interior design in Wagholi, Pune — complete 2 & 3 BHK interiors from ₹4.5 lakh. ${COMPANY.googleStarRating}.0★ from ${COMPANY.googleReviewCount}+ Google reviews. Free site visit, local studio.`,
     buyerProfile: [
       {
         heading: "Who we usually design for in Wagholi",
@@ -296,7 +297,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
       },
     ],
     metaDescription:
-      "Home interior design in Viman Nagar, Pune — renovations and new flats, 2 & 3 BHK from ₹4.5 lakh. 5.0★ from 570+ Google reviews. Free site visit.",
+      `Home interior design in Viman Nagar, Pune — renovations and new flats, 2 & 3 BHK from ₹4.5 lakh. ${COMPANY.googleStarRating}.0★ from ${COMPANY.googleReviewCount}+ Google reviews. Free site visit.`,
     buyerProfile: [
       {
         heading: "Who we usually design for in Viman Nagar",
@@ -399,7 +400,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
       },
     ],
     metaDescription:
-      "Home interior design in Lohegaon, Pune — 2 & 3 BHK interiors from ₹4.5 lakh, scoped to your move-in date. 5.0★ from 570+ Google reviews. Free visit.",
+      `Home interior design in Lohegaon, Pune — 2 & 3 BHK interiors from ₹4.5 lakh, scoped to your move-in date. ${COMPANY.googleStarRating}.0★ from ${COMPANY.googleReviewCount}+ Google reviews. Free visit.`,
     buyerProfile: [
       {
         heading: "Who we usually design for in Lohegaon",
@@ -503,7 +504,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
       },
     ],
     metaDescription:
-      "Home interior design in Magarpatta, Pune — township flats and villas, 2 & 3 BHK from ₹4.5 lakh. 5.0★ from 570+ Google reviews. Free site visit.",
+      `Home interior design in Magarpatta, Pune — township flats and villas, 2 & 3 BHK from ₹4.5 lakh. ${COMPANY.googleStarRating}.0★ from ${COMPANY.googleReviewCount}+ Google reviews. Free site visit.`,
     buyerProfile: [
       {
         heading: "Who we usually design for in Magarpatta",
@@ -606,7 +607,7 @@ export const locationContent: Record<AreaSlug, LocationPageContent> = {
       },
     ],
     metaDescription:
-      "Home interior design in Kesnand & east Pune — plotted homes and new flats from ₹4.5 lakh. 5.0★ from 570+ Google reviews. Free site visit.",
+      `Home interior design in Kesnand & east Pune — plotted homes and new flats from ₹4.5 lakh. ${COMPANY.googleStarRating}.0★ from ${COMPANY.googleReviewCount}+ Google reviews. Free site visit.`,
     buyerProfile: [
       {
         heading: "Who we usually design for in Kesnand",
