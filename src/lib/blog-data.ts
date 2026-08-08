@@ -31,6 +31,137 @@ export type BlogPost = {
 /** Post images are served from /public — real project photos where available, curated stock otherwise. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "office-cafe-interior-design-kharadi-pune",
+    seoTitle: "Office & Café Interior Design in Kharadi, Pune",
+    seoDescription:
+      "What changes when a fit-out is a business, not a home — deadlines, hard-wearing finishes, services coordination, and how commercial work is priced.",
+    title:
+      "Office and café interiors in Kharadi: what changes when it is a business, not a home",
+    description:
+      "Kharadi's offices, cafés and clinics need a different kind of interior job to a flat — the deadline is the deliverable, finishes have to survive daily footfall, and most of the work is services coordination. A practical guide for anyone fitting out a commercial space in east Pune.",
+    publishedAt: "2026-08-09",
+    author: "Perfect Home Decor",
+    category: "Commercial interiors",
+    image: "/images/stock/office-interior-design-pune.webp",
+    keywords: [
+      "office interior design Kharadi",
+      "commercial interior design Pune",
+      "cafe interior design Pune",
+      "shop interior design Kharadi",
+      "office fit out Pune",
+      "clinic interior design Pune",
+      "retail interior Kharadi",
+      "commercial interior designer east Pune",
+    ],
+    takeaways: [
+      "In commercial work the schedule is the deliverable — every extra day is rent paid on a space earning nothing.",
+      "Specify finishes for footfall, not for photographs. A domestic-grade laminate on a café floor fails within a year.",
+      "Most of a fit-out is coordination — electrical, data, HVAC, fire and plumbing — not carpentry.",
+      "Landlord and building fit-out rules decide your timeline more often than the design does. Get them in writing before drawings start.",
+      "Commercial work is priced on scope and area, not on a BHK band, so quotes are only comparable once the scope is written down.",
+    ],
+    sections: [
+      {
+        heading: "Why Kharadi has a commercial interiors market of its own",
+        paragraphs: [
+          "Kharadi is not primarily a residential story. EON IT Park, World Trade Center and the Gera Commerzone belt put tens of thousands of working people into a few square kilometres every weekday, and an ecosystem has grown to serve them — cafés, quick-service restaurants, clinics, salons, coaching centres, co-working floors and the smaller offices of firms that want to sit near their clients.",
+          "That produces a steady flow of commercial fit-out work with a completely different shape to a home interior. A family moving into a 2 BHK can live with a week's slippage. A café that was due to open on the first of the month cannot — the staff are hired, the stock is ordered, and the rent is running whether the doors open or not.",
+          "Most interior firms in east Pune are residential specialists who take commercial work occasionally. The difference shows up in the parts of the job that are invisible in photographs.",
+        ],
+      },
+      {
+        heading: "The deadline is the deliverable",
+        paragraphs: [
+          "On a home project, the honest answer to \"when will it finish\" is a range. On a commercial project, a range is not good enough, because everything downstream — the licence inspection, the staff start dates, the launch — is pinned to a single date.",
+          "That changes how the work has to be planned. Materials are ordered before the site is ready rather than as each stage arrives. Trades are sequenced so two can work in the same space without one undoing the other. Long-lead items — a bespoke counter, imported tiles, a specific light fitting — are identified in week one, because those are what actually slip.",
+          "It also changes what an honest contractor tells you at quotation stage. If your date is not achievable with the scope you have described, that should be said before you sign, not discovered in the final fortnight.",
+        ],
+      },
+      {
+        heading: "Finishes have to survive footfall, not just look good",
+        paragraphs: [
+          "A domestic wall finish takes the occasional knock. A café wall takes chair backs, bags, trolleys and cleaning staff every single day. A clinic corridor gets mopped with disinfectant twice daily. An office lift lobby sees a few hundred people before lunch.",
+          "So the specification changes. Flooring moves to commercial-grade vitrified or engineered surfaces rated for the traffic. Wall protection goes in at chair-rail height where it will actually be hit. Laminates and PU finishes are chosen for cleanability rather than for the depth of the sheen. Counters that will take hot pans and constant wiping get quartz or solid surface rather than anything that stains.",
+          "This is the most common false economy in commercial work. A domestic-grade specification saves money at handover and costs more within eighteen months, on a space that has to close for the repairs.",
+        ],
+      },
+      {
+        heading: "Layout follows workflow, not a mood board",
+        paragraphs: [
+          "In a home, layout follows how a family likes to live. In a business, it follows how work actually gets done — and getting it wrong costs money every day the space is open.",
+          "In a café that means the path from counter to machine to pass, where the queue forms without blocking the door, and where staff cross each other. In a clinic it means reception sightlines, the waiting area, and privacy at the point where patients discuss anything personal. In an office it means the ratio of focus seats to meeting space, and whether the two collide acoustically.",
+          "We walk through a normal working day before drawing anything — the busiest hour, the delivery, the cleaning routine. It is far cheaper to solve a bottleneck on paper than to move a counter that has already been built.",
+        ],
+      },
+      {
+        heading: "Most of the job is services coordination",
+        paragraphs: [
+          "Clients often think of a fit-out as carpentry and finishes. On a commercial site, the larger share of the risk sits in the services — electrical loads, data cabling, HVAC, plumbing, exhaust and fire compliance — and in getting them to agree with each other above the ceiling.",
+          "A café's exhaust route usually decides the kitchen position, not the other way round. An office's data and power layout has to be fixed before the ceiling closes, because reopening it later means downtime. Fire detection and sprinkler positions are set by regulation and by the building, not by where a light would look best.",
+          "This is why we bring the electrical work inside the ceiling design rather than treating it as a separate trade arriving afterwards. Points, drivers and ducting get placed once, and access panels are planned in so that maintenance never means breaking a finished ceiling open.",
+        ],
+      },
+      {
+        heading: "Working around a business that is still trading",
+        paragraphs: [
+          "Renovations of a running business are common in Kharadi — a café refreshing its interior, a clinic adding consultation rooms, an office reconfiguring a floor. The constraint is that revenue cannot stop.",
+          "That usually means phasing: the work is divided into zones handed back in sequence, so part of the space stays open throughout. Noisy and dusty stages go into nights or weekends where the building permits it. Dust barriers are real partitions rather than sheeting, because a customer-facing space cannot look like a building site.",
+          "Phasing costs more than a single continuous run — there is mobilisation and protection for each stage. It is almost always cheaper than closing.",
+        ],
+      },
+      {
+        heading: "Landlord approvals and building fit-out rules",
+        paragraphs: [
+          "In commercial buildings the landlord's fit-out guidelines frequently decide your programme more than the design does. Permitted working hours, service-lift booking, restrictions on core drilling, insurance requirements for contractors, deposits, and rules about what may be altered are all set before you start.",
+          "Get these in writing during the lease discussion, not after. We have seen fit-outs lose a fortnight because the building only allowed noisy work between ten at night and six in the morning, which nobody had asked about until the drilling started.",
+          "The same applies to signage and anything externally visible, which is normally controlled centrally and may need approval well before you want it installed.",
+        ],
+      },
+      {
+        heading: "How commercial work is priced",
+        paragraphs: [
+          "Home interiors can be quoted against familiar bands, because a 2 BHK in one tower is broadly comparable to a 2 BHK in the next. Commercial work has no equivalent. A 900 square foot café and a 900 square foot office share almost nothing — one is dominated by kitchen services and seating, the other by workstations, cabling and meeting rooms.",
+          "So commercial quotes are built on scope and area after a site visit, itemised line by line: civil and partitions, ceiling and lighting, joinery, flooring, services, finishes and furniture as separate heads. That structure is what lets you compare two quotations honestly and trim scope yourself if the total runs beyond the budget.",
+          "Be wary of a single lump-sum figure with no breakdown. On commercial jobs it almost always means the scope has not been pinned down, and the difference reappears later as variations.",
+        ],
+      },
+      {
+        heading: "Questions worth asking before you sign",
+        paragraphs: [
+          "Ask who is accountable on site day to day, and whether that person is present or supervising several projects. Ask how services coordination is handled and who resolves a clash between the electrician and the AC contractor. Ask what happens to the date if a long-lead item slips.",
+          "Ask to see the itemised breakdown rather than a headline number, and check the finish specifications against the traffic your space will actually take. Ask what the contractor needs from the landlord, and by when.",
+          "And ask for a commercial reference — a fit-out is a different discipline to a flat, and a firm that has only done homes will learn on your programme.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How long does an office or café fit-out take in Kharadi?",
+        a: "A straightforward office fit-out of a few thousand square feet typically runs six to ten weeks from drawings to handover; a café with a full kitchen usually takes longer because of exhaust, plumbing and equipment lead times. The honest number comes after a site visit and a look at the building's fit-out rules, which often affect the programme more than the design does.",
+      },
+      {
+        q: "Can you work nights and weekends so we do not have to close?",
+        a: "Yes, where the building permits it — and phasing a job so part of the space keeps trading is common in Kharadi. It costs more than a single continuous run because each stage needs its own protection and mobilisation, but it is almost always cheaper than closing. We confirm the permitted hours with the building before committing to a schedule.",
+      },
+      {
+        q: "Do you handle landlord and building approvals?",
+        a: "We prepare the drawings and contractor documentation the building asks for, and coordinate the fit-out permission, insurance paperwork and service-lift booking. The lease-level negotiation stays with you, but we will tell you early what the building needs so it does not become the thing holding up your start date.",
+      },
+      {
+        q: "What does a commercial interior cost compared with a home?",
+        a: "There is no equivalent of the per-BHK bands used for homes, because a café and an office of identical size have almost nothing in common. Commercial work is quoted on scope and area after a site visit and itemised by head — civil, ceiling, joinery, flooring, services, finishes and furniture — so you can compare quotations properly and adjust scope yourself.",
+      },
+      {
+        q: "Can you work alongside our architect or brand team?",
+        a: "Yes, and on branded or franchised spaces it is usually the better arrangement. We build to their specification, flag anything that will not behave the way it is drawn, and sequence our stages around the other trades on site.",
+      },
+      {
+        q: "Do you take on small commercial jobs?",
+        a: "Yes — clinics, salons, coaching centres and small offices are a regular part of what we do across Kharadi, Wagholi and Viman Nagar. A free site visit and an itemised quote apply the same way as on larger fit-outs.",
+      },
+    ],
+  },
+  {
     slug: "home-interior-design-kharadi-2bhk-3bhk-guide",
     seoTitle: "Home Interior Design in Kharadi: 2 & 3 BHK Guide",
     seoDescription:
