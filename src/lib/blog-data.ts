@@ -34,7 +34,7 @@ export const blogPosts: BlogPost[] = [
     slug: "home-interior-design-kharadi-2bhk-3bhk-guide",
     seoTitle: "Home Interior Design in Kharadi: 2 & 3 BHK Guide",
     seoDescription:
-      "How complete home interior design works for Kharadi flats — what the scope covers, how honest itemised pricing is built, timelines, and questions to ask before you sign.",
+      "How complete home interior design works for Kharadi flats — what the scope covers, how itemised pricing is built, timelines, and what to ask before you sign.",
     title:
       "Home interior design in Kharadi: what a complete 2 BHK or 3 BHK actually involves",
     description:

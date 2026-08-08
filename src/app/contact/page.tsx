@@ -7,6 +7,7 @@ import { LeadForm } from "@/components/LeadForm";
 import { SocialIconLinks } from "@/components/SocialIconLinks";
 import { getContactMapIframeSrc } from "@/lib/contact-map-embed";
 import { COMPANY, SITE_URL, whatsappLink } from "@/lib/site";
+import { OG_IMAGE, ogImages } from "@/lib/og-image";
 
 export const metadata: Metadata = {
   title: "Contact — free interior consultation Pune",
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     url: `${SITE_URL}/contact`,
     title: `Contact | ${COMPANY.name}`,
+    images: ogImages(OG_IMAGE.brand, `${COMPANY.name}, Wagholi, Pune`),
   },
 };
 

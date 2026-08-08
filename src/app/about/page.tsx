@@ -9,6 +9,7 @@ import {
   getGooglePlaceReviewStats,
 } from "@/lib/google-place-reviews";
 import { COMPANY, SITE_URL } from "@/lib/site";
+import { OG_IMAGE, ogImages } from "@/lib/og-image";
 
 const heroImage = "/images/stock/open-plan-living-dining-interior-pune.webp";
 
@@ -19,6 +20,10 @@ export const metadata: Metadata = {
   openGraph: {
     url: `${SITE_URL}/about`,
     title: `About | ${COMPANY.name}`,
+    images: ogImages(
+      OG_IMAGE.interiors,
+      `Interiors delivered by ${COMPANY.name} in Pune`,
+    ),
   },
 };
 

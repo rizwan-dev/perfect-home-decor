@@ -9,6 +9,7 @@ import { ProjectStrip } from "@/components/ProjectStrip";
 import { Reveal } from "@/components/Reveal";
 import { PricingBands } from "@/components/PricingBands";
 import { projects } from "@/lib/projects-data";
+import { SERVICE_OG, ogImages } from "@/lib/og-image";
 import { serviceDetail } from "@/lib/services-detail-data";
 import { JsonLd } from "@/components/JsonLd";
 import { LeadForm } from "@/components/LeadForm";
@@ -37,7 +38,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${s.title} in Pune`,
     description: s.short,
     alternates: { canonical: `/services/${slug}` },
-    openGraph: { title: `${s.title} | ${COMPANY.name}`, url, description: s.short },
+    openGraph: {
+      title: `${s.title} | ${COMPANY.name}`,
+      url,
+      description: s.short,
+      images: ogImages(SERVICE_OG[slug], `${s.title} by ${COMPANY.name}, Pune`),
+    },
     keywords: s.keywords,
   };
 }

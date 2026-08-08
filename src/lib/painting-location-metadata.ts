@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SITE_URL, type AreaSlug } from "./site";
 import { paintingLocationContent } from "./painting-locations-data";
+import { OG_IMAGE, ogImages } from "./og-image";
 
 export function paintingLocationPageMetadata(area: AreaSlug): Metadata {
   const c = paintingLocationContent[area];
@@ -14,6 +15,10 @@ export function paintingLocationPageMetadata(area: AreaSlug): Metadata {
       title: c.headline,
       description: c.metaDescription,
       url: `${SITE_URL}${path}`,
+      images: ogImages(
+        OG_IMAGE.painting,
+        `Wall painting delivered in ${c.areaLabel}, Pune`,
+      ),
     },
   };
 }

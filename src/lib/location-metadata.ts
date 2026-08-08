@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SITE_URL, type AreaSlug } from "./site";
 import { locationContent } from "./locations-data";
+import { OG_IMAGE, ogImages } from "./og-image";
 
 export function locationPageMetadata(area: AreaSlug): Metadata {
   const c = locationContent[area];
@@ -21,6 +22,10 @@ export function locationPageMetadata(area: AreaSlug): Metadata {
       title: c.headline,
       description: c.metaDescription,
       url: `${SITE_URL}${path}`,
+      images: ogImages(
+        OG_IMAGE.interiors,
+        `Home interior design delivered in ${c.areaLabel}, Pune`,
+      ),
     },
   };
 }

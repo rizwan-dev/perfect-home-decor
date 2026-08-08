@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SITE_URL, type AreaSlug } from "./site";
 import { modularKitchenLocationContent } from "./modular-kitchen-locations-data";
+import { OG_IMAGE, ogImages } from "./og-image";
 
 export function modularKitchenLocationPageMetadata(area: AreaSlug): Metadata {
   const c = modularKitchenLocationContent[area];
@@ -14,6 +15,10 @@ export function modularKitchenLocationPageMetadata(area: AreaSlug): Metadata {
       title: c.headline,
       description: c.metaDescription,
       url: `${SITE_URL}${path}`,
+      images: ogImages(
+        OG_IMAGE.modularKitchen,
+        `Modular kitchen delivered in ${c.areaLabel}, Pune`,
+      ),
     },
   };
 }

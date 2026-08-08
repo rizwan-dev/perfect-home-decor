@@ -6,6 +6,7 @@ import { CTASection } from "@/components/CTASection";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceCard } from "@/components/ServiceCard";
 import { COMPANY, SITE_URL } from "@/lib/site";
+import { OG_IMAGE, ogImages } from "@/lib/og-image";
 import { SERVICE_SLUGS } from "@/lib/services-data";
 
 export const metadata: Metadata = {
@@ -17,6 +18,10 @@ export const metadata: Metadata = {
     title: `Services | ${COMPANY.name}`,
     description:
       "Residential and commercial interior design across Pune—one accountable team.",
+    images: ogImages(
+      OG_IMAGE.interiors,
+      `Interior design and home services by ${COMPANY.name}, Pune`,
+    ),
   },
 };
 

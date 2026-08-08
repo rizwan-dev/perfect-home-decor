@@ -4,6 +4,7 @@ import { CTASection } from "@/components/CTASection";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbJsonLd } from "@/lib/json-ld";
 import { COMPANY, SITE_URL } from "@/lib/site";
+import { OG_IMAGE, ogImages } from "@/lib/og-image";
 import { projects } from "@/lib/projects-data";
 import { ProjectsGrid } from "./ProjectsGrid";
 
@@ -14,6 +15,10 @@ export const metadata: Metadata = {
   openGraph: {
     url: `${SITE_URL}/projects`,
     title: `Projects | ${COMPANY.name}`,
+    images: ogImages(
+      OG_IMAGE.interiors,
+      `Completed interior projects by ${COMPANY.name} across Pune`,
+    ),
   },
 };
 

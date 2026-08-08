@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 import { COMPANY, SITE_URL } from "@/lib/site";
+import { OG_IMAGE, ogImages } from "@/lib/og-image";
 import { blogPosts } from "@/lib/blog-data";
 import { estimateReadMinutes, getGuideGroups } from "@/lib/blog-utils";
 
@@ -23,6 +24,10 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/blog`,
     title: `Guides | ${COMPANY.name}`,
     description: `Design & execution guides for Pune homeowners.`,
+    images: ogImages(
+      OG_IMAGE.brand,
+      `Interior design guides from ${COMPANY.name}, Pune`,
+    ),
   },
 };
 
