@@ -11,6 +11,8 @@ import { PricingBands } from "@/components/PricingBands";
 import { projects } from "@/lib/projects-data";
 import { SERVICE_OG, ogImages } from "@/lib/og-image";
 import { serviceDetail } from "@/lib/services-detail-data";
+import { SERVICE_GUIDES } from "@/lib/service-guides";
+import { blogPosts } from "@/lib/blog-data";
 import { JsonLd } from "@/components/JsonLd";
 import { LeadForm } from "@/components/LeadForm";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -106,6 +108,12 @@ export default async function ServicePage({ params }: Props) {
   }));
 
   const relatedSlugs = SERVICE_SLUGS.filter((s) => s !== slug);
+
+  // Guides relevant to this service. Service pages previously linked to none,
+  // which left seven guides on a single inbound link from /blog.
+  const guides = (SERVICE_GUIDES[slug] ?? [])
+    .map((g) => blogPosts.find((p) => p.slug === g))
+    .filter((p): p is (typeof blogPosts)[number] => Boolean(p));
   const localityBlock = serviceLocalityBlock(slug);
   const serviceProjects = projects.filter((p) => p.service === slug);
   const detail = serviceDetail[slug];
@@ -668,6 +676,41 @@ export default async function ServicePage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {guides.length > 0 && (
+        <section className="border-t border-stone-200 bg-white py-14 sm:py-16">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <SectionHeading
+              eyebrow="Guides"
+              title={`Reading before you commit to ${meta.title.toLowerCase()}`}
+              description="Long-form, Pune-specific reference pieces—written from our own sites, not generic décor advice."
+            />
+            <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {guides.map((post) => (
+                <li key={post.slug}>
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="group flex h-full flex-col rounded-2xl border border-stone-200 bg-stone-50/60 p-5 transition hover:border-wood/40 hover:bg-white hover:shadow-sm"
+                  >
+                    <p className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-wood-dark">
+                      {post.category}
+                    </p>
+                    <p className="mt-2 font-display text-lg leading-snug text-charcoal transition group-hover:text-wood-dark">
+                      {post.title}
+                    </p>
+                    <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-stone-600">
+                      {post.description}
+                    </p>
+                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-wood-dark">
+                      Read guide <span aria-hidden>→</span>
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       <CTASection
         title={`Ready to start your ${meta.title.toLowerCase()}?`}
