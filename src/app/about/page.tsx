@@ -64,7 +64,7 @@ export default async function AboutPage() {
             the real world.
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-cream/88 sm:text-xl">
-            For more than a decade we have specialised in{" "}
+            Since {COMPANY.foundedYear} we have specialised in{" "}
             <span className="font-medium text-cream">home interiors</span>
             —turnkey apartments, modular kitchens, ceilings, paint, and custom
             woodwork—plus commercial fit-outs, with one accountable team from
@@ -182,7 +182,7 @@ export default async function AboutPage() {
               Why owners choose us
             </p>
             <h2 className="mt-3 font-display text-3xl tracking-tight text-charcoal sm:text-4xl">
-              The signals that matter after a decade on site
+              The signals that matter after {COMPANY.yearsExperience}+ years on site
             </h2>
             <p className="mt-4 text-base leading-relaxed text-stone-600">
               From first sketch to snag list, we optimise for clarity, compliance,

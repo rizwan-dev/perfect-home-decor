@@ -60,7 +60,16 @@ export const COMPANY = {
    */
   email: "info@perfecthomedecor.in",
   hours: "Every day: 9:00 AM – 9:00 PM",
-  yearsExperience: 12,
+  /** Trading since 2019. */
+  foundedYear: 2019,
+  /**
+   * Derived, not hardcoded — a fixed number silently becomes a false claim
+   * every January. This was set to 12 while the business had traded since
+   * 2019, overstating experience by five years across seven pages.
+   */
+  get yearsExperience() {
+    return new Date().getFullYear() - this.foundedYear;
+  },
   /** Completed projects / clients served */
   happyClients: 1000,
   /** Residential & commercial interior projects delivered (marketing stat). */
