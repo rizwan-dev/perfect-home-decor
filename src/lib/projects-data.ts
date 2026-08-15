@@ -30,6 +30,25 @@ export function projectsNearArea(areaLabel: string): ProjectItem[] {
 }
 
 export const projects: ProjectItem[] = [
+  // Owner confirmed both societies on 2026-08-15. Titles are deliberately
+  // generic — the BHK size, exact scope and a real photo are still to come,
+  // and inventing them would put a claim on the page we cannot stand behind.
+  {
+    id: "nyati-elysia-kharadi",
+    title: "Home Interior Design, Nyati Elysia, Kharadi",
+    service: "interior-design",
+    area: "Kharadi",
+    image: "/images/stock/home-interior-design-kharadi-flat.webp",
+    alt: "Home interior design delivered at Nyati Elysia, Kharadi, Pune",
+  },
+  {
+    id: "panchshil-towers-kharadi",
+    title: "Home Interior Design, Panchshil Towers, Kharadi",
+    service: "interior-design",
+    area: "Kharadi",
+    image: "/images/stock/home-interior-design-kharadi-living-room.webp",
+    alt: "Home interior design delivered at Panchshil Towers, Kharadi, Pune",
+  },
   {
     id: "forest-county-kharadi",
     title: "3 BHK Home Interior Design, Forest County, Kharadi",

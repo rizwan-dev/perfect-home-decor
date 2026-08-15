@@ -596,6 +596,10 @@ export function LocationLanding({ area }: { area: AreaSlug }) {
 
       <ProjectStrip
         projects={projectsNearArea(c.areaLabel)}
+        // Default is 3, which hid most of the proof: Kharadi alone has 11
+        // delivered projects. Naming more societies is the whole point of
+        // this strip on a locality page.
+        limit={6}
         eyebrow="Local proof"
         title={`Interior work delivered around ${c.areaLabel}`}
         description="Societies our team already knows—lift bookings, work hours, and handover checklists included."
