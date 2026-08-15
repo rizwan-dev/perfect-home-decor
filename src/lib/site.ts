@@ -87,7 +87,7 @@ export const COMPANY = {
    * Also interpolated into all 24 locality meta descriptions, so bumping this one
    * number updates every page. Matches the live profile as of 2026-08-02.
    */
-  googleReviewCount: 575,
+  googleReviewCount: 585,
   facebookUrl: "https://www.facebook.com/theperfecthomedecor",
   instagramUrl: "https://www.instagram.com/perfecthomedecore/",
   linkedinUrl: "https://www.linkedin.com/company/101354667/",

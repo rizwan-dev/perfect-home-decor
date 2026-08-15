@@ -18,7 +18,19 @@ const serviceLabels: Record<string, string> = {
   "custom-furniture": "Custom furniture",
 };
 
-export function Footer() {
+type FooterProps = {
+  /** Live Google rating/review count from the Places API. Falls back to the
+      constants when the layout cannot fetch, so the footer never disagrees
+      with the hero — which is what happened while it read the constant and
+      the homepage read the API. */
+  googleRating?: number;
+  googleReviewCount?: number;
+};
+
+export function Footer({ googleRating, googleReviewCount }: FooterProps = {}) {
+  const rating = googleRating ?? COMPANY.googleStarRating;
+  const reviewCount = googleReviewCount ?? COMPANY.googleReviewCount;
+
   return (
     <footer className="border-t border-stone-200 bg-white">
       {/* Pre-footer trust + action band */}
@@ -38,7 +50,7 @@ export function Footer() {
                 ★★★★★
               </span>
               <span>
-                {COMPANY.googleStarRating}.0 on Google · {COMPANY.googleReviewCount}+ reviews
+                {rating.toFixed(1)} on Google · {reviewCount.toLocaleString("en-IN")} reviews
               </span>
             </a>
           </div>

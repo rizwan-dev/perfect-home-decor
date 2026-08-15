@@ -229,12 +229,12 @@ export default async function HomePage() {
                 className="group flex items-center justify-between gap-4 rounded-2xl border border-stone-200 bg-white px-5 py-4 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-wood-dark/60 hover:shadow-[0_16px_32px_-20px_rgba(28,25,23,0.25)]"
               >
                 <span>
-                  <span className="block text-sm font-semibold text-charcoal transition-colors group-hover:text-wood-dark">
+                  <div className="block text-sm font-semibold text-charcoal transition-colors group-hover:text-wood-dark">
                     {a.label}
-                  </span>
-                  <span className="mt-0.5 block text-xs text-stone-500">
+                  </div>
+                  <div className="mt-0.5 block text-xs text-stone-500">
                     Interior designer in {a.label}
-                  </span>
+                  </div>
                 </span>
                 <span
                   className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-stone-200 text-sm text-stone-500 transition duration-300 group-hover:translate-x-1 group-hover:border-wood-dark group-hover:bg-wood-dark group-hover:text-cream"

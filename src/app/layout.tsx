@@ -70,7 +70,10 @@ export default async function RootLayout({
         <JsonLd data={localBusinessJsonLd(googleStats)} />
         <Navbar />
         <main className="flex-1">{children}</main>
-        <Footer />
+        <Footer
+          googleRating={googleStats.rating}
+          googleReviewCount={googleStats.userRatingsTotal}
+        />
         <WhatsAppFloat />
         <StickyDesktopBookVisit />
         <StickyMobileBar />

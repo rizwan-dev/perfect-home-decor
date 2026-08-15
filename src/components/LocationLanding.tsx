@@ -163,7 +163,7 @@ export function LocationLanding({ area }: { area: AreaSlug }) {
               className="inline-flex justify-center rounded-full bg-cream px-8 py-3.5 text-sm font-semibold text-charcoal transition hover:bg-white"
             >
               Free site visit in {c.areaLabel}
-            </Link>
+            </Link>{" "}
             <a
               href={`tel:${COMPANY.phoneTel}`}
               className="inline-flex justify-center rounded-full border border-cream/40 px-8 py-3.5 text-sm font-semibold text-cream transition hover:bg-white/10"
@@ -189,12 +189,12 @@ export function LocationLanding({ area }: { area: AreaSlug }) {
               <div key={s.l} className="px-2 py-8 text-center sm:px-6">
                 <dt className="sr-only">{s.l}</dt>
                 <dd>
-                  <span className="block font-display text-3xl text-charcoal sm:text-4xl">
+                  <div className="block font-display text-3xl text-charcoal sm:text-4xl">
                     {s.v}
-                  </span>
-                  <span className="mt-1 block text-xs leading-snug text-stone-500">
+                  </div>
+                  <div className="mt-1 block text-xs leading-snug text-stone-500">
                     {s.l}
-                  </span>
+                  </div>
                 </dd>
               </div>
             ))}

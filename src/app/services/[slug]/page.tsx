@@ -183,13 +183,13 @@ export default async function ServicePage({ params }: Props) {
               className="inline-flex justify-center rounded-full bg-cream px-8 py-3.5 text-sm font-semibold text-charcoal shadow-lg transition hover:bg-white"
             >
               Request a consultation
-            </Link>
+            </Link>{" "}
             <a
               href={`tel:${COMPANY.phoneTel}`}
               className="inline-flex justify-center rounded-full border border-cream/45 px-8 py-3.5 text-sm font-semibold text-cream transition hover:bg-white/10"
             >
               Call {COMPANY.phoneDisplay}
-            </a>
+            </a>{" "}
             <Link
               href="/projects"
               className="inline-flex justify-center rounded-full border border-cream/25 bg-white/5 px-8 py-3.5 text-sm font-semibold text-cream/95 backdrop-blur-sm transition hover:bg-white/10"

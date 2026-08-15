@@ -92,9 +92,9 @@ export function HomeCostCalculator({ tiers }: { tiers: Tier[] }) {
                 }}
                 className={`${cardBase} ${bhk === b.label ? cardActive : cardInactive}`}
               >
-                <span className="block font-display text-lg text-charcoal">
+                <div className="block font-display text-lg text-charcoal">
                   {b.label}
-                </span>
+                </div>
               </button>
             ))}
           </div>
@@ -194,12 +194,12 @@ export function HomeCostCalculator({ tiers }: { tiers: Tier[] }) {
                 }}
                 className={`${cardBase} ${tier === t.name ? cardActive : cardInactive}`}
               >
-                <span className="block font-display text-lg text-charcoal">
+                <div className="block font-display text-lg text-charcoal">
                   {t.name}
-                </span>
-                <span className="mt-1 block text-xs leading-relaxed text-stone-500">
+                </div>
+                <div className="mt-1 block text-xs leading-relaxed text-stone-500">
                   {t.tagline}
-                </span>
+                </div>
               </button>
             ))}
           </div>
