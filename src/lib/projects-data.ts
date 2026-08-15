@@ -30,24 +30,24 @@ export function projectsNearArea(areaLabel: string): ProjectItem[] {
 }
 
 export const projects: ProjectItem[] = [
-  // Owner confirmed both societies on 2026-08-15. Titles are deliberately
-  // generic — the BHK size, exact scope and a real photo are still to come,
-  // and inventing them would put a claim on the page we cannot stand behind.
+  // Both societies and their 2 & 3 BHK scope confirmed by the owner on
+  // 2026-08-15. Exact per-flat scope and a real photo are still to come —
+  // the images below are stock placeholders, not these projects.
   {
     id: "nyati-elysia-kharadi",
-    title: "Home Interior Design, Nyati Elysia, Kharadi",
+    title: "2 & 3 BHK Home Interior Design, Nyati Elysia, Kharadi",
     service: "interior-design",
     area: "Kharadi",
     image: "/images/stock/home-interior-design-kharadi-flat.webp",
-    alt: "Home interior design delivered at Nyati Elysia, Kharadi, Pune",
+    alt: "2 and 3 BHK home interior design delivered at Nyati Elysia, Kharadi, Pune",
   },
   {
     id: "panchshil-towers-kharadi",
-    title: "Home Interior Design, Panchshil Towers, Kharadi",
+    title: "2 & 3 BHK Home Interior Design, Panchshil Towers, Kharadi",
     service: "interior-design",
     area: "Kharadi",
     image: "/images/stock/home-interior-design-kharadi-living-room.webp",
-    alt: "Home interior design delivered at Panchshil Towers, Kharadi, Pune",
+    alt: "2 and 3 BHK home interior design delivered at Panchshil Towers, Kharadi, Pune",
   },
   {
     id: "forest-county-kharadi",
@@ -100,6 +100,16 @@ export const projects: ProjectItem[] = [
     area: "Wagholi",
     image: "/images/projects/false-ceiling-led-cove-lighting-pune.webp",
     alt: "Delivered LED-strip false ceiling with cove lighting and panelled wall — 3 BHK, Nyati Elan, Wagholi",
+  },
+  // Confirmed by the owner on 2026-08-15, 2 & 3 BHK. Stock image until a
+  // real photo of this project is supplied.
+  {
+    id: "vtp-purvanchal-wagholi",
+    title: "2 & 3 BHK Home Interior Design, VTP Purvanchal, Wagholi",
+    service: "interior-design",
+    area: "Wagholi",
+    image: "/images/stock/home-interior-design-living-room-pune.webp",
+    alt: "2 and 3 BHK home interior design delivered at VTP Purvanchal, Wagholi, Pune",
   },
   {
     id: "konark-exotica-wagholi",
