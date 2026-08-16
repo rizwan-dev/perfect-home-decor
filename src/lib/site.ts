@@ -91,6 +91,20 @@ export const COMPANY = {
   facebookUrl: "https://www.facebook.com/theperfecthomedecor",
   instagramUrl: "https://www.instagram.com/perfecthomedecore/",
   linkedinUrl: "https://www.linkedin.com/company/101354667/",
+  /**
+   * The three below are declared in `sameAs` only — deliberately NOT linked
+   * from the UI (see SocialIconLinks). `sameAs` is an identity map telling
+   * Google which profiles belong to this business; it is not a quality signal
+   * and costs nothing to declare. Sending real visitors to them is a separate
+   * question, and these are all low-activity, so the footer keeps to
+   * Facebook / Instagram / LinkedIn.
+   *
+   * All three verified reachable (HTTP 200, no redirect) on 2026-08-16.
+   * Pinterest uses the region-neutral `www.` host, not `in.`.
+   */
+  twitterUrl: "https://x.com/Perf_HomeDecor",
+  pinterestUrl: "https://www.pinterest.com/perfecthomedecore/",
+  youtubeUrl: "https://www.youtube.com/@perfecthomedecor",
   /** Keyless embed pinned to the exact Maps listing via CID (not an address search). */
   mapEmbedUrl: "https://maps.google.com/maps?cid=15641839200569855066&output=embed",
 } as const;

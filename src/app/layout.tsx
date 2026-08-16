@@ -52,6 +52,21 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  /**
+   * Pinterest domain claim. Verifying the domain attributes every pin sourced
+   * from this site back to the account (logo + profile link on the pin), which
+   * also makes the `sameAs` entry in LocalBusiness one Google can corroborate.
+   *
+   * `verification.other` renders the key verbatim as the meta name, so this
+   * emits <meta name="p:domain_verify" content="…" /> — Pinterest requires
+   * that exact name. Keep it after the claim is confirmed: removing the tag
+   * un-verifies the domain.
+   */
+  verification: {
+    other: {
+      "p:domain_verify": "15c54535a88d8840a646f283f3c37d47",
+    },
+  },
 };
 
 export default async function RootLayout({
