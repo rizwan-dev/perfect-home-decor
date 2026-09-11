@@ -38,12 +38,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const url = `${SITE_URL}/services/${slug}`;
   return {
     title: `${s.title} in Pune`,
-    description: s.short,
+    description: s.metaDescription ?? s.short,
     alternates: { canonical: `/services/${slug}` },
     openGraph: {
       title: `${s.title} | ${COMPANY.name}`,
       url,
-      description: s.short,
+      description: s.metaDescription ?? s.short,
       images: ogImages(SERVICE_OG[slug], `${s.title} by ${COMPANY.name}, Pune`),
     },
     keywords: s.keywords,

@@ -1,3 +1,5 @@
+import { COMPANY } from "./site";
+
 export type ServiceSlug =
   | "interior-design"
   | "commercial-interior-design"
@@ -19,7 +21,15 @@ export const servicesMeta: Record<
   ServiceSlug,
   {
     title: string;
+    /** Rendered on the page itself AND used as the meta description fallback. */
     short: string;
+    /**
+     * Search-snippet copy, when `short` should not double as one. `short` is
+     * body text first, so it carries no rating or call to action — fine on the
+     * page, weak in a SERP next to locality pages that lead with "5.0★ from
+     * 605+ Google reviews. Free site visit." Set this to compete properly.
+     */
+    metaDescription?: string;
     heroImage: string;
     keywords: string[];
   }
@@ -65,6 +75,7 @@ export const servicesMeta: Record<
     title: "False Ceiling (POP)",
     short:
       "Layered ceilings, cove lighting, and clean profiles that hide wiring and AC piping—while keeping standard Pune flat heights bright and airy.",
+    metaDescription: `Gypsum & POP false ceilings in Pune — cove and profile lighting, wiring concealed, ceiling and finish paint by one team. ${COMPANY.googleStarRating}.0★ from ${COMPANY.googleReviewCount}+ Google reviews. Free site visit.`,
     heroImage: "/images/stock/open-plan-living-dining-interior-pune.webp",
     keywords: ["false ceiling Pune", "POP ceiling", "gypsum ceiling"],
   },

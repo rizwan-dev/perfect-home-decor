@@ -85,9 +85,13 @@ export const COMPANY = {
    * Fallback review count when `GOOGLE_PLACES_API_KEY` + `GOOGLE_PLACE_ID` are not set
    * or the Places API request fails. Prefer configuring env for live counts.
    * Also interpolated into all 24 locality meta descriptions, so bumping this one
-   * number updates every page. Matches the live profile as of 2026-08-02.
+   * number updates every page. Verified against the Places API on 2026-09-11.
+   *
+   * Keep this current — a stale value understates the business in every search
+   * snippet at once, which is the cheapest CTR lever available. It sat at 585
+   * for five weeks while the real count reached 605.
    */
-  googleReviewCount: 585,
+  googleReviewCount: 605,
   facebookUrl: "https://www.facebook.com/theperfecthomedecor",
   instagramUrl: "https://www.instagram.com/perfecthomedecore/",
   linkedinUrl: "https://www.linkedin.com/company/101354667/",
