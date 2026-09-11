@@ -345,6 +345,149 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
+    slug: "society-permission-interior-work-kharadi-pune",
+    seoTitle: "Society Permission for Interior Work in Kharadi",
+    seoDescription:
+      "How society permission, work hours, lift booking and debris rules decide your interior timeline in Kharadi towers — and what to settle before you sign.",
+    title:
+      "Society permission for interior work in Kharadi: the rules that decide your timeline",
+    description:
+      "In Kharadi's high-rise societies, the managing committee often controls your interior schedule more than the design does. A practical guide to permissions, deposits, work hours, service lift booking, debris removal and worker passes — written from what actually happens on site.",
+    publishedAt: "2026-09-11",
+    author: "Perfect Home Decor",
+    category: "Home Interior Design",
+    image: "/images/projects/living-room-led-ceiling-marble-tv-unit-pune.webp",
+    keywords: [
+      "society permission interior work Pune",
+      "interior work rules housing society",
+      "NOC for interior work Kharadi",
+      "society work hours renovation Pune",
+      "interior designer in Kharadi",
+      "flat renovation rules Pune",
+      "service lift booking interior work",
+      "debris removal society Pune",
+    ],
+    takeaways: [
+      "In most Kharadi towers you need written permission from the managing committee before any material enters the building — not before work starts, before delivery.",
+      "Permitted work hours are the single biggest constraint on your schedule. A society allowing 9 am to 6 pm with Sundays off gives you roughly 45 working hours a week, not 70.",
+      "Expect a refundable security deposit against damage to common areas. Amounts vary widely between societies, so ask yours directly rather than assuming.",
+      "The service lift is usually bookable, padded and weight-limited. Full-height wardrobe shutters and 8x4 boards sometimes cannot go up it at all, which changes how the work is fabricated.",
+      "Debris is where most jobs get stopped. Many societies require same-day removal to a designated point and will not allow it to sit in the corridor overnight.",
+      "Settle permissions before you sign with any contractor. A quotation built on six weeks becomes a different number if the society only permits five working days a week.",
+    ],
+    sections: [
+      {
+        heading: "Why the society office decides your timeline",
+        paragraphs: [
+          "Most people planning an interior job in Kharadi think about design first, budget second, and the society office not at all. On site, the order is often reversed. A well-planned 2 BHK that could run six weeks in an independent house can take eight or nine in a high-rise, and almost none of that difference comes from the work itself.",
+          "Kharadi is dominated by large gated developments — towers near EON IT Park and World Trade Center, township-scale complexes toward Mundhwa bridge, and newer high-rises along the river. These are professionally managed buildings with real rules, and the managing committee has both the authority and the practical means to stop a job: they control the gate, the lift, and the security desk.",
+          "None of this is a problem when it is planned for. It becomes a problem when a contractor quotes a timeline based on an empty flat and a free run at it, then discovers in week one that material cannot come up after 6 pm and Sundays are off entirely.",
+        ],
+      },
+      {
+        heading: "What permission actually involves",
+        paragraphs: [
+          "The mechanism is broadly the same across Kharadi societies, even though the paperwork differs. You submit a written application to the managing committee or the facility manager, stating what work is planned, who is doing it, and over what period. Most societies want the contractor named, not just the scope.",
+          "What you get back is usually a work permission letter or NOC, valid for a defined window. That validity matters more than people expect — a permission granted for eight weeks does not automatically extend if the job runs over, and renewing it mid-project can mean waiting for the next committee meeting.",
+          "Alongside the permission, most societies collect a refundable security deposit against damage to common areas — lift interiors, lobby flooring, corridor walls, staircase railings. It is returned after a walkthrough at the end. The amounts vary a great deal between societies in the same area, so treat any figure you hear secondhand as unreliable and ask your own office what theirs is.",
+          "Some societies also levy a non-refundable charge toward water and electricity consumed during the work. Again, worth asking rather than discovering on the first bill.",
+        ],
+      },
+      {
+        heading: "Work hours: the rule that shapes everything else",
+        paragraphs: [
+          "If you take one thing from this article, take this. Permitted working hours have a larger effect on your completion date than the size of your crew.",
+          "A typical residential society permits work on weekdays and Saturdays within daytime hours, with Sundays and public holidays off. Some tighten it further — a midday break around the afternoon rest period is common in buildings with young children or shift workers, and some restrict noisy work such as drilling, cutting and chipping to an even narrower band within the permitted day.",
+          "Do the arithmetic before you accept a timeline. A crew allowed nine hours a day across six days has fifty-four hours a week. Restrict noisy work to five of those hours and the number that matters for carpentry and POP drops to thirty. That is why the same scope of work genuinely takes longer in a managed tower than in a plotted house, and why any contractor quoting you a schedule should be asking about your society's hours before they quote, not after.",
+          "The practical response is to sequence around it. Noisy work — chipping, core drilling, cutting — goes early in the day and early in the project. Quiet finishing work, painting and assembly can fill the hours when noise is restricted. Done properly this recovers most of the lost time. Done badly, the crew sits idle.",
+        ],
+      },
+      {
+        heading: "The service lift, and why it changes the design",
+        paragraphs: [
+          "High-rise societies normally require all material to move through a designated service lift rather than the passenger lifts, and often require it to be booked in advance and padded with protective sheeting before loading.",
+          "Two constraints follow, and both can affect the design rather than just the logistics. The first is weight — service lifts have stated limits, and a full load of boards, granite or tiles may need splitting across several trips, each of which needs its slot.",
+          "The second is size, and it catches people out. A standard 8 x 4 foot board, or a full-height wardrobe shutter, may simply not fit into a lift car diagonally. Where that is the case, the work has to be fabricated differently — panels cut to a size that will travel and assembled in the flat, rather than built complete in the workshop and carried up. That is a decision to make at the drawing stage, not on delivery day with a lorry waiting downstairs.",
+          "It is worth measuring your service lift car before drawings are frozen. Internal width, depth and diagonal clearance, plus the door opening. It takes five minutes and it occasionally changes how a whole wardrobe run is built.",
+        ],
+      },
+      {
+        heading: "Debris removal, where jobs actually get stopped",
+        paragraphs: [
+          "More interior jobs in Pune societies get halted over debris than over anything in the design. Chipped tile, POP offcuts, old plywood, packaging and cement bags accumulate faster than most people expect, and societies are strict about it because it blocks fire escapes and makes common areas unusable.",
+          "The common rule is that debris must be bagged and moved the same day to a designated collection point, not left in the corridor or the fire staircase overnight. Some societies allow a skip or collection vehicle only on specified days, which means debris has to be stored inside your own flat until then.",
+          "Ask two questions before work starts: where does debris go, and on which days can it leave the premises. Then make sure it is written into your contractor's scope, with removal included rather than billed as an extra later. Disposal is a real cost and a contractor who has excluded it quietly will either come back for it or leave it in your flat.",
+        ],
+      },
+      {
+        heading: "Worker passes, verification and gate access",
+        paragraphs: [
+          "Most Kharadi societies operate visitor management at the gate, and workers on a multi-week job are not treated as casual visitors. Expect to submit a list of workers in advance, with identity documents, so that passes can be issued.",
+          "Some societies additionally ask for police verification of workers on longer projects. This is normal and reasonable in a residential building, but it takes time — which is another argument for starting the permission process well before you want the crew on site.",
+          "In practice this favours contractors who work with a settled crew rather than assembling different labour each week. Every new face is a fresh pass, a fresh verification, and a delay at the gate on a morning when material is waiting.",
+        ],
+      },
+      {
+        heading: "What you cannot change, whatever the design says",
+        paragraphs: [
+          "Some things are not negotiable regardless of what a designer proposes. Structural elements — columns, beams, shear walls, slabs — cannot be cut, chased deeply or removed. In a high-rise, that is a building-safety matter, not a preference, and a society is right to refuse it.",
+          "External appearance is usually controlled too. Enclosing a balcony, changing window frames, fitting grilles of a different pattern, mounting anything on the external facade or altering the elevation in a way visible from outside will typically need explicit approval and is often simply refused, because it affects the whole building's appearance.",
+          "Wet areas deserve particular care. Relocating a bathroom or shifting drainage points affects the flat below as much as your own, and most societies will want to see what is proposed before allowing it. If waterproofing is disturbed, insist it is redone properly and documented — a leak into the flat below is the single most expensive thing that can go wrong in a flat interior, and liability lands on you.",
+        ],
+      },
+      {
+        heading: "Neighbours, and how a complaint stops a job",
+        paragraphs: [
+          "A managing committee that receives repeated complaints from neighbours can and will suspend your permission. This happens more often than people expect, and it is almost always avoidable.",
+          "The triggers are consistent: noise outside permitted hours, dust escaping into the corridor, workers using passenger lifts, material stacked in common areas, and debris left overnight. Every one of these is a process failure rather than a design decision.",
+          "Simple measures prevent nearly all of it. Seal the flat's main door with a dust screen. Cover the corridor floor immediately outside during heavy material movement. Keep the crew to the service lift, without exception. Tell the two or three closest neighbours before noisy weeks begin — a short conversation in advance defuses far more than an apology afterwards.",
+        ],
+      },
+      {
+        heading: "What to settle before you sign anything",
+        paragraphs: [
+          "Get these answers from your society office first, then take them to whoever is quoting. A contractor who is given this information upfront can quote a schedule that will actually hold.",
+          "Ask: what are the permitted working hours, including any restriction on noisy work; which days are off; what is the permission process and how long does the committee take to decide; what deposit is required and what returns it; where does debris go and on which days; is the service lift bookable and what are its dimensions and weight limit; what documentation is needed for worker passes; and what specifically requires separate approval.",
+          "Then check the quotation against the answers. If it assumes a seven-day week and your society permits six, the timeline is wrong before the job begins. If debris removal is not listed, it will surface as a variation. A quote that has accounted for your building's actual rules is worth more than a cheaper one that has not, because the cheaper one is priced for a job that cannot happen.",
+        ],
+      },
+      {
+        heading: "How we handle it",
+        paragraphs: [
+          "We ask about society rules during the first site visit, before any drawing work begins, and we plan the sequence around the hours your building actually permits rather than the hours we would prefer. Where the service lift constrains panel sizes, that is settled at drawing stage so nothing arrives that cannot go up.",
+          "Worker lists and documentation for passes go in early, because waiting at the gate is lost time nobody is paying for. Debris removal is written into the scope rather than left to be discovered. And because the same crew handles carpentry, false ceiling, electrical and painting, there is one list of names at the security desk for the whole project instead of a new set every fortnight.",
+          "None of this is glamorous and none of it shows up in a photograph of the finished flat. It is, however, most of the difference between a job that finishes when it said it would and one that does not.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Do I really need society permission for interior work in my own flat?",
+        a: "For anything beyond minor cosmetic work, yes — in practice every managed society in Kharadi requires it. The flat is yours, but the lift, lobby, staircase, water supply and waste handling are common property, and the society has both the authority and the practical means to control access to them. Skipping the process usually ends with material stopped at the gate.",
+      },
+      {
+        q: "How long does society permission take to come through?",
+        a: "It depends on whether your society's facility manager can approve it directly or whether it waits for the next managing committee meeting. Where a committee decision is required, that can add a couple of weeks. Start the process as soon as your scope is settled rather than when you want the crew to begin — it is the cheapest delay to avoid.",
+      },
+      {
+        q: "How much is the security deposit?",
+        a: "It varies considerably between societies, even neighbouring ones in the same area, so it is not something to assume from a figure someone else quoted. Ask your own society office directly. It is normally refundable after a walkthrough confirms no damage to common areas, so also ask what that inspection covers.",
+      },
+      {
+        q: "Can interior work happen on Sundays or public holidays?",
+        a: "In most residential societies, no. Sundays and public holidays are usually off entirely, and that should be built into any timeline you are given. If a quotation's schedule only works on a seven-day week, it is not a schedule that applies to your building.",
+      },
+      {
+        q: "Who pays if the lift or lobby gets damaged?",
+        a: "You do, in the first instance — it normally comes out of the security deposit, which is exactly what the deposit exists for. That makes it worth confirming that your contractor pads the lift and protects common-area flooring before material movement begins, and worth agreeing in writing who bears the cost if damage does occur.",
+      },
+      {
+        q: "What happens if a neighbour complains?",
+        a: "A managing committee can suspend your work permission, and repeated complaints usually mean they will. Almost every complaint traces back to the same handful of causes: noise outside permitted hours, dust in the corridor, common areas used for storage, or debris left overnight. Handled properly, these do not arise — which is why the dust screen and the corridor covering are not optional extras.",
+      },
+    ],
+  },
+  {
     slug: "modular-kitchen-pune-checklist-before-you-sign",
     seoTitle: "Modular Kitchen Checklist for Pune Flats",
     seoDescription:

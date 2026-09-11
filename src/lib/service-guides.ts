@@ -18,6 +18,7 @@ export const SERVICE_GUIDES: Record<ServiceSlug, string[]> = {
   "interior-design": [
     "complete-guide-home-interior-design-pune",
     "home-interior-design-kharadi-2bhk-3bhk-guide",
+    "society-permission-interior-work-kharadi-pune",
     "living-room-interior-design-layout-lighting-pune",
     "bedroom-interior-design-pune-wardrobes-lighting",
     "kids-room-child-bedroom-interior-pune",

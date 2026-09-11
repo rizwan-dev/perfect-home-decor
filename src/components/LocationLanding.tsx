@@ -100,6 +100,7 @@ const areaHero: Record<AreaSlug, string> = {
  */
 const LOCATION_GUIDES = [
   "home-interior-design-kharadi-2bhk-3bhk-guide",
+  "society-permission-interior-work-kharadi-pune",
   "complete-guide-home-interior-design-pune",
   "modular-kitchen-pune-checklist-before-you-sign",
   "false-ceiling-pop-pune-height-lighting-guide",
