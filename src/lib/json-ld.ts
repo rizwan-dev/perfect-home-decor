@@ -4,7 +4,21 @@ import { COMPANY, GOOGLE_BUSINESS_KNOWLEDGE_URL, SITE_URL } from "./site";
 export function localBusinessJsonLd(googleStats?: GooglePlaceReviewStats | null) {
   return {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    /**
+     * A LocalBusiness subtype, chosen because it describes the trade precisely
+     * — interiors, carpentry, false ceilings, painting — where plain
+     * LocalBusiness describes any shop at all. Anything valid for
+     * LocalBusiness stays valid here, so this is a free precision gain.
+     *
+     * It is NOT a ranking lever. Schema does not affect map-pack position, and
+     * claims that a more specific @type confers "topical authority" are
+     * unsupported. Kept for correctness only.
+     *
+     * The `@id` deliberately stays `#business`: service pages reference this
+     * node as their `provider`, so renaming it would leave those references
+     * pointing at nothing and split one business into two.
+     */
+    "@type": "HomeAndConstructionBusiness",
     "@id": `${SITE_URL}/#business`,
     name: COMPANY.name,
     image: `${SITE_URL}/images/stock/living-room-interior-warm-lighting-pune.webp`,
@@ -163,7 +177,8 @@ export function faqJsonLd(
     url: pageUrl,
     name: `Frequently asked questions — ${COMPANY.name}`,
     about: {
-      "@type": "LocalBusiness",
+      // Must match the main node's @type — same @id, same entity.
+      "@type": "HomeAndConstructionBusiness",
       "@id": `${SITE_URL}/#business`,
       name: COMPANY.name,
       url: SITE_URL,
